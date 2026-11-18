@@ -1,0 +1,96 @@
+{
+  "format_version": 1,
+  "source_run": "experiments/runs/full-reference",
+  "archives": [
+    {
+      "evaluation": "browsecomp",
+      "archive": "full-reference-browsecomp.tar.gz",
+      "files": 4073,
+      "uncompressed_bytes": 36923851,
+      "compressed_bytes": 5370334,
+      "sha256": "2cb2190c9ee04e63d8fc574c0a16a04bc19d344e8dba6c4cb3b170ec7cd9f618",
+      "content_sha256": "8695ef4e4a1bbb72a507a5660ffef9ec2a3beb2ddc39c4883d8f94c912eb49c4"
+    },
+    {
+      "evaluation": "drop",
+      "archive": "full-reference-drop.tar.gz",
+      "files": 19074,
+      "uncompressed_bytes": 392338309,
+      "compressed_bytes": 92402778,
+      "sha256": "e6dc785d6ca26881663c112d4297956db0cc0bb87d59daa75353b89ec5af45df",
+      "content_sha256": "63fcd2c9ce7986885c9c89a55d046ab42837469c09e8bbdebe87bdbe064c4a14"
+    },
+    {
+      "evaluation": "gpqa",
+      "archive": "full-reference-gpqa.tar.gz",
+      "files": 3962,
+      "uncompressed_bytes": 69276596,
+      "compressed_bytes": 11160451,
+      "sha256": "8711a03f1ff58d270551222a6fc76c7b58c191aa3d4ccb364b65644a472a541b",
+      "content_sha256": "e8c5d4a080735c58c9c5bf9a61c88ec66676892b9b1d38c6a042b8ab9c110160"
+    },
+    {
+      "evaluation": "healthbench",
+      "archive": "full-reference-healthbench.tar.gz",
+      "files": 5200,
+      "uncompressed_bytes": 46663891,
+      "compressed_bytes": 7111827,
+      "sha256": "b448364bf4c1e052089bdeba969884dc624239b6fbc5ca193ebf80e2fa1efdd5",
+      "content_sha256": "5a968eaae914daa27c64c60d09f6335a7d38d14a49fe847fc025195dfa36f15e"
+    },
+    {
+      "evaluation": "healthbench_hard",
+      "archive": "full-reference-healthbench_hard.tar.gz",
+      "files": 1689,
+      "uncompressed_bytes": 15954291,
+      "compressed_bytes": 2453619,
+      "sha256": "ea5b3b3000325355ebd4d507c995291ac55e844a2fa2ae317418f0a21fc45977",
+      "content_sha256": "377e206d1843302c70b1bf18851b1b08cd20b24718306d9c54fed56f467e1cf1"
+    },
+    {
+      "evaluation": "humaneval",
+      "archive": "full-reference-humaneval.tar.gz",
+      "files": 986,
+      "uncompressed_bytes": 5130964,
+      "compressed_bytes": 667861,
+      "sha256": "ea2b9ca9ac25599ad3be0b27a982a84c2213d78329a8ed215cd4ee5e396418a2",
+      "content_sha256": "d8b1ec2a6f58add94e55a3b485213bdc4e5d8070d369777281a920cc6a7ee3e6"
+    },
+    {
+      "evaluation": "math",
+      "archive": "full-reference-math.tar.gz",
+      "files": 15003,
+      "uncompressed_bytes": 118345598,
+      "compressed_bytes": 17605760,
+      "sha256": "bc2e34c1c4aabd19371c3c10bbcb56f259b6c73cc39143494aab1781b39619c6",
+      "content_sha256": "90472582af707eb643e22405f3937fa57259992338b590573c77161f92b0aae9"
+    },
+    {
+      "evaluation": "mgsm",
+      "archive": "full-reference-mgsm.tar.gz",
+      "files": 5502,
+      "uncompressed_bytes": 66037123,
+      "compressed_bytes": 6281103,
+      "sha256": "a52030c98bb74e8c02c0d9781d9512dc3c80c0cc761060eba206cde52a7747d7",
+      "content_sha256": "36162feea6eb8a760cdb1ebd0fb6247fc5aa8464636a8813ca9a6bc07b361c6b"
+    },
+    {
+      "evaluation": "mmlu",
+      "archive": "full-reference-mmlu.tar.gz",
+      "files": 28086,
+      "uncompressed_bytes": 238197426,
+      "compressed_bytes": 39229763,
+      "sha256": "645a342ea34e45377e1cc1cfaceffd0acdcfd0cac29852f9cefa881ea43bd921",
+      "content_sha256": "ee4d260e67fef1f278ad52fd9a9e9fefc90fd0198afa10e8f25b37a67d4b09ba"
+    },
+    {
+      "evaluation": "simpleqa",
+      "archive": "full-reference-simpleqa.tar.gz",
+      "files": 12980,
+      "uncompressed_bytes": 82650211,
+      "compressed_bytes": 9502610,
+      "sha256": "44ef89a6b82b5b1212c8bfaf21e2754a7fb24af462caa2d232bf88e9aae63bea",
+      "content_sha256": "b7b5964f1cdbfc3ac890cffa26cc15050190742bd57a82846982b11942a5b145"
+    }
+  ]
+}

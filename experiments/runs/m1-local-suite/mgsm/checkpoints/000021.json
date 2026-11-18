@@ -1,0 +1,31 @@
+{
+  "index": 21,
+  "input_sha256": "312bf48e2493e5a259e5bf9dc6e6a9fbbca20bc6fd6a8f21e2fc800fda369d3f",
+  "input": {
+    "inputs": "Une robe nécessite 2 rouleaux de fibre bleue et la moitié de cette quantité en fibre blanche. Combien faut-il de rouleaux au total ?",
+    "targets": "3",
+    "lang": "fr"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": true,
+      "metrics": {
+        "fr": true,
+        "group_latin": true
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Résolvez ce problème de mathématiques. Donnez les étapes de raisonnement avant de fournir la réponse finale sur la dernière ligne elle-même dans le format de &#34;Réponse:&#34;. N&#39;ajoutez rien d&#39;autre que la réponse entière après &#34;Réponse:&#34;.\n\nUne robe nécessite 2 rouleaux de fibre bleue et la moitié de cette quantité en fibre blanche. Combien faut-il de rouleaux au total ?</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>Pour résoudre ce problème de mathématiques, nous devons suivre ces étapes de raisonnement :\n\n1. **Décrit le problème mathématiquement** :\n   - Nous avons une quantité d&#39;huile qui est 2 rouleaux de fibre bleue et la moitié de cette quantité en fibre blanche.\n\n2. **Identifie les quantités de fibres** :\n   - Quantité de fibre bleue : 2 rouleaux\n   - Quantité de fibre blanche : 2 rouleaux (mais elle représente la moitié de la quantité de fibre bleue, donc 1 rouleau)\n\n3. **Calculer la quantité de fibres totales** :\n   - Quantité de fibres totales = Quantité de fibre bleue + Quantité de fibre blanche\n   - Quantité de fibres totales = 2 rouleaux + 1 rouleau\n   - Quantité de fibres totales = 3 rouleaux\n\n4. **Résultat** : La quantité totale est 3 roules.\n\nDonc, la réponse finale est : **3** rouleaux.\n\n**Réponse: 3** rouleaux**</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 3</p>\n<p>Extracted Answer: 3</p>\n<p>Score: True</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Résolvez ce problème de mathématiques. Donnez les étapes de raisonnement avant de fournir la réponse finale sur la dernière ligne elle-même dans le format de \"Réponse:\". N'ajoutez rien d'autre que la réponse entière après \"Réponse:\".\n\nUne robe nécessite 2 rouleaux de fibre bleue et la moitié de cette quantité en fibre blanche. Combien faut-il de rouleaux au total ?"
+        },
+        {
+          "content": "Pour résoudre ce problème de mathématiques, nous devons suivre ces étapes de raisonnement :\n\n1. **Décrit le problème mathématiquement** :\n   - Nous avons une quantité d'huile qui est 2 rouleaux de fibre bleue et la moitié de cette quantité en fibre blanche.\n\n2. **Identifie les quantités de fibres** :\n   - Quantité de fibre bleue : 2 rouleaux\n   - Quantité de fibre blanche : 2 rouleaux (mais elle représente la moitié de la quantité de fibre bleue, donc 1 rouleau)\n\n3. **Calculer la quantité de fibres totales** :\n   - Quantité de fibres totales = Quantité de fibre bleue + Quantité de fibre blanche\n   - Quantité de fibres totales = 2 rouleaux + 1 rouleau\n   - Quantité de fibres totales = 3 rouleaux\n\n4. **Résultat** : La quantité totale est 3 roules.\n\nDonc, la réponse finale est : **3** rouleaux.\n\n**Réponse: 3** rouleaux**",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

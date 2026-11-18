@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef string_sequence(n: int) -> str:\n    \"\"\" Return a string containing space-delimited numbers starting from 0 upto n inclusive.\n    >>> string_sequence(0)\n    '0'\n    >>> string_sequence(5)\n    '0 1 2 3 4 5'\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\ndef string_sequence(n: int) -> str:\n    \"\"\" Return a string containing space-delimited numbers starting from 0 upto n inclusive.\n    >>> string_sequence(0)\n    '0'\n    >>> string_sequence(5)\n    '0 1 2 3 4 5'\n    \"\"\"\n    return \" \".join(map(str, range(n)))\n```",
+  "usage": {
+    "input_tokens": 118,
+    "output_tokens": 78,
+    "input_cached_tokens": 52,
+    "total_tokens": 196
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 3054284235,
+  "seconds": 0.773487666156143,
+  "generation_tokens_per_second": 132.55801980543717,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

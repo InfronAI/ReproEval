@@ -1,0 +1,229 @@
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=77
+  - wheel
+* Getting build dependencies for sdist...
+running egg_info
+writing src/simple_evals_local.egg-info/PKG-INFO
+writing dependency_links to src/simple_evals_local.egg-info/dependency_links.txt
+writing entry points to src/simple_evals_local.egg-info/entry_points.txt
+writing requirements to src/simple_evals_local.egg-info/requires.txt
+writing top-level names to src/simple_evals_local.egg-info/top_level.txt
+reading manifest file 'src/simple_evals_local.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'src/simple_evals_local.egg-info/SOURCES.txt'
+* Installed build dependency versions:
+  - setuptools==84.2.1
+  - wheel==0.48.0
+* Building sdist...
+running sdist
+running egg_info
+writing src/simple_evals_local.egg-info/PKG-INFO
+writing dependency_links to src/simple_evals_local.egg-info/dependency_links.txt
+writing entry points to src/simple_evals_local.egg-info/entry_points.txt
+writing requirements to src/simple_evals_local.egg-info/requires.txt
+writing top-level names to src/simple_evals_local.egg-info/top_level.txt
+reading manifest file 'src/simple_evals_local.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'src/simple_evals_local.egg-info/SOURCES.txt'
+running check
+creating simple_evals_local-0.2.0
+creating simple_evals_local-0.2.0/src/simple_evals
+creating simple_evals_local-0.2.0/src/simple_evals/sampler
+creating simple_evals_local-0.2.0/src/simple_evals_local.egg-info
+creating simple_evals_local-0.2.0/tests
+copying files to simple_evals_local-0.2.0...
+copying LICENSE -> simple_evals_local-0.2.0
+copying README.md -> simple_evals_local-0.2.0
+copying pyproject.toml -> simple_evals_local-0.2.0
+copying src/simple_evals/__init__.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/__main__.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/analysis.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/browsecomp_eval.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/calibration_eval.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/cli.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/code_execution.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/code_runner.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/common.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/datasets.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/drop_eval.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/gpqa_eval.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/healthbench_eval.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/healthbench_meta_eval.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/humaneval_eval.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/math_eval.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/mgsm_eval.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/mmlu_eval.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/registry.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/run_multilingual_mmlu.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/runtime.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/simple_evals.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/simpleqa_eval.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/types.py -> simple_evals_local-0.2.0/src/simple_evals
+copying src/simple_evals/sampler/__init__.py -> simple_evals_local-0.2.0/src/simple_evals/sampler
+copying src/simple_evals/sampler/browse_sampler.py -> simple_evals_local-0.2.0/src/simple_evals/sampler
+copying src/simple_evals/sampler/chat_completion_sampler.py -> simple_evals_local-0.2.0/src/simple_evals/sampler
+copying src/simple_evals/sampler/claude_sampler.py -> simple_evals_local-0.2.0/src/simple_evals/sampler
+copying src/simple_evals/sampler/mlx_sampler.py -> simple_evals_local-0.2.0/src/simple_evals/sampler
+copying src/simple_evals/sampler/o_chat_completion_sampler.py -> simple_evals_local-0.2.0/src/simple_evals/sampler
+copying src/simple_evals/sampler/responses_sampler.py -> simple_evals_local-0.2.0/src/simple_evals/sampler
+copying src/simple_evals_local.egg-info/PKG-INFO -> simple_evals_local-0.2.0/src/simple_evals_local.egg-info
+copying src/simple_evals_local.egg-info/SOURCES.txt -> simple_evals_local-0.2.0/src/simple_evals_local.egg-info
+copying src/simple_evals_local.egg-info/dependency_links.txt -> simple_evals_local-0.2.0/src/simple_evals_local.egg-info
+copying src/simple_evals_local.egg-info/entry_points.txt -> simple_evals_local-0.2.0/src/simple_evals_local.egg-info
+copying src/simple_evals_local.egg-info/requires.txt -> simple_evals_local-0.2.0/src/simple_evals_local.egg-info
+copying src/simple_evals_local.egg-info/top_level.txt -> simple_evals_local-0.2.0/src/simple_evals_local.egg-info
+copying tests/test_cli_and_data.py -> simple_evals_local-0.2.0/tests
+copying tests/test_evaluators.py -> simple_evals_local-0.2.0/tests
+copying tests/test_healthbench_eval.py -> simple_evals_local-0.2.0/tests
+copying tests/test_healthbench_meta_eval.py -> simple_evals_local-0.2.0/tests
+copying tests/test_runtime.py -> simple_evals_local-0.2.0/tests
+copying tests/test_samplers.py -> simple_evals_local-0.2.0/tests
+Writing simple_evals_local-0.2.0/setup.cfg
+Creating tar archive
+removing 'simple_evals_local-0.2.0' (and everything under it)
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=77
+  - wheel
+* Getting build dependencies for wheel...
+running egg_info
+writing src/simple_evals_local.egg-info/PKG-INFO
+writing dependency_links to src/simple_evals_local.egg-info/dependency_links.txt
+writing entry points to src/simple_evals_local.egg-info/entry_points.txt
+writing requirements to src/simple_evals_local.egg-info/requires.txt
+writing top-level names to src/simple_evals_local.egg-info/top_level.txt
+reading manifest file 'src/simple_evals_local.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'src/simple_evals_local.egg-info/SOURCES.txt'
+* Installed build dependency versions:
+  - setuptools==84.2.1
+  - wheel==0.48.0
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib/simple_evals
+copying src/simple_evals/analysis.py -> build/lib/simple_evals
+copying src/simple_evals/registry.py -> build/lib/simple_evals
+copying src/simple_evals/code_execution.py -> build/lib/simple_evals
+copying src/simple_evals/code_runner.py -> build/lib/simple_evals
+copying src/simple_evals/math_eval.py -> build/lib/simple_evals
+copying src/simple_evals/gpqa_eval.py -> build/lib/simple_evals
+copying src/simple_evals/datasets.py -> build/lib/simple_evals
+copying src/simple_evals/__init__.py -> build/lib/simple_evals
+copying src/simple_evals/types.py -> build/lib/simple_evals
+copying src/simple_evals/mmlu_eval.py -> build/lib/simple_evals
+copying src/simple_evals/runtime.py -> build/lib/simple_evals
+copying src/simple_evals/healthbench_meta_eval.py -> build/lib/simple_evals
+copying src/simple_evals/calibration_eval.py -> build/lib/simple_evals
+copying src/simple_evals/browsecomp_eval.py -> build/lib/simple_evals
+copying src/simple_evals/cli.py -> build/lib/simple_evals
+copying src/simple_evals/common.py -> build/lib/simple_evals
+copying src/simple_evals/simple_evals.py -> build/lib/simple_evals
+copying src/simple_evals/drop_eval.py -> build/lib/simple_evals
+copying src/simple_evals/run_multilingual_mmlu.py -> build/lib/simple_evals
+copying src/simple_evals/humaneval_eval.py -> build/lib/simple_evals
+copying src/simple_evals/simpleqa_eval.py -> build/lib/simple_evals
+copying src/simple_evals/mgsm_eval.py -> build/lib/simple_evals
+copying src/simple_evals/__main__.py -> build/lib/simple_evals
+copying src/simple_evals/healthbench_eval.py -> build/lib/simple_evals
+creating build/lib/simple_evals/sampler
+copying src/simple_evals/sampler/claude_sampler.py -> build/lib/simple_evals/sampler
+copying src/simple_evals/sampler/__init__.py -> build/lib/simple_evals/sampler
+copying src/simple_evals/sampler/responses_sampler.py -> build/lib/simple_evals/sampler
+copying src/simple_evals/sampler/browse_sampler.py -> build/lib/simple_evals/sampler
+copying src/simple_evals/sampler/chat_completion_sampler.py -> build/lib/simple_evals/sampler
+copying src/simple_evals/sampler/mlx_sampler.py -> build/lib/simple_evals/sampler
+copying src/simple_evals/sampler/o_chat_completion_sampler.py -> build/lib/simple_evals/sampler
+running egg_info
+writing src/simple_evals_local.egg-info/PKG-INFO
+writing dependency_links to src/simple_evals_local.egg-info/dependency_links.txt
+writing entry points to src/simple_evals_local.egg-info/entry_points.txt
+writing requirements to src/simple_evals_local.egg-info/requires.txt
+writing top-level names to src/simple_evals_local.egg-info/top_level.txt
+reading manifest file 'src/simple_evals_local.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'src/simple_evals_local.egg-info/SOURCES.txt'
+installing to build/bdist.macosx-26.0-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-26.0-arm64/wheel
+creating build/bdist.macosx-26.0-arm64/wheel/simple_evals
+copying build/lib/simple_evals/analysis.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/registry.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/code_execution.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/code_runner.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/math_eval.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/gpqa_eval.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/datasets.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/__init__.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/types.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/mmlu_eval.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/runtime.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/healthbench_meta_eval.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/calibration_eval.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/browsecomp_eval.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/cli.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/common.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+creating build/bdist.macosx-26.0-arm64/wheel/simple_evals/sampler
+copying build/lib/simple_evals/sampler/claude_sampler.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals/sampler
+copying build/lib/simple_evals/sampler/__init__.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals/sampler
+copying build/lib/simple_evals/sampler/responses_sampler.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals/sampler
+copying build/lib/simple_evals/sampler/browse_sampler.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals/sampler
+copying build/lib/simple_evals/sampler/chat_completion_sampler.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals/sampler
+copying build/lib/simple_evals/sampler/mlx_sampler.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals/sampler
+copying build/lib/simple_evals/sampler/o_chat_completion_sampler.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals/sampler
+copying build/lib/simple_evals/simple_evals.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/drop_eval.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/run_multilingual_mmlu.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/humaneval_eval.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/simpleqa_eval.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/mgsm_eval.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/__main__.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+copying build/lib/simple_evals/healthbench_eval.py -> build/bdist.macosx-26.0-arm64/wheel/./simple_evals
+running install_egg_info
+Copying src/simple_evals_local.egg-info to build/bdist.macosx-26.0-arm64/wheel/./simple_evals_local-0.2.0-py3.11.egg-info
+running install_scripts
+creating build/bdist.macosx-26.0-arm64/wheel/simple_evals_local-0.2.0.dist-info/WHEEL
+creating '/Users/apple/Projects/simple-evals/dist/.tmp-9a5we5ix/simple_evals_local-0.2.0-py3-none-any.whl' and adding 'build/bdist.macosx-26.0-arm64/wheel' to it
+adding 'simple_evals/__init__.py'
+adding 'simple_evals/__main__.py'
+adding 'simple_evals/analysis.py'
+adding 'simple_evals/browsecomp_eval.py'
+adding 'simple_evals/calibration_eval.py'
+adding 'simple_evals/cli.py'
+adding 'simple_evals/code_execution.py'
+adding 'simple_evals/code_runner.py'
+adding 'simple_evals/common.py'
+adding 'simple_evals/datasets.py'
+adding 'simple_evals/drop_eval.py'
+adding 'simple_evals/gpqa_eval.py'
+adding 'simple_evals/healthbench_eval.py'
+adding 'simple_evals/healthbench_meta_eval.py'
+adding 'simple_evals/humaneval_eval.py'
+adding 'simple_evals/math_eval.py'
+adding 'simple_evals/mgsm_eval.py'
+adding 'simple_evals/mmlu_eval.py'
+adding 'simple_evals/registry.py'
+adding 'simple_evals/run_multilingual_mmlu.py'
+adding 'simple_evals/runtime.py'
+adding 'simple_evals/simple_evals.py'
+adding 'simple_evals/simpleqa_eval.py'
+adding 'simple_evals/types.py'
+adding 'simple_evals/sampler/__init__.py'
+adding 'simple_evals/sampler/browse_sampler.py'
+adding 'simple_evals/sampler/chat_completion_sampler.py'
+adding 'simple_evals/sampler/claude_sampler.py'
+adding 'simple_evals/sampler/mlx_sampler.py'
+adding 'simple_evals/sampler/o_chat_completion_sampler.py'
+adding 'simple_evals/sampler/responses_sampler.py'
+adding 'simple_evals_local-0.2.0.dist-info/licenses/LICENSE'
+adding 'simple_evals_local-0.2.0.dist-info/METADATA'
+adding 'simple_evals_local-0.2.0.dist-info/WHEEL'
+adding 'simple_evals_local-0.2.0.dist-info/entry_points.txt'
+adding 'simple_evals_local-0.2.0.dist-info/top_level.txt'
+adding 'simple_evals_local-0.2.0.dist-info/RECORD'
+removing build/bdist.macosx-26.0-arm64/wheel
+Successfully built simple_evals_local-0.2.0.tar.gz and simple_evals_local-0.2.0-py3-none-any.whl

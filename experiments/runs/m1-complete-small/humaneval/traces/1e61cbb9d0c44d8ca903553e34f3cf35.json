@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in upper case, else return False.\n    The function should return False is the given dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) should return True.\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower case or all keys are strings in upper case, else return False.\n    The function should return False if the dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\"}) should return True.\n    \"\"\"\n    if not dict:\n        return False\n\n    lower_case_keys = all(key in dict and key.lower() == key.lower() for key in dict)\n    upper_case_keys = all(key in dict and key.upper() == key.upper() for key in dict)\n    return lower_case_keys or upper_case_keys\n\n# Example usage\nprint(check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}))  # True\nprint(check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}))  # False\nprint(check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}))  # False\nprint(check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}))  # False\nprint(check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\"}))  # True\n```\n\nThis code defines a function `check_dict_case` that takes a dictionary as input and checks if all the keys are strings in lower case or upper case. If the dictionary is empty, it returns `False`. The function returns `True` if the dictionary is valid, otherwise it returns `False`.",
+  "usage": {
+    "input_tokens": 223,
+    "output_tokens": 411,
+    "input_cached_tokens": 52,
+    "total_tokens": 634
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 174564360,
+  "seconds": 2.84305104194209,
+  "generation_tokens_per_second": 156.18490069403686,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

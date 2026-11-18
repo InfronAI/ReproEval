@@ -1,0 +1,32 @@
+{
+  "index": 14,
+  "input_sha256": "2c3d9a9e5ef12dd5913eca669b71de01c42358983338213a74134a7765a887eb",
+  "input": {
+    "task_id": "HumanEval/14",
+    "prompt": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n",
+    "entry_point": "all_prefixes",
+    "canonical_solution": "    result = []\n\n    for i in range(len(string)):\n        result.append(string[:i+1])\n    return result\n",
+    "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('') == []\n    assert candidate('asdfgh') == ['a', 'as', 'asd', 'asdf', 'asdfg', 'asdfgh']\n    assert candidate('WWW') == ['W', 'WW', 'WWW']\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef all_prefixes(string: str) -&gt; List[str]:\n    &#34;&#34;&#34; Return list of all prefixes from shortest to longest of the input string\n    &gt;&gt;&gt; all_prefixes(&#39;abc&#39;)\n    [&#39;a&#39;, &#39;ab&#39;, &#39;abc&#39;]\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39; Return list of all prefixes from shortest to longest of the input string &#39;\n    result = []\n    for i in range(len(string) + 1):\n        prefix = string[:i]\n        result.append(prefix)\n    return result\n\nfrom typing import List\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n"
+        },
+        {
+          "content": "    ' Return list of all prefixes from shortest to longest of the input string '\n    result = []\n    for i in range(len(string) + 1):\n        prefix = string[:i]\n        result.append(prefix)\n    return result\n\nfrom typing import List\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

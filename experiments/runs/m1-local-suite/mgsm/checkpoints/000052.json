@@ -1,0 +1,31 @@
+{
+  "index": 52,
+  "input_sha256": "3231dba4bb2a3bd522aa1f9d271edaa1f42f311ca8d4d3b8a000581946a85fcc",
+  "input": {
+    "inputs": "乔希决定试试房屋翻新。他花了 80,000 美元买了一套房子，然后投入 50,000 美元进行维修。这样做使房子的价值增加了 150%。他赚了多少利润？",
+    "targets": "70000",
+    "lang": "zh"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": false,
+      "metrics": {
+        "zh": false,
+        "group_non_latin": false
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>解决这个数学问题。在最后一行给出答案前，请提供推理步骤。最后一行应该以 &#34;答案: &#34; 的形式独立给出答案。在 &#34;答案：&#34; 后不要添加除整数答案之外的任何内容。\n\n乔希决定试试房屋翻新。他花了 80,000 美元买了一套房子，然后投入 50,000 美元进行维修。这样做使房子的价值增加了 150%。他赚了多少利润？</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>乔希花费了 $80,000 加入了 $50,000，所以总花费是 $130,000。如果房子的市值增加了 150%，那么增加了的市值是总价值的 150%，即 $130,000 * 150% = $195,000。所以，他赚了 $195,000 - $130,000 = $65,000 的利润。</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 70000</p>\n<p>Extracted Answer: None</p>\n<p>Score: False</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "解决这个数学问题。在最后一行给出答案前，请提供推理步骤。最后一行应该以 \"答案: \" 的形式独立给出答案。在 \"答案：\" 后不要添加除整数答案之外的任何内容。\n\n乔希决定试试房屋翻新。他花了 80,000 美元买了一套房子，然后投入 50,000 美元进行维修。这样做使房子的价值增加了 150%。他赚了多少利润？"
+        },
+        {
+          "content": "乔希花费了 $80,000 加入了 $50,000，所以总花费是 $130,000。如果房子的市值增加了 150%，那么增加了的市值是总价值的 150%，即 $130,000 * 150% = $195,000。所以，他赚了 $195,000 - $130,000 = $65,000 的利润。",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

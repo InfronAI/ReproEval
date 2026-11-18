@@ -1,0 +1,32 @@
+{
+  "index": 162,
+  "input_sha256": "9d0c7f4e7473f7a0c7ae6f807076306001be24d4002bf7aa53ffb8710b7cd229",
+  "input": {
+    "task_id": "HumanEval/162",
+    "prompt": "\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its md5 hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n",
+    "entry_point": "string_to_md5",
+    "canonical_solution": "    import hashlib\n    return hashlib.md5(text.encode('ascii')).hexdigest() if text else None\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    assert candidate('') == None\n    assert candidate('A B C') == '0ef78513b0cb8cef12743f5aeb35f888'\n    assert candidate('password') == '5f4dcc3b5aa765d61d8327deb882cf99'\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef string_to_md5(text):\n    &#34;&#34;&#34;\n    Given a string &#39;text&#39;, return its md5 hash equivalent string.\n    If &#39;text&#39; is an empty string, return None.\n\n    &gt;&gt;&gt; string_to_md5(&#39;Hello world&#39;) == &#39;3e25960a79dbc69b674cd4ec67a72c62&#39;\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#34;\\n    Given a string &#39;text&#39;, return its md5 hash equivalent string.\\n    If &#39;text&#39; is an empty string, return None.\\n\\n    &gt;&gt;&gt; string_to_md5(&#39;Hello world&#39;) == &#39;3e25960a79dbc69b674cd4ec67a72c62&#39;\\n    &#34;\n    if not text:\n        return None\n    hash_object = hashlib.md5()\n    hash_object.update(text.encode(&#39;utf-8&#39;))\n    md5_hash = hash_object.hexdigest()\n    return md5_hash\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its md5 hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n"
+        },
+        {
+          "content": "    \"\\n    Given a string 'text', return its md5 hash equivalent string.\\n    If 'text' is an empty string, return None.\\n\\n    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\\n    \"\n    if not text:\n        return None\n    hash_object = hashlib.md5()\n    hash_object.update(text.encode('utf-8'))\n    md5_hash = hash_object.hexdigest()\n    return md5_hash\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

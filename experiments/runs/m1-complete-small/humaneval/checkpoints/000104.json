@@ -1,0 +1,32 @@
+{
+  "index": 104,
+  "input_sha256": "a096ba6a01cbd19709bd7f9ecfe8cade31557cd9966d61d152c600e22c2165aa",
+  "input": {
+    "task_id": "HumanEval/104",
+    "prompt": "\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any even digit.\n\n    Note: Returned list should be sorted in increasing order.\n    \n    For example:\n    >>> unique_digits([15, 33, 1422, 1])\n    [1, 15, 33]\n    >>> unique_digits([152, 323, 1422, 10])\n    []\n    \"\"\"\n",
+    "entry_point": "unique_digits",
+    "canonical_solution": "    odd_digit_elements = []\n    for i in x:\n        if all (int(c) % 2 == 1 for c in str(i)):\n            odd_digit_elements.append(i)\n    return sorted(odd_digit_elements)\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([15, 33, 1422, 1]) == [1, 15, 33]\n    assert candidate([152, 323, 1422, 10]) == []\n    assert candidate([12345, 2033, 111, 151]) == [111, 151]\n    assert candidate([135, 103, 31]) == [31, 135]\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef unique_digits(x):\n    &#34;&#34;&#34;Given a list of positive integers x. return a sorted list of all \n    elements that hasn&#39;t any even digit.\n\n    Note: Returned list should be sorted in increasing order.\n    \n    For example:\n    &gt;&gt;&gt; unique_digits([15, 33, 1422, 1])\n    [1, 15, 33]\n    &gt;&gt;&gt; unique_digits([152, 323, 1422, 10])\n    []\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#34;\\n    Given a list of positive integers x, return a sorted list of all\\n    elements that hasn&#39;t any even digit.\\n\\n    Parameters:\\n    x (list of int): A list of positive integers\\n\\n    Returns:\\n    list: A sorted list of all elements that hasn&#39;t any even digit\\n\\n    &gt;&gt;&gt; unique_digits([15, 33, 1422, 1])\\n    [1, 15, 33]\\n    &gt;&gt;&gt; unique_digits([152, 323, 1422, 10])\\n    []\\n    &#34;\n    def is_even(n):\n        return n % 2 == 0\n    odd_digits = [x for x in x if not is_even(x)]\n    sorted_odd_digits = sorted(odd_digits)\n    return sorted_odd_digits\n\nprint(unique_digits([15, 33, 1422, 1]))\n\nprint(unique_digits([152, 323, 1422, 10]))\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any even digit.\n\n    Note: Returned list should be sorted in increasing order.\n    \n    For example:\n    >>> unique_digits([15, 33, 1422, 1])\n    [1, 15, 33]\n    >>> unique_digits([152, 323, 1422, 10])\n    []\n    \"\"\"\n"
+        },
+        {
+          "content": "    \"\\n    Given a list of positive integers x, return a sorted list of all\\n    elements that hasn't any even digit.\\n\\n    Parameters:\\n    x (list of int): A list of positive integers\\n\\n    Returns:\\n    list: A sorted list of all elements that hasn't any even digit\\n\\n    >>> unique_digits([15, 33, 1422, 1])\\n    [1, 15, 33]\\n    >>> unique_digits([152, 323, 1422, 10])\\n    []\\n    \"\n    def is_even(n):\n        return n % 2 == 0\n    odd_digits = [x for x in x if not is_even(x)]\n    sorted_odd_digits = sorted(odd_digits)\n    return sorted_odd_digits\n\nprint(unique_digits([15, 33, 1422, 1]))\n\nprint(unique_digits([152, 323, 1422, 10]))\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

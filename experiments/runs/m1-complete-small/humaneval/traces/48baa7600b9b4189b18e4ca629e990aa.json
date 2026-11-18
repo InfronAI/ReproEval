@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\nfrom typing import List\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"\n    if not numbers:\n        return 0.0\n\n    # Calculate the mean of the list\n    mean = sum(numbers) / len(numbers)\n\n    # Calculate the absolute difference between each number and the mean\n    abs_diff = [abs(x - mean) for x in numbers]\n\n    # Calculate the average of the absolute differences\n    mad = sum(abs_diff) / len(numbers)\n\n    return mad\n```",
+  "usage": {
+    "input_tokens": 167,
+    "output_tokens": 200,
+    "input_cached_tokens": 57,
+    "total_tokens": 367
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 4112182888,
+  "seconds": 1.7593598328530788,
+  "generation_tokens_per_second": 129.27542095433085,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

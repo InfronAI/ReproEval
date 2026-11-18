@@ -1,0 +1,14 @@
+{
+  "pid": 96915,
+  "plan": "experiments/plans/local-validation.json",
+  "command": [
+    "/Users/apple/Projects/simple-evals/.venv/bin/python",
+    "-u",
+    "/Users/apple/Projects/simple-evals/scripts/run_plan.py",
+    "experiments/plans/local-validation.json",
+    "--state",
+    "/Users/apple/Projects/simple-evals/experiments/jobs/local-validation/stages.json"
+  ],
+  "started_at": "2026-11-15T12:38:52.071213+00:00",
+  "log": "experiments/jobs/local-validation/console.log"
+}

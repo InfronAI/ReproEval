@@ -1,0 +1,32 @@
+{
+  "index": 90,
+  "input_sha256": "fdf5d0637ad2f0070978be578f542f83edf3aa4a4017e4bc91f4ab638ccd3be8",
+  "input": {
+    "task_id": "HumanEval/90",
+    "prompt": "\ndef next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 2\n    next_smallest([5, 1, 4, 3, 2]) == 2\n    next_smallest([]) == None\n    next_smallest([1, 1]) == None\n    \"\"\"\n",
+    "entry_point": "next_smallest",
+    "canonical_solution": "    lst = sorted(set(lst))\n    return None if len(lst) < 2 else lst[1]\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([1, 2, 3, 4, 5]) == 2\n    assert candidate([5, 1, 4, 3, 2]) == 2\n    assert candidate([]) == None\n    assert candidate([1, 1]) == None\n    assert candidate([1,1,1,1,0]) == 1\n    assert candidate([1, 0**0]) == None\n    assert candidate([-35, 34, 12, -45]) == -35\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef next_smallest(lst):\n    &#34;&#34;&#34;\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 2\n    next_smallest([5, 1, 4, 3, 2]) == 2\n    next_smallest([]) == None\n    next_smallest([1, 1]) == None\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;\\n    You are given a list of integers.\\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\\n    Return None if there is no such element.\\n    \\n    next_smallest([1, 2, 3, 4, 5]) == 2\\n    next_smallest([5, 1, 4, 3, 2]) == 2\\n    next_smallest([]) == None\\n    next_smallest([1, 1]) == None\\n    &#39;\n    if not lst:\n        return None\n    for i in range(1, len(lst)):\n        if lst[i] &gt; lst[i - 1]:\n            return lst[i]\n    return lst[1]\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 2\n    next_smallest([5, 1, 4, 3, 2]) == 2\n    next_smallest([]) == None\n    next_smallest([1, 1]) == None\n    \"\"\"\n"
+        },
+        {
+          "content": "    '\\n    You are given a list of integers.\\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\\n    Return None if there is no such element.\\n    \\n    next_smallest([1, 2, 3, 4, 5]) == 2\\n    next_smallest([5, 1, 4, 3, 2]) == 2\\n    next_smallest([]) == None\\n    next_smallest([1, 1]) == None\\n    '\n    if not lst:\n        return None\n    for i in range(1, len(lst)):\n        if lst[i] > lst[i - 1]:\n            return lst[i]\n    return lst[1]\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

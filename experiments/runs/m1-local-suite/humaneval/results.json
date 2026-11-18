@@ -1,0 +1,160 @@
+{
+  "score": 0.12,
+  "metrics": {
+    "pass@1": 0.12,
+    "pass@1:std": 0.24000000000000002,
+    "pass@2": 0.18,
+    "pass@2:std": 0.36,
+    "pass@5": 0.2,
+    "pass@5:std": 0.4000000000000001,
+    "score:std": 0.24000000000000002
+  },
+  "htmls": [
+    "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef count_upper(s):\n    &#34;&#34;&#34;\n    Given a string s, count the number of uppercase vowels in even indices.\n    \n    For example:\n    count_upper(&#39;aBCdEf&#39;) returns 1\n    count_upper(&#39;abcdefg&#39;) returns 0\n    count_upper(&#39;dBBE&#39;) returns 0\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;\\n    Given a string s, count the number of uppercase vowels in even indices.\\n    &#39;\n    vowels = &#39;AEIOU&#39;\n    count = 0\n    for i in range(len(s)):\n        if i % 2 == 0 and s[i].lower() in vowels:\n            count += 1\n    return count\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1, 1, 1, 1, 1]</p>\n<p>Extracted Answer: [1, 0, 1, 0, 1]</p>\n<p>Score: 0.6</p>",
+    "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef even_odd_palindrome(n):\n    &#34;&#34;&#34;\n    Given a positive integer n, return a tuple that has the number of even and odd\n    integer palindromes that fall within the range(1, n), inclusive.\n\n    Example 1:\n\n        Input: 3\n        Output: (1, 2)\n        Explanation:\n        Integer palindrome are 1, 2, 3. one of them is even, and two of them are odd.\n\n    Example 2:\n\n        Input: 12\n        Output: (4, 6)\n        Explanation:\n        Integer palindrome are 1, 2, 3, 4, 5, 6, 7, 8, 9, 11. four of them are even, and 6 of them are odd.\n\n    Note:\n        1. 1 &lt;= n &lt;= 10^3\n        2. returned tuple has the number of even and odd integer palindromes respectively.\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;\\n    Given a positive integer n, return a tuple that has the number of even and odd integer palindromes that fall within the range(1, n), inclusive.\\n\\n    Example 1:\\n    Integer palindrome are 1, 2, 3. one of them is even, and two of them are odd.\\n\\n    Example 2:\\n    Integer palindrome are 12. four of them are even, and six of them are odd.\\n\\n    Note:\\n    1. 1 &lt;= n &lt;= 10^3\\n    2. returned tuple has the number of even and odd integer palindromes respectively.\\n    &#39;\n    even_palindrome_count = 0\n    odd_palindrome_count = 0\n    palindrome_range = list(range(1, n + 1))\n    for palindrome in palindrome_range:\n        if palindrome % 2 == 0:\n            even_palindrome_count += 1\n        else:\n            odd_palindrome_count += 1\n    return (even_palindrome_count, odd_palindrome_count)\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1, 1, 1, 1, 1]</p>\n<p>Extracted Answer: [0, 0, 0, 0, 0]</p>\n<p>Score: 0.0</p>",
+    "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef is_palindrome(string: str) -&gt; bool:\n    &#34;&#34;&#34; Test if given string is a palindrome &#34;&#34;&#34;\n    return string == string[::-1]\n\n\ndef make_palindrome(string: str) -&gt; str:\n    &#34;&#34;&#34; Find the shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    &gt;&gt;&gt; make_palindrome(&#39;&#39;)\n    &#39;&#39;\n    &gt;&gt;&gt; make_palindrome(&#39;cat&#39;)\n    &#39;catac&#39;\n    &gt;&gt;&gt; make_palindrome(&#39;cata&#39;)\n    &#39;catac&#39;\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#34; Find the shortest palindrome that begins with a supplied string.\\n    Algorithm idea is simple:\\n    - Find the longest postfix of supplied string that is a palindrome.\\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\\n    &gt;&gt;&gt; make_palindrome(&#39;&#39;)\\n    &#39;&#39;\\n    &gt;&gt;&gt; make_palindrome(&#39;cat&#39;)\\n    &#39;catac&#39;\\n    &gt;&gt;&gt; make_palindrome(&#39;cata&#39;)\\n    &#39;catac&#39;\\n    &#34;\n    string = string[::-1]\n    return string + string[string.find(string[::-1]):]\n\ndef is_palindrome(string: str) -&gt; bool:\n    &#34;&#34;&#34; Test if given string is a palindrome &#34;&#34;&#34;\n    return string == string[::-1]\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1, 1, 1, 1, 1]</p>\n<p>Extracted Answer: [0, 0, 0, 0, 0]</p>\n<p>Score: 0.0</p>",
+    "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef digitSum(s):\n    &#34;&#34;&#34;Task\n    Write a function that takes a string as input and returns the sum of the upper characters only&#39;\n    ASCII codes.\n\n    Examples:\n        digitSum(&#34;&#34;) =&gt; 0\n        digitSum(&#34;abAB&#34;) =&gt; 131\n        digitSum(&#34;abcCd&#34;) =&gt; 67\n        digitSum(&#34;helloE&#34;) =&gt; 69\n        digitSum(&#34;woArBld&#34;) =&gt; 131\n        digitSum(&#34;aAaaaXa&#34;) =&gt; 153\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;\\n    Task\\n    Write a function that takes a string as input and returns the sum of the upper characters only\\n    ASCII codes.\\n\\n    Examples:\\n        digitSum(&#34;&#34;) =&gt; 0\\n        digitSum(&#34;abAB&#34;) =&gt; 131\\n        digitSum(&#34;abcCd&#34;) =&gt; 67\\n        digitSum(&#34;helloE&#34;) =&gt; 69\\n        digitSum(&#34;woArBld&#34;) =&gt; 131\\n        digitSum(&#34;aAaaaXa&#34;) =&gt; 153\\n    &#39;\n    sum = 0\n    for char in s:\n        sum += ord(char)\n    return sum\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1, 1, 1, 1, 1]</p>\n<p>Extracted Answer: [0, 0, 0, 0, 0]</p>\n<p>Score: 0.0</p>",
+    "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef tri(n):\n    &#34;&#34;&#34;Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in \n    the last couple centuries. However, what people don&#39;t know is Tribonacci sequence.\n    Tribonacci sequence is defined by the recurrence:\n    tri(1) = 3\n    tri(n) = 1 + n / 2, if n is even.\n    tri(n) =  tri(n - 1) + tri(n - 2) + tri(n + 1), if n is odd.\n    For example:\n    tri(2) = 1 + (2 / 2) = 2\n    tri(4) = 3\n    tri(3) = tri(2) + tri(1) + tri(4)\n           = 2 + 3 + 3 = 8 \n    You are given a non-negative integer number n, you have to a return a list of the \n    first n + 1 numbers of the Tribonacci sequence.\n    Examples:\n    tri(3) = [1, 3, 2, 8]\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    a = [0, 3]\n    b = [0, 3]\n    c = [0, 3, 8]\n    for i in range(3, n + 1):\n        if i % 2 == 0:\n            a.append(a[-1] + a[-2] + a[-3])\n        else:\n            a.append(a[-1] + a[-2] + a[-3] + a[-1])\n        a.append(a[-1] + a[-2] + a[-3] + a[-1])\n        a.append(a[-1] + a[-2] + a[-3] + a[-1])\n        a.append(a[-1] + a[-2] + a[-3] + a[-1])\n    return a[:n + 1]\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1, 1, 1, 1, 1]</p>\n<p>Extracted Answer: [0, 0, 0, 0, 0]</p>\n<p>Score: 0.0</p>"
+  ],
+  "convos": [
+    [
+      {
+        "role": "user",
+        "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase vowels in even indices.\n    \n    For example:\n    count_upper('aBCdEf') returns 1\n    count_upper('abcdefg') returns 0\n    count_upper('dBBE') returns 0\n    \"\"\"\n"
+      },
+      {
+        "content": "    '\\n    Given a string s, count the number of uppercase vowels in even indices.\\n    '\n    vowels = 'AEIOU'\n    count = 0\n    for i in range(len(s)):\n        if i % 2 == 0 and s[i].lower() in vowels:\n            count += 1\n    return count\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    '\\n    Given a string s, count the number of uppercase vowels in even indices.\\n    '\n    count = 0\n    for i in range(len(s)):\n        if i % 2 == 0 and 'A' <= s[i] <= 'Z' and ('a' <= s[i] <= 'z'):\n            if s[i].isupper():\n                count += 1\n    return count\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    \"\\n    Given a string s, count the number of uppercase vowels in even indices.\\n    \\n    For example:\\n    count_upper('aBCdEf') returns 1\\n    count_upper('abcdefg') returns 0\\n    count_upper('dBBE') returns 0\\n    \"\n    uppercase_vowels = 'AEIOU'\n    even_index = True\n    count = 0\n    for i in range(len(s)):\n        if i % 2 == 0 and s[i] in uppercase_vowels:\n            count += 1\n    return count\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    '\\n    Given a string s, count the number of uppercase vowels in even indices.\\n\\n    Parameters:\\n    s (str): The input string to analyze.\\n\\n    Returns:\\n    int: The count of uppercase vowels in even indices.\\n\\n    Constraints:\\n    1 <= len(s) <= 1000\\n    '\n    vowels = 'AEIOU'\n    uppercase_vowels = 0\n    for i in range(len(s)):\n        if i % 2 == 0 and s[i] in vowels:\n            uppercase_vowels += 1\n    return uppercase_vowels\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    \"\\n    Given a string s, count the number of uppercase vowels in even indices.\\n    \\n    For example:\\n    count_upper('aBCdEf') returns 1\\n    count_upper('abcdefg') returns 0\\n    count_upper('dBBE') returns 0\\n    \"\n    vowels = 'AEIOU'\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in vowels:\n            if i % 2 == 0:\n                count += 1\n    return count\n",
+        "role": "assistant"
+      }
+    ],
+    [
+      {
+        "role": "user",
+        "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef even_odd_palindrome(n):\n    \"\"\"\n    Given a positive integer n, return a tuple that has the number of even and odd\n    integer palindromes that fall within the range(1, n), inclusive.\n\n    Example 1:\n\n        Input: 3\n        Output: (1, 2)\n        Explanation:\n        Integer palindrome are 1, 2, 3. one of them is even, and two of them are odd.\n\n    Example 2:\n\n        Input: 12\n        Output: (4, 6)\n        Explanation:\n        Integer palindrome are 1, 2, 3, 4, 5, 6, 7, 8, 9, 11. four of them are even, and 6 of them are odd.\n\n    Note:\n        1. 1 <= n <= 10^3\n        2. returned tuple has the number of even and odd integer palindromes respectively.\n    \"\"\"\n"
+      },
+      {
+        "content": "    '\\n    Given a positive integer n, return a tuple that has the number of even and odd integer palindromes that fall within the range(1, n), inclusive.\\n\\n    Example 1:\\n    Integer palindrome are 1, 2, 3. one of them is even, and two of them are odd.\\n\\n    Example 2:\\n    Integer palindrome are 12. four of them are even, and six of them are odd.\\n\\n    Note:\\n    1. 1 <= n <= 10^3\\n    2. returned tuple has the number of even and odd integer palindromes respectively.\\n    '\n    even_palindrome_count = 0\n    odd_palindrome_count = 0\n    palindrome_range = list(range(1, n + 1))\n    for palindrome in palindrome_range:\n        if palindrome % 2 == 0:\n            even_palindrome_count += 1\n        else:\n            odd_palindrome_count += 1\n    return (even_palindrome_count, odd_palindrome_count)\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    '\\n    Given a positive integer n, return a tuple that has the number of even and odd integers palindromes that fall within the range (1, n), inclusive.\\n\\n    Example 1:\\n    Integer palindrome are 1, 2, 3. one of them is even, and two of them are odd.\\n\\n    Example 2:\\n    Integer palindrome are 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23. four of them are even, and six of them are odd.\\n\\n    Constraints:\\n    1 <= n <= 10^3\\n    '\n    even_palindromes = []\n    odd_palindromes = []\n    even_odd = 0\n    for i in range(1, n + 1):\n        if i % 2 == 0:\n            even_palindromes.append(i)\n            even_odd += 1\n        else:\n            odd_palindromes.append(i)\n            even_odd += 1\n    return (even_palindromes, odd_palindromes, even_odd)\n\nn = 3\n\nprint(even_odd_palindrome(n))\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    '\\n    Given a positive integer n, return a tuple that has the number of even and odd\\n    integer palindromes that fall within the range(1, n), inclusive.\\n\\n    Example 1:\\n        Input: 3\\n        Output: (1, 2)\\n        Explanation:\\n        Integer palindrome are 1, 2, 3. one of them is even, and two of them are odd.\\n\\n    Example 2:\\n        Input: 12\\n        Output: (4, 6)\\n        Explanation:\\n        Integer palindrome are 1, 2, 3, 4, 5, 6, 7, 8, 9, 11. four of them are even, and 6 of them are odd.\\n\\n    Note:\\n        1. 1 <= n <= 10^3\\n        2. returned tuple has the number of even and odd integer palindromes respectively.\\n    '\n    even_palindrome_count = 0\n    odd_palindrome_count = 0\n    for i in range(1, n + 1):\n        if str(i) == str(i)[::-1]:\n            if i % 2 == 0:\n                even_palindrome_count += 1\n            else:\n                even_palindrome_count += 1\n        else:\n            odd_palindrome_count += 1\n    return (even_palindrome_count, odd_palindrome_count)\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    '\\n    Given a positive integer n, return a tuple that has the number of even and odd\\n    integer palindromes that fall within the range(1, n), inclusive.\\n\\n    Example 1:\\n\\n        Input: 3\\n        Output: (1, 2)\\n        Explanation:\\n        Integer palindrome are 1, 2, 3. one of them is even, and two of them are odd.\\n\\n    Example 2:\\n\\n        Input: 12\\n        Output: (4, 6)\\n        Explanation:\\n        Integer palindrome are 1, 2, 3, 4, 5, 6, 7, 8, 9, 11. four of them are even, and six of them are odd.\\n\\n    Note:\\n        1. 1 <= n <= 10^3\\n        2. returned tuple has the number of even and odd integer palindromes respectively.\\n    '\n    even_palindrome_count = 0\n    odd_palindrome_count = 0\n    for i in range(1, n + 1):\n        if i % 2 == 0:\n            even_palindrome_count += 1\n        else:\n            odd_palindrome_count += 1\n    return (even_palindrome_count, odd_palindrome_count)\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    '\\n    Given a positive integer n, return a tuple that has the number of even and odd integer palindromes that fall within the range(1, n), inclusive.\\n\\n    Example 1:\\n        Integer palindrome are 1, 2, 3. one of them is even, and two of them are odd.\\n\\n    Example 2:\\n        Integer palindrome are 1, 2, 3, 4, 5, 6, 7, 8, 9, 11. four of them are even, and six of them are odd.\\n\\n    Note:\\n        1. 1 <= n <= 10^3\\n        2. returned tuple has the number of even and odd integer palindromes respectively.\\n    '\n    even_palindromes = []\n    odd_palindromes = []\n    even_count = 0\n    odd_count = 0\n    for i in range(1, n + 1):\n        if i % 2 == 0:\n            even_palindromes.append(i)\n            even_count += 1\n        else:\n            odd_palindromes.append(i)\n            odd_count += 1\n    return (even_palindromes, odd_palindromes)\n\nn = 3\n\nprint(even_odd_palindrome(n))\n",
+        "role": "assistant"
+      }
+    ],
+    [
+      {
+        "role": "user",
+        "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef make_palindrome(string: str) -> str:\n    \"\"\" Find the shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> make_palindrome('')\n    ''\n    >>> make_palindrome('cat')\n    'catac'\n    >>> make_palindrome('cata')\n    'catac'\n    \"\"\"\n"
+      },
+      {
+        "content": "    \" Find the shortest palindrome that begins with a supplied string.\\n    Algorithm idea is simple:\\n    - Find the longest postfix of supplied string that is a palindrome.\\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\\n    >>> make_palindrome('')\\n    ''\\n    >>> make_palindrome('cat')\\n    'catac'\\n    >>> make_palindrome('cata')\\n    'catac'\\n    \"\n    string = string[::-1]\n    return string + string[string.find(string[::-1]):]\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    \" Find the shortest palindrome that begins with a supplied string.\\n    Algorithm idea is simple:\\n    - Find the longest postfix of supplied string that is a palindrome.\\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\\n    >>> make_palindrome('')\\n    ''\\n    >>> make_palindrome('cat')\\n    'catac'\\n    >>> make_palindrome('cata')\\n    'catac'\\n    \"\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    \" Find the shortest palindrome that begins with a supplied string.\\n    Algorithm idea is simple:\\n    - Find the longest postfix of supplied string that is a palindrome.\\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\\n    >>> make_palindrome('')\\n    ''\\n    >>> make_palindrome('cat')\\n    'catac'\\n    >>> make_palindrome('cata')\\n    'catac'\\n    \"\n    string = string.lower()\n    string = ''.join([char for char in string if char != string[0]])\n    string = string + string[1:]\n    string = string[::-1]\n    return string\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    \" Find the shortest palindrome that begins with a supplied string.\\n    Algorithm idea is simple:\\n    - Find the longest postfix of supplied string that is a palindrome.\\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\\n    >>> make_palindrome('')\\n    ''\\n    >>> make_palindrome('cat')\\n    'catac'\\n    >>> make_palindrome('cata')\\n    'catac'\\n    \"\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    \" Find the shortest palindrome that begins with a supplied string.\\n    Algorithm idea is simple:\\n    - Find the longest postfix of supplied string that is a palindrome.\\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\\n    >>> make_palindrome('')\\n    ''\\n    >>> make_palindrome('cat')\\n    'catac'\\n    >>> make_palindrome('cata')\\n    'catac'\\n    \"\n    if not string:\n        return ''\n    def find_palindrome_suffix(string: str) -> str:\n        for i in range(len(string) - 1, -1, -1):\n            if string[i:] == string[:i]:\n                return string[i:]\n    def find_palindrome_prefix(string: str) -> str:\n        for i in range(len(string) - 1, -1, -1):\n            if string[i:] == string[:i]:\n                return string[i:]\n    palindrome_suffix = find_palindrome_suffix(string)\n    palindrome_prefix = find_palindrome_prefix(string)\n    return string + reverse_string(palindrome_prefix) + reverse_string(palindrome_suffix)\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\ndef reverse_string(string: str) -> str:\n    \"\"\" Reverse a string \"\"\"\n    return string[::-1]\n",
+        "role": "assistant"
+      }
+    ],
+    [
+      {
+        "role": "user",
+        "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the upper characters only'\n    ASCII codes.\n\n    Examples:\n        digitSum(\"\") => 0\n        digitSum(\"abAB\") => 131\n        digitSum(\"abcCd\") => 67\n        digitSum(\"helloE\") => 69\n        digitSum(\"woArBld\") => 131\n        digitSum(\"aAaaaXa\") => 153\n    \"\"\"\n"
+      },
+      {
+        "content": "    '\\n    Task\\n    Write a function that takes a string as input and returns the sum of the upper characters only\\n    ASCII codes.\\n\\n    Examples:\\n        digitSum(\"\") => 0\\n        digitSum(\"abAB\") => 131\\n        digitSum(\"abcCd\") => 67\\n        digitSum(\"helloE\") => 69\\n        digitSum(\"woArBld\") => 131\\n        digitSum(\"aAaaaXa\") => 153\\n    '\n    sum = 0\n    for char in s:\n        sum += ord(char)\n    return sum\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    '\\n    Task\\n    Write a function that takes a string as input and returns the sum of the upper characters only\\n    ASCII codes.\\n\\n    Examples:\\n        digitSum(\"\") => 0\\n        digitSum(\"abAB\") => 131\\n        digitSum(\"abcCd\") => 67\\n        digitSum(\"helloE\") => 69\\n        digitSum(\"woArBld\") => 131\\n        digitSum(\"aAaaaXa\") => 153\\n    '\n    sum = 0\n    for char in s:\n        if char.isupper():\n            sum += ord(char) - 65 + 1\n    return sum\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    ascii_values = [ord(char) for char in s]\n    return sum((ascii_values[i:i + 13] for i in range(len(ascii_values) - 13, -1, -1)))\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    'Task\\n    Write a function that takes a string as input and returns the sum of the upper characters only\\'\\n    ASCII codes.\\n\\n    Examples:\\n        digitSum(\"\") => 0\\n        digitSum(\"abAB\") => 131\\n        digitSum(\"abcCd\") => 67\\n        digitSum(\"helloE\") => 69\\n        digitSum(\"woArBld\") => 131\\n        digitSum(\"aAaaaXa\") => 153\\n    '\n    chars = list(s)\n    sum = 0\n    for i in range(len(chars)):\n        if chars[i].isupper():\n            sum += int(chars[i])\n    return sum\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    'Task\\n    Write a function that takes a string as input and returns the sum of the upper characters only\\'\\n    ASCII codes.\\n\\n    Examples:\\n        digitSum(\"\") => 0\\n        digitSum(\"abAB\") => 131\\n        digitSum(\"abcCd\") => 67\\n        digitSum(\"helloE\") => 69\\n        digitSum(\"woArBld\") => 131\\n        digitSum(\"aAaaaXa\") => 153\\n    '\n    chars = list(s)\n    sum = 0\n    for i in range(len(chars)):\n        if i == 0 or i == len(chars) - 1:\n            sum += ord(chars[i])\n        else:\n            sum += 26 * ord(chars[i]) + ord(chars[i + 1])\n    return sum\n",
+        "role": "assistant"
+      }
+    ],
+    [
+      {
+        "role": "user",
+        "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef tri(n):\n    \"\"\"Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in \n    the last couple centuries. However, what people don't know is Tribonacci sequence.\n    Tribonacci sequence is defined by the recurrence:\n    tri(1) = 3\n    tri(n) = 1 + n / 2, if n is even.\n    tri(n) =  tri(n - 1) + tri(n - 2) + tri(n + 1), if n is odd.\n    For example:\n    tri(2) = 1 + (2 / 2) = 2\n    tri(4) = 3\n    tri(3) = tri(2) + tri(1) + tri(4)\n           = 2 + 3 + 3 = 8 \n    You are given a non-negative integer number n, you have to a return a list of the \n    first n + 1 numbers of the Tribonacci sequence.\n    Examples:\n    tri(3) = [1, 3, 2, 8]\n    \"\"\"\n"
+      },
+      {
+        "content": "    a = [0, 3]\n    b = [0, 3]\n    c = [0, 3, 8]\n    for i in range(3, n + 1):\n        if i % 2 == 0:\n            a.append(a[-1] + a[-2] + a[-3])\n        else:\n            a.append(a[-1] + a[-2] + a[-3] + a[-1])\n        a.append(a[-1] + a[-2] + a[-3] + a[-1])\n        a.append(a[-1] + a[-2] + a[-3] + a[-1])\n        a.append(a[-1] + a[-2] + a[-3] + a[-1])\n    return a[:n + 1]\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    'Return the first n + 1 numbers of the Tribonacci sequence'\n    sequence = [0, 3, 1]\n    if n == 0:\n        return sequence\n    for i in range(3, n + 1):\n        sequence.append(sum(sequence[-2:]) + sequence[-1])\n    return sequence\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    'Generate the first n + 1 numbers of the Tribonacci sequence.'\n    if n == 0:\n        return []\n    elif n == 1:\n        return [3]\n    elif n == 2:\n        return [1, 3]\n    else:\n        sequence = [1, 3]\n        for i in range(3, n + 1):\n            if i % 2 == 0:\n                sequence.append(sequence[-1] + sequence[-2] + sequence[-3])\n            else:\n                sequence.append(sequence[-1] + sequence[-2] + sequence[-3])\n        return sequence\n",
+        "role": "assistant"
+      },
+      {
+        "content": "    \"Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in the last couple centuries. However, what people don't know is Tribonacci sequence.\\n    Tribonacci sequence is defined by the recurrence:\\n    tri(1) = 3\\n    tri(n) = 1 + n / 2, if n is even.\\n    tri(n) =  tri(n - 1) + tri(n - 2) + tri(n + 1), if n is odd.\\n    For example:\\n    tri(2) = 1 + (2 / 2) = 2\\n    tri(4) = 3\\n    tri(3) = tri(2) + tri(1) + tri(4)\\n           = 2 + 3 + 3 = 8 \\n    You are given a non-negative integer number n, you have to a return a list of the \\n    first n + 1 numbers of the Tribonacci sequence.\\n    Examples:\\n    tri(3) = [1, 3, 2, 8]\\n    \"\n    if n == 0:\n        return []\n    if n == 1 or n == 2:\n        return [3]\n    else:\n        sequence = [3]\n        for i in range(3, n + 1):\n            if i % 2 == 0:\n                sequence.append(sequence[-1] + sequence[-2] + sequence[-3])\n            else:\n                sequence.append(sequence[-1] + sequence[-2] + sequence[-3] + 1)\n        return sequence\n",
+        "role": "assistant"
+      },
+      {
+        "content": "def tri(n):\n    \"\"\"Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in the last couple centuries. However, what people don't know is Tribonacci sequence.\n    Tribonacci sequence is defined by the recurrence:\n    tri(1) = 3\n    tri(n) = 1 + n / 2, if n is even.\n    tri(n) =  tri(n - 1) + tri(n - 2) + tri(n + 1), if n is odd.\n    For example:\n    tri(2) = 1 + (2 / 2) = 2\n    tri(4) = 3\n    tri(3) = tri(2) + tri(1) + tri(4)\n           = 2 + 3 + 3 = 8 \n    You are given a non-negative integer number n, you have to a return a list of the \n    first n + 1 numbers of the Tribonacci sequence.\n    Examples:\n    tri(3) = [1, 3, 2, 8]\n    \"\"\"\n    if n == 0:\n        return []\n    elif n == 1:\n        return [3]\n    elif n == 2:\n        return [1, 3]\n    else:\n        sequence = [1, 3]\n        for i in range(3, n + 1):\n            if i % 2 == 0:\n                sequence.append(sequence[-1] + sequence[-2] + sequence[-3])\n            else:\n                sequence.append(sum(sequence[-1:-2:-1:-1]+[1]))\n        return sequence[:n+1]\n",
+        "role": "assistant"
+      }
+    ]
+  ],
+  "metadata": {
+    "example_level_metadata": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef monotonic(l: list):\n    \"\"\"Return True is list elements are monotonically increasing or decreasing.\n    >>> monotonic([1, 2, 4, 20])\n    True\n    >>> monotonic([1, 20, 4, 10])\n    False\n    >>> monotonic([4, 1, 0, -10])\n    True\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\ndef monotonic(l: list):\n    \"\"\"Return True is list elements are monotonically increasing or decreasing.\n    >>> monotonic([1, 2, 4, 20])\n    True\n    >>> monotonic([1, 20, 4, 10])\n    False\n    >>> monotonic([4, 1, 0, -10])\n    True\n    \"\"\"\n    n = len(l)\n    for i in range(n - 1):\n        if l[i] < l[i + 1]:\n            return False\n    return True\n```",
+  "usage": {
+    "input_tokens": 141,
+    "output_tokens": 126,
+    "input_cached_tokens": 52,
+    "total_tokens": 267
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 324430672,
+  "seconds": 1.093805874697864,
+  "generation_tokens_per_second": 138.81160568684564,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

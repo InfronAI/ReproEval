@@ -1,0 +1,32 @@
+{
+  "index": 118,
+  "input_sha256": "47c73fcf05f18b60952bd19726ba35ec510341f722c24499b1143206b50f32fe",
+  "input": {
+    "task_id": "HumanEval/118",
+    "prompt": "\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands between \n    two consonants from the right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    get_closest_vowel(\"yogurt\") ==> \"u\"\n    get_closest_vowel(\"FULL\") ==> \"U\"\n    get_closest_vowel(\"quick\") ==> \"\"\n    get_closest_vowel(\"ab\") ==> \"\"\n    \"\"\"\n",
+    "entry_point": "get_closest_vowel",
+    "canonical_solution": "    if len(word) < 3:\n        return \"\"\n\n    vowels = {\"a\", \"e\", \"i\", \"o\", \"u\", \"A\", \"E\", 'O', 'U', 'I'}\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels:\n            if (word[i+1] not in vowels) and (word[i-1] not in vowels):\n                return word[i]\n    return \"\"\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(\"yogurt\") == \"u\"\n    assert candidate(\"full\") == \"u\"\n    assert candidate(\"easy\") == \"\"\n    assert candidate(\"eAsy\") == \"\"\n    assert candidate(\"ali\") == \"\"\n    assert candidate(\"bad\") == \"a\"\n    assert candidate(\"most\") == \"o\"\n    assert candidate(\"ab\") == \"\"\n    assert candidate(\"ba\") == \"\"\n    assert candidate(\"quick\") == \"\"\n    assert candidate(\"anime\") == \"i\"\n    assert candidate(\"Asia\") == \"\"\n    assert candidate(\"Above\") == \"o\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef get_closest_vowel(word):\n    &#34;&#34;&#34;You are given a word. Your task is to find the closest vowel that stands between \n    two consonants from the right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn&#39;t count. Return empty string if you didn&#39;t\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    get_closest_vowel(&#34;yogurt&#34;) ==&gt; &#34;u&#34;\n    get_closest_vowel(&#34;FULL&#34;) ==&gt; &#34;U&#34;\n    get_closest_vowel(&#34;quick&#34;) ==&gt; &#34;&#34;\n    get_closest_vowel(&#34;ab&#34;) ==&gt; &#34;&#34;\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    vowels = &#39;aeiouAEIOU&#39;\n    vowel_index = 0\n    closest_vowel = &#39;&#39;\n    for i in range(len(word)):\n        if vowels.find(word[i]) != -1:\n            if i == len(word) - 1 and vowels.find(word[i]) != -1 or (i == len(word) - 2 and vowels.find(word[i]) != -1):\n                if i == len(word) - 1 and vowels.find(word[i]) != -1 or (i == len(word) - 2 and vowels.find(word[i]) != -1):\n                    closest_vowel = word[i]\n            else:\n                vowel_index = i\n                continue\n    return closest_vowel\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands between \n    two consonants from the right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    get_closest_vowel(\"yogurt\") ==> \"u\"\n    get_closest_vowel(\"FULL\") ==> \"U\"\n    get_closest_vowel(\"quick\") ==> \"\"\n    get_closest_vowel(\"ab\") ==> \"\"\n    \"\"\"\n"
+        },
+        {
+          "content": "    vowels = 'aeiouAEIOU'\n    vowel_index = 0\n    closest_vowel = ''\n    for i in range(len(word)):\n        if vowels.find(word[i]) != -1:\n            if i == len(word) - 1 and vowels.find(word[i]) != -1 or (i == len(word) - 2 and vowels.find(word[i]) != -1):\n                if i == len(word) - 1 and vowels.find(word[i]) != -1 or (i == len(word) - 2 and vowels.find(word[i]) != -1):\n                    closest_vowel = word[i]\n            else:\n                vowel_index = i\n                continue\n    return closest_vowel\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

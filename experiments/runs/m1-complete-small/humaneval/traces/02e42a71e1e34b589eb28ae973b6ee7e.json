@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef largest_prime_factor(n: int):\n    \"\"\"Return the largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> largest_prime_factor(13195)\n    29\n    >>> largest_prime_factor(2048)\n    2\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\ndef largest_prime_factor(n: int):\n    \"\"\"\n    Return the largest prime factor of n. Assume n > 1 and is not a prime.\n    \"\"\"\n    i = 2\n    while i * i <= n:\n        if n % i:\n            i += 1\n        else:\n            n //= i\n    return n\n```",
+  "usage": {
+    "input_tokens": 119,
+    "output_tokens": 75,
+    "input_cached_tokens": 52,
+    "total_tokens": 194
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 3492168275,
+  "seconds": 0.6953697078861296,
+  "generation_tokens_per_second": 144.47316682322258,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

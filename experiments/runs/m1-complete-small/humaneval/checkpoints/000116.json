@@ -1,0 +1,32 @@
+{
+  "index": 116,
+  "input_sha256": "d2ca1fa5f144af7a5d2a2f69f5f92ab246809c18f5e14f77f53b3da35416805f",
+  "input": {
+    "task_id": "HumanEval/116",
+    "prompt": "\ndef sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their binary representation in ascending order.\n    For similar number of ones, sort based on decimal value.\n\n    It must be implemented like this:\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\n    \"\"\"\n",
+    "entry_point": "sort_array",
+    "canonical_solution": "    return sorted(sorted(arr), key=lambda x: bin(x)[2:].count('1'))\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert True, \"This prints if this assert fails 1 (good for debugging!)\"\n    assert candidate([1,5,2,3,4]) == [1, 2, 4, 3, 5]\n    assert candidate([-2,-3,-4,-5,-6]) == [-4, -2, -6, -5, -3]\n    assert candidate([1,0,2,3,4]) == [0, 1, 2, 4, 3]\n    assert candidate([]) == []\n    assert candidate([2,5,77,4,5,3,5,7,2,3,4]) == [2, 2, 4, 4, 3, 3, 5, 5, 5, 7, 77]\n    assert candidate([3,6,44,12,32,5]) == [32, 3, 5, 6, 12, 44]\n    assert candidate([2,4,8,16,32]) == [2, 4, 8, 16, 32]\n    assert candidate([2,4,8,16,32]) == [2, 4, 8, 16, 32]\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True, \"This prints if this assert fails 2 (also good for debugging!)\"\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef sort_array(arr):\n    &#34;&#34;&#34;\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their binary representation in ascending order.\n    For similar number of ones, sort based on decimal value.\n\n    It must be implemented like this:\n    &gt;&gt;&gt; sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\n    &gt;&gt;&gt; sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\n    &gt;&gt;&gt; sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;\\n    Sorts an array of non-negative integers according to number of ones in their binary representation \\n    in ascending order. For similar number of ones, sorts based on decimal value.\\n\\n    It must be implemented like this:\\n    &gt;&gt;&gt; sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\\n    &gt;&gt;&gt; sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\\n    &gt;&gt;&gt; sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\\n    &#39;\n    def binary_sort(arr):\n        ones_count = [0] * len(arr)\n        for i in range(len(arr)):\n            ones_count[arr[i]] += 1\n        sorted_arr = arr[:]\n        for i in range(len(arr)):\n            if ones_count[arr[i]] &gt; ones_count[sorted_arr[i]]:\n                sorted_arr[i] = arr[i]\n        return sorted_arr\n    return binary_sort(arr)\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their binary representation in ascending order.\n    For similar number of ones, sort based on decimal value.\n\n    It must be implemented like this:\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\n    \"\"\"\n"
+        },
+        {
+          "content": "    '\\n    Sorts an array of non-negative integers according to number of ones in their binary representation \\n    in ascending order. For similar number of ones, sorts based on decimal value.\\n\\n    It must be implemented like this:\\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\\n    '\n    def binary_sort(arr):\n        ones_count = [0] * len(arr)\n        for i in range(len(arr)):\n            ones_count[arr[i]] += 1\n        sorted_arr = arr[:]\n        for i in range(len(arr)):\n            if ones_count[arr[i]] > ones_count[sorted_arr[i]]:\n                sorted_arr[i] = arr[i]\n        return sorted_arr\n    return binary_sort(arr)\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

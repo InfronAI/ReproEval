@@ -1,0 +1,32 @@
+{
+  "index": 24,
+  "input_sha256": "65f4765ac440d36f0d48dc4c9b92ea22991005e2d8062a09ca8474bc20d8b059",
+  "input": {
+    "task_id": "HumanEval/24",
+    "prompt": "\n\ndef largest_divisor(n: int) -> int:\n    \"\"\" For a given number n, find the largest number that divides n evenly, smaller than n\n    >>> largest_divisor(15)\n    5\n    \"\"\"\n",
+    "entry_point": "largest_divisor",
+    "canonical_solution": "    for i in reversed(range(n)):\n        if n % i == 0:\n            return i\n",
+    "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate(3) == 1\n    assert candidate(7) == 1\n    assert candidate(10) == 5\n    assert candidate(100) == 50\n    assert candidate(49) == 7\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef largest_divisor(n: int) -&gt; int:\n    &#34;&#34;&#34; For a given number n, find the largest number that divides n evenly, smaller than n\n    &gt;&gt;&gt; largest_divisor(15)\n    5\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39; For a given number n, find the largest number that divides n evenly, smaller than n\\n    &gt;&gt;&gt; largest_divisor(15)\\n    5\\n    &#39;\n    for i in range(2, n):\n        if n % i == 0:\n            return i\n    return n\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef largest_divisor(n: int) -> int:\n    \"\"\" For a given number n, find the largest number that divides n evenly, smaller than n\n    >>> largest_divisor(15)\n    5\n    \"\"\"\n"
+        },
+        {
+          "content": "    ' For a given number n, find the largest number that divides n evenly, smaller than n\\n    >>> largest_divisor(15)\\n    5\\n    '\n    for i in range(2, n):\n        if n % i == 0:\n            return i\n    return n\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

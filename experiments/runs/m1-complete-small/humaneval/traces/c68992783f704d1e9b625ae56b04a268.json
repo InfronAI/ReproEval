@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef starts_one_ends(n):\n    \"\"\"\n    Given a positive integer n, return the count of the numbers of n-digit\n    positive integers that start or end with 1.\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\ndef starts_one_ends(n):\n    \"\"\"\n    Given a positive integer n, return the count of the numbers of n-digit\n    positive integers that start or end with 1.\n\n    Parameters:\n    n (int): A positive integer representing the number of digits in the numbers.\n\n    Returns:\n    int: The count of the numbers of n-digit positive integers that start or end with 1.\n    \"\"\"\n    # Initialize the count of valid numbers\n    count = 0\n\n    # Iterate through all possible n-digit numbers\n    for i in range(n):\n        # Check if the number starts with 1 or ends with 1\n        if i == 0 or i == n - 1:\n            # Check if the number is valid (1-9)\n            if 0 < int(str(i)[0]) < 10 and 0 < int(str(n - i - 1)[0]) < 10:\n                count += 1\n\n    return count\n```",
+  "usage": {
+    "input_tokens": 94,
+    "output_tokens": 207,
+    "input_cached_tokens": 52,
+    "total_tokens": 301
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 1165322410,
+  "seconds": 1.7655581249855459,
+  "generation_tokens_per_second": 129.5595075596558,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

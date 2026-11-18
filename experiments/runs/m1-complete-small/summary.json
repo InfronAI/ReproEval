@@ -1,0 +1,22 @@
+[
+  {
+    "evaluation": "gpqa",
+    "status": "completed",
+    "examples": 198,
+    "metric": "score",
+    "score": 0.08585858585858586,
+    "generated_tokens": 119919,
+    "inference_seconds": 1100.294,
+    "token_limit_hits": 84
+  },
+  {
+    "evaluation": "humaneval",
+    "status": "completed",
+    "examples": 164,
+    "metric": "score",
+    "score": 0.23780487804878048,
+    "generated_tokens": 39793,
+    "inference_seconds": 331.545,
+    "token_limit_hits": 7
+  }
+]

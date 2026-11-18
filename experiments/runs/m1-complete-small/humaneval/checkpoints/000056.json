@@ -1,0 +1,32 @@
+{
+  "index": 56,
+  "input_sha256": "c3b90808231740c203efef71e83f0278af472a2be9192dc1c0869cfe257edc6d",
+  "input": {
+    "task_id": "HumanEval/56",
+    "prompt": "\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n    return True if every opening bracket has a corresponding closing bracket.\n\n    >>> correct_bracketing(\"<\")\n    False\n    >>> correct_bracketing(\"<>\")\n    True\n    >>> correct_bracketing(\"<<><>>\")\n    True\n    >>> correct_bracketing(\"><<>\")\n    False\n    \"\"\"\n",
+    "entry_point": "correct_bracketing",
+    "canonical_solution": "    depth = 0\n    for b in brackets:\n        if b == \"<\":\n            depth += 1\n        else:\n            depth -= 1\n        if depth < 0:\n            return False\n    return depth == 0\n",
+    "test": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate(\"<>\")\n    assert candidate(\"<<><>>\")\n    assert candidate(\"<><><<><>><>\")\n    assert candidate(\"<><><<<><><>><>><<><><<>>>\")\n    assert not candidate(\"<<<><>>>>\")\n    assert not candidate(\"><<>\")\n    assert not candidate(\"<\")\n    assert not candidate(\"<<<<\")\n    assert not candidate(\">\")\n    assert not candidate(\"<<>\")\n    assert not candidate(\"<><><<><>><>><<>\")\n    assert not candidate(\"<><><<><>><>>><>\")\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef correct_bracketing(brackets: str):\n    &#34;&#34;&#34; brackets is a string of &#34;&lt;&#34; and &#34;&gt;&#34;.\n    return True if every opening bracket has a corresponding closing bracket.\n\n    &gt;&gt;&gt; correct_bracketing(&#34;&lt;&#34;)\n    False\n    &gt;&gt;&gt; correct_bracketing(&#34;&lt;&gt;&#34;)\n    True\n    &gt;&gt;&gt; correct_bracketing(&#34;&lt;&lt;&gt;&lt;&gt;&gt;&#34;)\n    True\n    &gt;&gt;&gt; correct_bracketing(&#34;&gt;&lt;&lt;&gt;&#34;)\n    False\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39; brackets is a string of &#34;&lt;&#34; and &#34;&gt;&#34;.\\n    return True if every opening bracket has a corresponding closing bracket.\\n\\n    &gt;&gt;&gt; correct_bracketing(&#34;&lt;&#34;)\\n    False\\n    &gt;&gt;&gt; correct_bracketing(&#34;&lt;&gt;&#34;)\\n    True\\n    &gt;&gt;&gt; correct_bracketing(&#34;&lt;&lt;&gt;&lt;&gt;&gt;&#34;)\\n    True\\n    &gt;&gt;&gt; correct_bracketing(&#34;&gt;&lt;&lt;&gt;&#34;)\\n    False\\n    &#39;\n    stack = []\n    for bracket in brackets:\n        if bracket == &#39;&lt;&#39;:\n            stack.append(bracket)\n        else:\n            if not stack:\n                return False\n            last_opening = stack.pop()\n            if last_opening != bracket:\n                return False\n    return True\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n    return True if every opening bracket has a corresponding closing bracket.\n\n    >>> correct_bracketing(\"<\")\n    False\n    >>> correct_bracketing(\"<>\")\n    True\n    >>> correct_bracketing(\"<<><>>\")\n    True\n    >>> correct_bracketing(\"><<>\")\n    False\n    \"\"\"\n"
+        },
+        {
+          "content": "    ' brackets is a string of \"<\" and \">\".\\n    return True if every opening bracket has a corresponding closing bracket.\\n\\n    >>> correct_bracketing(\"<\")\\n    False\\n    >>> correct_bracketing(\"<>\")\\n    True\\n    >>> correct_bracketing(\"<<><>>\")\\n    True\\n    >>> correct_bracketing(\"><<>\")\\n    False\\n    '\n    stack = []\n    for bracket in brackets:\n        if bracket == '<':\n            stack.append(bracket)\n        else:\n            if not stack:\n                return False\n            last_opening = stack.pop()\n            if last_opening != bracket:\n                return False\n    return True\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

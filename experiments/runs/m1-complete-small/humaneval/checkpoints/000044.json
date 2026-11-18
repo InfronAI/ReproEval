@@ -1,0 +1,32 @@
+{
+  "index": 44,
+  "input_sha256": "6061d3cbdcfaee3d014078646b2ad9f3b4bb7d7d0536a521593f831fb8ce83f7",
+  "input": {
+    "task_id": "HumanEval/44",
+    "prompt": "\n\ndef change_base(x: int, base: int):\n    \"\"\"Change numerical base of input number x to base.\n    return string representation after the conversion.\n    base numbers are less than 10.\n    >>> change_base(8, 3)\n    '22'\n    >>> change_base(8, 2)\n    '1000'\n    >>> change_base(7, 2)\n    '111'\n    \"\"\"\n",
+    "entry_point": "change_base",
+    "canonical_solution": "    ret = \"\"\n    while x > 0:\n        ret = str(x % base) + ret\n        x //= base\n    return ret\n",
+    "test": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate(8, 3) == \"22\"\n    assert candidate(9, 3) == \"100\"\n    assert candidate(234, 2) == \"11101010\"\n    assert candidate(16, 2) == \"10000\"\n    assert candidate(8, 2) == \"1000\"\n    assert candidate(7, 2) == \"111\"\n    for x in range(2, 8):\n        assert candidate(x, x + 1) == str(x)\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef change_base(x: int, base: int):\n    &#34;&#34;&#34;Change numerical base of input number x to base.\n    return string representation after the conversion.\n    base numbers are less than 10.\n    &gt;&gt;&gt; change_base(8, 3)\n    &#39;22&#39;\n    &gt;&gt;&gt; change_base(8, 2)\n    &#39;1000&#39;\n    &gt;&gt;&gt; change_base(7, 2)\n    &#39;111&#39;\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#34;Change the base of the input number x to base.\\n    return string representation after the conversion.\\n    base numbers are less than 10.\\n    &gt;&gt;&gt; change_base(8, 3)\\n    &#39;22&#39;\\n    &gt;&gt;&gt; change_base(8, 2)\\n    &#39;1000&#39;\\n    &gt;&gt;&gt; change_base(7, 2)\\n    &#39;111&#39;\\n    &#34;\n    if x &lt; 0:\n        raise ValueError(&#39;Input number x must be a positive integer&#39;)\n    if base &lt; 2 or base &gt; 9:\n        raise ValueError(&#39;Base must be a positive integer less than 10&#39;)\n    return str(int(x, base))\n\nfrom typing import int, str\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef change_base(x: int, base: int):\n    \"\"\"Change numerical base of input number x to base.\n    return string representation after the conversion.\n    base numbers are less than 10.\n    >>> change_base(8, 3)\n    '22'\n    >>> change_base(8, 2)\n    '1000'\n    >>> change_base(7, 2)\n    '111'\n    \"\"\"\n"
+        },
+        {
+          "content": "    \"Change the base of the input number x to base.\\n    return string representation after the conversion.\\n    base numbers are less than 10.\\n    >>> change_base(8, 3)\\n    '22'\\n    >>> change_base(8, 2)\\n    '1000'\\n    >>> change_base(7, 2)\\n    '111'\\n    \"\n    if x < 0:\n        raise ValueError('Input number x must be a positive integer')\n    if base < 2 or base > 9:\n        raise ValueError('Base must be a positive integer less than 10')\n    return str(int(x, base))\n\nfrom typing import int, str\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

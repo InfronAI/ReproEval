@@ -1,0 +1,20 @@
+{
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.11.16",
+  "chip": "Apple M1 Pro",
+  "memory_bytes": 17179869184,
+  "wheel_import_check": "Passed from /private/tmp with the built wheel; all evaluation names listed without credentials",
+  "demo": {
+    "source": "demo.cast",
+    "duration_seconds": 14.1885,
+    "fps": 8,
+    "dimensions": [
+      1280,
+      800
+    ],
+    "recorded_command": "/Users/apple/Projects/simple-evals/.venv/bin/python -m simple_evals --eval mmlu --examples 2 --offline --max-tokens 512 --output experiments/runs/demo",
+    "note": "Video/GIF are rendered from actual timestamped PTY output, without fabricated results."
+  },
+  "note": "Current tests are recorded separately; CI workflow is configured but has not been run on GitHub."
+}

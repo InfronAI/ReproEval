@@ -1,0 +1,32 @@
+{
+  "index": 25,
+  "input_sha256": "e35b593605297954d5bc41ca4b2a8feb5b0eb49c65aa40271ee4049659c881da",
+  "input": {
+    "task_id": "HumanEval/25",
+    "prompt": "from typing import List\n\n\ndef factorize(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> factorize(8)\n    [2, 2, 2]\n    >>> factorize(25)\n    [5, 5]\n    >>> factorize(70)\n    [2, 5, 7]\n    \"\"\"\n",
+    "entry_point": "factorize",
+    "canonical_solution": "    import math\n    fact = []\n    i = 2\n    while i <= int(math.sqrt(n) + 1):\n        if n % i == 0:\n            fact.append(i)\n            n //= i\n        else:\n            i += 1\n\n    if n > 1:\n        fact.append(n)\n    return fact\n",
+    "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate(2) == [2]\n    assert candidate(4) == [2, 2]\n    assert candidate(8) == [2, 2, 2]\n    assert candidate(3 * 19) == [3, 19]\n    assert candidate(3 * 19 * 3 * 19) == [3, 3, 19, 19]\n    assert candidate(3 * 19 * 3 * 19 * 3 * 19) == [3, 3, 3, 19, 19, 19]\n    assert candidate(3 * 19 * 19 * 19) == [3, 19, 19, 19]\n    assert candidate(3 * 2 * 3) == [2, 3, 3]\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 1.0,
+      "metrics": {
+        "pass@1": 1.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef factorize(n: int) -&gt; List[int]:\n    &#34;&#34;&#34; Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    &gt;&gt;&gt; factorize(8)\n    [2, 2, 2]\n    &gt;&gt;&gt; factorize(25)\n    [5, 5]\n    &gt;&gt;&gt; factorize(70)\n    [2, 5, 7]\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39; Return list of prime factors of given integer in the order from smallest to largest.\\n    Each of the factors should be listed number of times corresponding to how many times it appears in factorization.\\n    Input number should be equal to the product of all factors\\n    &gt;&gt;&gt; factorize(8)\\n    [2, 2, 2]\\n    &gt;&gt;&gt; factorize(25)\\n    [5, 5]\\n    &gt;&gt;&gt; factorize(70)\\n    [2, 5, 7]\\n    &#39;\n    prime_factors = []\n    i = 2\n    while i * i &lt;= n:\n        while n % i == 0:\n            prime_factors.append(i)\n            n //= i\n        i += 1\n    if n &gt; 1:\n        prime_factors.append(n)\n    return prime_factors\n\nfrom typing import List\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [1]</p>\n<p>Score: 1.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef factorize(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> factorize(8)\n    [2, 2, 2]\n    >>> factorize(25)\n    [5, 5]\n    >>> factorize(70)\n    [2, 5, 7]\n    \"\"\"\n"
+        },
+        {
+          "content": "    ' Return list of prime factors of given integer in the order from smallest to largest.\\n    Each of the factors should be listed number of times corresponding to how many times it appears in factorization.\\n    Input number should be equal to the product of all factors\\n    >>> factorize(8)\\n    [2, 2, 2]\\n    >>> factorize(25)\\n    [5, 5]\\n    >>> factorize(70)\\n    [2, 5, 7]\\n    '\n    prime_factors = []\n    i = 2\n    while i * i <= n:\n        while n % i == 0:\n            prime_factors.append(i)\n            n //= i\n        i += 1\n    if n > 1:\n        prime_factors.append(n)\n    return prime_factors\n\nfrom typing import List\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

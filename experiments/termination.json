@@ -1,0 +1,38 @@
+{
+  "status": "ended_early_by_user",
+  "ended_at": "2026-11-17T15:31:15.135655+00:00",
+  "reason": "User requested early termination of the testing task",
+  "automatic_continuation": false,
+  "plan": "experiments/plans/full-reference.json",
+  "planned_stages": 14,
+  "fully_completed_plan_stages": 0,
+  "completed_evaluations_in_first_stage": [
+    "mmlu",
+    "math",
+    "gpqa",
+    "mgsm",
+    "drop",
+    "humaneval",
+    "simpleqa",
+    "browsecomp"
+  ],
+  "partial_evaluations": [
+    {
+      "evaluation": "healthbench",
+      "saved_checkpoints": 389,
+      "state": "failed",
+      "error": "Grader returned invalid output after 3 attempts"
+    },
+    {
+      "evaluation": "healthbench_hard",
+      "saved_checkpoints": 123,
+      "state": "stopped_early",
+      "error": null
+    }
+  ],
+  "unstarted_evaluations_in_first_stage": [
+    "healthbench_consensus",
+    "healthbench_meta"
+  ],
+  "all_results_and_checkpoints_preserved": true
+}

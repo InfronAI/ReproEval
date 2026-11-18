@@ -1,0 +1,32 @@
+{
+  "index": 143,
+  "input_sha256": "e3ca5f934ea45b5a28fb473ced5e70e66ecce6e2a47c44f64368488ee07c90c6",
+  "input": {
+    "task_id": "HumanEval/143",
+    "prompt": "\ndef words_in_sentence(sentence):\n    \"\"\"\n    You are given a string representing a sentence,\n    the sentence contains some words separated by a space,\n    and you have to return a string that contains the words from the original sentence,\n    whose lengths are prime numbers,\n    the order of the words in the new string should be the same as the original one.\n\n    Example 1:\n        Input: sentence = \"This is a test\"\n        Output: \"is\"\n\n    Example 2:\n        Input: sentence = \"lets go for swimming\"\n        Output: \"go for\"\n\n    Constraints:\n        * 1 <= len(sentence) <= 100\n        * sentence contains only letters\n    \"\"\"\n",
+    "entry_point": "words_in_sentence",
+    "canonical_solution": "    new_lst = []\n    for word in sentence.split():\n        flg = 0\n        if len(word) == 1:\n            flg = 1\n        for i in range(2, len(word)):\n            if len(word)%i == 0:\n                flg = 1\n        if flg == 0 or len(word) == 2:\n            new_lst.append(word)\n    return \" \".join(new_lst)\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(\"This is a test\") == \"is\"\n    assert candidate(\"lets go for swimming\") == \"go for\"\n    assert candidate(\"there is no place available here\") == \"there is no place\"\n    assert candidate(\"Hi I am Hussein\") == \"Hi am Hussein\"\n    assert candidate(\"go for it\") == \"go for it\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate(\"here\") == \"\"\n    assert candidate(\"here is\") == \"is\"\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 1.0,
+      "metrics": {
+        "pass@1": 1.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef words_in_sentence(sentence):\n    &#34;&#34;&#34;\n    You are given a string representing a sentence,\n    the sentence contains some words separated by a space,\n    and you have to return a string that contains the words from the original sentence,\n    whose lengths are prime numbers,\n    the order of the words in the new string should be the same as the original one.\n\n    Example 1:\n        Input: sentence = &#34;This is a test&#34;\n        Output: &#34;is&#34;\n\n    Example 2:\n        Input: sentence = &#34;lets go for swimming&#34;\n        Output: &#34;go for&#34;\n\n    Constraints:\n        * 1 &lt;= len(sentence) &lt;= 100\n        * sentence contains only letters\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;\\n    You are given a string representing a sentence,\\n    the sentence contains some words separated by a space,\\n    and you have to return a string that contains the words from the original sentence,\\n    whose lengths are prime numbers,\\n    the order of the words in the new string should be the same as the original one.\\n\\n    Example 1:\\n        Input: sentence = &#34;This is a test&#34;\\n        Output: &#34;is&#34;\\n\\n    Example 2:\\n        Input: sentence = &#34;lets go for swimming&#34;\\n        Output: &#34;go for&#34;\\n\\n    Constraints:\\n        * 1 &lt;= len(sentence) &lt;= 100\\n        * sentence contains only letters\\n    &#39;\n    words = sentence.split(&#39; &#39;)\n    prime_words = []\n    for word in words:\n        if is_prime(len(word)):\n            prime_words.append(word)\n    return &#39; &#39;.join(prime_words)\n\ndef is_prime(n):\n    &#34;&#34;&#34;\n    Check if a number is prime or not.\n    &#34;&#34;&#34;\n    if n &lt;= 1:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [1]</p>\n<p>Score: 1.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef words_in_sentence(sentence):\n    \"\"\"\n    You are given a string representing a sentence,\n    the sentence contains some words separated by a space,\n    and you have to return a string that contains the words from the original sentence,\n    whose lengths are prime numbers,\n    the order of the words in the new string should be the same as the original one.\n\n    Example 1:\n        Input: sentence = \"This is a test\"\n        Output: \"is\"\n\n    Example 2:\n        Input: sentence = \"lets go for swimming\"\n        Output: \"go for\"\n\n    Constraints:\n        * 1 <= len(sentence) <= 100\n        * sentence contains only letters\n    \"\"\"\n"
+        },
+        {
+          "content": "    '\\n    You are given a string representing a sentence,\\n    the sentence contains some words separated by a space,\\n    and you have to return a string that contains the words from the original sentence,\\n    whose lengths are prime numbers,\\n    the order of the words in the new string should be the same as the original one.\\n\\n    Example 1:\\n        Input: sentence = \"This is a test\"\\n        Output: \"is\"\\n\\n    Example 2:\\n        Input: sentence = \"lets go for swimming\"\\n        Output: \"go for\"\\n\\n    Constraints:\\n        * 1 <= len(sentence) <= 100\\n        * sentence contains only letters\\n    '\n    words = sentence.split(' ')\n    prime_words = []\n    for word in words:\n        if is_prime(len(word)):\n            prime_words.append(word)\n    return ' '.join(prime_words)\n\ndef is_prime(n):\n    \"\"\"\n    Check if a number is prime or not.\n    \"\"\"\n    if n <= 1:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

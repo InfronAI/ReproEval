@@ -1,0 +1,35 @@
+{
+  "score": 0.0,
+  "metrics": {
+    "is_correct": 0.0,
+    "is_correct:std": 0.0,
+    "is_incorrect": 0.0,
+    "is_incorrect:std": 0.0,
+    "is_not_attempted": 1.0,
+    "is_not_attempted:std": 0.0,
+    "score:std": 0.0,
+    "is_given_attempted": 0.0,
+    "accuracy_given_attempted": 0,
+    "f1": 0
+  },
+  "htmls": [
+    "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>In which city of Pakistan was Muhammad Rafiq Tarar, a Pakistani politician, born?</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>Muhammad Rafiq Tarar, a prominent Pakistani politician, was born in the city of Lahore, which is the capital city of the Punjab state in the northwestern region of Pakistan. Lahore was known as the &#34;Capital of Lahore&#34; due to its historical importance and the proximity of the city to the border with India. Lahore was a significant city during the British Raj period and served as a major trading port and a hub for the British colonial administration. Lahore was a part of the British Raj and was an important commercial and administrative center. Lahore was the birthplace of many prominent personalities in the history of Pakistan.</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: Mandi Bahauddin, Punjab</p>\n<p>Extracted Answer: Muhammad Rafiq Tarar, a prominent Pakistani politician, was born in the city of Lahore, which is the capital city of the Punjab state in the northwestern region of Pakistan. Lahore was known as the &#34;Capital of Lahore&#34; due to its historical importance and the proximity of the city to the border with India. Lahore was a significant city during the British Raj period and served as a major trading port and a hub for the British colonial administration. Lahore was a part of the British Raj and was an important commercial and administrative center. Lahore was the birthplace of many prominent personalities in the history of Pakistan.</p>\n<p>Score: False</p>"
+  ],
+  "convos": [
+    [
+      {
+        "role": "user",
+        "content": "In which city of Pakistan was Muhammad Rafiq Tarar, a Pakistani politician, born?"
+      },
+      {
+        "content": "Muhammad Rafiq Tarar, a prominent Pakistani politician, was born in the city of Lahore, which is the capital city of the Punjab state in the northwestern region of Pakistan. Lahore was known as the \"Capital of Lahore\" due to its historical importance and the proximity of the city to the border with India. Lahore was a significant city during the British Raj period and served as a major trading port and a hub for the British colonial administration. Lahore was a part of the British Raj and was an important commercial and administrative center. Lahore was the birthplace of many prominent personalities in the history of Pakistan.",
+        "role": "assistant"
+      }
+    ]
+  ],
+  "metadata": {
+    "example_level_metadata": [
+      null
+    ]
+  }
+}

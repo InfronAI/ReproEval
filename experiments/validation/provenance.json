@@ -1,0 +1,18 @@
+{
+  "verified_completed_runs": [
+    "experiments/comparison/m1-models/mlx-community-Qwen2.5-0.5B-Instruct-4bit-c4020aa3",
+    "experiments/comparison/m1-models/mlx-community-Qwen2.5-3B-Instruct-4bit-c55dcb1b",
+    "experiments/runs/demo",
+    "experiments/runs/m1-browsing",
+    "experiments/runs/m1-calibration-100-validity",
+    "experiments/runs/m1-complete-small",
+    "experiments/runs/m1-multilingual",
+    "experiments/runs/m1-physician-1",
+    "experiments/runs/m1-physician-2",
+    "experiments/runs/m1-physician-3",
+    "experiments/runs/m1-reference-2",
+    "experiments/runs/m1-reference-3",
+    "experiments/runs/m1-verified-suite"
+  ],
+  "source_snapshot_hashes": "all match"
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "evaluation": "mmlu",
+    "status": "completed",
+    "examples": 2,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 455,
+    "inference_seconds": 5.354,
+    "token_limit_hits": 0
+  }
+]

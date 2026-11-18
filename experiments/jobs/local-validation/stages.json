@@ -1,0 +1,73 @@
+[
+  {
+    "name": "all-original-evaluators",
+    "command": [
+      "/Users/apple/Projects/simple-evals/.venv/bin/python",
+      "-m",
+      "simple_evals",
+      "--eval",
+      "all",
+      "--examples",
+      "1",
+      "--max-tokens",
+      "768",
+      "--grader-max-tokens",
+      "768",
+      "--output",
+      "experiments/runs/m1-verified-suite",
+      "--model-revision",
+      "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+      "--grader-revision",
+      "4f83f8f146fdf28b512a06562b671d7af4fab457"
+    ],
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "name": "complete-gpqa-and-humaneval",
+    "command": [
+      "/Users/apple/Projects/simple-evals/.venv/bin/python",
+      "-m",
+      "simple_evals",
+      "--eval",
+      "gpqa,humaneval",
+      "--full",
+      "--n-repeats",
+      "1",
+      "--samples-per-task",
+      "1",
+      "--max-tokens",
+      "768",
+      "--output",
+      "experiments/runs/m1-complete-small",
+      "--model-revision",
+      "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+      "--grader-revision",
+      "4f83f8f146fdf28b512a06562b671d7af4fab457"
+    ],
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "name": "multilingual-smoke",
+    "command": [
+      "/Users/apple/Projects/simple-evals/.venv/bin/python",
+      "-m",
+      "simple_evals",
+      "--eval",
+      "mmlu,mmlu_AR-XY,mmlu_BN-BD,mmlu_DE-DE,mmlu_ES-LA,mmlu_FR-FR,mmlu_HI-IN,mmlu_ID-ID,mmlu_IT-IT,mmlu_JA-JP,mmlu_KO-KR,mmlu_PT-BR,mmlu_ZH-CN,mmlu_SW-KE,mmlu_YO-NG",
+      "--examples",
+      "1",
+      "--max-tokens",
+      "768",
+      "--output",
+      "experiments/runs/m1-multilingual",
+      "--model-revision",
+      "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+      "--grader-revision",
+      "4f83f8f146fdf28b512a06562b671d7af4fab457"
+    ],
+    "status": "completed",
+    "returncode": 0
+  }
+]

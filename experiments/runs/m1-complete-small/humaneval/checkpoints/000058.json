@@ -1,0 +1,32 @@
+{
+  "index": 58,
+  "input_sha256": "dd035be2c7f44a7419e6d859023990ca0a8dc2f4a5e2022bc20a7923658b04c3",
+  "input": {
+    "task_id": "HumanEval/58",
+    "prompt": "\n\ndef common(l1: list, l2: list):\n    \"\"\"Return sorted unique common elements for two lists.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    >>> common([5, 3, 2, 8], [3, 2])\n    [2, 3]\n\n    \"\"\"\n",
+    "entry_point": "common",
+    "canonical_solution": "    ret = set()\n    for e1 in l1:\n        for e2 in l2:\n            if e1 == e2:\n                ret.add(e1)\n    return sorted(list(ret))\n",
+    "test": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121]) == [1, 5, 653]\n    assert candidate([5, 3, 2, 8], [3, 2]) == [2, 3]\n    assert candidate([4, 3, 2, 8], [3, 2, 4]) == [2, 3, 4]\n    assert candidate([4, 3, 2, 8], []) == []\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 1.0,
+      "metrics": {
+        "pass@1": 1.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef common(l1: list, l2: list):\n    &#34;&#34;&#34;Return sorted unique common elements for two lists.\n    &gt;&gt;&gt; common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    &gt;&gt;&gt; common([5, 3, 2, 8], [3, 2])\n    [2, 3]\n\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;Return sorted unique common elements for two lists.&#39;\n    unique_elements = set(l1).intersection(set(l2))\n    sorted_unique_elements = sorted(list(unique_elements))\n    return sorted_unique_elements\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [1]</p>\n<p>Score: 1.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef common(l1: list, l2: list):\n    \"\"\"Return sorted unique common elements for two lists.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    >>> common([5, 3, 2, 8], [3, 2])\n    [2, 3]\n\n    \"\"\"\n"
+        },
+        {
+          "content": "    'Return sorted unique common elements for two lists.'\n    unique_elements = set(l1).intersection(set(l2))\n    sorted_unique_elements = sorted(list(unique_elements))\n    return sorted_unique_elements\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

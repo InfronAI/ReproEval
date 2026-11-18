@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\nfrom typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n    # Initialize variables\n    i = 0\n    j = 1\n    min_distance = float('inf')\n    min_index = -1\n\n    while i < j:\n        # Calculate the distance between current pair of numbers and update the minimum distance and index\n        distance = abs(numbers[i] - numbers[j])\n        if distance < min_distance:\n            min_distance = distance\n            min_index = i\n        i += 1\n        j += 1\n\n    # Check if the minimum distance is less than or equal to the threshold\n    if min_distance <= threshold:\n        return True\n    else:\n        return False\n```",
+  "usage": {
+    "input_tokens": 174,
+    "output_tokens": 255,
+    "input_cached_tokens": 24,
+    "total_tokens": 429
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 2395017330,
+  "seconds": 2.0380082498304546,
+  "generation_tokens_per_second": 140.7098947223709,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

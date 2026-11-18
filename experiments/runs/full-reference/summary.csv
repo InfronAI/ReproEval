@@ -1,0 +1,13 @@
+evaluation,status,examples,metric,score,generated_tokens,inference_seconds,token_limit_hits
+mmlu,completed,14042,score,0.30957128614157525,5231611,36620.603,368
+math,completed,5000,score,0.0216,4341284,30495.972,1036
+gpqa,completed,1980,score,0.14191919191919192,1884161,10542.813,455
+mgsm,completed,2750,score,0.029818181818181817,2600177,13868.089,1010
+drop,completed,9536,f1_score,20.690936451342285,1048786,9988.753,298
+humaneval,completed,164,score,0.23658536585365855,246997,1747.22,34
+simpleqa,completed,4326,score,0.0034674063800277394,815058,7131.862,134
+browsecomp,completed,1266,score,0.1334913112164297,563247,5471.429,112
+healthbench,failed,389,score,,404705,10991.461,37
+healthbench_hard,pending,123,score,,140291,6847.033,15
+healthbench_consensus,pending,0,score,,0,0,0
+healthbench_meta,pending,0,score,,0,0,0

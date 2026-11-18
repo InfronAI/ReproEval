@@ -1,0 +1,32 @@
+{
+  "index": 45,
+  "input_sha256": "cff340672722cc4dc31c8ea88203a813f802e2ecaefcf46b8054765872b35dde",
+  "input": {
+    "task_id": "HumanEval/45",
+    "prompt": "\n\ndef triangle_area(a, h):\n    \"\"\"Given length of a side and high return area for a triangle.\n    >>> triangle_area(5, 3)\n    7.5\n    \"\"\"\n",
+    "entry_point": "triangle_area",
+    "canonical_solution": "    return a * h / 2.0\n",
+    "test": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate(5, 3) == 7.5\n    assert candidate(2, 2) == 2.0\n    assert candidate(10, 8) == 40.0\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 1.0,
+      "metrics": {
+        "pass@1": 1.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef triangle_area(a, h):\n    &#34;&#34;&#34;Given length of a side and high return area for a triangle.\n    &gt;&gt;&gt; triangle_area(5, 3)\n    7.5\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;Given length of a side and high return area for a triangle.\\n    &gt;&gt;&gt; triangle_area(5, 3)\\n    7.5\\n    &#39;\n    return a * h / 2\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [1]</p>\n<p>Score: 1.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef triangle_area(a, h):\n    \"\"\"Given length of a side and high return area for a triangle.\n    >>> triangle_area(5, 3)\n    7.5\n    \"\"\"\n"
+        },
+        {
+          "content": "    'Given length of a side and high return area for a triangle.\\n    >>> triangle_area(5, 3)\\n    7.5\\n    '\n    return a * h / 2\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

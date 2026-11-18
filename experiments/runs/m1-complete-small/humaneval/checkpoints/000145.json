@@ -1,0 +1,32 @@
+{
+  "index": 145,
+  "input_sha256": "39decad270b4fa998459ff2ce7285d913d02e1e862cc23ddf1e01e58e5613a7b",
+  "input": {
+    "task_id": "HumanEval/145",
+    "prompt": "\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    >>> order_by_points([]) == []\n    \"\"\"\n",
+    "entry_point": "order_by_points",
+    "canonical_solution": "    def digits_sum(n):\n        neg = 1\n        if n < 0: n, neg = -1 * n, -1 \n        n = [int(i) for i in str(n)]\n        n[0] = n[0] * neg\n        return sum(n)\n    return sorted(nums, key=digits_sum)\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    assert candidate([1234,423,463,145,2,423,423,53,6,37,3457,3,56,0,46]) == [0, 2, 3, 6, 53, 423, 423, 423, 1234, 145, 37, 46, 56, 463, 3457]\n    assert candidate([]) == []\n    assert candidate([1, -11, -32, 43, 54, -98, 2, -3]) == [-3, -32, -98, -11, 1, 2, 43, 54]\n    assert candidate([1,2,3,4,5,6,7,8,9,10,11]) == [1, 10, 2, 11, 3, 4, 5, 6, 7, 8, 9]\n    assert candidate([0,6,6,-76,-21,23,4]) == [-76, -21, 0, 4, 23, 6, 6]\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True, \"This prints if this assert fails 2 (also good for debugging!)\"\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef order_by_points(nums):\n    &#34;&#34;&#34;\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    &gt;&gt;&gt; order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    &gt;&gt;&gt; order_by_points([]) == []\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;\\n    Write a function which sorts the given list of integers\\n    in ascending order according to the sum of their digits.\\n    Note: if there are several items with similar sum of their digits,\\n    order them based on their index in original list.\\n\\n    For example:\\n    &gt;&gt;&gt; order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\\n    &gt;&gt;&gt; order_by_points([]) == []\\n    &#39;\n    if not nums:\n        return []\n    digits = [str(num) for num in nums]\n    numbers = [num for num in nums]\n    digit_sum = []\n    for i in range(len(numbers)):\n        if len(digit_sum) &gt; 0:\n            digit_sum.append(int(digits[i]) + int(digit_sum[-1]) if digit_sum else int(digits[i]) + 0)\n    digit_sum.sort()\n    sorted_nums = []\n    for i in range(len(numbers)):\n        if len(digit_sum) &gt; 0:\n            sorted_nums.append(int(digits[i]) + int(digit_sum[-1]) if digit_sum else int(digits[i]) + 0)\n        else:\n            sorted_nums.append(int(digits[i]) + int(digit_sum[-1]) if digit_sum else int(digits[i]) + 0)\n    return sorted_nums\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    >>> order_by_points([]) == []\n    \"\"\"\n"
+        },
+        {
+          "content": "    '\\n    Write a function which sorts the given list of integers\\n    in ascending order according to the sum of their digits.\\n    Note: if there are several items with similar sum of their digits,\\n    order them based on their index in original list.\\n\\n    For example:\\n    >>> order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\\n    >>> order_by_points([]) == []\\n    '\n    if not nums:\n        return []\n    digits = [str(num) for num in nums]\n    numbers = [num for num in nums]\n    digit_sum = []\n    for i in range(len(numbers)):\n        if len(digit_sum) > 0:\n            digit_sum.append(int(digits[i]) + int(digit_sum[-1]) if digit_sum else int(digits[i]) + 0)\n    digit_sum.sort()\n    sorted_nums = []\n    for i in range(len(numbers)):\n        if len(digit_sum) > 0:\n            sorted_nums.append(int(digits[i]) + int(digit_sum[-1]) if digit_sum else int(digits[i]) + 0)\n        else:\n            sorted_nums.append(int(digits[i]) + int(digit_sum[-1]) if digit_sum else int(digits[i]) + 0)\n    return sorted_nums\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

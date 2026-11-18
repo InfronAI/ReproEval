@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-evals-local"
+version = "0.2.0"
+description = "ReproEval: reproducible language model benchmarking with local inference, automated grading, and traceable reports"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+  "numpy>=1.26,<3", "pandas>=2.2,<3", "scipy>=1.12,<2",
+  "jinja2>=3.1.4,<4", "requests>=2.32,<3", "tqdm>=4.66,<5",
+  "blobfile>=3,<4", "openai>=1.68,<3", "tabulate>=0.9,<1",
+]
+
+[project.optional-dependencies]
+mlx = ["mlx-lm>=0.31.3,<0.32; sys_platform == 'darwin' and platform_machine == 'arm64'"]
+anthropic = ["anthropic>=0.49,<1"]
+humaneval = ["human-eval==1.0.3"]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1", "build>=1.2,<2", "pillow>=11,<13", "pyte>=0.8,<1"]
+browse = ["ddgs>=9,<10", "beautifulsoup4>=4.12,<5"]
+analysis = ["jupyterlab>=4,<5", "matplotlib>=3.9,<4", "seaborn>=0.13,<1"]
+
+[project.scripts]
+simple-evals = "simple_evals.cli:main"
+
+[project.urls]
+Repository = "https://github.com/InfronAI/ReproEval"
+Documentation = "https://github.com/InfronAI/ReproEval#readme"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]

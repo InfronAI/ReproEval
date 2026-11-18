@@ -1,0 +1,32 @@
+{
+  "index": 26,
+  "input_sha256": "752e115fba45d7046da8e1b9d32a63d4bcb8fc00019a7e84df9506835011e406",
+  "input": {
+    "task_id": "HumanEval/26",
+    "prompt": "from typing import List\n\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    >>> remove_duplicates([1, 2, 3, 2, 4])\n    [1, 3, 4]\n    \"\"\"\n",
+    "entry_point": "remove_duplicates",
+    "canonical_solution": "    import collections\n    c = collections.Counter(numbers)\n    return [n for n in numbers if c[n] <= 1]\n",
+    "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == []\n    assert candidate([1, 2, 3, 4]) == [1, 2, 3, 4]\n    assert candidate([1, 2, 3, 2, 4, 3, 5]) == [1, 4, 5]\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef remove_duplicates(numbers: List[int]) -&gt; List[int]:\n    &#34;&#34;&#34; From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    &gt;&gt;&gt; remove_duplicates([1, 2, 3, 2, 4])\n    [1, 3, 4]\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39; From a list of integers, remove all elements that occur more than once.\\n    Keep order of elements left the same as in the input.\\n    &gt;&gt;&gt; remove_duplicates([1, 2, 3, 2, 4])\\n    [1, 3, 4]\\n    &#39;\n    i = 0\n    while i &lt; len(numbers):\n        if numbers[i] not in numbers[i + 1:]:\n            numbers.remove(numbers[i])\n        else:\n            i += 1\n    return numbers\n\nfrom typing import List\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    >>> remove_duplicates([1, 2, 3, 2, 4])\n    [1, 3, 4]\n    \"\"\"\n"
+        },
+        {
+          "content": "    ' From a list of integers, remove all elements that occur more than once.\\n    Keep order of elements left the same as in the input.\\n    >>> remove_duplicates([1, 2, 3, 2, 4])\\n    [1, 3, 4]\\n    '\n    i = 0\n    while i < len(numbers):\n        if numbers[i] not in numbers[i + 1:]:\n            numbers.remove(numbers[i])\n        else:\n            i += 1\n    return numbers\n\nfrom typing import List\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

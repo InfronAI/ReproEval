@@ -1,0 +1,12 @@
+[
+  {
+    "evaluation": "simpleqa_calibration",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 3244,
+    "inference_seconds": 88.379,
+    "token_limit_hits": 0
+  }
+]

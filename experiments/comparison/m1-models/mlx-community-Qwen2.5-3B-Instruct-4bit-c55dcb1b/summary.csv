@@ -1,0 +1,2 @@
+evaluation,status,examples,metric,score,generated_tokens,inference_seconds,token_limit_hits
+mmlu,completed,2,score,0.0,514,12.094,0

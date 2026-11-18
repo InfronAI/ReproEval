@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this ingeger is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    iscube(1) ==> True\n    iscube(2) ==> False\n    iscube(-1) ==> True\n    iscube(64) ==> True\n    iscube(0) ==> True\n    iscube(180) ==> False\n    '''\n"
+    }
+  ],
+  "response": "```python\ndef iscube(a):\n    # Check if a is a cube of any integer\n    for i in range(1, int(a**0.5) + 1):\n        if a == i**3:\n            return True\n    return False\n```\nThis function checks if a given integer is a cube of any integer by iterating through the range of possible cube roots until it finds one that is a perfect cube. If such a cube root is found, the function returns True; otherwise, it returns False.",
+  "usage": {
+    "input_tokens": 163,
+    "output_tokens": 109,
+    "input_cached_tokens": 53,
+    "total_tokens": 272
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 2384626058,
+  "seconds": 0.9922372498549521,
+  "generation_tokens_per_second": 138.12479216147574,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

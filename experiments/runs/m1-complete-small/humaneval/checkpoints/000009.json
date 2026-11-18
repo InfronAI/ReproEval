@@ -1,0 +1,32 @@
+{
+  "index": 9,
+  "input_sha256": "4395713675a16763e73140573f3240a33454a5ef2190834e9c5654ed70a2098b",
+  "input": {
+    "task_id": "HumanEval/9",
+    "prompt": "from typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n",
+    "entry_point": "rolling_max",
+    "canonical_solution": "    running_max = None\n    result = []\n\n    for n in numbers:\n        if running_max is None:\n            running_max = n\n        else:\n            running_max = max(running_max, n)\n\n        result.append(running_max)\n\n    return result\n",
+    "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == []\n    assert candidate([1, 2, 3, 4]) == [1, 2, 3, 4]\n    assert candidate([4, 3, 2, 1]) == [4, 4, 4, 4]\n    assert candidate([3, 2, 3, 100, 3]) == [3, 3, 3, 100, 100]\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -&gt; List[int]:\n    &#34;&#34;&#34; From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    &gt;&gt;&gt; rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39; From a given list of integers, generate a list of rolling maximum element found until given moment\\n    in the sequence.\\n    &gt;&gt;&gt; rolling_max([1, 2, 3, 2, 3, 4, 2])\\n    [1, 2, 3, 3, 3, 4, 4]\\n    &#39;\n    max_value = -float(&#39;inf&#39;)\n    rolling_max_list = []\n    for i in range(len(numbers)):\n        if i == 0 or numbers[i] == max_value:\n            continue\n        elif i == len(numbers) - 1:\n            rolling_max_list.append(numbers[i])\n        else:\n            rolling_max_list.append(max(numbers[i], max_value))\n        max_value = max(numbers[i], max_value)\n    return rolling_max_list\n\nfrom typing import List, Tuple\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n"
+        },
+        {
+          "content": "    ' From a given list of integers, generate a list of rolling maximum element found until given moment\\n    in the sequence.\\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\\n    [1, 2, 3, 3, 3, 4, 4]\\n    '\n    max_value = -float('inf')\n    rolling_max_list = []\n    for i in range(len(numbers)):\n        if i == 0 or numbers[i] == max_value:\n            continue\n        elif i == len(numbers) - 1:\n            rolling_max_list.append(numbers[i])\n        else:\n            rolling_max_list.append(max(numbers[i], max_value))\n        max_value = max(numbers[i], max_value)\n    return rolling_max_list\n\nfrom typing import List, Tuple\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

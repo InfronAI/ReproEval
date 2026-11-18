@@ -1,0 +1,16 @@
+evaluation,status,examples,metric,score,generated_tokens,inference_seconds,token_limit_hits
+mmlu,completed,1,score,0.0,279,2.278,0
+mmlu_AR-XY,completed,1,score,1.0,285,2.192,0
+mmlu_BN-BD,completed,1,score,1.0,476,3.636,0
+mmlu_DE-DE,completed,1,score,1.0,210,1.604,0
+mmlu_ES-LA,completed,1,score,0.0,278,2.195,0
+mmlu_FR-FR,completed,1,score,1.0,364,2.73,0
+mmlu_HI-IN,completed,1,score,0.0,399,3.082,0
+mmlu_ID-ID,completed,1,score,0.0,317,2.416,0
+mmlu_IT-IT,completed,1,score,0.0,378,3.015,0
+mmlu_JA-JP,completed,1,score,1.0,478,3.871,0
+mmlu_KO-KR,completed,1,score,0.0,283,2.372,0
+mmlu_PT-BR,completed,1,score,0.0,270,2.249,0
+mmlu_ZH-CN,completed,1,score,0.0,217,1.763,0
+mmlu_SW-KE,completed,1,score,0.0,239,2.009,0
+mmlu_YO-NG,completed,1,score,0.0,243,2.019,0

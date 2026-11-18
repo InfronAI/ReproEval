@@ -1,0 +1,10 @@
+{"evaluation": "browsecomp", "files": 4073, "archive_sha256": "2cb2190c9ee04e63d8fc574c0a16a04bc19d344e8dba6c4cb3b170ec7cd9f618", "content_verified": true}
+{"evaluation": "drop", "files": 19074, "archive_sha256": "e6dc785d6ca26881663c112d4297956db0cc0bb87d59daa75353b89ec5af45df", "content_verified": true}
+{"evaluation": "gpqa", "files": 3962, "archive_sha256": "8711a03f1ff58d270551222a6fc76c7b58c191aa3d4ccb364b65644a472a541b", "content_verified": true}
+{"evaluation": "healthbench", "files": 5200, "archive_sha256": "b448364bf4c1e052089bdeba969884dc624239b6fbc5ca193ebf80e2fa1efdd5", "content_verified": true}
+{"evaluation": "healthbench_hard", "files": 1689, "archive_sha256": "ea5b3b3000325355ebd4d507c995291ac55e844a2fa2ae317418f0a21fc45977", "content_verified": true}
+{"evaluation": "humaneval", "files": 986, "archive_sha256": "ea2b9ca9ac25599ad3be0b27a982a84c2213d78329a8ed215cd4ee5e396418a2", "content_verified": true}
+{"evaluation": "math", "files": 15003, "archive_sha256": "bc2e34c1c4aabd19371c3c10bbcb56f259b6c73cc39143494aab1781b39619c6", "content_verified": true}
+{"evaluation": "mgsm", "files": 5502, "archive_sha256": "a52030c98bb74e8c02c0d9781d9512dc3c80c0cc761060eba206cde52a7747d7", "content_verified": true}
+{"evaluation": "mmlu", "files": 28086, "archive_sha256": "645a342ea34e45377e1cc1cfaceffd0acdcfd0cac29852f9cefa881ea43bd921", "content_verified": true}
+{"evaluation": "simpleqa", "files": 12980, "archive_sha256": "44ef89a6b82b5b1212c8bfaf21e2754a7fb24af462caa2d232bf88e9aae63bea", "content_verified": true}

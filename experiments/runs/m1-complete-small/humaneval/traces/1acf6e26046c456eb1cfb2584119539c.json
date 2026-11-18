@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n    Strange sorting, is when you start with the minimum value,\n    then maximum of the remaining integers, then minimum and so on.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\n    strange_sort_list([]) == []\n    '''\n"
+    }
+  ],
+  "response": "```python\ndef strange_sort_list(lst):\n    if not lst:\n        return []\n    else:\n        min_val = min(lst)\n        lst.remove(min_val)\n        max_val = max(lst)\n        lst.remove(max_val)\n        return [min_val] + lst\n```",
+  "usage": {
+    "input_tokens": 174,
+    "output_tokens": 57,
+    "input_cached_tokens": 52,
+    "total_tokens": 231
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 362384947,
+  "seconds": 0.5973896253854036,
+  "generation_tokens_per_second": 141.23294898898644,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

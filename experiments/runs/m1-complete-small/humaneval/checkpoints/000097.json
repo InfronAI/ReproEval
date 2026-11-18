@@ -1,0 +1,32 @@
+{
+  "index": 97,
+  "input_sha256": "23944705b3a865ff16bdcd5c5221b4396db6f4dc2d9865e6f8fda01f57af9991",
+  "input": {
+    "task_id": "HumanEval/97",
+    "prompt": "\ndef multiply(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the product of their unit digits.\n    Assume the input is always valid.\n    Examples:\n    multiply(148, 412) should return 16.\n    multiply(19, 28) should return 72.\n    multiply(2020, 1851) should return 0.\n    multiply(14,-15) should return 20.\n    \"\"\"\n",
+    "entry_point": "multiply",
+    "canonical_solution": "    return abs(a % 10) * abs(b % 10)\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(148, 412) == 16, \"First test error: \" + str(candidate(148, 412))                    \n    assert candidate(19, 28) == 72, \"Second test error: \" + str(candidate(19, 28))           \n    assert candidate(2020, 1851) == 0, \"Third test error: \" + str(candidate(2020, 1851))\n    assert candidate(14,-15) == 20, \"Fourth test error: \" + str(candidate(14,-15))      \n    assert candidate(76, 67) == 42, \"Fifth test error: \" + str(candidate(76, 67))      \n    assert candidate(17, 27) == 49, \"Sixth test error: \" + str(candidate(17, 27))      \n\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate(0, 1) == 0, \"1st edge test error: \" + str(candidate(0, 1))\n    assert candidate(0, 0) == 0, \"2nd edge test error: \" + str(candidate(0, 0))\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef multiply(a, b):\n    &#34;&#34;&#34;Complete the function that takes two integers and returns \n    the product of their unit digits.\n    Assume the input is always valid.\n    Examples:\n    multiply(148, 412) should return 16.\n    multiply(19, 28) should return 72.\n    multiply(2020, 1851) should return 0.\n    multiply(14,-15) should return 20.\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    result = a * b\n    unit_digit = result % 10\n    return unit_digit * multiply(a // 10, b)\n\ndef multiply(a, b):\n    result = a * b\n    unit_digit = result % 10\n    return unit_digit * multiply(a // 10, b)\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef multiply(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the product of their unit digits.\n    Assume the input is always valid.\n    Examples:\n    multiply(148, 412) should return 16.\n    multiply(19, 28) should return 72.\n    multiply(2020, 1851) should return 0.\n    multiply(14,-15) should return 20.\n    \"\"\"\n"
+        },
+        {
+          "content": "    result = a * b\n    unit_digit = result % 10\n    return unit_digit * multiply(a // 10, b)\n\ndef multiply(a, b):\n    result = a * b\n    unit_digit = result % 10\n    return unit_digit * multiply(a // 10, b)\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

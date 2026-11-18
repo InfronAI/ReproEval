@@ -1,0 +1,122 @@
+[
+  {
+    "evaluation": "mmlu",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 279,
+    "inference_seconds": 2.352,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "math",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 770,
+    "inference_seconds": 10.779,
+    "token_limit_hits": 1
+  },
+  {
+    "evaluation": "gpqa",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 1.0,
+    "generated_tokens": 597,
+    "inference_seconds": 4.839,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mgsm",
+    "status": "completed",
+    "examples": 11,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 6671,
+    "inference_seconds": 55.235,
+    "token_limit_hits": 8
+  },
+  {
+    "evaluation": "drop",
+    "status": "completed",
+    "examples": 1,
+    "metric": "f1_score",
+    "score": 0.0,
+    "generated_tokens": 66,
+    "inference_seconds": 1.878,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "humaneval",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.6,
+    "generated_tokens": 864,
+    "inference_seconds": 5.925,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "simpleqa",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 125,
+    "inference_seconds": 6.042,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "browsecomp",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 328,
+    "inference_seconds": 6.705,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "healthbench",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.13333333333333333,
+    "generated_tokens": 1410,
+    "inference_seconds": 78.866,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "healthbench_hard",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 852,
+    "inference_seconds": 58.921,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "healthbench_consensus",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.6666666666666666,
+    "generated_tokens": 355,
+    "inference_seconds": 15.985,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "healthbench_meta",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": null,
+    "generated_tokens": 76,
+    "inference_seconds": 6.044,
+    "token_limit_hits": 0
+  }
+]

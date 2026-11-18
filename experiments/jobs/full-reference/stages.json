@@ -1,0 +1,34 @@
+[
+  {
+    "name": "original-suite",
+    "command": [
+      "/Users/apple/Projects/simple-evals/.venv/bin/python",
+      "-m",
+      "simple_evals",
+      "--backend",
+      "mlx",
+      "--model",
+      "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+      "--grader-model",
+      "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "--model-revision",
+      "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+      "--grader-revision",
+      "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "--max-tokens",
+      "2048",
+      "--grader-max-tokens",
+      "1024",
+      "--eval",
+      "all",
+      "--full",
+      "--paper-repeats",
+      "--output",
+      "experiments/runs/full-reference",
+      "--resume"
+    ],
+    "status": "ended_early",
+    "ended_at": "2026-11-17T15:31:15.135655+00:00",
+    "stop_reason": "User requested early termination of the testing task"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "file": "common.py",
+    "constant": "QUERY_TEMPLATE_MULTICHOICE",
+    "unchanged": true
+  },
+  {
+    "file": "common.py",
+    "constant": "EQUALITY_TEMPLATE",
+    "unchanged": true
+  },
+  {
+    "file": "math_eval.py",
+    "constant": "QUERY_TEMPLATE",
+    "unchanged": true
+  },
+  {
+    "file": "browsecomp_eval.py",
+    "constant": "QUERY_TEMPLATE",
+    "unchanged": true
+  },
+  {
+    "file": "browsecomp_eval.py",
+    "constant": "GRADER_TEMPLATE",
+    "unchanged": true
+  },
+  {
+    "file": "simpleqa_eval.py",
+    "constant": "GRADER_TEMPLATE",
+    "unchanged": true
+  },
+  {
+    "file": "healthbench_eval.py",
+    "constant": "GRADER_TEMPLATE",
+    "unchanged": true
+  }
+]

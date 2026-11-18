@@ -1,0 +1,224 @@
+[
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_KO-KR.csv",
+    "sha256": "432e06531c26ca68374ba3fc460e5889e5add58341d179bc19ea6cb46b14aaa5",
+    "bytes": 7666949,
+    "downloaded_at": "2026-11-15T12:19:43.321620+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_ZH-CN.csv",
+    "sha256": "cb4354776463e0414597a4685588d72eb5cb6a1d79caf3efa0c9e0c2764786f1",
+    "bytes": 5582888,
+    "downloaded_at": "2026-11-15T12:19:49.077411+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_bn.tsv",
+    "sha256": "6b00bc7cc635547e866989284afa924d789b5affa2eb8de623c385dd943ad977",
+    "bytes": 156684,
+    "downloaded_at": "2026-11-15T12:14:48.095305+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_ES-LA.csv",
+    "sha256": "7026c2120f3a4b68641f725818e47f35529f61c094f280c52fa019fadb060071",
+    "bytes": 7638282,
+    "downloaded_at": "2026-11-15T12:19:25.387276+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/drop_v0_dev.jsonl.gz",
+    "sha256": "7a58d35552dc476699d87ee8af0254f63e9f00f5a7f6b8b033e11c933157e186",
+    "bytes": 3640945,
+    "downloaded_at": "2026-11-15T12:13:13.224937+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_ID-ID.csv",
+    "sha256": "4270643b50bfde7812db5d5c26c273e773d4cbc32868d001195caab0217120e1",
+    "bytes": 7112650,
+    "downloaded_at": "2026-11-15T12:19:34.771841+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/simple_qa_test_set.csv",
+    "sha256": "feee3f7e7db3617e94e8fcf1977b756ec420ef8568f4e0fcbbe0e92e9d5fc032",
+    "bytes": 2012910,
+    "downloaded_at": "2026-11-15T12:13:00.690065+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_HI-IN.csv",
+    "sha256": "2901b1633e80d66c47ea3fc5d38fcb5c545d00d741b7c7d7705a559227143109",
+    "bytes": 16190141,
+    "downloaded_at": "2026-11-15T12:19:31.798388+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_zh.tsv",
+    "sha256": "b2fa63151022370a0de1f4211c8c284eae74b0f5a3b003b1d5982c0d4a73f661",
+    "bytes": 57838,
+    "downloaded_at": "2026-11-15T12:15:02.922014+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_fr.tsv",
+    "sha256": "36207c1c03fd7cd3ea491441eb755408199f94e4a647851df531bbaedc99d606",
+    "bytes": 69141,
+    "downloaded_at": "2026-11-15T12:14:54.060305+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_YO-NG.csv",
+    "sha256": "0193d8dcb83e1f443a7459bc2a1f171e951781256c83611c64468e9ee8407711",
+    "bytes": 8922419,
+    "downloaded_at": "2026-11-15T12:19:55.161368+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_FR-FR.csv",
+    "sha256": "9e306e122e61513f2f0cdfae7eaceaaebac86e5bfa1ddbe63ec4e8562729ca50",
+    "bytes": 8110686,
+    "downloaded_at": "2026-11-15T12:19:28.400676+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_JA-JP.csv",
+    "sha256": "b2daf62034489b88411af91ad955e8ec513bd7d3129c9eb0319036160bd18032",
+    "bytes": 8019567,
+    "downloaded_at": "2026-11-15T12:19:40.548851+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_IT-IT.csv",
+    "sha256": "42c59e0902f0915b0e172aaa7d2e8f3bbf91f469983e900bba7441082d859996",
+    "bytes": 7599360,
+    "downloaded_at": "2026-11-15T12:19:37.745562+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_es.tsv",
+    "sha256": "5bd27ebdf00140cec845c5298dc17715f5cd57d8edda6df1976db40bf3f0750a",
+    "bytes": 66896,
+    "downloaded_at": "2026-11-15T12:14:52.505229+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/gpqa_diamond.csv",
+    "sha256": "41d1213cd7a4998605a26c2798500652572007161b3a92817ba46b35befcd305",
+    "bytes": 1373492,
+    "downloaded_at": "2026-11-15T12:12:55.301790+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_ru.tsv",
+    "sha256": "6bd30fd2e80c5bac23f566fb4ae0e6a55a19578401fbf9a01fb21beb3645fef8",
+    "bytes": 110953,
+    "downloaded_at": "2026-11-15T12:14:56.885293+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_th.tsv",
+    "sha256": "f3932dc5ad8e9d0ea82b017adc1e1461dd647af861e7166d6741986602a0cfd6",
+    "bytes": 151921,
+    "downloaded_at": "2026-11-15T12:15:01.630433+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_te.tsv",
+    "sha256": "dd6b1452c244bb2e4ba254c01ea84137f80c1cefc57d69c23b0ed88b9c0f36b7",
+    "bytes": 176547,
+    "downloaded_at": "2026-11-15T12:15:00.029022+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/drop_v0_train.jsonl.gz",
+    "sha256": "d4a3a00ea2cfbe69d11f0bd24f5ba069731c645489bd39248b480d8eb34e1fb6",
+    "bytes": 34738971,
+    "downloaded_at": "2026-11-15T12:13:10.711746+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/browse_comp_test_set.csv",
+    "sha256": "7b24471cd5b3eb2a46830a14802b5c029ea62f488ff75a0f88af7923d1454abf",
+    "bytes": 1196283,
+    "downloaded_at": "2026-11-15T12:13:06.095490+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_sw.tsv",
+    "sha256": "2bac828d77229e65d7c7197b1ad4a2cb5b1fe99b163f2cbdd66501de6a2115c4",
+    "bytes": 67456,
+    "downloaded_at": "2026-11-15T12:14:58.213310+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu.csv",
+    "sha256": "15b6785d49e0012602e089558a7a0dfb916baf97e9295aa25b48062f13c6afbb",
+    "bytes": 6667575,
+    "downloaded_at": "2026-11-15T12:12:50.969005+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_en.tsv",
+    "sha256": "50021d0f28cc957edcb44e7806425b1c7fbd648ddcb9e0a8ec689d10e57d40fa",
+    "bytes": 61299,
+    "downloaded_at": "2026-11-15T12:14:51.181006+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_SW-KE.csv",
+    "sha256": "41bd52c6cc68e07afab298a3611e08d4745f18d884fd635b72faab55f769fb53",
+    "bytes": 6886483,
+    "downloaded_at": "2026-11-15T12:19:51.980306+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_ja.tsv",
+    "sha256": "59a2b50debe77981fd784cb3b2bef1505e3abf2a37116dc9d7a366ab029b4637",
+    "bytes": 81043,
+    "downloaded_at": "2026-11-15T12:14:55.429621+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/healthbench/2025-05-07-06-14-12_oss_eval.jsonl",
+    "sha256": "e99dd3c6372c10d6fcc5e385c5fae69d0dd40392dae56836ef9493ae324ecd2f",
+    "bytes": 60258154,
+    "downloaded_at": "2026-11-15T12:14:25.876979+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_BN-BD.csv",
+    "sha256": "c2054362b43ca2d2a2d4544ee0c64c6eb1fae5d461d0a460c8e40aaefda4bbbf",
+    "bytes": 16286391,
+    "downloaded_at": "2026-11-15T12:19:19.851943+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/math_500_test.csv",
+    "sha256": "830003254c2894832217e1da6ed7fd9304546d2161640c1ce05ab9cccf532e2f",
+    "bytes": 367182,
+    "downloaded_at": "2026-11-15T12:12:52.789245+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_DE-DE.csv",
+    "sha256": "819cb422a3bcae4fabc302d3a938f1fd17be368770c8cb1d6cd299784a0f80c1",
+    "bytes": 7813137,
+    "downloaded_at": "2026-11-15T12:19:22.620038+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_PT-BR.csv",
+    "sha256": "926107573af1491c0e77df2bd6815c521f2203dd4a4a5b54fad5ea1733ce9c9c",
+    "bytes": 7211320,
+    "downloaded_at": "2026-11-15T12:19:46.192476+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/healthbench/2025-05-07-06-14-12_oss_meta_eval.jsonl",
+    "sha256": "6a343ed3fcb6f28353c2c6c157ae30ddf2db874c947b27ba474ad54da9c5dbac",
+    "bytes": 136224466,
+    "downloaded_at": "2026-11-15T12:14:46.552592+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/healthbench/hard_2025-05-08-21-00-10.jsonl",
+    "sha256": "b0320430e5cd974e746585594c1dd10b5a3fc2aff9c72b26106c2c4a069d74e9",
+    "bytes": 12581564,
+    "downloaded_at": "2026-11-15T12:14:29.428852+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mmlu_AR-XY.csv",
+    "sha256": "3c60bb57926cc33dc58d57f70884c8199142944b971659753edfab54b90e51d4",
+    "bytes": 9829263,
+    "downloaded_at": "2026-11-15T12:19:15.998934+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/healthbench/consensus_2025-05-09-20-00-46.jsonl",
+    "sha256": "fabe37553327238928b05357d8b309737b5d426d6dee432a3376da618d0969d6",
+    "bytes": 36921504,
+    "downloaded_at": "2026-11-15T12:14:34.646690+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/math_test.csv",
+    "sha256": "1835505d451a6f4b8bfdfe11b90bbd6676f382d2aa269acf8d3e4155947fe451",
+    "bytes": 1031861,
+    "downloaded_at": "2026-11-15T12:19:12.616378+00:00"
+  },
+  {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_de.tsv",
+    "sha256": "4dfea30fede44b813e2e496f5f0534049e83c7cc8aed6e00600b30ec62053626",
+    "bytes": 69640,
+    "downloaded_at": "2026-11-15T12:14:49.669217+00:00"
+  }
+]

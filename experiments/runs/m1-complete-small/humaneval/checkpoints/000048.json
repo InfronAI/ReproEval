@@ -1,0 +1,32 @@
+{
+  "index": 48,
+  "input_sha256": "ffd14e1f4c93b07a40323f88d822c5968788c068181287c3b246fcc577f5e32e",
+  "input": {
+    "task_id": "HumanEval/48",
+    "prompt": "\n\ndef is_palindrome(text: str):\n    \"\"\"\n    Checks if given string is a palindrome\n    >>> is_palindrome('')\n    True\n    >>> is_palindrome('aba')\n    True\n    >>> is_palindrome('aaaaa')\n    True\n    >>> is_palindrome('zbcd')\n    False\n    \"\"\"\n",
+    "entry_point": "is_palindrome",
+    "canonical_solution": "    for i in range(len(text)):\n        if text[i] != text[len(text) - 1 - i]:\n            return False\n    return True\n",
+    "test": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate('') == True\n    assert candidate('aba') == True\n    assert candidate('aaaaa') == True\n    assert candidate('zbcd') == False\n    assert candidate('xywyx') == True\n    assert candidate('xywyz') == False\n    assert candidate('xywzx') == False\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 1.0,
+      "metrics": {
+        "pass@1": 1.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef is_palindrome(text: str):\n    &#34;&#34;&#34;\n    Checks if given string is a palindrome\n    &gt;&gt;&gt; is_palindrome(&#39;&#39;)\n    True\n    &gt;&gt;&gt; is_palindrome(&#39;aba&#39;)\n    True\n    &gt;&gt;&gt; is_palindrome(&#39;aaaaa&#39;)\n    True\n    &gt;&gt;&gt; is_palindrome(&#39;zbcd&#39;)\n    False\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#34;\\n    Checks if given string is a palindrome\\n    &gt;&gt;&gt; is_palindrome(&#39;&#39;)\\n    True\\n    &gt;&gt;&gt; is_palindrome(&#39;aba&#39;)\\n    True\\n    &gt;&gt;&gt; is_palindrome(&#39;aaaaa&#39;)\\n    True\\n    &gt;&gt;&gt; is_palindrome(&#39;zbcd&#39;)\\n    False\\n    &#34;\n    text = &#39;&#39;.join((char.lower() for char in text if char != &#39; &#39;))\n    return text == text[::-1]\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [1]</p>\n<p>Score: 1.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef is_palindrome(text: str):\n    \"\"\"\n    Checks if given string is a palindrome\n    >>> is_palindrome('')\n    True\n    >>> is_palindrome('aba')\n    True\n    >>> is_palindrome('aaaaa')\n    True\n    >>> is_palindrome('zbcd')\n    False\n    \"\"\"\n"
+        },
+        {
+          "content": "    \"\\n    Checks if given string is a palindrome\\n    >>> is_palindrome('')\\n    True\\n    >>> is_palindrome('aba')\\n    True\\n    >>> is_palindrome('aaaaa')\\n    True\\n    >>> is_palindrome('zbcd')\\n    False\\n    \"\n    text = ''.join((char.lower() for char in text if char != ' '))\n    return text == text[::-1]\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

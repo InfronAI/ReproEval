@@ -1,0 +1,32 @@
+{
+  "index": 121,
+  "input_sha256": "ea1951100ea89ff5b0ea0b645c7cea6f62135603b691f8acfb878696de5c9268",
+  "input": {
+    "task_id": "HumanEval/121",
+    "prompt": "\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 12\n    solution([3, 3, 3, 3, 3]) ==> 9\n    solution([30, 13, 24, 321]) ==>0\n    \"\"\"\n",
+    "entry_point": "solution",
+    "canonical_solution": "    return sum([x for idx, x in enumerate(lst) if idx%2==0 and x%2==1])\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([5, 8, 7, 1])    == 12\n    assert candidate([3, 3, 3, 3, 3]) == 9\n    assert candidate([30, 13, 24, 321]) == 0\n    assert candidate([5, 9]) == 5\n    assert candidate([2, 4, 8]) == 0\n    assert candidate([30, 13, 23, 32]) == 23\n    assert candidate([3, 13, 2, 9]) == 3\n\n    # Check some edge cases that are easy to work out by hand.\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef solution(lst):\n    &#34;&#34;&#34;Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==&gt; 12\n    solution([3, 3, 3, 3, 3]) ==&gt; 9\n    solution([30, 13, 24, 321]) ==&gt;0\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\\n    \\n    Examples\\n    solution([5, 8, 7, 1]) ==&gt; 12\\n    solution([3, 3, 3, 3, 3]) ==&gt; 9\\n    solution([30, 13, 24, 321]) ==&gt; 0\\n    &#39;\n    result = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 != 0:\n            result += lst[i]\n    return result\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 12\n    solution([3, 3, 3, 3, 3]) ==> 9\n    solution([30, 13, 24, 321]) ==>0\n    \"\"\"\n"
+        },
+        {
+          "content": "    'Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\\n    \\n    Examples\\n    solution([5, 8, 7, 1]) ==> 12\\n    solution([3, 3, 3, 3, 3]) ==> 9\\n    solution([30, 13, 24, 321]) ==> 0\\n    '\n    result = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 != 0:\n            result += lst[i]\n    return result\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

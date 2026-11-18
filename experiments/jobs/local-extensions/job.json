@@ -1,0 +1,14 @@
+{
+  "pid": 97580,
+  "plan": "experiments/plans/local-extensions.json",
+  "command": [
+    "/Users/apple/Projects/simple-evals/.venv/bin/python",
+    "-u",
+    "/Users/apple/Projects/simple-evals/scripts/run_plan.py",
+    "experiments/plans/local-extensions.json",
+    "--state",
+    "/Users/apple/Projects/simple-evals/experiments/jobs/local-extensions/stages.json"
+  ],
+  "started_at": "2026-11-15T12:43:51.055349+00:00",
+  "log": "experiments/jobs/local-extensions/console.log"
+}

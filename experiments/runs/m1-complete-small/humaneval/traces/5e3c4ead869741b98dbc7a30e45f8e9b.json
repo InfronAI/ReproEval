@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (2.0, 2.2)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (2.0, 2.0)\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\nfrom typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\"\n    From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    \"\"\"\n    sorted_numbers = sorted(numbers)\n    n = len(sorted_numbers)\n\n    if n < 2:\n        raise ValueError(\"At least two numbers are required\")\n\n    mid_index = n // 2\n    mid_element = sorted_numbers[mid_index]\n\n    i = 0\n    while i < n - 1 and sorted_numbers[i] < mid_element:\n        i += 1\n\n    return (mid_element, sorted_numbers[i])\n```",
+  "usage": {
+    "input_tokens": 216,
+    "output_tokens": 161,
+    "input_cached_tokens": 55,
+    "total_tokens": 377
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 702865206,
+  "seconds": 1.4150029579177499,
+  "generation_tokens_per_second": 132.79135405215112,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,32 @@
+{
+  "index": 18,
+  "input_sha256": "64e9376d7025a30b4163c9631344e0b33133e1f81d6b3163dd94d83a29c9fc35",
+  "input": {
+    "task_id": "HumanEval/18",
+    "prompt": "\n\ndef how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many times a given substring can be found in the original string. Count overlaping cases.\n    >>> how_many_times('', 'a')\n    0\n    >>> how_many_times('aaa', 'a')\n    3\n    >>> how_many_times('aaaa', 'aa')\n    3\n    \"\"\"\n",
+    "entry_point": "how_many_times",
+    "canonical_solution": "    times = 0\n\n    for i in range(len(string) - len(substring) + 1):\n        if string[i:i+len(substring)] == substring:\n            times += 1\n\n    return times\n",
+    "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('', 'x') == 0\n    assert candidate('xyxyxyx', 'x') == 4\n    assert candidate('cacacacac', 'cac') == 4\n    assert candidate('john doe', 'john') == 1\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef how_many_times(string: str, substring: str) -&gt; int:\n    &#34;&#34;&#34; Find how many times a given substring can be found in the original string. Count overlaping cases.\n    &gt;&gt;&gt; how_many_times(&#39;&#39;, &#39;a&#39;)\n    0\n    &gt;&gt;&gt; how_many_times(&#39;aaa&#39;, &#39;a&#39;)\n    3\n    &gt;&gt;&gt; how_many_times(&#39;aaaa&#39;, &#39;aa&#39;)\n    3\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#34; Find how many times a given substring can be found in the original string. Count overlaping cases.\\n    &gt;&gt;&gt; how_many_times(&#39;&#39;, &#39;a&#39;)\\n    0\\n    &gt;&gt;&gt; how_many_times(&#39;aaa&#39;, &#39;a&#39;)\\n    3\\n    &gt;&gt;&gt; how_many_times(&#39;aaaa&#39;, &#39;aa&#39;)\\n    3\\n    &#34;\n    string = string + &#39;a&#39; if string.endswith(&#39;a&#39;) else string\n    string = string[1:] if string.startswith(&#39;a&#39;) else string\n    return string.find(substring) + 1\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many times a given substring can be found in the original string. Count overlaping cases.\n    >>> how_many_times('', 'a')\n    0\n    >>> how_many_times('aaa', 'a')\n    3\n    >>> how_many_times('aaaa', 'aa')\n    3\n    \"\"\"\n"
+        },
+        {
+          "content": "    \" Find how many times a given substring can be found in the original string. Count overlaping cases.\\n    >>> how_many_times('', 'a')\\n    0\\n    >>> how_many_times('aaa', 'a')\\n    3\\n    >>> how_many_times('aaaa', 'aa')\\n    3\\n    \"\n    string = string + 'a' if string.endswith('a') else string\n    string = string[1:] if string.startswith('a') else string\n    return string.find(substring) + 1\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

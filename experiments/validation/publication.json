@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/InfronAI/ReproEval",
+  "project_name": "ReproEval",
+  "original_upstream_commit": "652c89d0ca9df547706735883097e9537d40dc47",
+  "target_initial_commit": "a3fc6e3a632ebe5bb656bf5c210cb2e0c8b40c16",
+  "archives": 10,
+  "archived_files": 96555,
+  "archived_bytes": 191786106,
+  "uncompressed_bytes": 1071518260,
+  "all_archive_contents_verified": true,
+  "benchmarks_remain_ended_early": true,
+  "credential_scan": "No active credentials identified. One AWS-pattern match is an expired 2023 presigned URL in the original public GPQA ancillary source field; the original record is preserved."
+}

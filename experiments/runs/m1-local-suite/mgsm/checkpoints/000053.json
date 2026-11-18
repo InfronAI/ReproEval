@@ -1,0 +1,31 @@
+{
+  "index": 53,
+  "input_sha256": "24bd9dcef6ae106950ad0f61a22e2f000273b51479c47a334c9ea4d1e4a8f0d3",
+  "input": {
+    "inputs": "詹姆斯决定每周跑 3 次 3 段冲刺，每段冲刺跑 60 米。他每周一共跑多少米？",
+    "targets": "540",
+    "lang": "zh"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": false,
+      "metrics": {
+        "zh": false,
+        "group_non_latin": false
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>解决这个数学问题。在最后一行给出答案前，请提供推理步骤。最后一行应该以 &#34;答案: &#34; 的形式独立给出答案。在 &#34;答案：&#34; 后不要添加除整数答案之外的任何内容。\n\n詹姆斯决定每周跑 3 次 3 段冲刺，每段冲刺跑 60 米。他每周一共跑多少米？</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>詹姆斯每周跑 3 次 3 段冲刺，每段冲刺跑 60 米。我们先计算总共有多少次冲刺，然后计算总共有多少米。\n\n每次冲刺跑 60 米，所以3次冲刺总共跑的米数为：\n\\[ 3 \\times 60 \\text{ 米} = 180 \\text{ 米} \\]\n\n所以，詹姆斯每周一共跑 180 米。</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 540</p>\n<p>Extracted Answer: None</p>\n<p>Score: False</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "解决这个数学问题。在最后一行给出答案前，请提供推理步骤。最后一行应该以 \"答案: \" 的形式独立给出答案。在 \"答案：\" 后不要添加除整数答案之外的任何内容。\n\n詹姆斯决定每周跑 3 次 3 段冲刺，每段冲刺跑 60 米。他每周一共跑多少米？"
+        },
+        {
+          "content": "詹姆斯每周跑 3 次 3 段冲刺，每段冲刺跑 60 米。我们先计算总共有多少次冲刺，然后计算总共有多少米。\n\n每次冲刺跑 60 米，所以3次冲刺总共跑的米数为：\n\\[ 3 \\times 60 \\text{ 米} = 180 \\text{ 米} \\]\n\n所以，詹姆斯每周一共跑 180 米。",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

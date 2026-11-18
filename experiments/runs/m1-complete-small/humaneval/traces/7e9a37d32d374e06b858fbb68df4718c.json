@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef search(lst):\n    '''\n    You are given a non-empty list of positive integers. Return the greatest integer that is greater than \n    zero, and has a frequency greater than or equal to the value of the integer itself. \n    The frequency of an integer is the number of times it appears in the list.\n    If no such a value exist, return -1.\n    Examples:\n        search([4, 1, 2, 2, 3, 1]) == 2\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3\n        search([5, 5, 4, 4, 4]) == -1\n    '''\n"
+    }
+  ],
+  "response": "```python\ndef search(lst):\n    \"\"\"\n    You are given a non-empty list of positive integers. Return the greatest integer that is greater than \n    zero, and has a frequency greater than or equal to the value of the integer itself.\n    The frequency of an integer is the number of times it appears in the list.\n    If no such a value exist, return -1.\n    Examples:\n        search([4, 1, 2, 2, 3, 1]) == 2\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3\n        search([5, 5, 4, 4, 4]) == -1\n    \"\"\"\n    # Count the frequency of each number in the list\n    freq = {}\n    for num in lst:\n        if num in freq:\n            freq[num] += 1\n        else:\n            freq[num] = 1\n    \n    # Find the greatest integer that meets the criteria\n    for num in lst:\n        if freq[num] >= num and num > 0:\n            return num\n    \n    # Check if we have found all numbers that meet the criteria\n    for num in lst:\n        if freq[num] < num:\n            return -1\n    \n    return -1\n```\n\nThis solution follows the guidelines provided in the question. The function takes a list of positive integers as input and returns the greatest integer that meets the criteria based on the given conditions. The docstring describes the function, its inputs, outputs, and the examples provided to verify correctness.",
+  "usage": {
+    "input_tokens": 215,
+    "output_tokens": 338,
+    "input_cached_tokens": 52,
+    "total_tokens": 553
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 3787323247,
+  "seconds": 2.7323140408843756,
+  "generation_tokens_per_second": 136.2395349163867,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,35 @@
+{
+  "index": 2,
+  "input_sha256": "c8cf73d19e9d0b5f31f522a37d80f9bc04b8ea7d4a6b3928cb5f9cfb3c5e73e4",
+  "input": {
+    "Unnamed: 0": 253,
+    "Question": "A 75-year-old female presents to the office for a health maintenance examination. She says that she is more fatigued than she was at 65, but she still gardens and drives to the grocery store. Routine laboratory studies reveal a leukocyte count of 25.0 × 103/mcL (reference range 4.5-11.0 × 103/mcL) and 97% mature-appearing lymphocytes on a peripheral blood smear. Immunohistochemical stains demonstrate the lymphocytes to be of B-cell origin. The most likely diagnosis is",
+    "A": "acute lymphocytic leukemia",
+    "B": "acute myelogenous leukemia",
+    "C": "chronic lymphocytic leukemia",
+    "D": "chronic myelogenous leukemia",
+    "Answer": "C",
+    "Subject": "professional_medicine"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 1.0,
+      "metrics": {
+        "other": 1.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCD. Think step by step before answering.\n\nA 75-year-old female presents to the office for a health maintenance examination. She says that she is more fatigued than she was at 65, but she still gardens and drives to the grocery store. Routine laboratory studies reveal a leukocyte count of 25.0 × 103/mcL (reference range 4.5-11.0 × 103/mcL) and 97% mature-appearing lymphocytes on a peripheral blood smear. Immunohistochemical stains demonstrate the lymphocytes to be of B-cell origin. The most likely diagnosis is\n\nA) acute lymphocytic leukemia\nB) acute myelogenous leukemia\nC) chronic lymphocytic leukemia\nD) chronic myelogenous leukemia</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>To determine the most likely diagnosis for the 75-year-old female presenting to the office for a health maintenance examination, we need to consider the clinical profile and lab findings provided.\n\n1. Age: She is 75 years old.\n2. Gender: Female.\n3. Health maintenance examination: She says she is more fatigued than she was at 65, and she still gardens and drives to the grocery store.\n\nGiven these points, we can infer the following:\n\n- Age: 75 years old is typically a person in their 60s to 70s, making it unlikely to be a person who has had a significant amount of work or exercise (like gardening and driving).\n- Grooming and driving: While this is a common activity for older people, it is more typical for older adults who have not had a significant amount of physical activity.\n\nThe combination of being more fatigued and still engaging in activities like gardening and driving suggests a more sedentary lifestyle, which is characteristic of older adults.\n\n4. Lab studies: The lab studies reveal a leukocyte count of 25.0 × 103/mL (reference range 4.5-11.0 × 103/mL) and 97% mature-appearing lymphocytes on a peripheral blood smear.\n\n5. Immunohistochemical stains: Immunohistochemical stains demonstrate the lymphocytes to be of B-cell origin.\n\nGiven this information, we can conclude that the most likely diagnosis is:\n\nC) Chronic lymphocytic leukemia\n\nChronic lymphocytic leukemia is a type of leukemia that can affect older adults. It is characterized by the presence of lymphocytes (a type of white blood cell) in the blood. The lymphocytes are a component of the immune system and can be found in the blood, lymph nodes, and other tissues.\n\nTherefore, the most likely diagnosis is:\n\nAnswer: C</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: C</p>\n<p>Extracted Answer: C</p>\n<p>Score: 1.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Answer the following multiple choice question. The last line of your response should be of the following format: 'Answer: $LETTER' (without quotes) where LETTER is one of ABCD. Think step by step before answering.\n\nA 75-year-old female presents to the office for a health maintenance examination. She says that she is more fatigued than she was at 65, but she still gardens and drives to the grocery store. Routine laboratory studies reveal a leukocyte count of 25.0 × 103/mcL (reference range 4.5-11.0 × 103/mcL) and 97% mature-appearing lymphocytes on a peripheral blood smear. Immunohistochemical stains demonstrate the lymphocytes to be of B-cell origin. The most likely diagnosis is\n\nA) acute lymphocytic leukemia\nB) acute myelogenous leukemia\nC) chronic lymphocytic leukemia\nD) chronic myelogenous leukemia"
+        },
+        {
+          "content": "To determine the most likely diagnosis for the 75-year-old female presenting to the office for a health maintenance examination, we need to consider the clinical profile and lab findings provided.\n\n1. Age: She is 75 years old.\n2. Gender: Female.\n3. Health maintenance examination: She says she is more fatigued than she was at 65, and she still gardens and drives to the grocery store.\n\nGiven these points, we can infer the following:\n\n- Age: 75 years old is typically a person in their 60s to 70s, making it unlikely to be a person who has had a significant amount of work or exercise (like gardening and driving).\n- Grooming and driving: While this is a common activity for older people, it is more typical for older adults who have not had a significant amount of physical activity.\n\nThe combination of being more fatigued and still engaging in activities like gardening and driving suggests a more sedentary lifestyle, which is characteristic of older adults.\n\n4. Lab studies: The lab studies reveal a leukocyte count of 25.0 × 103/mL (reference range 4.5-11.0 × 103/mL) and 97% mature-appearing lymphocytes on a peripheral blood smear.\n\n5. Immunohistochemical stains: Immunohistochemical stains demonstrate the lymphocytes to be of B-cell origin.\n\nGiven this information, we can conclude that the most likely diagnosis is:\n\nC) Chronic lymphocytic leukemia\n\nChronic lymphocytic leukemia is a type of leukemia that can affect older adults. It is characterized by the presence of lymphocytes (a type of white blood cell) in the blood. The lymphocytes are a component of the immune system and can be found in the blood, lymph nodes, and other tissues.\n\nTherefore, the most likely diagnosis is:\n\nAnswer: C",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

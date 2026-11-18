@@ -1,0 +1,3 @@
+evaluation,status,examples,metric,score,generated_tokens,inference_seconds,token_limit_hits
+gpqa,completed,198,score,0.08585858585858586,119919,1100.294,84
+humaneval,completed,164,score,0.23780487804878048,39793,331.545,7

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message {
+                padding: 8px 16px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+            }
+            .message.user {
+                background-color: #B2DFDB;
+                color: #00695C;
+            }
+            .message.assistant {
+                background-color: #B39DDB;
+                color: #4527A0;
+            }
+            .message.system {
+                background-color: #EEEEEE;
+                color: #212121;
+            }
+            .role {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .variant {
+                color: #795548;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h1>Metrics</h1>
+    <table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><b>Score</b></td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>other</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>other:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>score:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    </table>
+    
+    <h1>Examples</h1>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCD. Think step by step before answering.
+
+成功的抗癌 HPV 疫苗包含：
+
+A) 通过特定诱变获得的减毒活疫苗
+B) 全病毒化学灭活疫苗
+C) 病毒 L1 蛋白自组装成的 VLP
+D) 亚单位化学灭活疫苗</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant
+    
+    </div>
+    <div class="content">
+    <pre>To determine which option is correct, let&#39;s analyze each option step by step.
+
+A) The passage mentions that the HPV vaccine is a &#34;virus L1 protein self-assembled into a vesicle.&#34; This indicates that the HPV vaccine contains a viral protein (L1 protein) that is self-assembled into a vesicle. This is a characteristic of certain types of vaccines containing viral proteins.
+
+B) The passage states that the vaccine contains &#34;all virus L1 protein.&#34; This means that the vaccine contains all the viral protein of the HPV virus.
+
+C) The passage mentions that the vaccine is &#34;virus L1 protein self-assembled into a vesicle.&#34; This indicates that the vaccine contains a virus L1 protein that is self-assembled into a vesicle.
+
+D) The passage mentions that the vaccine contains &#34;all virus L1 protein.&#34; This means that the vaccine contains all the viral proteins of the HPV virus.
+
+Given this analysis, the correct answer is:
+
+C) 病毒 L1 蛋白自组装成的 VLP
+
+Answer: C</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: C</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    </body>
+</html>

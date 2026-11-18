@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message {
+                padding: 8px 16px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+            }
+            .message.user {
+                background-color: #B2DFDB;
+                color: #00695C;
+            }
+            .message.assistant {
+                background-color: #B39DDB;
+                color: #4527A0;
+            }
+            .message.system {
+                background-color: #EEEEEE;
+                color: #212121;
+            }
+            .role {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .variant {
+                color: #795548;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h1>Metrics</h1>
+    <table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><b>Score</b></td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>format_valid_rate</td>
+        <td>0.88</td>
+    </tr>
+    
+    <tr>
+        <td>format_valid_rate:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>answer_frequency</td>
+        <td>0.84</td>
+    </tr>
+    
+    <tr>
+        <td>answer_frequency:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>stated_brier_valid_only</td>
+        <td>0.707784090909091</td>
+    </tr>
+    
+    <tr>
+        <td>stated_brier_valid_only:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@1</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@1:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@1</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@1:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@2</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@2:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@2</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@2:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@3</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@3:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@3</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@3:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@4</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@4:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@4</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@4:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@5</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@5:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@5</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@5:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@6</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@6:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@6</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@6:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@7</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@7:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@7</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@7:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@8</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@8:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@8</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@8:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@9</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@9:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@9</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@9:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@10</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@10:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@10</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@10:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@11</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@11:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@11</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@11:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@12</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@12:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@12</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@12:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@13</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@13:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@13</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@13:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@14</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@14:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@14</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@14:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@15</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@15:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@15</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@15:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@16</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@16:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@16</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@16:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@17</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@17:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@17</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@17:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@18</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@18:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@18</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@18:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@19</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@19:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@19</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@19:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@20</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@20:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@20</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@20:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@21</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@21:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@21</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@21:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@22</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@22:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@22</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@22:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@23</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@23:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@23</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@23:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@24</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@24:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@24</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@24:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@25</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@25:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@25</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@25:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@26</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@26:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@26</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@26:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@27</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@27:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@27</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@27:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@28</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@28:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@28</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@28:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@29</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@29:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@29</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@29:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@30</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@30:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@30</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@30:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@31</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@31:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@31</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@31:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@32</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@32:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@32</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@32:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@33</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@33:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@33</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@33:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@34</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@34:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@34</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@34:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@35</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@35:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@35</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@35:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@36</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@36:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@36</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@36:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@37</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@37:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@37</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@37:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@38</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@38:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@38</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@38:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@39</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@39:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@39</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@39:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@40</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@40:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@40</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@40:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@41</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@41:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@41</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@41:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@42</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@42:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@42</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@42:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@43</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@43:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@43</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@43:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@44</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@44:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@44</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@44:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@45</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@45:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@45</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@45:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@46</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@46:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@46</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@46:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@47</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@47:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@47</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@47:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@48</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@48:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@48</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@48:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@49</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@49:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@49</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@49:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@50</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@50:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@50</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@50:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@51</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@51:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@51</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@51:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@52</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@52:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@52</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@52:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@53</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@53:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@53</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@53:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@54</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@54:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@54</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@54:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@55</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@55:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@55</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@55:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@56</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@56:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@56</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@56:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@57</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@57:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@57</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@57:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@58</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@58:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@58</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@58:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@59</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@59:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@59</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@59:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@60</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@60:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@60</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@60:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@61</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@61:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@61</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@61:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@62</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@62:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@62</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@62:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@63</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@63:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@63</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@63:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@64</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@64:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@64</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@64:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@65</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@65:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@65</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@65:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@66</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@66:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@66</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@66:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@67</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@67:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@67</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@67:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@68</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@68:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@68</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@68:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@69</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@69:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@69</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@69:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@70</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@70:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@70</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@70:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@71</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@71:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@71</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@71:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@72</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@72:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@72</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@72:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@73</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@73:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@73</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@73:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@74</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@74:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@74</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@74:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@75</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@75:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@75</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@75:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@76</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@76:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@76</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@76:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@77</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@77:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@77</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@77:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@78</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@78:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@78</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@78:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@79</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@79:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@79</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@79:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@80</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@80:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@80</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@80:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@81</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@81:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@81</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@81:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@82</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@82:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@82</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@82:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@83</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@83:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@83</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@83:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@84</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@84:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@84</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@84:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@85</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@85:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@85</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@85:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@86</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@86:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@86</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@86:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@87</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@87:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@87</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@87:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@88</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@88:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@88</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@88:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@89</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@89:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@89</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@89:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@90</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@90:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@90</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@90:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@91</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@91:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@91</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@91:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@92</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@92:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@92</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@92:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@93</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@93:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@93</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@93:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@94</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@94:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@94</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@94:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@95</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@95:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@95</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@95:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@96</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@96:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@96</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@96:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@97</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@97:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@97</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@97:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@98</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@98:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@98</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@98:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@99</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@99:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@99</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@99:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@100</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>pass@100:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@100</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>consensus@100:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>score:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    </table>
+    
+    <h1>Examples</h1>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user
+    
+    </div>
+    <div class="content">
+    <pre>Question: In which city of Pakistan was Muhammad Rafiq Tarar, a Pakistani politician, born?
+Give your best guess. Return JSON containing &#34;answer&#34; (a string) and &#34;confidence_score&#34; (a number from 0 to 100).</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant
+    
+    </div>
+    <div class="content">
+    <pre>```json
+{
+  &#34;answer&#34;: &#34;Karachi&#34;,
+  &#34;confidence_score&#34;: 90
+}
+```</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: Mandi Bahauddin, Punjab</p>
+<p>Extracted Answer: Karachi</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    </body>
+</html>

@@ -1,0 +1,3 @@
+model,evaluation,status,examples,metric,score,generated_tokens,inference_seconds,token_limit_hits
+mlx-community/Qwen2.5-0.5B-Instruct-4bit,mmlu,completed,2,score,0.0,455,5.601,0
+mlx-community/Qwen2.5-3B-Instruct-4bit,mmlu,completed,2,score,0.0,514,12.094,0

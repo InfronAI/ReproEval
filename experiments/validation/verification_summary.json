@@ -1,0 +1,18 @@
+{
+  "tests_passed": 39,
+  "lint": "passed",
+  "dependency_check": "passed",
+  "wheel_and_sdist": "built",
+  "wheel_entrypoint_outside_checkout": "passed",
+  "readme_local_links": "passed",
+  "demo": "H.264 MP4, 1280x800, 14.125 seconds; GIF loops indefinitely",
+  "prompt_constants_unchanged": 7,
+  "note": "CI workflow added; GitHub-hosted CI has not been executed. Full experiments have independent live status.",
+  "completed_resume": "passed: 362 trace files unchanged, 2 completed stages skipped",
+  "full_plan": "14 stages parsed, unique output directories",
+  "completed_full_splits": {
+    "gpqa": 198,
+    "humaneval": 164
+  },
+  "mmlu_language_smoke_checks": 15
+}

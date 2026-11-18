@@ -1,0 +1,32 @@
+{
+  "index": 132,
+  "input_sha256": "824121de9e49d1579743affc959deec87894ab4436a61e17281d003ad0d90939",
+  "input": {
+    "task_id": "HumanEval/132",
+    "prompt": "\ndef is_nested(string):\n    '''\n    Create a function that takes a string as input which contains only square brackets.\n    The function should return True if and only if there is a valid subsequence of brackets \n    where at least one bracket in the subsequence is nested.\n\n    is_nested('[[]]') ➞ True\n    is_nested('[]]]]]]][[[[[]') ➞ False\n    is_nested('[][]') ➞ False\n    is_nested('[]') ➞ False\n    is_nested('[[][]]') ➞ True\n    is_nested('[[]][[') ➞ True\n    '''\n",
+    "entry_point": "is_nested",
+    "canonical_solution": "    opening_bracket_index = []\n    closing_bracket_index = []\n    for i in range(len(string)):\n        if string[i] == '[':\n            opening_bracket_index.append(i)\n        else:\n            closing_bracket_index.append(i)\n    closing_bracket_index.reverse()\n    cnt = 0\n    i = 0\n    l = len(closing_bracket_index)\n    for idx in opening_bracket_index:\n        if i < l and idx < closing_bracket_index[i]:\n            cnt += 1\n            i += 1\n    return cnt >= 2\n\n    \n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate('[[]]') == True, \"This prints if this assert fails 1 (good for debugging!)\"\n    assert candidate('[]]]]]]][[[[[]') == False\n    assert candidate('[][]') == False\n    assert candidate(('[]')) == False\n    assert candidate('[[[[]]]]') == True\n    assert candidate('[]]]]]]]]]]') == False\n    assert candidate('[][][[]]') == True\n    assert candidate('[[]') == False\n    assert candidate('[]]') == False\n    assert candidate('[[]][[') == True\n    assert candidate('[[][]]') == True\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate('') == False, \"This prints if this assert fails 2 (also good for debugging!)\"\n    assert candidate('[[[[[[[[') == False\n    assert candidate(']]]]]]]]') == False\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef is_nested(string):\n    &#39;&#39;&#39;\n    Create a function that takes a string as input which contains only square brackets.\n    The function should return True if and only if there is a valid subsequence of brackets \n    where at least one bracket in the subsequence is nested.\n\n    is_nested(&#39;[[]]&#39;) ➞ True\n    is_nested(&#39;[]]]]]]][[[[[]&#39;) ➞ False\n    is_nested(&#39;[][]&#39;) ➞ False\n    is_nested(&#39;[]&#39;) ➞ False\n    is_nested(&#39;[[][]]&#39;) ➞ True\n    is_nested(&#39;[[]][[&#39;) ➞ True\n    &#39;&#39;&#39;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    for i in range(len(string) - 1):\n        for j in range(i + 1, len(string)):\n            if string[i] == &#39;[&#39; and string[j] == &#39;[&#39;:\n                continue\n            elif string[i] == &#39;[&#39; and string[j] == &#39;]&#39; or (string[i] == &#39;]&#39; and string[j] == &#39;[&#39;):\n                continue\n            elif string[i] == &#39;[&#39; and string[j] == &#39;]&#39; or (string[i] == &#39;]&#39; and string[j] == &#39;[&#39;):\n                continue\n            else:\n                return False\n    return True\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef is_nested(string):\n    '''\n    Create a function that takes a string as input which contains only square brackets.\n    The function should return True if and only if there is a valid subsequence of brackets \n    where at least one bracket in the subsequence is nested.\n\n    is_nested('[[]]') ➞ True\n    is_nested('[]]]]]]][[[[[]') ➞ False\n    is_nested('[][]') ➞ False\n    is_nested('[]') ➞ False\n    is_nested('[[][]]') ➞ True\n    is_nested('[[]][[') ➞ True\n    '''\n"
+        },
+        {
+          "content": "    for i in range(len(string) - 1):\n        for j in range(i + 1, len(string)):\n            if string[i] == '[' and string[j] == '[':\n                continue\n            elif string[i] == '[' and string[j] == ']' or (string[i] == ']' and string[j] == '['):\n                continue\n            elif string[i] == '[' and string[j] == ']' or (string[i] == ']' and string[j] == '['):\n                continue\n            else:\n                return False\n    return True\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

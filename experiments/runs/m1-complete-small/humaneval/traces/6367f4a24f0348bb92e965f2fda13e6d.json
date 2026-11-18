@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\nfrom typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n    return [s for s in strings if substring in s]\n```\n\nThis function signature defines the input parameters (`strings` and `substring`) and the return type (`List[str]`). The docstring provides a clear description of the function's purpose, the input and output, and the type of the input arguments. The function itself uses a list comprehension to filter the input list of strings, checking if the substring exists in each string. The docstring provides a clear and concise description of the function's functionality, including its purpose, the input parameters, the return type, and the docstring for the input parameter.",
+  "usage": {
+    "input_tokens": 143,
+    "output_tokens": 215,
+    "input_cached_tokens": 57,
+    "total_tokens": 358
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 3466164934,
+  "seconds": 1.8445175420492887,
+  "generation_tokens_per_second": 130.23241536532504,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,32 @@
+{
+  "index": 139,
+  "input_sha256": "fb26507a57860b30126b9eedb7025cb066a1b1d79bd334c732daf4f4ca7a2d51",
+  "input": {
+    "task_id": "HumanEval/139",
+    "prompt": "\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> special_factorial(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n",
+    "entry_point": "special_factorial",
+    "canonical_solution": "    fact_i = 1\n    special_fact = 1\n    for i in range(1, n+1):\n        fact_i *= i\n        special_fact *= fact_i\n    return special_fact\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(4) == 288, \"Test 4\"\n    assert candidate(5) == 34560, \"Test 5\"\n    assert candidate(7) == 125411328000, \"Test 7\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate(1) == 1, \"Test 1\"\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef special_factorial(n):\n    &#34;&#34;&#34;The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n &gt; 0\n\n    For example:\n    &gt;&gt;&gt; special_factorial(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;The Brazilian factorial is defined as:\\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\\n    where n &gt; 0\\n\\n    For example:\\n    &gt;&gt;&gt; special_factorial(4)\\n    288\\n\\n    The function will receive an integer as input and should return the special\\n    factorial of this integer.&#39;\n    result = 1\n    for i in range(1, n):\n        result *= i\n        result += special_factorial(i - 1)\n    return result\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> special_factorial(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n"
+        },
+        {
+          "content": "    'The Brazilian factorial is defined as:\\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\\n    where n > 0\\n\\n    For example:\\n    >>> special_factorial(4)\\n    288\\n\\n    The function will receive an integer as input and should return the special\\n    factorial of this integer.'\n    result = 1\n    for i in range(1, n):\n        result *= i\n        result += special_factorial(i - 1)\n    return result\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

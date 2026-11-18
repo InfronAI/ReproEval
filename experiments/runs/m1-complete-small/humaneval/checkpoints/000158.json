@@ -1,0 +1,32 @@
+{
+  "index": 158,
+  "input_sha256": "1cff19fb6a15e47ae6a8e6f2640d96a54cfdc98d2de15ea3d3b5909001fe79d5",
+  "input": {
+    "task_id": "HumanEval/158",
+    "prompt": "\ndef find_max(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with maximum number\n    of unique characters. If multiple strings have maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    find_max([\"name\", \"of\", \"string\"]) == \"string\"\n    find_max([\"name\", \"enam\", \"game\"]) == \"enam\"\n    find_max([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"aaaaaaa\"\n    \"\"\"\n",
+    "entry_point": "find_max",
+    "canonical_solution": "    return sorted(words, key = lambda x: (-len(set(x)), x))[0]\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert (candidate([\"name\", \"of\", \"string\"]) == \"string\"), \"t1\"\n    assert (candidate([\"name\", \"enam\", \"game\"]) == \"enam\"), 't2'\n    assert (candidate([\"aaaaaaa\", \"bb\", \"cc\"]) == \"aaaaaaa\"), 't3'\n    assert (candidate([\"abc\", \"cba\"]) == \"abc\"), 't4'\n    assert (candidate([\"play\", \"this\", \"game\", \"of\",\"footbott\"]) == \"footbott\"), 't5'\n    assert (candidate([\"we\", \"are\", \"gonna\", \"rock\"]) == \"gonna\"), 't6'\n    assert (candidate([\"we\", \"are\", \"a\", \"mad\", \"nation\"]) == \"nation\"), 't7'\n    assert (candidate([\"this\", \"is\", \"a\", \"prrk\"]) == \"this\"), 't8'\n\n    # Check some edge cases that are easy to work out by hand.\n    assert (candidate([\"b\"]) == \"b\"), 't9'\n    assert (candidate([\"play\", \"play\", \"play\"]) == \"play\"), 't10'\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef find_max(words):\n    &#34;&#34;&#34;Write a function that accepts a list of strings.\n    The list contains different words. Return the word with maximum number\n    of unique characters. If multiple strings have maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    find_max([&#34;name&#34;, &#34;of&#34;, &#34;string&#34;]) == &#34;string&#34;\n    find_max([&#34;name&#34;, &#34;enam&#34;, &#34;game&#34;]) == &#34;enam&#34;\n    find_max([&#34;aaaaaaa&#34;, &#34;bb&#34; ,&#34;cc&#34;]) == &#34;&#34;aaaaaaa&#34;\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;\\n    This function accepts a list of strings and returns the word with the maximum number of unique characters.\\n    If multiple words have the maximum number of unique characters, it returns the one which comes first in lexicographical order.\\n    &#39;\n    unique_words = set()\n    for word in words:\n        unique_words.add(word)\n    max_word = &#39;&#39;\n    max_count = 0\n    for word in unique_words:\n        if unique_words.count(word) &gt; max_count:\n            max_word = word\n            max_count = unique_words.count(word)\n    return [word for word in unique_words if unique_words.count(word) == max_count]\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef find_max(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with maximum number\n    of unique characters. If multiple strings have maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    find_max([\"name\", \"of\", \"string\"]) == \"string\"\n    find_max([\"name\", \"enam\", \"game\"]) == \"enam\"\n    find_max([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"aaaaaaa\"\n    \"\"\"\n"
+        },
+        {
+          "content": "    '\\n    This function accepts a list of strings and returns the word with the maximum number of unique characters.\\n    If multiple words have the maximum number of unique characters, it returns the one which comes first in lexicographical order.\\n    '\n    unique_words = set()\n    for word in words:\n        unique_words.add(word)\n    max_word = ''\n    max_count = 0\n    for word in unique_words:\n        if unique_words.count(word) > max_count:\n            max_word = word\n            max_count = unique_words.count(word)\n    return [word for word in unique_words if unique_words.count(word) == max_count]\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

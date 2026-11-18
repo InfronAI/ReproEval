@@ -1,0 +1,31 @@
+{
+  "index": 37,
+  "input_sha256": "d6ddda18028cac24b688e3159da8c425da30d551f90a7802faa7c4772f984d90",
+  "input": {
+    "inputs": "Josha anaamua kujaribu kununua nyumba na kuuza kwa faida. Ananunua nyumba kwa $80,000 na kutumia $50,000 kuikarabati. Hii iliongeza thamani ya nyumba hiyo kwa 150%. Alipata faida ya kiasi gani?",
+    "targets": "70000",
+    "lang": "sw"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": false,
+      "metrics": {
+        "sw": false,
+        "group_latin": false
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Suluhisha tatizo hili la hesabu. Toa hatua za mantiki kabla ya kutoa jibu la mwisho kwenye mstari wa mwisho peke yake katika muundo wa &#34;Jibu:&#34;. Usiongeze chochote kingine isipokuwa jibu la integer baada ya &#34;Jibu:&#34;.\n\nJosha anaamua kujaribu kununua nyumba na kuuza kwa faida. Ananunua nyumba kwa $80,000 na kutumia $50,000 kuikarabati. Hii iliongeza thamani ya nyumba hiyo kwa 150%. Alipata faida ya kiasi gani?</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>Based on the information provided, we can calculate the percentage of the increase in the value of $80,000 due to the increase in $50,000.\n\n1. Calculate the percentage increase in $80,000:\n$$\\frac{50,000}{80,000} \\times 100\\% = 0.625 \\times 100\\% = 62.5\\%$$\n\n2. Calculate the percentage increase in the value of $50,000:\n$$\\frac{150\\%}{80\\%} \\times 100\\% = 0.1875 \\times 100\\% = 18.75\\%$$\n\n3. Add the two percentage increases together:\n$$62.5\\% + 18.75\\% = 81.25\\%$$\n\nTherefore, the percentage of the increase in the value of $80,000 due to the increase in $50,000 is 81.25%.</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 70000</p>\n<p>Extracted Answer: None</p>\n<p>Score: False</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Suluhisha tatizo hili la hesabu. Toa hatua za mantiki kabla ya kutoa jibu la mwisho kwenye mstari wa mwisho peke yake katika muundo wa \"Jibu:\". Usiongeze chochote kingine isipokuwa jibu la integer baada ya \"Jibu:\".\n\nJosha anaamua kujaribu kununua nyumba na kuuza kwa faida. Ananunua nyumba kwa $80,000 na kutumia $50,000 kuikarabati. Hii iliongeza thamani ya nyumba hiyo kwa 150%. Alipata faida ya kiasi gani?"
+        },
+        {
+          "content": "Based on the information provided, we can calculate the percentage of the increase in the value of $80,000 due to the increase in $50,000.\n\n1. Calculate the percentage increase in $80,000:\n$$\\frac{50,000}{80,000} \\times 100\\% = 0.625 \\times 100\\% = 62.5\\%$$\n\n2. Calculate the percentage increase in the value of $50,000:\n$$\\frac{150\\%}{80\\%} \\times 100\\% = 0.1875 \\times 100\\% = 18.75\\%$$\n\n3. Add the two percentage increases together:\n$$62.5\\% + 18.75\\% = 81.25\\%$$\n\nTherefore, the percentage of the increase in the value of $80,000 due to the increase in $50,000 is 81.25%.",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

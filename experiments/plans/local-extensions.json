@@ -1,0 +1,127 @@
+{
+  "description": "Local implementations of paper-inspired extensions. Small subsets, not full-paper reproduction. Separate 3B candidate explicitly configured.",
+  "stages": [
+    {
+      "name": "calibration-100-draws",
+      "args": [
+        "--eval",
+        "simpleqa_calibration",
+        "--examples",
+        "1",
+        "--calibration-samples",
+        "100",
+        "--temperature",
+        "1",
+        "--max-tokens",
+        "384",
+        "--output",
+        "experiments/runs/m1-calibration-100-validity",
+        "--model",
+        "mlx-community/Qwen2.5-3B-Instruct-4bit",
+        "--model-revision",
+        "4f83f8f146fdf28b512a06562b671d7af4fab457",
+        "--grader-revision",
+        "4f83f8f146fdf28b512a06562b671d7af4fab457"
+      ]
+    },
+    {
+      "name": "browsing-two-steps",
+      "args": [
+        "--eval",
+        "browsecomp",
+        "--examples",
+        "1",
+        "--browse",
+        "--browse-steps",
+        "2",
+        "--max-tokens",
+        "512",
+        "--output",
+        "experiments/runs/m1-browsing",
+        "--model",
+        "mlx-community/Qwen2.5-3B-Instruct-4bit",
+        "--model-revision",
+        "4f83f8f146fdf28b512a06562b671d7af4fab457",
+        "--grader-revision",
+        "4f83f8f146fdf28b512a06562b671d7af4fab457"
+      ]
+    },
+    {
+      "name": "physician-group-1",
+      "args": [
+        "--eval",
+        "healthbench",
+        "--examples",
+        "1",
+        "--physician-group",
+        "Group 1",
+        "--grader-max-tokens",
+        "768",
+        "--output",
+        "experiments/runs/m1-physician-1"
+      ]
+    },
+    {
+      "name": "physician-group-2",
+      "args": [
+        "--eval",
+        "healthbench",
+        "--examples",
+        "1",
+        "--physician-group",
+        "Group 2",
+        "--grader-max-tokens",
+        "768",
+        "--output",
+        "experiments/runs/m1-physician-2"
+      ]
+    },
+    {
+      "name": "physician-group-3",
+      "args": [
+        "--eval",
+        "healthbench",
+        "--examples",
+        "1",
+        "--physician-group",
+        "Group 3",
+        "--grader-max-tokens",
+        "768",
+        "--output",
+        "experiments/runs/m1-physician-3"
+      ]
+    },
+    {
+      "name": "reference-group-2",
+      "args": [
+        "--eval",
+        "healthbench",
+        "--examples",
+        "1",
+        "--physician-group",
+        "Group 2",
+        "--reference-completions",
+        "--grader-max-tokens",
+        "768",
+        "--output",
+        "experiments/runs/m1-reference-2"
+      ]
+    },
+    {
+      "name": "reference-group-3",
+      "args": [
+        "--eval",
+        "healthbench",
+        "--examples",
+        "1",
+        "--physician-group",
+        "Group 3",
+        "--reference-completions",
+        "--grader-max-tokens",
+        "768",
+        "--output",
+        "experiments/runs/m1-reference-3"
+      ]
+    }
+  ]
+}

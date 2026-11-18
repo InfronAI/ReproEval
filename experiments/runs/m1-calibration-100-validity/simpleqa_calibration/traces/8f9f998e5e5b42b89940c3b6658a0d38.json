@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Question: In which city of Pakistan was Muhammad Rafiq Tarar, a Pakistani politician, born?\nGive your best guess. Return JSON containing \"answer\" (a string) and \"confidence_score\" (a number from 0 to 100)."
+    }
+  ],
+  "response": "```json\n{\n  \"answer\": \"Karachi\",\n  \"confidence_score\": 80\n}\n```\n\n\nThe best guess is Karachi, as it's the most populous city of Pakistan and generally the location for most public figures. However, without official confirmation, the accuracy might vary.",
+  "usage": {
+    "input_tokens": 81,
+    "output_tokens": 60,
+    "input_cached_tokens": 80,
+    "total_tokens": 141
+  },
+  "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+  "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+  "role": "candidate",
+  "seed": 4144210462,
+  "seconds": 1.4574602502398193,
+  "generation_tokens_per_second": 49.06629398106268,
+  "peak_memory_gb": 2.008294016,
+  "truncated": false,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,32 @@
+{
+  "index": 110,
+  "input_sha256": "e062ffaac58f14a65088e67cf7da4e93df2d7dd3b43da304f0ef907916bbe21d",
+  "input": {
+    "task_id": "HumanEval/110",
+    "prompt": "\ndef exchange(lst1, lst2):\n    \"\"\"In this problem, you will implement a function that takes two lists of numbers,\n    and determines whether it is possible to perform an exchange of elements\n    between them to make lst1 a list of only even numbers.\n    There is no limit on the number of exchanged elements between lst1 and lst2.\n    If it is possible to exchange elements between the lst1 and lst2 to make\n    all the elements of lst1 to be even, return \"YES\".\n    Otherwise, return \"NO\".\n    For example:\n    exchange([1, 2, 3, 4], [1, 2, 3, 4]) => \"YES\"\n    exchange([1, 2, 3, 4], [1, 5, 3, 4]) => \"NO\"\n    It is assumed that the input lists will be non-empty.\n    \"\"\"\n",
+    "entry_point": "exchange",
+    "canonical_solution": "    odd = 0\n    even = 0\n    for i in lst1:\n        if i%2 == 1:\n            odd += 1\n    for i in lst2:\n        if i%2 == 0:\n            even += 1\n    if even >= odd:\n        return \"YES\"\n    return \"NO\"\n            \n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([1, 2, 3, 4], [1, 2, 3, 4]) == \"YES\"\n    assert candidate([1, 2, 3, 4], [1, 5, 3, 4]) == \"NO\"\n    assert candidate([1, 2, 3, 4], [2, 1, 4, 3]) == \"YES\" \n    assert candidate([5, 7, 3], [2, 6, 4]) == \"YES\"\n    assert candidate([5, 7, 3], [2, 6, 3]) == \"NO\" \n    assert candidate([3, 2, 6, 1, 8, 9], [3, 5, 5, 1, 1, 1]) == \"NO\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate([100, 200], [200, 200]) == \"YES\"\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef exchange(lst1, lst2):\n    &#34;&#34;&#34;In this problem, you will implement a function that takes two lists of numbers,\n    and determines whether it is possible to perform an exchange of elements\n    between them to make lst1 a list of only even numbers.\n    There is no limit on the number of exchanged elements between lst1 and lst2.\n    If it is possible to exchange elements between the lst1 and lst2 to make\n    all the elements of lst1 to be even, return &#34;YES&#34;.\n    Otherwise, return &#34;NO&#34;.\n    For example:\n    exchange([1, 2, 3, 4], [1, 2, 3, 4]) =&gt; &#34;YES&#34;\n    exchange([1, 2, 3, 4], [1, 5, 3, 4]) =&gt; &#34;NO&#34;\n    It is assumed that the input lists will be non-empty.\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    if not lst1 or not lst2:\n        return &#39;NO&#39;\n    if len(lst1) != len(lst2):\n        return &#39;NO&#39;\n    if len(lst1) != len(lst2) + 1:\n        return &#39;NO&#39;\n    even_count = 0\n    for num in lst1:\n        if num % 2 == 0:\n            even_count += 1\n    if even_count &lt; len(lst1) // 2:\n        return &#39;NO&#39;\n    if even_count &gt; len(lst1) // 2:\n        return &#39;NO&#39;\n    if sum(lst1) % 2 != 0:\n        return &#39;NO&#39;\n    if sum(lst2) % 2 != 0:\n        return &#39;NO&#39;\n    if sum(lst1) % 2 != 0:\n        return &#39;NO&#39;\n    return &#39;YES&#39;\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef exchange(lst1, lst2):\n    \"\"\"In this problem, you will implement a function that takes two lists of numbers,\n    and determines whether it is possible to perform an exchange of elements\n    between them to make lst1 a list of only even numbers.\n    There is no limit on the number of exchanged elements between lst1 and lst2.\n    If it is possible to exchange elements between the lst1 and lst2 to make\n    all the elements of lst1 to be even, return \"YES\".\n    Otherwise, return \"NO\".\n    For example:\n    exchange([1, 2, 3, 4], [1, 2, 3, 4]) => \"YES\"\n    exchange([1, 2, 3, 4], [1, 5, 3, 4]) => \"NO\"\n    It is assumed that the input lists will be non-empty.\n    \"\"\"\n"
+        },
+        {
+          "content": "    if not lst1 or not lst2:\n        return 'NO'\n    if len(lst1) != len(lst2):\n        return 'NO'\n    if len(lst1) != len(lst2) + 1:\n        return 'NO'\n    even_count = 0\n    for num in lst1:\n        if num % 2 == 0:\n            even_count += 1\n    if even_count < len(lst1) // 2:\n        return 'NO'\n    if even_count > len(lst1) // 2:\n        return 'NO'\n    if sum(lst1) % 2 != 0:\n        return 'NO'\n    if sum(lst2) % 2 != 0:\n        return 'NO'\n    if sum(lst1) % 2 != 0:\n        return 'NO'\n    return 'YES'\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

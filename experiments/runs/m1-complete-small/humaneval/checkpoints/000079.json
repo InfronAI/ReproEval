@@ -1,0 +1,32 @@
+{
+  "index": 79,
+  "input_sha256": "d40201f7972425354148479c9cc9c1f198eb01da50e9a379033d1038b88ba30a",
+  "input": {
+    "task_id": "HumanEval/79",
+    "prompt": "\ndef decimal_to_binary(decimal):\n    \"\"\"You will be given a number in decimal form and your task is to convert it to\n    binary format. The function should return a string, with each character representing a binary\n    number. Each character in the string will be '0' or '1'.\n\n    There will be an extra couple of characters 'db' at the beginning and at the end of the string.\n    The extra characters are there to help with the format.\n\n    Examples:\n    decimal_to_binary(15)   # returns \"db1111db\"\n    decimal_to_binary(32)   # returns \"db100000db\"\n    \"\"\"\n",
+    "entry_point": "decimal_to_binary",
+    "canonical_solution": "    return \"db\" + bin(decimal)[2:] + \"db\"\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(0) == \"db0db\"\n    assert candidate(32) == \"db100000db\"\n    assert candidate(103) == \"db1100111db\"\n    assert candidate(15) == \"db1111db\", \"This prints if this assert fails 1 (good for debugging!)\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True, \"This prints if this assert fails 2 (also good for debugging!)\"\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef decimal_to_binary(decimal):\n    &#34;&#34;&#34;You will be given a number in decimal form and your task is to convert it to\n    binary format. The function should return a string, with each character representing a binary\n    number. Each character in the string will be &#39;0&#39; or &#39;1&#39;.\n\n    There will be an extra couple of characters &#39;db&#39; at the beginning and at the end of the string.\n    The extra characters are there to help with the format.\n\n    Examples:\n    decimal_to_binary(15)   # returns &#34;db1111db&#34;\n    decimal_to_binary(32)   # returns &#34;db100000db&#34;\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    decimal = abs(decimal)\n    binary_str = &#39;db&#39; + &#39;&#39;.join([&#39;0&#39; if i &lt; decimal.bit_length() else &#39;1&#39; for i in range(decimal.bit_length())])\n    binary_str += &#39;db&#39; * (decimal.bit_length() - 1)\n    binary_str = bin(decimal).replace(&#39;0b&#39;, &#39;&#39;)\n    return binary_str\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef decimal_to_binary(decimal):\n    \"\"\"You will be given a number in decimal form and your task is to convert it to\n    binary format. The function should return a string, with each character representing a binary\n    number. Each character in the string will be '0' or '1'.\n\n    There will be an extra couple of characters 'db' at the beginning and at the end of the string.\n    The extra characters are there to help with the format.\n\n    Examples:\n    decimal_to_binary(15)   # returns \"db1111db\"\n    decimal_to_binary(32)   # returns \"db100000db\"\n    \"\"\"\n"
+        },
+        {
+          "content": "    decimal = abs(decimal)\n    binary_str = 'db' + ''.join(['0' if i < decimal.bit_length() else '1' for i in range(decimal.bit_length())])\n    binary_str += 'db' * (decimal.bit_length() - 1)\n    binary_str = bin(decimal).replace('0b', '')\n    return binary_str\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "evaluation": "browsecomp",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 1.0,
+    "generated_tokens": 346,
+    "inference_seconds": 23.03,
+    "token_limit_hits": 0
+  }
+]

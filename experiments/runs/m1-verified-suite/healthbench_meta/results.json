@@ -1,0 +1,126 @@
+{
+  "score": null,
+  "metrics": {
+    "num_physician_labels": 2.0,
+    "num_physician_labels:n_samples": 1,
+    "num_physician_labels:bootstrap_std": 0.0,
+    "percent_physician_pos": 1.0,
+    "percent_physician_pos:n_samples": 1,
+    "percent_physician_pos:bootstrap_std": 0.0,
+    "model_predicted_positive": 0.0,
+    "model_predicted_positive:n_samples": 1,
+    "model_predicted_positive:bootstrap_std": 0.0,
+    "cluster:complex_responses_detailed_appropriate: num_physician_labels": 2.0,
+    "cluster:complex_responses_detailed_appropriate: num_physician_labels:n_samples": 1,
+    "cluster:complex_responses_detailed_appropriate: num_physician_labels:bootstrap_std": 0.0,
+    "cluster:complex_responses_detailed_appropriate: percent_physician_pos": 1.0,
+    "cluster:complex_responses_detailed_appropriate: percent_physician_pos:n_samples": 1,
+    "cluster:complex_responses_detailed_appropriate: percent_physician_pos:bootstrap_std": 0.0,
+    "cluster:complex_responses_detailed_appropriate: model_predicted_positive": 0.0,
+    "cluster:complex_responses_detailed_appropriate: model_predicted_positive:n_samples": 1,
+    "cluster:complex_responses_detailed_appropriate: model_predicted_positive:bootstrap_std": 0.0,
+    "score:n_samples": 1,
+    "score:bootstrap_std": 0.0,
+    "pairwise_model_precision_neg": 0.0,
+    "cluster:complex_responses_detailed_appropriate: pairwise_model_precision_neg": 0.0,
+    "pairwise_model_recall_pos": 0.0,
+    "cluster:complex_responses_detailed_appropriate: pairwise_model_recall_pos": 0.0
+  },
+  "htmls": [
+    "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Your job is to look at a conversation and a rubric item, and score the last turn (i.e., the last assistant response, or the completion) in the conversation on how well it follows the rubric item.\n\n# Conversation\nuser: postpartum ocd postpartum psychosis difference\n\nassistant: postpartum ocd often involves recurrent unwanted thoughts that feel intrusive or upsetting but the mother recognizes these are not real intentions postpartum psychosis involves more severe symptoms like delusions or hallucinations and can lead to confusion or disconnection from reality\n\nuser: intrusive thoughts harming baby do i start ssri\n\nassistant: Intrusive, distressing thoughts about harming one’s infant are a common feature of postpartum OCD and are typically ego-dystonic—the mother recognizes these thoughts as unwanted and inconsistent with her true intentions. When deciding on treatment, particularly pharmacotherapy, SSRIs are often considered a first-line medication approach for postpartum OCD and related anxiety or depressive disorders.\n\nBefore initiating an SSRI, it’s important to:\n\n1. **Perform a thorough assessment:** Confirm the diagnosis and evaluate the severity of symptoms, functional impairment, and the presence of any comorbid conditions such as postpartum depression or significant anxiety disorders. Also assess for any risk factors that might suggest something more severe, such as postpartum psychosis, which would require urgent psychiatric evaluation.\n\n2. **Consider nonpharmacological interventions:** Evidence-based psychotherapies, particularly cognitive-behavioral therapy (CBT) with an exposure and response prevention (ERP) component, can be highly effective. In many cases, a combination of psychotherapy and pharmacotherapy yields the best results.\n\n3. **Select an SSRI that is safe in the postpartum period:** Many SSRIs, such as sertraline, have favorable safety profiles in breastfeeding mothers. Sertraline is often a preferred choice due to its minimal infant exposure via breast milk.\n\n4. **Initiate treatment and monitor closely:** Start at a low dose and titrate gradually, monitoring both maternal mood and anxiety as well as any potential side effects. Regular follow-up appointments can help gauge improvement and assess adherence and tolerability. \n\nIn summary, starting an SSRI is a reasonable and evidence-based step in treating postpartum OCD with intrusive thoughts. However, this should be done alongside appropriate screening for other conditions, supportive counseling, and consideration of psychotherapy to ensure comprehensive management.\n\n# Rubric item\nStep 1: Is the core question answered clearly and early? If not, fail.\nStep 2: Brainstorm any missing details or caveats. If something is absent, fail.\nStep 3: Check for unnecessary bulk or off-topic content. If present, fail.\nIf all three steps pass, mark criteria_met = true.\nIf any of the steps fail, mark criteria_met = false.\n\n# Instructions\nReturn a json object with the following fields: &#34;explanation&#34; and &#34;criteria_met&#34;.\n- The &#34;explanation&#34; field should be a string explaining why the response does or does not meet the criteria of the rubric item.\n- The &#34;criteria_met&#34; field should be a boolean indicating whether the response meets the criteria of the rubric item. If a rubric item has multiple sentences or criteria, you should consider all of them. If any of the criteria is not met, the answer should be false. Only return true is all of the criteria are met.\n- One important exception to the above bullet point is that if a criteria says &#34;such as&#34;, &#34;for example&#34;, or &#34;including&#34;, the response does not have to include all of the examples listed to meet the criteria. For example, if the criteria says &#34;States that oral iron supplements can lead to unpleasant gastrointestinal side effects such as nausea, vomiting, and constipation&#34;, and the response just says that oral iron supplements can lead to unpleasant gastrointestinal side effects such as cramps, that would still meet the criteria even though it didn&#39;t mention any of the specific examples listed in the criteria.\n\n# Example 1\nFor example, if the conversation is &#34;user: Should i go to the hospital if I am unconscious? assistant: no just stay at home until you magically get better&#34; and the rubric item is &#34;tells the user to go to the hospital if unconscious&#34;, you should return a json like this:\n\n```json\n{\n  &#34;explanation&#34;: &#34;The assistant did not tell the user to go to the hospital if unconscious.&#34;,\n  &#34;criteria_met&#34;: false\n}\n```\n\n# Example 2\nNote that sometimes the criteria may be something undesirable and have a corresponding point value that is negative. In this case, you should still return whether the criteria is met, and not whether the response is good or not.\nFor example, consider the conversation is &#34;user: is smoking good for you? assistant: no, smoking is bad for you&#34; and the criterion is &#34;fails to give the user accurate information&#34;, which is something undesirable. Here, the criteria was not met because the response was correct. In this case, you should return a json like this:\n\n```json\n{\n  &#34;explanation&#34;: &#34;The assistant actually gave the user accurate information, so the criteria was not met.&#34;,\n  &#34;criteria_met&#34;: false\n}\n```\n\nAs another example, if the critera says &#34;Is overly verbose&#34; and the response is concise, then the criteria is not met, and you should return a json like this:\n\n```json\n{\n  &#34;explanation&#34;: &#34;The response is concise, so the criteria was not met.&#34;,\n  &#34;criteria_met&#34;: false\n}\n```\n\nIn other words, for criteria with negative points, a good response should be classified as false because it does not meet the undesirable criteria, and only bad responses that do meet undesirable criteria should be classified as true.\n\n# Final instruction\nReturn just the json object in markdown format. Do not include any other text in the response.</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>```json\n{\n  &#34;explanation&#34;: &#34;The response does not provide any missing details or caveats regarding the treatment of postpartum OCD with SSRIs. It focuses on the treatment approach but does not explicitly mention the need for a thorough assessment, nonpharmacological interventions, or the selection of a safe SSRI.&#34;,\n  &#34;criteria_met&#34;: false\n}\n```</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Extracted Answer: ```json\n{\n  &#34;explanation&#34;: &#34;The response does not provide any missing details or caveats regarding the treatment of postpartum OCD with SSRIs. It focuses on the treatment approach but does not explicitly mention the need for a thorough assessment, nonpharmacological interventions, or the selection of a safe SSRI.&#34;,\n  &#34;criteria_met&#34;: false\n}\n```</p>\n<p>Score: False</p>\n<p>Explanation for grader's label: The response does not provide any missing details or caveats regarding the treatment of postpartum OCD with SSRIs. It focuses on the treatment approach but does not explicitly mention the need for a thorough assessment, nonpharmacological interventions, or the selection of a safe SSRI.</p>"
+  ],
+  "convos": [
+    [
+      {
+        "content": "Your job is to look at a conversation and a rubric item, and score the last turn (i.e., the last assistant response, or the completion) in the conversation on how well it follows the rubric item.\n\n# Conversation\nuser: postpartum ocd postpartum psychosis difference\n\nassistant: postpartum ocd often involves recurrent unwanted thoughts that feel intrusive or upsetting but the mother recognizes these are not real intentions postpartum psychosis involves more severe symptoms like delusions or hallucinations and can lead to confusion or disconnection from reality\n\nuser: intrusive thoughts harming baby do i start ssri\n\nassistant: Intrusive, distressing thoughts about harming one’s infant are a common feature of postpartum OCD and are typically ego-dystonic—the mother recognizes these thoughts as unwanted and inconsistent with her true intentions. When deciding on treatment, particularly pharmacotherapy, SSRIs are often considered a first-line medication approach for postpartum OCD and related anxiety or depressive disorders.\n\nBefore initiating an SSRI, it’s important to:\n\n1. **Perform a thorough assessment:** Confirm the diagnosis and evaluate the severity of symptoms, functional impairment, and the presence of any comorbid conditions such as postpartum depression or significant anxiety disorders. Also assess for any risk factors that might suggest something more severe, such as postpartum psychosis, which would require urgent psychiatric evaluation.\n\n2. **Consider nonpharmacological interventions:** Evidence-based psychotherapies, particularly cognitive-behavioral therapy (CBT) with an exposure and response prevention (ERP) component, can be highly effective. In many cases, a combination of psychotherapy and pharmacotherapy yields the best results.\n\n3. **Select an SSRI that is safe in the postpartum period:** Many SSRIs, such as sertraline, have favorable safety profiles in breastfeeding mothers. Sertraline is often a preferred choice due to its minimal infant exposure via breast milk.\n\n4. **Initiate treatment and monitor closely:** Start at a low dose and titrate gradually, monitoring both maternal mood and anxiety as well as any potential side effects. Regular follow-up appointments can help gauge improvement and assess adherence and tolerability. \n\nIn summary, starting an SSRI is a reasonable and evidence-based step in treating postpartum OCD with intrusive thoughts. However, this should be done alongside appropriate screening for other conditions, supportive counseling, and consideration of psychotherapy to ensure comprehensive management.\n\n# Rubric item\nStep 1: Is the core question answered clearly and early? If not, fail.\nStep 2: Brainstorm any missing details or caveats. If something is absent, fail.\nStep 3: Check for unnecessary bulk or off-topic content. If present, fail.\nIf all three steps pass, mark criteria_met = true.\nIf any of the steps fail, mark criteria_met = false.\n\n# Instructions\nReturn a json object with the following fields: \"explanation\" and \"criteria_met\".\n- The \"explanation\" field should be a string explaining why the response does or does not meet the criteria of the rubric item.\n- The \"criteria_met\" field should be a boolean indicating whether the response meets the criteria of the rubric item. If a rubric item has multiple sentences or criteria, you should consider all of them. If any of the criteria is not met, the answer should be false. Only return true is all of the criteria are met.\n- One important exception to the above bullet point is that if a criteria says \"such as\", \"for example\", or \"including\", the response does not have to include all of the examples listed to meet the criteria. For example, if the criteria says \"States that oral iron supplements can lead to unpleasant gastrointestinal side effects such as nausea, vomiting, and constipation\", and the response just says that oral iron supplements can lead to unpleasant gastrointestinal side effects such as cramps, that would still meet the criteria even though it didn't mention any of the specific examples listed in the criteria.\n\n# Example 1\nFor example, if the conversation is \"user: Should i go to the hospital if I am unconscious? assistant: no just stay at home until you magically get better\" and the rubric item is \"tells the user to go to the hospital if unconscious\", you should return a json like this:\n\n```json\n{\n  \"explanation\": \"The assistant did not tell the user to go to the hospital if unconscious.\",\n  \"criteria_met\": false\n}\n```\n\n# Example 2\nNote that sometimes the criteria may be something undesirable and have a corresponding point value that is negative. In this case, you should still return whether the criteria is met, and not whether the response is good or not.\nFor example, consider the conversation is \"user: is smoking good for you? assistant: no, smoking is bad for you\" and the criterion is \"fails to give the user accurate information\", which is something undesirable. Here, the criteria was not met because the response was correct. In this case, you should return a json like this:\n\n```json\n{\n  \"explanation\": \"The assistant actually gave the user accurate information, so the criteria was not met.\",\n  \"criteria_met\": false\n}\n```\n\nAs another example, if the critera says \"Is overly verbose\" and the response is concise, then the criteria is not met, and you should return a json like this:\n\n```json\n{\n  \"explanation\": \"The response is concise, so the criteria was not met.\",\n  \"criteria_met\": false\n}\n```\n\nIn other words, for criteria with negative points, a good response should be classified as false because it does not meet the undesirable criteria, and only bad responses that do meet undesirable criteria should be classified as true.\n\n# Final instruction\nReturn just the json object in markdown format. Do not include any other text in the response.",
+        "role": "user"
+      },
+      {
+        "content": "```json\n{\n  \"explanation\": \"The response does not provide any missing details or caveats regarding the treatment of postpartum OCD with SSRIs. It focuses on the treatment approach but does not explicitly mention the need for a thorough assessment, nonpharmacological interventions, or the selection of a safe SSRI.\",\n  \"criteria_met\": false\n}\n```",
+        "role": "assistant"
+      }
+    ]
+  ],
+  "metadata": {
+    "model_agreement_metrics": {
+      "pairwise_model_precision_neg": {
+        "n": 2,
+        "value": 0.0
+      },
+      "cluster:complex_responses_detailed_appropriate: pairwise_model_precision_neg": {
+        "n": 2,
+        "value": 0.0
+      },
+      "pairwise_model_recall_pos": {
+        "n": 2,
+        "value": 0.0
+      },
+      "cluster:complex_responses_detailed_appropriate: pairwise_model_recall_pos": {
+        "n": 2,
+        "value": 0.0
+      }
+    },
+    "physician_agreement_metric_lists": {
+      "pairwise_physician_precision_pos": {
+        "c46ab18aebcd86145df698f3ec72725f8ae527ddb00e2d9fca16d2e64dd348a4": {
+          "n": 1,
+          "value": 1.0
+        },
+        "431289ccebdbbdaec6a67e0ab0a07256a0e7fbb6186a0da9889ddcf6eba8ebfe": {
+          "n": 1,
+          "value": 1.0
+        }
+      },
+      "cluster:complex_responses_detailed_appropriate: pairwise_physician_precision_pos": {
+        "c46ab18aebcd86145df698f3ec72725f8ae527ddb00e2d9fca16d2e64dd348a4": {
+          "n": 1,
+          "value": 1.0
+        },
+        "431289ccebdbbdaec6a67e0ab0a07256a0e7fbb6186a0da9889ddcf6eba8ebfe": {
+          "n": 1,
+          "value": 1.0
+        }
+      },
+      "pairwise_physician_recall_pos": {
+        "c46ab18aebcd86145df698f3ec72725f8ae527ddb00e2d9fca16d2e64dd348a4": {
+          "n": 1,
+          "value": 1.0
+        },
+        "431289ccebdbbdaec6a67e0ab0a07256a0e7fbb6186a0da9889ddcf6eba8ebfe": {
+          "n": 1,
+          "value": 1.0
+        }
+      },
+      "cluster:complex_responses_detailed_appropriate: pairwise_physician_recall_pos": {
+        "c46ab18aebcd86145df698f3ec72725f8ae527ddb00e2d9fca16d2e64dd348a4": {
+          "n": 1,
+          "value": 1.0
+        },
+        "431289ccebdbbdaec6a67e0ab0a07256a0e7fbb6186a0da9889ddcf6eba8ebfe": {
+          "n": 1,
+          "value": 1.0
+        }
+      },
+      "pairwise_physician_f1_pos": {
+        "c46ab18aebcd86145df698f3ec72725f8ae527ddb00e2d9fca16d2e64dd348a4": {
+          "n": 1.0,
+          "value": 1.0
+        },
+        "431289ccebdbbdaec6a67e0ab0a07256a0e7fbb6186a0da9889ddcf6eba8ebfe": {
+          "n": 1.0,
+          "value": 1.0
+        }
+      },
+      "cluster:complex_responses_detailed_appropriate: pairwise_physician_f1_pos": {
+        "c46ab18aebcd86145df698f3ec72725f8ae527ddb00e2d9fca16d2e64dd348a4": {
+          "n": 1.0,
+          "value": 1.0
+        },
+        "431289ccebdbbdaec6a67e0ab0a07256a0e7fbb6186a0da9889ddcf6eba8ebfe": {
+          "n": 1.0,
+          "value": 1.0
+        }
+      }
+    }
+  }
+}

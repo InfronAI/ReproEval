@@ -1,0 +1,32 @@
+{
+  "index": 86,
+  "input_sha256": "caa072c172c10be313ceccbde1083893d2357c75f7b7190d5fa934726fdc8d60",
+  "input": {
+    "task_id": "HumanEval/86",
+    "prompt": "\ndef anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    Ordered version of string, is a string where all words (separated by space)\n    are replaced by a new word where all the characters arranged in\n    ascending order based on ascii value.\n    Note: You should keep the order of words and blank spaces in the sentence.\n\n    For example:\n    anti_shuffle('Hi') returns 'Hi'\n    anti_shuffle('hello') returns 'ehllo'\n    anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'\n    \"\"\"\n",
+    "entry_point": "anti_shuffle",
+    "canonical_solution": "    return ' '.join([''.join(sorted(list(i))) for i in s.split(' ')])\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate('Hi') == 'Hi'\n    assert candidate('hello') == 'ehllo'\n    assert candidate('number') == 'bemnru'\n    assert candidate('abcd') == 'abcd'\n    assert candidate('Hello World!!!') == 'Hello !!!Wdlor'\n    assert candidate('') == ''\n    assert candidate('Hi. My name is Mister Robot. How are you?') == '.Hi My aemn is Meirst .Rboot How aer ?ouy'\n    # Check some edge cases that are easy to work out by hand.\n    assert True\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef anti_shuffle(s):\n    &#34;&#34;&#34;\n    Write a function that takes a string and returns an ordered version of it.\n    Ordered version of string, is a string where all words (separated by space)\n    are replaced by a new word where all the characters arranged in\n    ascending order based on ascii value.\n    Note: You should keep the order of words and blank spaces in the sentence.\n\n    For example:\n    anti_shuffle(&#39;Hi&#39;) returns &#39;Hi&#39;\n    anti_shuffle(&#39;hello&#39;) returns &#39;ehllo&#39;\n    anti_shuffle(&#39;Hello World!!!&#39;) returns &#39;Hello !!!Wdlor&#39;\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#34;\\n    Write a function that takes a string and returns an ordered version of it.\\n    Ordered version of string, is a string where all words (separated by space)\\n    are replaced by a new word where all the characters arranged in\\n    ascending order based on ascii value.\\n    Note: You should keep the order of words and blank spaces in the sentence.\\n\\n    For example:\\n    anti_shuffle(&#39;Hi&#39;) returns &#39;Hi&#39;\\n    anti_shuffle(&#39;hello&#39;) returns &#39;ehllo&#39;\\n    anti_shuffle(&#39;Hello World!!!&#39;) returns &#39;Hello !!!Wdlor&#39;\\n    &#34;\n    words = s.split()\n    sorted_words = sorted(words, key=lambda x: ord(x))\n    ordered_string = &#39;&#39;.join(sorted_words)\n    return ordered_string\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    Ordered version of string, is a string where all words (separated by space)\n    are replaced by a new word where all the characters arranged in\n    ascending order based on ascii value.\n    Note: You should keep the order of words and blank spaces in the sentence.\n\n    For example:\n    anti_shuffle('Hi') returns 'Hi'\n    anti_shuffle('hello') returns 'ehllo'\n    anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'\n    \"\"\"\n"
+        },
+        {
+          "content": "    \"\\n    Write a function that takes a string and returns an ordered version of it.\\n    Ordered version of string, is a string where all words (separated by space)\\n    are replaced by a new word where all the characters arranged in\\n    ascending order based on ascii value.\\n    Note: You should keep the order of words and blank spaces in the sentence.\\n\\n    For example:\\n    anti_shuffle('Hi') returns 'Hi'\\n    anti_shuffle('hello') returns 'ehllo'\\n    anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'\\n    \"\n    words = s.split()\n    sorted_words = sorted(words, key=lambda x: ord(x))\n    ordered_string = ''.join(sorted_words)\n    return ordered_string\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

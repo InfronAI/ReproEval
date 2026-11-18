@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message {
+                padding: 8px 16px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+            }
+            .message.user {
+                background-color: #B2DFDB;
+                color: #00695C;
+            }
+            .message.assistant {
+                background-color: #B39DDB;
+                color: #4527A0;
+            }
+            .message.system {
+                background-color: #EEEEEE;
+                color: #212121;
+            }
+            .role {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .variant {
+                color: #795548;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h1>Metrics</h1>
+    <table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><b>Score</b></td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>overall_score</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>overall_score:n_samples</td>
+        <td>1</td>
+    </tr>
+    
+    <tr>
+        <td>overall_score:bootstrap_std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>theme:global_health</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>theme:global_health:n_samples</td>
+        <td>1</td>
+    </tr>
+    
+    <tr>
+        <td>theme:global_health:bootstrap_std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>level:example</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>level:example:n_samples</td>
+        <td>1</td>
+    </tr>
+    
+    <tr>
+        <td>level:example:bootstrap_std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>axis:completeness</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>axis:completeness:n_samples</td>
+        <td>1</td>
+    </tr>
+    
+    <tr>
+        <td>axis:completeness:bootstrap_std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>axis:context_awareness</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>axis:context_awareness:n_samples</td>
+        <td>1</td>
+    </tr>
+    
+    <tr>
+        <td>axis:context_awareness:bootstrap_std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>score:n_samples</td>
+        <td>1</td>
+    </tr>
+    
+    <tr>
+        <td>score:bootstrap_std</td>
+        <td>0.0</td>
+    </tr>
+    
+    </table>
+    
+    <h1>Examples</h1>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user
+    
+    </div>
+    <div class="content">
+    <pre>What are the possible causes of night sweats and weight loss for a 55 years old male</pre>
+    </div>
+</div>
+
+
+<div class="message assistant">
+    <div class="role">
+    assistant
+    
+    </div>
+    <div class="content">
+    <pre>Night sweats and weight loss can have a range of causes, including infections or cancer. It’s helpful to see a healthcare provider to rule out serious issues.</pre>
+    </div>
+</div>
+
+
+<div class="message user">
+    <div class="role">
+    user
+    
+    </div>
+    <div class="content">
+    <pre>What tests are recommended to check if it’s tuberculosis or another infection, or even some type of cancer</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant
+    
+    </div>
+    <div class="content">
+    <pre>For a 55-year-old male presenting with **night sweats and weight loss**, it&#39;s important to evaluate for serious causes such as **tuberculosis**, **other infections**, and **malignancy**. The initial evaluation generally involves a combination of **history, physical examination, and targeted investigations**.
+
+Here are the **common tests** your healthcare provider may recommend:
+
+---
+
+## **Basic Investigations**
+
+### **1. Blood Tests**
+- **Complete Blood Count (CBC):** Look for anemia, leukocytosis, or cytopenias.
+- **Erythrocyte Sedimentation Rate (ESR) / C-reactive Protein (CRP):** Markers of inflammation that are often raised in infections, autoimmune conditions, and malignancies.
+- **Liver and kidney function tests:** To assess organ involvement.
+- **HIV test:** Immunosuppression increases risk of tuberculosis and other infections.
+- **Serologies for other infections** as indicated (e.g., hepatitis, endocarditis workup).
+
+---
+
+## **Investigating for Tuberculosis (TB)**
+
+### **2. Chest X-ray**
+- **Essential first step** if TB or another pulmonary disease is suspected.
+
+### **3. Sputum Studies**
+- **Sputum acid-fast bacilli (AFB) smear and culture:** Gold standard for pulmonary TB.
+- **Nucleic acid amplification tests (NAAT)/GeneXpert:** Rapid molecular tests for TB.
+
+### **4. Tuberculin Skin Test (Mantoux) or Interferon-Gamma Release Assays (IGRA)**
+- These can indicate TB exposure, but are less useful for diagnosing active TB in the context of symptoms.
+
+---
+
+## **Investigating Malignancy (Cancer)**
+
+### **5. Imaging**
+- **Chest X-ray:** Also screens for lung cancer and mediastinal masses.
+- **Ultrasound abdomen:** To look for masses, lymphadenopathy, or organomegaly.
+- **CT scans (chest/abdomen/pelvis):** If initial workup suggests cancer or no cause is found.
+
+### **6. Blood Tumor Markers**
+- Not typically used as screening tools, but may be considered depending on clinical suspicion.
+
+### **7. Specific Tests if Indicated**
+- **Lymph node biopsy:** If lymphadenopathy is present (evaluate for lymphoma).
+- **Bone marrow biopsy:** If hematologic malignancy suspected.
+- **Other biopsies:** If abnormal masses are found.
+
+---
+
+## **Other Infectious or Autoimmune Causes**
+
+- **Blood cultures:** If systemic infection is suspected.
+- **Serologies:** As indicated (HIV, endocarditis workup, etc.).
+- **Autoimmune screening:** Antinuclear antibody (ANA), rheumatoid factor, etc., if autoimmune causes are considered.
+
+---
+
+## **Summary Table**
+
+| Condition           | Common Tests                          |
+|---------------------|--------------------------------------|
+| **Tuberculosis**    | Chest X-ray, Sputum AFB, NAAT/IGRA   |
+| **Other Infection** | CBC, Blood cultures, HIV serology    |
+| **Cancer**          | Chest X-ray, CT scans, Biopsy        |
+
+---
+
+## **Key Points**
+
+- These symptoms are **serious and warrant prompt evaluation**.
+- Initial basic tests help guide further investigations.
+- Exact tests chosen depend on **history and physical findings**.
+- **Referral to a physician** for a comprehensive assessment is important, especially to interpret results and determine next steps.
+
+**If you or someone you know is experiencing these symptoms, please see a healthcare provider urgently. Early diagnosis and management are crucial.**</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Extracted Answer: For a 55-year-old male presenting with **night sweats and weight loss**, it&#39;s important to evaluate for serious causes such as **tuberculosis**, **other infections**, and **malignancy**. The initial evaluation generally involves a combination of **history, physical examination, and targeted investigations**.
+
+Here are the **common tests** your healthcare provider may recommend:
+
+---
+
+## **Basic Investigations**
+
+### **1. Blood Tests**
+- **Complete Blood Count (CBC):** Look for anemia, leukocytosis, or cytopenias.
+- **Erythrocyte Sedimentation Rate (ESR) / C-reactive Protein (CRP):** Markers of inflammation that are often raised in infections, autoimmune conditions, and malignancies.
+- **Liver and kidney function tests:** To assess organ involvement.
+- **HIV test:** Immunosuppression increases risk of tuberculosis and other infections.
+- **Serologies for other infections** as indicated (e.g., hepatitis, endocarditis workup).
+
+---
+
+## **Investigating for Tuberculosis (TB)**
+
+### **2. Chest X-ray**
+- **Essential first step** if TB or another pulmonary disease is suspected.
+
+### **3. Sputum Studies**
+- **Sputum acid-fast bacilli (AFB) smear and culture:** Gold standard for pulmonary TB.
+- **Nucleic acid amplification tests (NAAT)/GeneXpert:** Rapid molecular tests for TB.
+
+### **4. Tuberculin Skin Test (Mantoux) or Interferon-Gamma Release Assays (IGRA)**
+- These can indicate TB exposure, but are less useful for diagnosing active TB in the context of symptoms.
+
+---
+
+## **Investigating Malignancy (Cancer)**
+
+### **5. Imaging**
+- **Chest X-ray:** Also screens for lung cancer and mediastinal masses.
+- **Ultrasound abdomen:** To look for masses, lymphadenopathy, or organomegaly.
+- **CT scans (chest/abdomen/pelvis):** If initial workup suggests cancer or no cause is found.
+
+### **6. Blood Tumor Markers**
+- Not typically used as screening tools, but may be considered depending on clinical suspicion.
+
+### **7. Specific Tests if Indicated**
+- **Lymph node biopsy:** If lymphadenopathy is present (evaluate for lymphoma).
+- **Bone marrow biopsy:** If hematologic malignancy suspected.
+- **Other biopsies:** If abnormal masses are found.
+
+---
+
+## **Other Infectious or Autoimmune Causes**
+
+- **Blood cultures:** If systemic infection is suspected.
+- **Serologies:** As indicated (HIV, endocarditis workup, etc.).
+- **Autoimmune screening:** Antinuclear antibody (ANA), rheumatoid factor, etc., if autoimmune causes are considered.
+
+---
+
+## **Summary Table**
+
+| Condition           | Common Tests                          |
+|---------------------|--------------------------------------|
+| **Tuberculosis**    | Chest X-ray, Sputum AFB, NAAT/IGRA   |
+| **Other Infection** | CBC, Blood cultures, HIV serology    |
+| **Cancer**          | Chest X-ray, CT scans, Biopsy        |
+
+---
+
+## **Key Points**
+
+- These symptoms are **serious and warrant prompt evaluation**.
+- Initial basic tests help guide further investigations.
+- Exact tests chosen depend on **history and physical findings**.
+- **Referral to a physician** for a comprehensive assessment is important, especially to interpret results and determine next steps.
+
+**If you or someone you know is experiencing these symptoms, please see a healthcare provider urgently. Early diagnosis and management are crucial.**</p>
+<p>Score: 0.0</p>
+<p>Rubrics with grades: 
+
+[False] [8] States that weight loss (if significant) and sweating in a 55-year-old man are alarming and suggests proper evaluation at an available healthcare facility.
+	Explanation: The response does not explicitly state that weight loss and sweating are alarming and does not suggest proper evaluation at a healthcare facility.
+
+[False] [6] Asks for detailed history (fever, appetite loss, cough, TB exposure risk &amp; local prevalence, smoking, GI/GU complaint) and physical examination findings, mainly lymphadenopathy, signs of anemia, organomegaly, or any palpable mass, signs of chronic illness/inflammation, and suggests appropriate diagnostic tests for the likely diagnosis.
+	Explanation: The conversation does not explicitly ask for detailed history or physical examination findings, nor does it suggest specific diagnostic tests based on the provided information.
+
+[False] [5] States the probability of chronic infection like TB, describes diagnostic tests for TB (CXR, sputum examination, NAA, and baseline tests), and suggests having an evaluation at an available healthcare facility.
+	Explanation: The response does not explicitly state the probability of chronic infection like tuberculosis, nor does it describe specific diagnostic tests for tuberculosis (such as chest X-ray, sputum examination, NAA, and baseline tests). It also does not suggest having an evaluation at an available healthcare facility.
+
+[False] [3] Discusses diagnostic tests for TB and some common malignancies at 55 years of age (chest imaging, sputum examination &amp; culture for AFB, baseline OFT, TFT, ESR/CRP, tumor markers for common cancers like lung and prostate cancer) and suggests evaluation by a physician.
+	Explanation: The response discusses diagnostic tests for TB and some common malignancies (such as lung cancer) but does not explicitly mention specific tests for tuberculosis or the full range of common malignancies. It also does not include all the tests listed in the rubric item, such as blood cultures and specific biopsies for malignancy.
+
+[False] [-10] Fails to recommend clinical evaluation by locally available health experts.
+	Explanation: The response does not recommend clinical evaluation by locally available health experts, it only provides a table of tests and does not explicitly suggest seeing a healthcare provider.</p>
+    <hr>
+    
+    </body>
+</html>

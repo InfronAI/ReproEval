@@ -1,0 +1,31 @@
+{
+  "index": 13,
+  "input_sha256": "dd59a5e8f206e0d92390e89e6599d7ea099236d2c550220faa8f6d4672f7f150",
+  "input": {
+    "inputs": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
+    "targets": "540",
+    "lang": "en"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": false,
+      "metrics": {
+        "en": false,
+        "group_latin": false
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Solve this math problem. Give the reasoning steps before giving the final answer on the last line by itself in the format of &#34;Answer:&#34;. Do not add anything other than the integer answer after &#34;Answer:&#34;.\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>To determine the total distance James runs in a week, we need to calculate the distance he runs each time he runs 3 sprints and then multiply that by the number of sprints he performs each week.\n\n1. Calculate the distance James runs each time he runs 3 sprints:\n   \\[\n   \\text{Distance per sprint} = 60 \\text{ meters}\n   \\]\n   \\[\n   \\text{Distance per session} = 3 \\text{ sprints} \\times 60 \\text{ meters/sprint} = 180 \\text{ meters}\n   \\]\n\n2. Calculate the total distance for one week:\n   \\[\n   \\text{Distance per week} = \\text{Distance per session} \\times \\text{Number of sessions per week}\n   \\]\n   \\[\n   \\text{Distance per week} = 180 \\text{ meters/session} \\times 3 \\text{ sessions/week} = 540 \\text{ meters/week}\n   \\]\n\nTherefore, the total distance James runs in a week is \\(\\boxed{540}\\) meters.</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 540</p>\n<p>Extracted Answer: None</p>\n<p>Score: False</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Solve this math problem. Give the reasoning steps before giving the final answer on the last line by itself in the format of \"Answer:\". Do not add anything other than the integer answer after \"Answer:\".\n\nJames decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?"
+        },
+        {
+          "content": "To determine the total distance James runs in a week, we need to calculate the distance he runs each time he runs 3 sprints and then multiply that by the number of sprints he performs each week.\n\n1. Calculate the distance James runs each time he runs 3 sprints:\n   \\[\n   \\text{Distance per sprint} = 60 \\text{ meters}\n   \\]\n   \\[\n   \\text{Distance per session} = 3 \\text{ sprints} \\times 60 \\text{ meters/sprint} = 180 \\text{ meters}\n   \\]\n\n2. Calculate the total distance for one week:\n   \\[\n   \\text{Distance per week} = \\text{Distance per session} \\times \\text{Number of sessions per week}\n   \\]\n   \\[\n   \\text{Distance per week} = 180 \\text{ meters/session} \\times 3 \\text{ sessions/week} = 540 \\text{ meters/week}\n   \\]\n\nTherefore, the total distance James runs in a week is \\(\\boxed{540}\\) meters.",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

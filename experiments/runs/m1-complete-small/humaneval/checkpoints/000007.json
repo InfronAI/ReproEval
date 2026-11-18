@@ -1,0 +1,32 @@
+{
+  "index": 7,
+  "input_sha256": "20bd66a36d4f94ed0494729541920612833f65da35230e50b71a7b21c7e7dd27",
+  "input": {
+    "task_id": "HumanEval/7",
+    "prompt": "from typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n",
+    "entry_point": "filter_by_substring",
+    "canonical_solution": "    return [x for x in strings if substring in x]\n",
+    "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([], 'john') == []\n    assert candidate(['xxx', 'asd', 'xxy', 'john doe', 'xxxAAA', 'xxx'], 'xxx') == ['xxx', 'xxxAAA', 'xxx']\n    assert candidate(['xxx', 'asd', 'aaaxxy', 'john doe', 'xxxAAA', 'xxx'], 'xx') == ['xxx', 'aaaxxy', 'xxxAAA', 'xxx']\n    assert candidate(['grunt', 'trumpet', 'prune', 'gruesome'], 'run') == ['grunt', 'prune']\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 1.0,
+      "metrics": {
+        "pass@1": 1.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -&gt; List[str]:\n    &#34;&#34;&#34; Filter an input list of strings only for ones that contain given substring\n    &gt;&gt;&gt; filter_by_substring([], &#39;a&#39;)\n    []\n    &gt;&gt;&gt; filter_by_substring([&#39;abc&#39;, &#39;bacd&#39;, &#39;cde&#39;, &#39;array&#39;], &#39;a&#39;)\n    [&#39;abc&#39;, &#39;bacd&#39;, &#39;array&#39;]\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#34; Filter an input list of strings only for ones that contain given substring\\n    &gt;&gt;&gt; filter_by_substring([], &#39;a&#39;)\\n    []\\n    &gt;&gt;&gt; filter_by_substring([&#39;abc&#39;, &#39;bacd&#39;, &#39;cde&#39;, &#39;array&#39;], &#39;a&#39;)\\n    [&#39;abc&#39;, &#39;bacd&#39;, &#39;array&#39;]\\n    &#34;\n    return [s for s in strings if substring in s]\n\nfrom typing import List\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [1]</p>\n<p>Score: 1.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n"
+        },
+        {
+          "content": "    \" Filter an input list of strings only for ones that contain given substring\\n    >>> filter_by_substring([], 'a')\\n    []\\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\\n    ['abc', 'bacd', 'array']\\n    \"\n    return [s for s in strings if substring in s]\n\nfrom typing import List\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

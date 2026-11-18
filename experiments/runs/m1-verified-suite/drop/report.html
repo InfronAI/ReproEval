@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message {
+                padding: 8px 16px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+            }
+            .message.user {
+                background-color: #B2DFDB;
+                color: #00695C;
+            }
+            .message.assistant {
+                background-color: #B39DDB;
+                color: #4527A0;
+            }
+            .message.system {
+                background-color: #EEEEEE;
+                color: #212121;
+            }
+            .role {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .variant {
+                color: #795548;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h1>Metrics</h1>
+    <table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><b>Score</b></td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>em_score</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>em_score:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>f1_score</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>f1_score:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>score:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    </table>
+    
+    <h1>Examples</h1>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user
+    
+    </div>
+    <div class="content">
+    <pre>You will be asked to read a passage and answer a question. Some examples of passages and Q&amp;A are provided below.
+
+# Examples
+---
+Passage: In the county, the population was distributed as 25.80% under the age of 18, 9.50% from 18 to 24, 28.80% from 25 to 44, 22.10% from 45 to 64, and 13.80% who were 65 years of age or older.  The median age was 36 years. For every 100 females, there were 91.70 males.  For every 100 females age 18 and over, there were 87.70 males.
+Question: How many more males per 100 females were there then males per 100 females age 18 and over?
+Answer:  4
+
+---
+Passage: Coming off their win over the Jets, the Broncos traveled to Qualcomm Stadium for an AFC West rematch with the San Diego Chargers. The Chargers jumped out to a 10-0 lead, with a 53-yard field goal by kicker Nick Novak in the first quarter, followed in the second quarter by a 6-yard touchdown pass from quarterback Philip Rivers to tight end Antonio Gates. The Broncos responded just before halftime, with an 18-yard touchdown pass from quarterback Tim Tebow to wide receiver Eric Decker. The Chargers added to their lead in the third quarter, with a 25-yard field goal by Novak. The Broncos countered just before the end of the third quarter, with a 41-yard field goal by kicker Matt Prater. Novak missed a 48-yard field goal early in the fourth quarter. Trailing 13-10 with just over five minutes remaining in the fourth quarter, the Broncos marched down the field and tied the game with a 24-yard field goal by Prater. The Broncos&#39; defense subdued San Diego&#39;s final drive of the fourth quarter, sending the game to overtime. On the Chargers&#39; second possession in overtime, Novak&#39;s potential game-winning 53-yard field goal was blocked. However, head coach John Fox had called a timeout prior to the kick. Novak missed the second attempt wide right. The Broncos&#39; third possession in overtime began with 2:31 remaining, and Prater nailed the game-winning 37-yard field goal with 29 seconds left in overtime. With the win, the Broncos swept their AFC West division rivals on the road for the second time in three seasons. Cornerback Cassius Vaughn suffered a broken bone in his leg, and was placed on injured reserve the following day.
+Question: How many 53-yard field goals did Nick Novak attempt?
+Answer:  2
+
+---
+Passage: On December 7, 2015, the Washington Post reported that since 2001, in five theaters of the war  that the total number of terrorists killed ranges from 65,800 to 88,600, with Obama administration being responsible for between 30,000 and 33,000.
+Question: How many years after they began counting the number of terrorists killed in five theaters of the war did the Washington Post release a report?
+Answer:  4
+
+# Your Task
+
+---
+Passage: Trunajaya rebellion  or Trunajaya War was the ultimately unsuccessful rebellion waged by the Madurese prince Trunajaya and fighters from Makassar against the Mataram Sultanate and its Dutch East India Company  supporters in Java  during the 1670s. The rebellion was initially successful: the rebels defeated the royal army at Gegodog , captured most of the Javanese north coast, and took the Mataram capital Plered . King Amangkurat I died during the retreat of the royal court. His son and successor, Amangkurat II, requested help from the VOC in exchange for financial remuneration and geopolitical concessions. The VOC&#39;s subsequent involvement turned the tide of the war. VOC and Mataram forces recovered lost territories and overran Trunajaya&#39;s new capital at Kediri . However, the rebellion continued until the capture of Trunajaya at the end of 1679, and the defeat, death, or surrender of the other rebel leaders . Trunajaya was killed by Amangkurat II personally in 1680 while a prisoner of the VOC. After his father&#39;s death in 1677, Amangkurat II also faced rival claims to the throne. The most serious rival was his brother Pangeran Puger, who took the capital Plered in 1677 and did not surrender until 1681.
+Question: How many years was it between Trunajaya&#39;s capture and his death while prisoner of the VOC?
+Answer: 
+
+Think step by step, then write a line of the form &#34;Answer: $ANSWER&#34; at the end of your response.
+                    </pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant
+    
+    </div>
+    <div class="content">
+    <pre>30 years</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: [&#39;1&#39;]</p>
+<p>Extracted Answer: []</p>
+<p>Score: False</p>
+    <hr>
+    
+    </body>
+</html>

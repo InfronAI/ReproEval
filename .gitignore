@@ -127,3 +127,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Local data/model caches and private configuration
+.DS_Store
+.env.*
+!.env.example
+*.safetensors
+*.gguf
+experiments/**/.run.lock
+experiments/runs/**/*.tmp
+
+# Full-run payloads are versioned losslessly in experiments/artifacts/*.tar.gz.
+experiments/runs/full-reference/*/checkpoints/
+experiments/runs/full-reference/*/traces/
+experiments/runs/full-reference/*/results.json
+experiments/runs/full-reference/*/report.html

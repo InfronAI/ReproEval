@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef fib(n: int):\n    \"\"\"Return n-th Fibonacci number.\n    >>> fib(10)\n    55\n    >>> fib(1)\n    1\n    >>> fib(8)\n    21\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\ndef fib(n: int) -> int:\n    \"\"\"Return n-th Fibonacci number.\n    >>> fib(10)\n    55\n    >>> fib(1)\n    1\n    >>> fib(8)\n    21\n    \"\"\"\n    if n == 1:\n        return 1\n    elif n == 2:\n        return 1\n    else:\n        return fib(n - 1) + fib(n - 2)\n```",
+  "usage": {
+    "input_tokens": 105,
+    "output_tokens": 99,
+    "input_cached_tokens": 52,
+    "total_tokens": 204
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 2259578490,
+  "seconds": 0.8758514169603586,
+  "generation_tokens_per_second": 137.4183601952882,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

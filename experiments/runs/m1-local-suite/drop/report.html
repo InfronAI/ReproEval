@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message {
+                padding: 8px 16px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+            }
+            .message.user {
+                background-color: #B2DFDB;
+                color: #00695C;
+            }
+            .message.assistant {
+                background-color: #B39DDB;
+                color: #4527A0;
+            }
+            .message.system {
+                background-color: #EEEEEE;
+                color: #212121;
+            }
+            .role {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .variant {
+                color: #795548;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h1>Metrics</h1>
+    <table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><b>Score</b></td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>em_score</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>em_score:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>f1_score</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>f1_score:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>score:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    </table>
+    
+    <h1>Examples</h1>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user
+    
+    </div>
+    <div class="content">
+    <pre>You will be asked to read a passage and answer a question. Some examples of passages and Q&amp;A are provided below.
+
+# Examples
+---
+Passage: In the county, the population was distributed as 25.80% under the age of 18, 9.50% from 18 to 24, 28.80% from 25 to 44, 22.10% from 45 to 64, and 13.80% who were 65 years of age or older.  The median age was 36 years. For every 100 females, there were 91.70 males.  For every 100 females age 18 and over, there were 87.70 males.
+Question: How many more males per 100 females were there then males per 100 females age 18 and over?
+Answer:  4
+
+---
+Passage: Coming off their win over the Jets, the Broncos traveled to Qualcomm Stadium for an AFC West rematch with the San Diego Chargers. The Chargers jumped out to a 10-0 lead, with a 53-yard field goal by kicker Nick Novak in the first quarter, followed in the second quarter by a 6-yard touchdown pass from quarterback Philip Rivers to tight end Antonio Gates. The Broncos responded just before halftime, with an 18-yard touchdown pass from quarterback Tim Tebow to wide receiver Eric Decker. The Chargers added to their lead in the third quarter, with a 25-yard field goal by Novak. The Broncos countered just before the end of the third quarter, with a 41-yard field goal by kicker Matt Prater. Novak missed a 48-yard field goal early in the fourth quarter. Trailing 13-10 with just over five minutes remaining in the fourth quarter, the Broncos marched down the field and tied the game with a 24-yard field goal by Prater. The Broncos&#39; defense subdued San Diego&#39;s final drive of the fourth quarter, sending the game to overtime. On the Chargers&#39; second possession in overtime, Novak&#39;s potential game-winning 53-yard field goal was blocked. However, head coach John Fox had called a timeout prior to the kick. Novak missed the second attempt wide right. The Broncos&#39; third possession in overtime began with 2:31 remaining, and Prater nailed the game-winning 37-yard field goal with 29 seconds left in overtime. With the win, the Broncos swept their AFC West division rivals on the road for the second time in three seasons. Cornerback Cassius Vaughn suffered a broken bone in his leg, and was placed on injured reserve the following day.
+Question: How many 53-yard field goals did Nick Novak attempt?
+Answer:  2
+
+---
+Passage: On December 7, 2015, the Washington Post reported that since 2001, in five theaters of the war  that the total number of terrorists killed ranges from 65,800 to 88,600, with Obama administration being responsible for between 30,000 and 33,000.
+Question: How many years after they began counting the number of terrorists killed in five theaters of the war did the Washington Post release a report?
+Answer:  4
+
+# Your Task
+
+---
+Passage: Trunajaya rebellion  or Trunajaya War was the ultimately unsuccessful rebellion waged by the Madurese prince Trunajaya and fighters from Makassar against the Mataram Sultanate and its Dutch East India Company  supporters in Java  during the 1670s. The rebellion was initially successful: the rebels defeated the royal army at Gegodog , captured most of the Javanese north coast, and took the Mataram capital Plered . King Amangkurat I died during the retreat of the royal court. His son and successor, Amangkurat II, requested help from the VOC in exchange for financial remuneration and geopolitical concessions. The VOC&#39;s subsequent involvement turned the tide of the war. VOC and Mataram forces recovered lost territories and overran Trunajaya&#39;s new capital at Kediri . However, the rebellion continued until the capture of Trunajaya at the end of 1679, and the defeat, death, or surrender of the other rebel leaders . Trunajaya was killed by Amangkurat II personally in 1680 while a prisoner of the VOC. After his father&#39;s death in 1677, Amangkurat II also faced rival claims to the throne. The most serious rival was his brother Pangeran Puger, who took the capital Plered in 1677 and did not surrender until 1681.
+Question: How many years was it between Trunajaya&#39;s capture and his death while prisoner of the VOC?
+Answer: 
+
+Think step by step, then write a line of the form &#34;Answer: $ANSWER&#34; at the end of your response.
+                    </pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant
+    
+    </div>
+    <div class="content">
+    <pre>30 years</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: [&#39;1&#39;]</p>
+<p>Extracted Answer: []</p>
+<p>Score: False</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user
+    
+    </div>
+    <div class="content">
+    <pre>You will be asked to read a passage and answer a question. Some examples of passages and Q&amp;A are provided below.
+
+# Examples
+---
+Passage: The Browns took on the Indianapolis Colts in Week 2, with both teams looking to rebound from losses. The Colts moved the ball well early, but had to settle for two Adam Vinatieri field goals to take a 6-0 lead. The Browns answered with an Evan Moore touchdown reception from Colt McCoy. The Colts briefly regained the lead on another Vinatieri field goal, but the Browns responded with a Peyton Hillis touchdown run to take a 14-9 lead into halftime. The Colts added another field goal in the third, but the Browns scored 13 unanswered points in the fourth to put the game away and defeat the Colts 27-19. With the win, the Browns improved to 1-1.
+Question: Who scored the first points of the game?
+Answer:  Adam Vinatieri
+
+---
+Passage: As of the 2010 United States Census, there were 1,339,532 people, 448,528 households, and 340,523 families residing in the county. The population of Nassau County was estimated by the U.S. Census to have increased by 2.2% to 1,369,514 in 2017, representing 6.9% of the Census-estimated New York State population of 19,849,399 and 17.4% of the Census-estimated Long Island population of 7,869,820. The population density in 2010 was 4,700 people per square mile (1,815/km²).  There were 468,346 housing units at an average density of 1,598 per square mile (617/km²).  The racial makeup of the county was 73.0% White (U.S. Census) (65.5% non-Hispanic White), 11.1% African American (U.S. Census), 0.2% Native American (U.S. Census), 7.6% Asian (U.S. Census) (3.0% Indian, 1.8% Chinese, 1.0% Korean, 0.7% Filipino, 0.1% Japanese, 0.1% Vietnamese, 0.9% Other Asian), 0.03% Pacific Islander (U.S. Census), 5.6% from Race (United States Census), and 2.4% from two or more races. Hispanic (U.S. Census) or Latino (U.S. Census) of any race were 14.6% of the population.
+Question: Were there more Indian or Korean people in Nassau County in 2010?
+Answer:  Indian
+
+---
+Passage: According to 2011 census of India, Kumbakonam had a population of 140,156 with a sex-ratio of 1,021 females for every 1,000 males, much above the national average of 929. A total of 12,791 were under the age of six, constituting 6,495 males and 6,296 females.The average literacy of the city was 83.21%, compared to the national average of 72.99%. There were a total of 9,519 workers, comprising 32 cultivators, 83 main agricultural labourers, 1,206 in house hold industries, 7,169 other workers, 1,029 marginal workers, 24 marginal cultivators, 45 marginal agricultural labourers, 212 marginal workers in household industries and 0 other marginal workers.
+Question: Which groups were comprised of less than 50 workers?
+Answer:  cultivators and agricultural labourers and other marginal workers
+
+# Your Task
+
+---
+Passage: Led by former Giant Kurt Warner, the defending NFC champions took the field at Giants Stadium against a Giants team still reeling from their bad loss in New Orleans. The Giants scored first, sending Jacobs in for a 4-yard touchdown run following a Terrell Thomas interception. Later, Arizona running back Beanie Wells scored his first career touchdown on a 13-yard rush. Manning responded by throwing a 62-yard touchdown to Nicks for his longest reception of the year. In the second half, the Cardinals&#39; Tim Hightower and Jason Wright scored touchdowns. But it was turnovers that decided this game; Manning&#39;s 3 interceptions were as many as he had thrown all season. The Giants scored only 3 points in the second half, ending the game on an interception to Antrel Rolle. The Giants notable streak of 38 consecutive starts by the same offensive line unit was ended here, as offensive tackle Kareem McKenzie missed the game with a groin injury. McKenzie returned the following week.
+Question: Which player made the first score of the game?
+Answer: 
+
+Think step by step, then write a line of the form &#34;Answer: $ANSWER&#34; at the end of your response.
+                    </pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant
+    
+    </div>
+    <div class="content">
+    <pre>Kurt Warner</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: [&#39;Jacobs&#39;]</p>
+<p>Extracted Answer: []</p>
+<p>Score: False</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user
+    
+    </div>
+    <div class="content">
+    <pre>You will be asked to read a passage and answer a question. Some examples of passages and Q&amp;A are provided below.
+
+# Examples
+---
+Passage: By 1982 Timman was ranked second in the world, behind only Anatoly Karpov. In the 1980s he won a number of very strong tournaments, including Amsterdam IBM in 1981, Wijk aan Zee 1981, and 1985, Linares chess tournament 1988, the 1989 Max Euwe Memorial, and the 1989 World Cup tournament in Rotterdam. Other major successes included Las Palmas 1981, Mar del Plata chess tournaments 1982, Bugojno 1984, and Sarajevo 1984. One of his notable later successes was the 2nd Immopar Fast chess Tournament in 1991, a weekend event which attracted a huge amount of prize money. In this knock-out format tournament he defeated Gata Kamsky 1½-½, Karpov 2-0, Viswanathan Anand 1½-½, and finally the World Champion Garry Kasparov 1½-½ to win the first prize of approximately 75,000 USD. His performance was equivalent to an Elo rating of 2950.
+Question: How many total losses did Timman have in the 1991 Immopar tournament across all matches?
+Answer:  1.5
+
+---
+Passage: Van Coehoorn was born in March 1641, one of six sons of Goosewijn van Coehoorn and Aaltje van Hinckena on the Lettinga State in the village of Britsum near Leeuwarden in the Dutch province of Friesland. His father was an officer of German descent in a Friesland regiment of the Dutch States Army and a member of the petty nobility. Menno was educated at home with his brothers, then later at the University of Franeker by his uncle Bernardus Fullenius, where he showed a talent for mathematics and military drawing. In 1657, he was commissioned as a Lieutenant in his father&#39;s company, which formed part of the permanent garrison in Maastricht. In 1678, Van Coehoorn married Magdalena van Scheltinga; they had four surviving children, Goosewijn , Gertruda , Hendrik  and Amalia . Magdalena died in 1683 and he later married Truytje van Wigara . He died on 17 March 1704.
+Question: How many years old was Van Coehoorn when he died?
+Answer:  63
+
+---
+Passage: Coming off their win over the 49ers the Panthers flew to Edward Jones Dome for an NFC duel with the Rams. In the second quarter the Panthers trailed early as kicker Josh Brown nailed a 33-yard field goal. This was followed by QB Sam Bradford completing a 2-yard TD pass to WR Danny Amendola. The Panthers replied with kicker John Kasay making a 44-yard field goal. The Panthers fell further behind in the fourth quarter with Bradford finding TE Daniel Fells on a 23-yard TD pass, followed by Brown getting a 41-yard field goal. The Panthers responded with QB Matt Moore making a 17-yard TD pass to WR Brandon LaFell.
+Question: How many total touchdown passing  yards did Sam Bradford make?
+Answer:  25
+
+# Your Task
+
+---
+Passage: Hoping to rebound from their road loss to the Bills, the Chargers flew to Wembley Stadium for the 2008 International Series game with the New Orleans Saints. In the first quarter, San Diego trailed early as kicker Taylor Mehlhaff got a 23-yard field goal.  The &#39;Bolts would respond with kicker Nate Kaeding getting a 33-yard field goal.  In the second quarter, New Orleans regained the lead as QB Drew Brees (a former Charger) completed a 12-yard TD pass to WR Devery Henderson (with a failed PAT) and RB Deuce McAllister getting a 1-yard TD run.  San Diego answered as QB Philip Rivers completed a 12-yard TD pass to RB LaDainian Tomlinson, but the Saints replied with Brees completing a 30-yard TD pass to WR Lance Moore.  The Chargers closed out the half with Rivers completing a 12-yard TD pass to TE Antonio Gates. In the third quarter, New Orleans increased its lead Brees completing a 1-yard TD pass to TE Mark Campbell, after a very controversial Pass interference call on cornerback Cletis Gordon put the Saints on the 1-yard line.  The &#39;Bolts would answer with Kaeding getting a 24-yard field goal.  In the fourth quarter, the Saints continued to build its lead as FB Mike Karney got a 1-yard TD run.  San Diego tried to rally as Kaeding nailed a 31-yard field goal, Rivers completed a 14-yard TD pass to WR Vincent Jackson, and Brees giving the &#39;Bolts a safety via an incomplete pass thrown into the back of his own endzone.  However, New Orleans&#39; defense stiffened for the win. With the loss, the Chargers went into their bye week at 3-5.
+Question: How many total yards of touchdown passes did Drew Brees make?
+Answer: 
+
+Think step by step, then write a line of the form &#34;Answer: $ANSWER&#34; at the end of your response.
+                    </pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant
+    
+    </div>
+    <div class="content">
+    <pre>30</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: [&#39;43&#39;, &#39;12&#39;]</p>
+<p>Extracted Answer: []</p>
+<p>Score: False</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user
+    
+    </div>
+    <div class="content">
+    <pre>You will be asked to read a passage and answer a question. Some examples of passages and Q&amp;A are provided below.
+
+# Examples
+---
+Passage: Still searching for their first win of the year, the Dolphins went home for a Week 4 duel with the Oakland Raiders, featuring former teammate Daunte Culpepper.  The game was delayed for 30 minutes due to thunderstorms in the area. In the first quarter, Miami trailed early as Culpepper completed a 7-yard TD pass to WR Jerry Porter.  He even got a 2-yard TD run.  In the second quarter, the Dolphins managed to get on the board with RB Ronnie Brown getting a 9-yard TD run for the only score of the period.  In the third quarter, the &#39;Fins managed to get closer with kicker Jay Feely getting a 29-yard field goal, yet Oakland answered with Culpepper getting a 5-yard TD run.  Miami ended the period with QB Trent Green completing a 3-yard TD pass to TE Justin Peelle.  In the fourth quarter however, Culpepper delivered the final blows by hooking up with Porter again on a 27-yard TD pass and getting a 3-yard TD run.
+Question: How many yards difference is there between the longest touchdown pass and the shortest touchdown run?
+Answer:  25
+
+---
+Passage: In the county, the population was distributed as 25.80% under the age of 18, 9.50% from 18 to 24, 28.80% from 25 to 44, 22.10% from 45 to 64, and 13.80% who were 65 years of age or older.  The median age was 36 years. For every 100 females, there were 91.70 males.  For every 100 females age 18 and over, there were 87.70 males.
+Question: How many in percent weren&#39;t 18 to 24?
+Answer:  90.5
+
+---
+Passage: Hoping to rebound from their loss to the Rams, the Broncos returned home for an AFC duel against the Miami Dolphins &amp;#8212; the Broncos&#39; first home game in exactly one month. The Dolphins grabbed the early lead, with running back Daniel Thomas rushing for a 3-yard touchdown. The Broncos subsequently got on the scoreboard, with a 38-yard field goal by placekicker Brandon McManus. The Dolphins added to their lead early in the second quarter, with quarterback Ryan Tannehill rushing for a 1-yard touchdown. The Broncos cut into the Dolphins&#39; lead, with quarterback Peyton Manning connecting on a 5-yard touchdown pass to wide receiver Demaryius Thomas, however, the Dolphins responded, with Tannehill throwing a 10-yard touchdown pass to wide receiver Mike Wallace. Another touchdown pass from Manning to Demaryius Thomas &amp;#8212; from 14 yards out &amp;#8212; narrowed the Dolphins&#39; lead to 21-17 just before halftime. The Broncos drove to as far as the Dolphins&#39; 7-yard line on the initial possession of the second half, but after Manning was sacked by Dolphins&#39; linebacker Jelani Jenkins for an 8-yard loss, McManus missed on a 33-yard field goal attempt. After the Broncos&#39; defense forced a Dolphins&#39; punt, return specialist Isaiah Burse fumbled deep in Broncos&#39; territory, giving the football back to the Dolphins. Four plays later, Tannehill connected with wide receiver Jarvis Landry on a 5-yard touchdown pass to give the Dolphins a 28-17 lead at the 2:15 mark of the third quarter. The Broncos then reeled off 22 unanswered points. Early in the fourth quarter, Manning threw his third touchdown pass of the game to Demaryius Thomas &amp;#8212; from 5 yards out &amp;#8212; coupled with a two-point conversion pass to wide receiver Emmanuel Sanders. After forcing a Dolphins&#39; punt, the Broncos grabbed their first lead of the game at the 5:05 mark of the fourth quarter, with running back C. J. Anderson rushing for a 10-yard touchdown. On the third play of the Dolphins&#39; next possession, Tannehill was intercepted by Broncos&#39; safety T. J. Ward, who advanced the football all the way to the Dolphins&#39; 8-yard line. Two plays later, Manning threw a 2-yard touchdown pass to wide receiver Wes Welker to increase the Broncos&#39; lead to 39-28 with 3:17 remaining in the fourth quarter. The Dolphins attempted a rally, with Tannehill connecting on a 1-yard touchdown pass to Landry, coupled with running back Lamar Miller rushing for a two-point conversion, with 1:37 remaining in the game. However, the Dolphins&#39; onside kick attempt was unsuccessful, and the Broncos subsequently ran out the clock. Demaryius Thomas&#39; streak of 100-yard receiving games ended at seven games, one shy of the NFL record that was set by Detroit Lions&#39; wide receiver Calvin Johnson in 2012.
+Question: Which team allowed the least first half points?
+Answer:  Dolphins
+
+# Your Task
+
+---
+Passage: As Somalia gained military strength, Ethiopia grew weaker. In September 1974, Emperor Haile Selassie had been overthrown by the Derg , marking a period of turmoil. The Derg quickly fell into internal conflict to determine who would have primacy. Meanwhile, various anti-Derg as well as separatist movements began throughout the country. The regional balance of power now favoured Somalia. One of the separatist groups seeking to take advantage of the chaos was the pro-Somalia Western Somali Liberation Front  operating in the Somali-inhabited Ogaden area, which by late 1975 had struck numerous government outposts. From 1976 to 1977, Somalia supplied arms and other aid to the WSLF. A sign that order had been restored among the Derg was the announcement of Mengistu Haile Mariam as head of state on February 11, 1977. However, the country remained in chaos as the military attempted to suppress its civilian opponents in a period known as the Red Terror . Despite the violence, the Soviet Union, which had been closely observing developments, came to believe that Ethiopia was developing into a genuine Marxist-Leninist state and that it was in Soviet interests to aid the new regime. They thus secretly approached Mengistu with offers of aid that he accepted. Ethiopia closed the U.S. military mission and the communications centre in April 1977. In June 1977, Mengistu accused Somalia of infiltrating SNA soldiers into the Somali area to fight alongside the WSLF. Despite considerable evidence to the contrary, Barre strongly denied this, saying SNA &#34;volunteers&#34; were being allowed to help the WSLF.
+Question: How many years after Emperor Haile Selassie was overthrown by the Derg was the period called Red Terror?
+Answer: 
+
+Think step by step, then write a line of the form &#34;Answer: $ANSWER&#34; at the end of your response.
+                    </pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant
+    
+    </div>
+    <div class="content">
+    <pre>1974</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: [&#39;3&#39;]</p>
+<p>Extracted Answer: []</p>
+<p>Score: False</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user
+    
+    </div>
+    <div class="content">
+    <pre>You will be asked to read a passage and answer a question. Some examples of passages and Q&amp;A are provided below.
+
+# Examples
+---
+Passage: Before involving his country in the conflict raging in Europe and across the world, Charles III of Spain made provisions to defend the Spanish colonies against the British Royal Navy. For the defence of Cuba, he appointed Juan de Prado as commander-in-chief.  De Prado arrived at Havana in February 1761 and began work to improve the fortifications of the city. In June 1761, a flotilla of seven ships of the line under the command of Admiral Gutierre de Hevia arrived at Havana, transporting two regular infantry regiments  totalling some 1,000 men. However, yellow fever quickly reduced the defending forces, and by the time of the siege, they had been reduced to 3,850 soldiers, 5,000 sailors and marines and 2,800 militia. The main garrison consisted of:
+Question: What did people die of
+Answer:  yellow fever
+
+---
+Passage: The Chargers committed four turnovers and lost 37-0 to the Miami Dolphins for their most lopsided defeat since 1996. The Dolphins front four dominated the Chargers&#39; offensive line, forcing three interceptions and a lost fumble by Rivers. It was San Diego&#39;s third straight loss, and the first time they had been shut out since 1999. On the opening possession of the game, San Diego gambled on fourth and 1 from the Miami 22, but Oliver was stopped for a 1-yard loss. It was the only time the Chargers crossed midfield during the game. Miami led 17-0 after the first 21 minutes. They scored on all but one of their seven possessions in the first half, the exception being Caleb Sturgis&#39; miss on a 45-yard field goal attempt to end the half. Rivers was limited to 138 yards passing in the game, and was twice intercepted by Brent Grimes. His quarterback rating of 31.0 was his lowest since 2007. San Diego remained winless in South Florida since the Epic in Miami in January 1982, a string of eight straight losses to the Dolphins. Running back Donald Brown returned from his concussion in Week 5, and ran four times for 23 yards.
+Question: How many loses was this for the Chargers in total?
+Answer:  8
+
+---
+Passage: As of the census of 2000, there were 16,428 people, 5,229 households, and 4,094 families residing in the county. The population density was 8 people per square mile (3/km²). There were 5,773 housing units at an average density of 3 per square mile (1/km²). The racial makeup of the county was 64.96% Race (United States Census), 0.28% Race (United States Census) or Race (United States Census), 0.68% Race (United States Census), 0.60% Race (United States Census), 0.04% Race (United States Census), 30.69% from Race (United States Census), and 2.75% from two or more races. 16.3% were of German people, 6.2% identified as United States or American and 5.6% English people ancestry. 57.0% spoke English language, 41.7% Spanish language and 1.2% German language as their first language.
+Question: How many percent were not  english?
+Answer:  94.4
+
+# Your Task
+
+---
+Passage: After the teams traded punts on the first four possessions of the game, Pennington led the Jets on a 9-play, 76-yard drive, aided by a pass-interference call on Titans linebacker Peter Sirmon that negated an interception by defensive back Reynaldo Hill, capped off by a 1-yard touchdown run from Kevan Barlow. After another Titans punt, Tennessee head coach Jeff Fisher grew impatient with starting quarterback Kerry Collins, pulling him in favor of rookie quarterback Vince Young. Young drove the Titans to the Jets&#39; 32-yard line, but underthrew receiver David Givens on the next play, and Andre Dyson intercepted. Pennington drove the Jets into the Titans&#39; red zone, completing a 10-yard pass to Sean Ryan, but Ryan was hit hard by Keith Bulluck and fumbled, with Tennessee recovering. However, two plays later, the Jets would get the ball right back, as Collins, inserted back into the game, was intercepted by Dyson, his second of the quarter. Setting up shop at the Titans&#39; 36-yard line, the Jets would capitalize, as Pennington threw an 8-yard touchdown pass to Jerricho Cotchery with 18 seconds left in the first half, but kicker Mike Nugent shanked the extra-point attempt wide right to leave the Jets with a 13-0 halftime lead. Tennessee&#39;s woes in the passing game continued as soon as the second half started, with Collins getting intercepted again, this time by Kerry Rhodes, who returned the ball 25 yards to the Tennessee 22. Nugent nailed an 18-yard field goal as the drive stalled at the one-yard line. On the Jets&#39; next possession, Pennington drove to the red zone again, but Nugent missed a 34-yard field goal attempt wide right. On the Jets&#39; next possession, Pennington appeared to find Cotchery on a 2-yard touchdown pass, but the touchdown was nullified by a holding penalty on D&#39;Brickashaw Ferguson. When the drive stalled, Nugent missed another field goal, hitting the right upright from 30 yards out. Tennessee finally capitalized, with Travis Henry scoring on a 3-yard touchdown run with 10:48 left in the game. Tennessee went for two, and brought in Young. Young&#39;s pass intended for Bobby Wade was incomplete, but Jets defensive back Derrick Strait was flagged for pass interference, giving the Titans second life. They would take advantage, with Collins handing off to Henry for the conversion. After a trade of punts, the Jets took over on their own 11 with 7:28 to go. On third down, Pennington was sacked by Cortland Finnegan, and Tennessee&#39;s Randy Starks recovered at New York&#39;s 1-yard line. Tennessee went for two and converted, with Collins finding Drew Bennett open, and the game was tied, 16-16. The Jets came right back, first with Justin Miller returning the ensuing kickoff 41 yards, and then Pennington steadily driving downfield, finding Baker on the 12-yard touchdown pass to cap a 7-play, 57-yard drive. The Jets had to hold on because on the next possession, Collins found Bennett on a 26-yard completion moving the ball to midfield, and he then completed long passes to Ben Troupe and Wade to move the ball to the Jets&#39; 12-yard line with 1:11 to play. The Jets locked down, and on 4th-and-6 from the Jets&#39; 8-yard line, Collins&#39; pass for Bo Scaife was knocked away by Rhodes, ending the game.
+Question: Who had more points at halftime?
+Answer: 
+
+Think step by step, then write a line of the form &#34;Answer: $ANSWER&#34; at the end of your response.
+                    </pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant
+    
+    </div>
+    <div class="content">
+    <pre>Pennington</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: [&#39;Jets&#39;]</p>
+<p>Extracted Answer: []</p>
+<p>Score: False</p>
+    <hr>
+    
+    </body>
+</html>

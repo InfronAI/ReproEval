@@ -1,0 +1,32 @@
+{
+  "index": 89,
+  "input_sha256": "bc2f2d06613acbcf14b0ad9612e87ea617147b867c858bb77d99f907e8de86e1",
+  "input": {
+    "task_id": "HumanEval/89",
+    "prompt": "\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'lm'\n    encrypt('asdfghjkl') returns 'ewhjklnop'\n    encrypt('gf') returns 'kj'\n    encrypt('et') returns 'ix'\n    \"\"\"\n",
+    "entry_point": "encrypt",
+    "canonical_solution": "    d = 'abcdefghijklmnopqrstuvwxyz'\n    out = ''\n    for c in s:\n        if c in d:\n            out += d[(d.index(c)+2*2) % 26]\n        else:\n            out += c\n    return out\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate('hi') == 'lm', \"This prints if this assert fails 1 (good for debugging!)\"\n    assert candidate('asdfghjkl') == 'ewhjklnop', \"This prints if this assert fails 1 (good for debugging!)\"\n    assert candidate('gf') == 'kj', \"This prints if this assert fails 1 (good for debugging!)\"\n    assert candidate('et') == 'ix', \"This prints if this assert fails 1 (good for debugging!)\"\n\n    assert candidate('faewfawefaewg')=='jeiajeaijeiak', \"This prints if this assert fails 1 (good for debugging!)\"\n    assert candidate('hellomyfriend')=='lippsqcjvmirh', \"This prints if this assert fails 2 (good for debugging!)\"\n    assert candidate('dxzdlmnilfuhmilufhlihufnmlimnufhlimnufhfucufh')=='hbdhpqrmpjylqmpyjlpmlyjrqpmqryjlpmqryjljygyjl', \"This prints if this assert fails 3 (good for debugging!)\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate('a')=='e', \"This prints if this assert fails 2 (also good for debugging!)\"\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef encrypt(s):\n    &#34;&#34;&#34;Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt(&#39;hi&#39;) returns &#39;lm&#39;\n    encrypt(&#39;asdfghjkl&#39;) returns &#39;ewhjklnop&#39;\n    encrypt(&#39;gf&#39;) returns &#39;kj&#39;\n    encrypt(&#39;et&#39;) returns &#39;ix&#39;\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#34;Create a function encrypt that takes a string as an argument and\\n    returns a string encrypted with the alphabet being rotated. \\n    The alphabet should be rotated in a manner such that the letters \\n    shift down by two multiplied to two places.\\n    For example:\\n    encrypt(&#39;hi&#39;) returns &#39;lm&#39;\\n    encrypt(&#39;asdfghjkl&#39;) returns &#39;ewhjklnop&#39;\\n    encrypt(&#39;gf&#39;) returns &#39;kj&#39;\\n    encrypt(&#39;et&#39;) returns &#39;ix&#39;\\n    &#34;\n    alphabet = &#39;abcdefghijklmnopqrstuvwxyz&#39;\n    encrypted_word = &#39;&#39;\n    for char in s:\n        index = alphabet.index(char)\n        new_index = (index + 2) % 26\n        encrypted_word += alphabet[new_index]\n    return encrypted_word\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'lm'\n    encrypt('asdfghjkl') returns 'ewhjklnop'\n    encrypt('gf') returns 'kj'\n    encrypt('et') returns 'ix'\n    \"\"\"\n"
+        },
+        {
+          "content": "    \"Create a function encrypt that takes a string as an argument and\\n    returns a string encrypted with the alphabet being rotated. \\n    The alphabet should be rotated in a manner such that the letters \\n    shift down by two multiplied to two places.\\n    For example:\\n    encrypt('hi') returns 'lm'\\n    encrypt('asdfghjkl') returns 'ewhjklnop'\\n    encrypt('gf') returns 'kj'\\n    encrypt('et') returns 'ix'\\n    \"\n    alphabet = 'abcdefghijklmnopqrstuvwxyz'\n    encrypted_word = ''\n    for char in s:\n        index = alphabet.index(char)\n        new_index = (index + 2) % 26\n        encrypted_word += alphabet[new_index]\n    return encrypted_word\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

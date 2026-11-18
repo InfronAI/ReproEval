@@ -1,0 +1,32 @@
+{
+  "index": 60,
+  "input_sha256": "0949e8b71e26355cf89f0e8d85f44b090345d8b6e5835f87fb9ed84d631a610b",
+  "input": {
+    "task_id": "HumanEval/60",
+    "prompt": "\n\ndef sum_to_n(n: int):\n    \"\"\"sum_to_n is a function that sums numbers from 1 to n.\n    >>> sum_to_n(30)\n    465\n    >>> sum_to_n(100)\n    5050\n    >>> sum_to_n(5)\n    15\n    >>> sum_to_n(10)\n    55\n    >>> sum_to_n(1)\n    1\n    \"\"\"\n",
+    "entry_point": "sum_to_n",
+    "canonical_solution": "    return sum(range(n + 1))\n",
+    "test": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate(1) == 1\n    assert candidate(6) == 21\n    assert candidate(11) == 66\n    assert candidate(30) == 465\n    assert candidate(100) == 5050\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 1.0,
+      "metrics": {
+        "pass@1": 1.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef sum_to_n(n: int):\n    &#34;&#34;&#34;sum_to_n is a function that sums numbers from 1 to n.\n    &gt;&gt;&gt; sum_to_n(30)\n    465\n    &gt;&gt;&gt; sum_to_n(100)\n    5050\n    &gt;&gt;&gt; sum_to_n(5)\n    15\n    &gt;&gt;&gt; sum_to_n(10)\n    55\n    &gt;&gt;&gt; sum_to_n(1)\n    1\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;sum_to_n is a function that sums numbers from 1 to n.\\n    &gt;&gt;&gt; sum_to_n(30)\\n    465\\n    &gt;&gt;&gt; sum_to_n(100)\\n    5050\\n    &gt;&gt;&gt; sum_to_n(5)\\n    15\\n    &gt;&gt;&gt; sum_to_n(10)\\n    55\\n    &gt;&gt;&gt; sum_to_n(1)\\n    1\\n    &#39;\n    if n == 1:\n        return 1\n    else:\n        return n + sum_to_n(n - 1)\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [1]</p>\n<p>Score: 1.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef sum_to_n(n: int):\n    \"\"\"sum_to_n is a function that sums numbers from 1 to n.\n    >>> sum_to_n(30)\n    465\n    >>> sum_to_n(100)\n    5050\n    >>> sum_to_n(5)\n    15\n    >>> sum_to_n(10)\n    55\n    >>> sum_to_n(1)\n    1\n    \"\"\"\n"
+        },
+        {
+          "content": "    'sum_to_n is a function that sums numbers from 1 to n.\\n    >>> sum_to_n(30)\\n    465\\n    >>> sum_to_n(100)\\n    5050\\n    >>> sum_to_n(5)\\n    15\\n    >>> sum_to_n(10)\\n    55\\n    >>> sum_to_n(1)\\n    1\\n    '\n    if n == 1:\n        return 1\n    else:\n        return n + sum_to_n(n - 1)\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

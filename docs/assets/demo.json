@@ -1,0 +1,11 @@
+{
+  "source": "demo.cast",
+  "duration_seconds": 14.1885,
+  "fps": 8,
+  "dimensions": [
+    1280,
+    800
+  ],
+  "recorded_command": "/Users/apple/Projects/simple-evals/.venv/bin/python -m simple_evals --eval mmlu --examples 2 --offline --max-tokens 512 --output experiments/runs/demo",
+  "note": "Video/GIF are rendered from actual timestamped PTY output, without fabricated results."
+}

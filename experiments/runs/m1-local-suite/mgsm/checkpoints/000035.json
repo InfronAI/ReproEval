@@ -1,0 +1,31 @@
+{
+  "index": 35,
+  "input_sha256": "ad826d1fc2585b5a240bfc04a65e5d40c96513d3ad67414f13b7aaa7cc21f0a0",
+  "input": {
+    "inputs": "Bata wa Janet hutaga mayai 16 kila siku. Huwa anakula matatu wakati wa staftahi kila asubuhi na huokea marafiki zake mafini kila siku kwa mayai manne. Huwa anauza yaliyosalia katika soko la wakulima kila siku kwa $2 kwa kila yai la bata. Huwa anatengeneza pesa ngapi katika dola kila siku katika soko la wakulima?",
+    "targets": "18",
+    "lang": "sw"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": false,
+      "metrics": {
+        "sw": false,
+        "group_latin": false
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Suluhisha tatizo hili la hesabu. Toa hatua za mantiki kabla ya kutoa jibu la mwisho kwenye mstari wa mwisho peke yake katika muundo wa &#34;Jibu:&#34;. Usiongeze chochote kingine isipokuwa jibu la integer baada ya &#34;Jibu:&#34;.\n\nBata wa Janet hutaga mayai 16 kila siku. Huwa anakula matatu wakati wa staftahi kila asubuhi na huokea marafiki zake mafini kila siku kwa mayai manne. Huwa anauza yaliyosalia katika soko la wakulima kila siku kwa $2 kwa kila yai la bata. Huwa anatengeneza pesa ngapi katika dola kila siku katika soko la wakulima?</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>Based on the information provided, Janet did not mention a specific date or time when she met the king. The passage does not provide any details about a date or time when she met the king. Therefore, I cannot determine the exact date or time when Janet met the king. The passage does not provide enough information to determine the date or time when Janet met the king.</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 18</p>\n<p>Extracted Answer: None</p>\n<p>Score: False</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Suluhisha tatizo hili la hesabu. Toa hatua za mantiki kabla ya kutoa jibu la mwisho kwenye mstari wa mwisho peke yake katika muundo wa \"Jibu:\". Usiongeze chochote kingine isipokuwa jibu la integer baada ya \"Jibu:\".\n\nBata wa Janet hutaga mayai 16 kila siku. Huwa anakula matatu wakati wa staftahi kila asubuhi na huokea marafiki zake mafini kila siku kwa mayai manne. Huwa anauza yaliyosalia katika soko la wakulima kila siku kwa $2 kwa kila yai la bata. Huwa anatengeneza pesa ngapi katika dola kila siku katika soko la wakulima?"
+        },
+        {
+          "content": "Based on the information provided, Janet did not mention a specific date or time when she met the king. The passage does not provide any details about a date or time when she met the king. Therefore, I cannot determine the exact date or time when Janet met the king. The passage does not provide enough information to determine the date or time when Janet met the king.",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

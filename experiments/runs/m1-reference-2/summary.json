@@ -1,0 +1,12 @@
+[
+  {
+    "evaluation": "healthbench",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.2978723404255319,
+    "generated_tokens": 599,
+    "inference_seconds": 99.415,
+    "token_limit_hits": 0
+  }
+]

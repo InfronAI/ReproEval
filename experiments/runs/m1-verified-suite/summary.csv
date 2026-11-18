@@ -1,0 +1,13 @@
+evaluation,status,examples,metric,score,generated_tokens,inference_seconds,token_limit_hits
+mmlu,completed,1,score,0.0,279,2.352,0
+math,completed,1,score,0.0,770,10.779,1
+gpqa,completed,1,score,1.0,597,4.839,0
+mgsm,completed,11,score,0.0,6671,55.235,8
+drop,completed,1,f1_score,0.0,66,1.878,0
+humaneval,completed,1,score,0.6,864,5.925,0
+simpleqa,completed,1,score,0.0,125,6.042,0
+browsecomp,completed,1,score,0.0,328,6.705,0
+healthbench,completed,1,score,0.13333333333333333,1410,78.866,0
+healthbench_hard,completed,1,score,0.0,852,58.921,0
+healthbench_consensus,completed,1,score,0.6666666666666666,355,15.985,0
+healthbench_meta,completed,1,score,,76,6.044,0

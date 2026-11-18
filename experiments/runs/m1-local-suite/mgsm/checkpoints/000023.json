@@ -1,0 +1,31 @@
+{
+  "index": 23,
+  "input_sha256": "cda87a4a668e5ac186bd3dd957fe760bfd4dcabdc5846997ebf6786a53af32ca",
+  "input": {
+    "inputs": "Jacques fait des séries de 3 sprints 3 fois par semaine. Il court 60 mètres à chaque sprint. Au total, combien de mètres court-il par semaine ?",
+    "targets": "540",
+    "lang": "fr"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": false,
+      "metrics": {
+        "fr": false,
+        "group_latin": false
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Résolvez ce problème de mathématiques. Donnez les étapes de raisonnement avant de fournir la réponse finale sur la dernière ligne elle-même dans le format de &#34;Réponse:&#34;. N&#39;ajoutez rien d&#39;autre que la réponse entière après &#34;Réponse:&#34;.\n\nJacques fait des séries de 3 sprints 3 fois par semaine. Il court 60 mètres à chaque sprint. Au total, combien de mètres court-il par semaine ?</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>Pour résoudre ce problème de mathématiques, nous devons comprendre les facteurs de la question. Nous avons deux facteurs à analyser :\n\n1. La longueur de chaque sprint (3 mètres).\n2. La nombre de sprints par semaine (3 fois par semaine).\n\nChaque sprint est un facteur de 3 mètres, donc nous devons compter 3 fois par semaine. Cela signifie que chaque semaine, il a 3 fois plus de longueur de course. C&#39;est ce que nous devons établir.\n\nLa réponse est 90 mètres par semaine (3 fois par semaine x 3 mètres par sprint). La réponse finale est 90 mètres.</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 540</p>\n<p>Extracted Answer: None</p>\n<p>Score: False</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Résolvez ce problème de mathématiques. Donnez les étapes de raisonnement avant de fournir la réponse finale sur la dernière ligne elle-même dans le format de \"Réponse:\". N'ajoutez rien d'autre que la réponse entière après \"Réponse:\".\n\nJacques fait des séries de 3 sprints 3 fois par semaine. Il court 60 mètres à chaque sprint. Au total, combien de mètres court-il par semaine ?"
+        },
+        {
+          "content": "Pour résoudre ce problème de mathématiques, nous devons comprendre les facteurs de la question. Nous avons deux facteurs à analyser :\n\n1. La longueur de chaque sprint (3 mètres).\n2. La nombre de sprints par semaine (3 fois par semaine).\n\nChaque sprint est un facteur de 3 mètres, donc nous devons compter 3 fois par semaine. Cela signifie que chaque semaine, il a 3 fois plus de longueur de course. C'est ce que nous devons établir.\n\nLa réponse est 90 mètres par semaine (3 fois par semaine x 3 mètres par sprint). La réponse finale est 90 mètres.",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

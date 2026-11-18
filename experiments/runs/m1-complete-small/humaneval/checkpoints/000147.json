@@ -1,0 +1,32 @@
+{
+  "index": 147,
+  "input_sha256": "268f1497f6cce11dbfdbe4ae0f173732824ca132f41a3c61fd758b885a4d7577",
+  "input": {
+    "task_id": "HumanEval/147",
+    "prompt": "\ndef get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You have to create an integer array a of length n.\n        For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \n    and a[i] + a[j] + a[k] is a multiple of 3.\n\n    Example :\n        Input: n = 5\n        Output: 1\n        Explanation: \n        a = [1, 3, 7, 13, 21]\n        The only valid triple is (1, 7, 13).\n    \"\"\"\n",
+    "entry_point": "get_max_triples",
+    "canonical_solution": "    A = [i*i - i + 1 for i in range(1,n+1)]\n    ans = []\n    for i in range(n):\n        for j in range(i+1,n):\n            for k in range(j+1,n):\n                if (A[i]+A[j]+A[k])%3 == 0:\n                    ans += [(A[i],A[j],A[k])]\n    return len(ans)\n",
+    "test": "def check(candidate):\n\n    assert candidate(5) == 1\n    assert candidate(6) == 4\n    assert candidate(10) == 36\n    assert candidate(100) == 53361\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef get_max_triples(n):\n    &#34;&#34;&#34;\n    You are given a positive integer n. You have to create an integer array a of length n.\n        For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.\n        Return the number of triples (a[i], a[j], a[k]) of a where i &lt; j &lt; k, \n    and a[i] + a[j] + a[k] is a multiple of 3.\n\n    Example :\n        Input: n = 5\n        Output: 1\n        Explanation: \n        a = [1, 3, 7, 13, 21]\n        The only valid triple is (1, 7, 13).\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;\\n    You are given a positive integer n. You have to create an integer array a of length n.\\n        For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.\\n        Return the number of triples (a[i], a[j], a[k]) of a where i &lt; j &lt; k, \\n    and a[i] + a[j] + a[k] is a multiple of 3.\\n\\n    Example :\\n        Input: n = 5\\n        Output: 1\\n        Explanation: \\n        a = [1, 3, 7, 13, 21]\\n        The only valid triple is (1, 7, 13).\\n    &#39;\n    res = 0\n    for i in range(n):\n        for j in range(i, n):\n            for k in range(j, n):\n                if (a[i] + a[j] + a[k]) % 3 == 0:\n                    res += 1\n    return res\n\nn = 5\n\nprint(get_max_triples(n))\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You have to create an integer array a of length n.\n        For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \n    and a[i] + a[j] + a[k] is a multiple of 3.\n\n    Example :\n        Input: n = 5\n        Output: 1\n        Explanation: \n        a = [1, 3, 7, 13, 21]\n        The only valid triple is (1, 7, 13).\n    \"\"\"\n"
+        },
+        {
+          "content": "    '\\n    You are given a positive integer n. You have to create an integer array a of length n.\\n        For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.\\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \\n    and a[i] + a[j] + a[k] is a multiple of 3.\\n\\n    Example :\\n        Input: n = 5\\n        Output: 1\\n        Explanation: \\n        a = [1, 3, 7, 13, 21]\\n        The only valid triple is (1, 7, 13).\\n    '\n    res = 0\n    for i in range(n):\n        for j in range(i, n):\n            for k in range(j, n):\n                if (a[i] + a[j] + a[k]) % 3 == 0:\n                    res += 1\n    return res\n\nn = 5\n\nprint(get_max_triples(n))\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

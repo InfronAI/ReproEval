@@ -1,0 +1,31 @@
+{
+  "index": 18,
+  "input_sha256": "b34e9d34e99464cf220e6360c4559af2c12a8fc3336a1a7f88516d7e75609774",
+  "input": {
+    "inputs": "James decide correr 3 carreras de velocidad 3 veces por semana. Corre 60 metros en cada carrera de velocidad. ¿Cuántos metros corre en total por semana?",
+    "targets": "540",
+    "lang": "es"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": true,
+      "metrics": {
+        "es": true,
+        "group_latin": true
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Resuelve este problema matemático. Proporciona los pasos de razonamiento antes de dar la respuesta final en la última línea por sí misma en el formato de &#34;Respuesta:&#34;. No añadas nada más que la respuesta entera después de &#34;Respuesta:&#34;.\n\nJames decide correr 3 carreras de velocidad 3 veces por semana. Corre 60 metros en cada carrera de velocidad. ¿Cuántos metros corre en total por semana?</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>Conoceremos las siguientes medidas:\n\n1. El número de carreras de velocidad que James corre al día.\n2. El número de metros que corre en cada carrera.\n\nPor lo tanto, podemos calcular el número de carreras de velocidad que James corre al día y la cantidad de metros que corre en cada carrera.\n\nEl número de carreras de velocidad que James corre al día es 3.\n\nEl número de metros que corre en cada carrera es 60 metros.\n\nPara calcular la cantidad de metros que corre en total por semana, necesitamos multiplicar el número de carreras por el número de metros en cada carrera y luego multiplicar por el número de días en el que corre (3).\n\nRespuesta: 3 * 60 = 180 metros.\n\nMás:\n180 * 3 = 540 metros.\n\nPor lo tanto, James corre 540 metros en total por semana.</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 540</p>\n<p>Extracted Answer: 540</p>\n<p>Score: True</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Resuelve este problema matemático. Proporciona los pasos de razonamiento antes de dar la respuesta final en la última línea por sí misma en el formato de \"Respuesta:\". No añadas nada más que la respuesta entera después de \"Respuesta:\".\n\nJames decide correr 3 carreras de velocidad 3 veces por semana. Corre 60 metros en cada carrera de velocidad. ¿Cuántos metros corre en total por semana?"
+        },
+        {
+          "content": "Conoceremos las siguientes medidas:\n\n1. El número de carreras de velocidad que James corre al día.\n2. El número de metros que corre en cada carrera.\n\nPor lo tanto, podemos calcular el número de carreras de velocidad que James corre al día y la cantidad de metros que corre en cada carrera.\n\nEl número de carreras de velocidad que James corre al día es 3.\n\nEl número de metros que corre en cada carrera es 60 metros.\n\nPara calcular la cantidad de metros que corre en total por semana, necesitamos multiplicar el número de carreras por el número de metros en cada carrera y luego multiplicar por el número de días en el que corre (3).\n\nRespuesta: 3 * 60 = 180 metros.\n\nMás:\n180 * 3 = 540 metros.\n\nPor lo tanto, James corre 540 metros en total por semana.",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

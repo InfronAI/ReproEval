@@ -1,0 +1,21 @@
+{
+  "pid": 59817,
+  "plan": "experiments/plans/full-reference.json",
+  "command": [
+    "/Users/apple/Projects/simple-evals/.venv/bin/python",
+    "-u",
+    "/Users/apple/Projects/simple-evals/scripts/run_plan.py",
+    "/Users/apple/Projects/simple-evals/.cache/jobs/full-reference/20261115T130712915735Z/plan.json",
+    "--state",
+    "/Users/apple/Projects/simple-evals/experiments/jobs/full-reference/stages.json",
+    "--resume",
+    "--keep-going"
+  ],
+  "started_at": "2026-11-16T13:44:59.319082+00:00",
+  "log": "experiments/jobs/full-reference/console.log",
+  "code_snapshot": "/Users/apple/Projects/simple-evals/.cache/jobs/full-reference/20261115T130712915735Z/src",
+  "frozen_plan": "/Users/apple/Projects/simple-evals/.cache/jobs/full-reference/20261115T130712915735Z/plan.json",
+  "plan_sha256": "26c2a895e8a3610e48777df740e2b60d11f06b7d572b44d21fe701a39077289a",
+  "ended_at": "2026-11-17T15:31:15.135655+00:00",
+  "stop_reason": "User requested early termination of the testing task"
+}

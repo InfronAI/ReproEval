@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    15\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 15 and closest_integer(\"-14.5\") should return -15.\n    '''\n"
+    }
+  ],
+  "response": "```python\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    15\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 15 and closest_integer(\"-14.5\") should return -15.\n    '''\n    # Convert the input string to a float for accurate rounding\n    value = float(value)\n    # Determine the direction based on the sign of the value\n    if value < 0:\n        sign = '-'  # If the value is negative, we want to round towards zero\n    else:\n        sign = '+'  # If the value is positive, we want to round away from zero\n\n    # Calculate the difference between the value and zero\n    diff = abs(value)\n\n    # Determine the rounding direction based on the sign and the difference\n    if sign == '-':\n        rounding_dir = 'less'\n    else:\n        rounding_dir = 'more'\n\n    # Perform the rounding based on the sign and the difference\n    if diff > 5:\n        return int(value)\n    elif abs(diff) < 5 and abs(diff) > 3:\n        return int(value) - 0.5\n    elif abs(diff) >= 5 and abs(diff) < 10:\n        return int(value) + 0.5\n    else:\n        return int(value) + 1\n```",
+  "usage": {
+    "input_tokens": 214,
+    "output_tokens": 390,
+    "input_cached_tokens": 52,
+    "total_tokens": 604
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 3118684860,
+  "seconds": 2.683526541106403,
+  "generation_tokens_per_second": 157.07317894127723,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

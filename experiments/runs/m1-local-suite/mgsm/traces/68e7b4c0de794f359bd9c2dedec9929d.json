@@ -1,0 +1,23 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Résolvez ce problème de mathématiques. Donnez les étapes de raisonnement avant de fournir la réponse finale sur la dernière ligne elle-même dans le format de \"Réponse:\". N'ajoutez rien d'autre que la réponse entière après \"Réponse:\".\n\nPour garder ses poulets en bonne santé, Wendi leur donne chaque jour trois bols d'aliments mixtes contenant des graines, des vers de farine et des légumes. Elle les nourrit en trois repas séparés. Le matin, elle leur donne 15 bols d'aliments. L'après-midi, elle leur en donne 25 autres. Si son élevage compte 20 poulets, combien de bols de nourriture doit-elle leur donner pour le dernier repas de la journée ?"
+    }
+  ],
+  "response": "Wendi donne chaque jour 13 bols d'aliments pour chaque repas, car elle les nourrit en 3 repas séparés. Elle a 20 poulets à nourrir, donc elle devrait leur donner 20 bols de nourriture pour le dernier repas de la journée. \n\nRéponse: 20 bols de nourriture.",
+  "usage": {
+    "input_tokens": 204,
+    "output_tokens": 79,
+    "total_tokens": 283
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 1470348609,
+  "seconds": 0.8536232081241906,
+  "generation_tokens_per_second": 133.95859580039422,
+  "peak_memory_gb": 2.88137989,
+  "truncated": false,
+  "finish_reason": "stop"
+}

@@ -1,0 +1,32 @@
+{
+  "index": 15,
+  "input_sha256": "7839bd5a711926a1ee7860d0d206d1db149c92cfc10cee959cbf07d81e59fb98",
+  "input": {
+    "task_id": "HumanEval/15",
+    "prompt": "\n\ndef string_sequence(n: int) -> str:\n    \"\"\" Return a string containing space-delimited numbers starting from 0 upto n inclusive.\n    >>> string_sequence(0)\n    '0'\n    >>> string_sequence(5)\n    '0 1 2 3 4 5'\n    \"\"\"\n",
+    "entry_point": "string_sequence",
+    "canonical_solution": "    return ' '.join([str(x) for x in range(n + 1)])\n",
+    "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate(0) == '0'\n    assert candidate(3) == '0 1 2 3'\n    assert candidate(10) == '0 1 2 3 4 5 6 7 8 9 10'\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef string_sequence(n: int) -&gt; str:\n    &#34;&#34;&#34; Return a string containing space-delimited numbers starting from 0 upto n inclusive.\n    &gt;&gt;&gt; string_sequence(0)\n    &#39;0&#39;\n    &gt;&gt;&gt; string_sequence(5)\n    &#39;0 1 2 3 4 5&#39;\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#34; Return a string containing space-delimited numbers starting from 0 upto n inclusive.\\n    &gt;&gt;&gt; string_sequence(0)\\n    &#39;0&#39;\\n    &gt;&gt;&gt; string_sequence(5)\\n    &#39;0 1 2 3 4 5&#39;\\n    &#34;\n    return &#39; &#39;.join(map(str, range(n)))\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef string_sequence(n: int) -> str:\n    \"\"\" Return a string containing space-delimited numbers starting from 0 upto n inclusive.\n    >>> string_sequence(0)\n    '0'\n    >>> string_sequence(5)\n    '0 1 2 3 4 5'\n    \"\"\"\n"
+        },
+        {
+          "content": "    \" Return a string containing space-delimited numbers starting from 0 upto n inclusive.\\n    >>> string_sequence(0)\\n    '0'\\n    >>> string_sequence(5)\\n    '0 1 2 3 4 5'\\n    \"\n    return ' '.join(map(str, range(n)))\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

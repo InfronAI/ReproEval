@@ -1,0 +1,152 @@
+[
+  {
+    "evaluation": "mmlu",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 279,
+    "inference_seconds": 2.278,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_AR-XY",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 1.0,
+    "generated_tokens": 285,
+    "inference_seconds": 2.192,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_BN-BD",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 1.0,
+    "generated_tokens": 476,
+    "inference_seconds": 3.636,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_DE-DE",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 1.0,
+    "generated_tokens": 210,
+    "inference_seconds": 1.604,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_ES-LA",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 278,
+    "inference_seconds": 2.195,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_FR-FR",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 1.0,
+    "generated_tokens": 364,
+    "inference_seconds": 2.73,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_HI-IN",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 399,
+    "inference_seconds": 3.082,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_ID-ID",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 317,
+    "inference_seconds": 2.416,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_IT-IT",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 378,
+    "inference_seconds": 3.015,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_JA-JP",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 1.0,
+    "generated_tokens": 478,
+    "inference_seconds": 3.871,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_KO-KR",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 283,
+    "inference_seconds": 2.372,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_PT-BR",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 270,
+    "inference_seconds": 2.249,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_ZH-CN",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 217,
+    "inference_seconds": 1.763,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_SW-KE",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 239,
+    "inference_seconds": 2.009,
+    "token_limit_hits": 0
+  },
+  {
+    "evaluation": "mmlu_YO-NG",
+    "status": "completed",
+    "examples": 1,
+    "metric": "score",
+    "score": 0.0,
+    "generated_tokens": 243,
+    "inference_seconds": 2.019,
+    "token_limit_hits": 0
+  }
+]

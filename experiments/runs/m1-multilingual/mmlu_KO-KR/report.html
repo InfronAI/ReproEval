@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message {
+                padding: 8px 16px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+            }
+            .message.user {
+                background-color: #B2DFDB;
+                color: #00695C;
+            }
+            .message.assistant {
+                background-color: #B39DDB;
+                color: #4527A0;
+            }
+            .message.system {
+                background-color: #EEEEEE;
+                color: #212121;
+            }
+            .role {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .variant {
+                color: #795548;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h1>Metrics</h1>
+    <table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><b>Score</b></td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>other</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>other:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>score:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    </table>
+    
+    <h1>Examples</h1>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCD. Think step by step before answering.
+
+성공적인 항암 HPV 백신을 다음으로 구성됩니다.
+
+A) 특정 돌연변이 생성에 의해 약독화된 생바이러스
+B) 전체 바이러스가 화학적으로 불활성화된 백신
+C) 바이러스 L1 단백질을 VLP로 자체 조합 
+D) 아단위가 화학적으로 불활성화된 백신</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant
+    
+    </div>
+    <div class="content">
+    <pre>To answer this question, we need to understand the concept of &#34;antibody&#34; and how it relates to &#34;antigen.&#34; An antigen is a protein or carbohydrate that is recognized by the immune system as foreign and triggers an immune response. The immune system is responsible for distinguishing between &#34;self&#34; and &#34;non-self&#34; and can identify and neutralize foreign antigens.
+
+The passage mentions &#34;antibody&#34; and &#34;antigen&#34; based on the definition of &#34;antigen&#34; in the context of the immune system. The question specifically asks about the formation of &#34;antibody&#34; and &#34;antigen,&#34; which are components of the immune system.
+
+Let&#39;s analyze each option:
+
+A) Specific mutation in the DNA of the virus can lead to the production of antibodies against the virus.
+
+B) The entire virus has been chemically modified to become antigenic, and these are then combined to form the vaccine.
+
+C) The virus has been genetically modified to become a &#34;viral vector&#34; that can be used to produce the vaccine.
+
+D) The virus has been chemically modified to become a &#34;phage vector&#34; that can be used to produce the vaccine.
+
+Given the definition of &#34;antigen&#34; in the context of the immune system, option C is the correct answer. The virus has been genetically modified to become a &#34;viral vector&#34; that can be used to produce the vaccine.
+
+Answer: C</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: C</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    </body>
+</html>

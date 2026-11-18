@@ -1,0 +1,31 @@
+{
+  "index": 45,
+  "input_sha256": "76ff1e09b00064c672a1bd400f58f08ddebd2bbbfcc5500e4a61214b46d9787d",
+  "input": {
+    "inputs": "เป็ดของเจเน็ตวางไข่วันละ 16 ฟอง เธอกินไข่สามฟองเป็นมื้อเช้าทุกวัน และใช้ไข่สี่ฟองอบมัฟฟินให้เพื่อนทุกวัน เธอขายไข่ที่เหลือที่ตลาดเกษตรกรทุกวันในราคา $2 ต่อไข่เป็ดสดหนึ่งฟอง เธอจะมีรายได้จากตลาดเกษตรกรวันละกี่ดอลลาร์",
+    "targets": "18",
+    "lang": "th"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": false,
+      "metrics": {
+        "th": false,
+        "group_non_latin": false
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>แก้ปัญหาคณิตศาสตร์นี้ ให้ให้ขั้นตอนการใช้เหตุผลก่อนที่จะให้คำตอบสุดท้ายในบรรทัดสุดท้ายโดยอยู่ในรูปแบบ &#34;คำตอบ:&#34; ไม่ควรเพิ่มอะไรนอกจากคำตอบที่เป็นจำนวนเต็มหลังจาก &#34;คำตอบ:&#34;\n\nเป็ดของเจเน็ตวางไข่วันละ 16 ฟอง เธอกินไข่สามฟองเป็นมื้อเช้าทุกวัน และใช้ไข่สี่ฟองอบมัฟฟินให้เพื่อนทุกวัน เธอขายไข่ที่เหลือที่ตลาดเกษตรกรทุกวันในราคา $2 ต่อไข่เป็ดสดหนึ่งฟอง เธอจะมีรายได้จากตลาดเกษตรกรวันละกี่ดอลลาร์</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>คำตอบ: \n\nในแต่ละวัน, ผู้ชายจะมีป้ายไข่ที่เหลือประมาณ 16 ฟอง. \n\nในแต่ละวัน, ผู้ชายจะใช้ไข่สี่ฟองอบมัฟฟินให้เพื่อน 3 ฟอง. \n\nในแต่ละวัน, ผู้ชายจะขายไข่ที่เหลือที่ตลาดเกษตรกร 1 ฟอง. \n\nเมื่อ all the food is eaten, the surplus food will be sold at $2 per 1/4 of a chicken egg.\n\nTherefore, the amount of money that the person can make per day is:\n16 * 1/4 * 2 = 8 dollars\n\nTherefore, the person will have a profit of 8 dollars per day.\n\nSo, the answer is 8 dollars.</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 18</p>\n<p>Extracted Answer: 8</p>\n<p>Score: False</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "แก้ปัญหาคณิตศาสตร์นี้ ให้ให้ขั้นตอนการใช้เหตุผลก่อนที่จะให้คำตอบสุดท้ายในบรรทัดสุดท้ายโดยอยู่ในรูปแบบ \"คำตอบ:\" ไม่ควรเพิ่มอะไรนอกจากคำตอบที่เป็นจำนวนเต็มหลังจาก \"คำตอบ:\"\n\nเป็ดของเจเน็ตวางไข่วันละ 16 ฟอง เธอกินไข่สามฟองเป็นมื้อเช้าทุกวัน และใช้ไข่สี่ฟองอบมัฟฟินให้เพื่อนทุกวัน เธอขายไข่ที่เหลือที่ตลาดเกษตรกรทุกวันในราคา $2 ต่อไข่เป็ดสดหนึ่งฟอง เธอจะมีรายได้จากตลาดเกษตรกรวันละกี่ดอลลาร์"
+        },
+        {
+          "content": "คำตอบ: \n\nในแต่ละวัน, ผู้ชายจะมีป้ายไข่ที่เหลือประมาณ 16 ฟอง. \n\nในแต่ละวัน, ผู้ชายจะใช้ไข่สี่ฟองอบมัฟฟินให้เพื่อน 3 ฟอง. \n\nในแต่ละวัน, ผู้ชายจะขายไข่ที่เหลือที่ตลาดเกษตรกร 1 ฟอง. \n\nเมื่อ all the food is eaten, the surplus food will be sold at $2 per 1/4 of a chicken egg.\n\nTherefore, the amount of money that the person can make per day is:\n16 * 1/4 * 2 = 8 dollars\n\nTherefore, the person will have a profit of 8 dollars per day.\n\nSo, the answer is 8 dollars.",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

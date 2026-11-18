@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\nfrom typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n    if not numbers or len(numbers) < 2:\n        return []\n\n    # Find the index of the minimum value in the list\n    min_index = numbers.index(min(numbers))\n    # Find the index of the maximum value in the list\n    max_index = numbers.index(max(numbers))\n\n    # Create a new list with the same length as the original list, except with the minimum and maximum values replaced by 0 and 1 respectively\n    rescaled_list = [0] * len(numbers)\n    rescaled_list[min_index] = 0\n    rescaled_list[max_index] = 1\n\n    return rescaled_list\n```",
+  "usage": {
+    "input_tokens": 175,
+    "output_tokens": 254,
+    "input_cached_tokens": 57,
+    "total_tokens": 429
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 700268857,
+  "seconds": 2.126169666647911,
+  "generation_tokens_per_second": 131.1621606534502,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

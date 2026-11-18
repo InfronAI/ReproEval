@@ -1,0 +1,31 @@
+{
+  "index": 10,
+  "input_sha256": "b3199c1393d094d1af73ce47d0203c659fcc2e969dce455d8e3ca9f1d03c5eab",
+  "input": {
+    "inputs": "Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "targets": "18",
+    "lang": "en"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": false,
+      "metrics": {
+        "en": false,
+        "group_latin": false
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Solve this math problem. Give the reasoning steps before giving the final answer on the last line by itself in the format of &#34;Answer:&#34;. Do not add anything other than the integer answer after &#34;Answer:&#34;.\n\nJanet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers&#39; market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers&#39; market?</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>To determine how much Janet makes every day at the farmers&#39; market, we need to calculate her daily earnings from selling eggs and subtract that from her daily earnings from the eggs.\n\n1. **Calculate the daily earnings from eggs:**\n   - Janet has 16 eggs per day.\n   - She eats 3 eggs per day at breakfast and bakes 4 muffins per day, which adds to her daily egg production.\n   - Total daily egg production = 16 eggs + 3 eggs + 4 muffins = 23 eggs.\n\n2. **Calculate the daily earnings from selling eggs:**\n   - She sells each egg for $2.\n   - Daily earnings from eggs = 23 eggs/day * $2/egg = $46.\n\n3. **Calculate the daily earnings from muffins:**\n   - She eats 4 muffins per day and she sells all of them.\n   - Daily earnings from muffins = 4 muffins/day * $2/muff = $8.\n\n4. **Calculate the daily net earnings:**\n   - Daily net earnings = Daily earnings from eggs - Daily earnings from muffins = $46 - $8 = $38.\n\n5. **Calculate the daily earnings from selling eggs and muffins combined:**\n   - Daily earnings from selling eggs and muffins = Daily net earnings from eggs + Daily net earnings from muffins = $38 + $8 = $46.\n\n6. **Calculate the daily profit:**\n   - Daily profit = Daily earnings from selling eggs and muffins - Daily earnings from selling eggs = $46 - $38 = $8.\n\nAnswer: Janet makes $46 per day at the farmers&#39; market.</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 18</p>\n<p>Extracted Answer: 46</p>\n<p>Score: False</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Solve this math problem. Give the reasoning steps before giving the final answer on the last line by itself in the format of \"Answer:\". Do not add anything other than the integer answer after \"Answer:\".\n\nJanet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?"
+        },
+        {
+          "content": "To determine how much Janet makes every day at the farmers' market, we need to calculate her daily earnings from selling eggs and subtract that from her daily earnings from the eggs.\n\n1. **Calculate the daily earnings from eggs:**\n   - Janet has 16 eggs per day.\n   - She eats 3 eggs per day at breakfast and bakes 4 muffins per day, which adds to her daily egg production.\n   - Total daily egg production = 16 eggs + 3 eggs + 4 muffins = 23 eggs.\n\n2. **Calculate the daily earnings from selling eggs:**\n   - She sells each egg for $2.\n   - Daily earnings from eggs = 23 eggs/day * $2/egg = $46.\n\n3. **Calculate the daily earnings from muffins:**\n   - She eats 4 muffins per day and she sells all of them.\n   - Daily earnings from muffins = 4 muffins/day * $2/muff = $8.\n\n4. **Calculate the daily net earnings:**\n   - Daily net earnings = Daily earnings from eggs - Daily earnings from muffins = $46 - $8 = $38.\n\n5. **Calculate the daily earnings from selling eggs and muffins combined:**\n   - Daily earnings from selling eggs and muffins = Daily net earnings from eggs + Daily net earnings from muffins = $38 + $8 = $46.\n\n6. **Calculate the daily profit:**\n   - Daily profit = Daily earnings from selling eggs and muffins - Daily earnings from selling eggs = $46 - $38 = $8.\n\nAnswer: Janet makes $46 per day at the farmers' market.",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

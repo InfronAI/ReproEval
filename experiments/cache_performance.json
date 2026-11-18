@@ -1,0 +1,258 @@
+{
+  "purpose": "Synthetic performance A/B, not benchmark accuracy",
+  "outputs_identical": true,
+  "measurements": [
+    {
+      "prefix_cache": false,
+      "repetition": 0,
+      "prompt_index": 0,
+      "response": "42",
+      "usage": {
+        "input_tokens": 1636,
+        "output_tokens": 3,
+        "input_cached_tokens": 0,
+        "total_tokens": 1639
+      },
+      "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "role": "candidate",
+      "seed": 2825859266,
+      "seconds": 6.261740957852453,
+      "generation_tokens_per_second": 20.41624770733775,
+      "peak_memory_gb": 2.522659304,
+      "truncated": false,
+      "finish_reason": "stop"
+    },
+    {
+      "prefix_cache": false,
+      "repetition": 0,
+      "prompt_index": 1,
+      "response": "42",
+      "usage": {
+        "input_tokens": 1641,
+        "output_tokens": 3,
+        "input_cached_tokens": 0,
+        "total_tokens": 1644
+      },
+      "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "role": "candidate",
+      "seed": 282391470,
+      "seconds": 5.457308667246252,
+      "generation_tokens_per_second": 53.140217691538865,
+      "peak_memory_gb": 2.524510716,
+      "truncated": false,
+      "finish_reason": "stop"
+    },
+    {
+      "prefix_cache": false,
+      "repetition": 1,
+      "prompt_index": 0,
+      "response": "42",
+      "usage": {
+        "input_tokens": 1636,
+        "output_tokens": 3,
+        "input_cached_tokens": 0,
+        "total_tokens": 1639
+      },
+      "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "role": "candidate",
+      "seed": 3472959387,
+      "seconds": 4.221612500026822,
+      "generation_tokens_per_second": 64.26465560770174,
+      "peak_memory_gb": 2.524510716,
+      "truncated": false,
+      "finish_reason": "stop"
+    },
+    {
+      "prefix_cache": false,
+      "repetition": 1,
+      "prompt_index": 1,
+      "response": "42",
+      "usage": {
+        "input_tokens": 1641,
+        "output_tokens": 3,
+        "input_cached_tokens": 0,
+        "total_tokens": 1644
+      },
+      "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "role": "candidate",
+      "seed": 424158078,
+      "seconds": 4.137662833090872,
+      "generation_tokens_per_second": 59.81263692950658,
+      "peak_memory_gb": 2.524510716,
+      "truncated": false,
+      "finish_reason": "stop"
+    },
+    {
+      "prefix_cache": false,
+      "repetition": 2,
+      "prompt_index": 0,
+      "response": "42",
+      "usage": {
+        "input_tokens": 1636,
+        "output_tokens": 3,
+        "input_cached_tokens": 0,
+        "total_tokens": 1639
+      },
+      "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "role": "candidate",
+      "seed": 1338261179,
+      "seconds": 4.1211286671459675,
+      "generation_tokens_per_second": 66.4553634157143,
+      "peak_memory_gb": 2.524510716,
+      "truncated": false,
+      "finish_reason": "stop"
+    },
+    {
+      "prefix_cache": false,
+      "repetition": 2,
+      "prompt_index": 1,
+      "response": "42",
+      "usage": {
+        "input_tokens": 1641,
+        "output_tokens": 3,
+        "input_cached_tokens": 0,
+        "total_tokens": 1644
+      },
+      "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "role": "candidate",
+      "seed": 1975631768,
+      "seconds": 4.103514667134732,
+      "generation_tokens_per_second": 67.14225748151785,
+      "peak_memory_gb": 2.524510716,
+      "truncated": false,
+      "finish_reason": "stop"
+    },
+    {
+      "prefix_cache": true,
+      "repetition": 0,
+      "prompt_index": 0,
+      "response": "42",
+      "usage": {
+        "input_tokens": 1636,
+        "output_tokens": 3,
+        "input_cached_tokens": 0,
+        "total_tokens": 1639
+      },
+      "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "role": "candidate",
+      "seed": 998154988,
+      "seconds": 4.123705333098769,
+      "generation_tokens_per_second": 63.15318653555381,
+      "peak_memory_gb": 2.524510716,
+      "truncated": false,
+      "finish_reason": "stop"
+    },
+    {
+      "prefix_cache": true,
+      "repetition": 0,
+      "prompt_index": 1,
+      "response": "42",
+      "usage": {
+        "input_tokens": 1641,
+        "output_tokens": 3,
+        "input_cached_tokens": 1625,
+        "total_tokens": 1644
+      },
+      "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "role": "candidate",
+      "seed": 2337863472,
+      "seconds": 0.3061517500318587,
+      "generation_tokens_per_second": 63.81100491435146,
+      "peak_memory_gb": 2.524510716,
+      "truncated": false,
+      "finish_reason": "stop"
+    },
+    {
+      "prefix_cache": true,
+      "repetition": 1,
+      "prompt_index": 0,
+      "response": "42",
+      "usage": {
+        "input_tokens": 1636,
+        "output_tokens": 3,
+        "input_cached_tokens": 1635,
+        "total_tokens": 1639
+      },
+      "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "role": "candidate",
+      "seed": 27729086,
+      "seconds": 0.19351070886477828,
+      "generation_tokens_per_second": 62.031905950576125,
+      "peak_memory_gb": 2.524510716,
+      "truncated": false,
+      "finish_reason": "stop"
+    },
+    {
+      "prefix_cache": true,
+      "repetition": 1,
+      "prompt_index": 1,
+      "response": "42",
+      "usage": {
+        "input_tokens": 1641,
+        "output_tokens": 3,
+        "input_cached_tokens": 1640,
+        "total_tokens": 1644
+      },
+      "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "role": "candidate",
+      "seed": 2340728594,
+      "seconds": 0.18023479217663407,
+      "generation_tokens_per_second": 65.4807978702606,
+      "peak_memory_gb": 2.524510716,
+      "truncated": false,
+      "finish_reason": "stop"
+    },
+    {
+      "prefix_cache": true,
+      "repetition": 2,
+      "prompt_index": 0,
+      "response": "42",
+      "usage": {
+        "input_tokens": 1636,
+        "output_tokens": 3,
+        "input_cached_tokens": 1635,
+        "total_tokens": 1639
+      },
+      "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "role": "candidate",
+      "seed": 3698932416,
+      "seconds": 0.1781242499127984,
+      "generation_tokens_per_second": 69.4788880226145,
+      "peak_memory_gb": 2.524510716,
+      "truncated": false,
+      "finish_reason": "stop"
+    },
+    {
+      "prefix_cache": true,
+      "repetition": 2,
+      "prompt_index": 1,
+      "response": "42",
+      "usage": {
+        "input_tokens": 1641,
+        "output_tokens": 3,
+        "input_cached_tokens": 1640,
+        "total_tokens": 1644
+      },
+      "model": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "role": "candidate",
+      "seed": 943431149,
+      "seconds": 0.17847295803949237,
+      "generation_tokens_per_second": 67.59706549802088,
+      "peak_memory_gb": 2.524510716,
+      "truncated": false,
+      "finish_reason": "stop"
+    }
+  ]
+}

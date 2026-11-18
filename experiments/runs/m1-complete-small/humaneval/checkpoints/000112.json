@@ -1,0 +1,32 @@
+{
+  "index": 112,
+  "input_sha256": "07533421c45f5823241df9c1ca3ce3ee76a34b8295f12cfe105c08f5a466d417",
+  "input": {
+    "task_id": "HumanEval/112",
+    "prompt": "\ndef reverse_delete(s,c):\n    \"\"\"Task\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\n    then check if the result string is palindrome.\n    A string is called palindrome if it reads the same backward as forward.\n    You should return a tuple containing the result string and True/False for the check.\n    Example\n    For s = \"abcde\", c = \"ae\", the result should be ('bcd',False)\n    For s = \"abcdef\", c = \"b\"  the result should be ('acdef',False)\n    For s = \"abcdedcba\", c = \"ab\", the result should be ('cdedc',True)\n    \"\"\"\n",
+    "entry_point": "reverse_delete",
+    "canonical_solution": "    s = ''.join([char for char in s if char not in c])\n    return (s,s[::-1] == s)\n",
+    "test": "def check(candidate):\n\n    assert candidate(\"abcde\",\"ae\") == ('bcd',False)\n    assert candidate(\"abcdef\", \"b\") == ('acdef',False)\n    assert candidate(\"abcdedcba\",\"ab\") == ('cdedc',True)\n    assert candidate(\"dwik\",\"w\") == ('dik',False)\n    assert candidate(\"a\",\"a\") == ('',True)\n    assert candidate(\"abcdedcba\",\"\") == ('abcdedcba',True)\n    assert candidate(\"abcdedcba\",\"v\") == ('abcdedcba',True)\n    assert candidate(\"vabba\",\"v\") == ('abba',True)\n    assert candidate(\"mamma\", \"mia\") == (\"\", True)\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef reverse_delete(s,c):\n    &#34;&#34;&#34;Task\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\n    then check if the result string is palindrome.\n    A string is called palindrome if it reads the same backward as forward.\n    You should return a tuple containing the result string and True/False for the check.\n    Example\n    For s = &#34;abcde&#34;, c = &#34;ae&#34;, the result should be (&#39;bcd&#39;,False)\n    For s = &#34;abcdef&#34;, c = &#34;b&#34;  the result should be (&#39;acdef&#39;,False)\n    For s = &#34;abcdedcba&#34;, c = &#34;ab&#34;, the result should be (&#39;cdedc&#39;,True)\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;Task\\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\\n    then check if the result string is palindrome.\\n    A string is called palindrome if it reads the same backward as forward.\\n    You should return a tuple containing the result string and True/False for the check.\\n    &#39;\n    t = ()\n    for i in range(len(s)):\n        if s[i] in c:\n            continue\n        t = t + (s[i],)\n    if len(t) % 2 != 0:\n        return (&#39;&#39;, False)\n    else:\n        return (&#39;&#39;.join(reversed(t)), True)\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef reverse_delete(s,c):\n    \"\"\"Task\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\n    then check if the result string is palindrome.\n    A string is called palindrome if it reads the same backward as forward.\n    You should return a tuple containing the result string and True/False for the check.\n    Example\n    For s = \"abcde\", c = \"ae\", the result should be ('bcd',False)\n    For s = \"abcdef\", c = \"b\"  the result should be ('acdef',False)\n    For s = \"abcdedcba\", c = \"ab\", the result should be ('cdedc',True)\n    \"\"\"\n"
+        },
+        {
+          "content": "    'Task\\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\\n    then check if the result string is palindrome.\\n    A string is called palindrome if it reads the same backward as forward.\\n    You should return a tuple containing the result string and True/False for the check.\\n    '\n    t = ()\n    for i in range(len(s)):\n        if s[i] in c:\n            continue\n        t = t + (s[i],)\n    if len(t) % 2 != 0:\n        return ('', False)\n    else:\n        return (''.join(reversed(t)), True)\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

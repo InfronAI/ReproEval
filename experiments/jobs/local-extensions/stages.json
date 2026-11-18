@@ -1,0 +1,159 @@
+[
+  {
+    "name": "calibration-100-draws",
+    "command": [
+      "/Users/apple/Projects/simple-evals/.venv/bin/python",
+      "-m",
+      "simple_evals",
+      "--eval",
+      "simpleqa_calibration",
+      "--examples",
+      "1",
+      "--calibration-samples",
+      "100",
+      "--temperature",
+      "1",
+      "--max-tokens",
+      "384",
+      "--output",
+      "experiments/runs/m1-calibration-100-validity",
+      "--model",
+      "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "--model-revision",
+      "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "--grader-revision",
+      "4f83f8f146fdf28b512a06562b671d7af4fab457"
+    ],
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "name": "browsing-two-steps",
+    "command": [
+      "/Users/apple/Projects/simple-evals/.venv/bin/python",
+      "-m",
+      "simple_evals",
+      "--eval",
+      "browsecomp",
+      "--examples",
+      "1",
+      "--browse",
+      "--browse-steps",
+      "2",
+      "--max-tokens",
+      "512",
+      "--output",
+      "experiments/runs/m1-browsing",
+      "--model",
+      "mlx-community/Qwen2.5-3B-Instruct-4bit",
+      "--model-revision",
+      "4f83f8f146fdf28b512a06562b671d7af4fab457",
+      "--grader-revision",
+      "4f83f8f146fdf28b512a06562b671d7af4fab457"
+    ],
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "name": "physician-group-1",
+    "command": [
+      "/Users/apple/Projects/simple-evals/.venv/bin/python",
+      "-m",
+      "simple_evals",
+      "--eval",
+      "healthbench",
+      "--examples",
+      "1",
+      "--physician-group",
+      "Group 1",
+      "--grader-max-tokens",
+      "768",
+      "--output",
+      "experiments/runs/m1-physician-1"
+    ],
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "name": "physician-group-2",
+    "command": [
+      "/Users/apple/Projects/simple-evals/.venv/bin/python",
+      "-m",
+      "simple_evals",
+      "--eval",
+      "healthbench",
+      "--examples",
+      "1",
+      "--physician-group",
+      "Group 2",
+      "--grader-max-tokens",
+      "768",
+      "--output",
+      "experiments/runs/m1-physician-2"
+    ],
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "name": "physician-group-3",
+    "command": [
+      "/Users/apple/Projects/simple-evals/.venv/bin/python",
+      "-m",
+      "simple_evals",
+      "--eval",
+      "healthbench",
+      "--examples",
+      "1",
+      "--physician-group",
+      "Group 3",
+      "--grader-max-tokens",
+      "768",
+      "--output",
+      "experiments/runs/m1-physician-3"
+    ],
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "name": "reference-group-2",
+    "command": [
+      "/Users/apple/Projects/simple-evals/.venv/bin/python",
+      "-m",
+      "simple_evals",
+      "--eval",
+      "healthbench",
+      "--examples",
+      "1",
+      "--physician-group",
+      "Group 2",
+      "--reference-completions",
+      "--grader-max-tokens",
+      "768",
+      "--output",
+      "experiments/runs/m1-reference-2"
+    ],
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "name": "reference-group-3",
+    "command": [
+      "/Users/apple/Projects/simple-evals/.venv/bin/python",
+      "-m",
+      "simple_evals",
+      "--eval",
+      "healthbench",
+      "--examples",
+      "1",
+      "--physician-group",
+      "Group 3",
+      "--reference-completions",
+      "--grader-max-tokens",
+      "768",
+      "--output",
+      "experiments/runs/m1-reference-3"
+    ],
+    "status": "completed",
+    "returncode": 0
+  }
+]

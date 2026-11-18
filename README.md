@@ -1,142 +1,277 @@
-# ⚠️ Deprecation Notice
+# ReproEval
 
-**July 2025**: `simple-evals` will no longer be updated for new models or benchmark results. The repo will continue to host reference implementations for **HealthBench**, **BrowseComp**, and **SimpleQA**.
+[English](README.md) · [简体中文](README.zh-CN.md) · [Experiment report](experiments/REPORT.md) · [Paper audit](docs/PAPER_AUDIT.md)
 
----
+A reproducible language model evaluation framework covering reasoning, coding, factuality, and multilingual benchmarks, with local inference, automated grading, resumable experiments, and traceable reports.
 
-# Overview
-This repository contains a lightweight library for evaluating language models.
-We are open sourcing it so we can be transparent about the accuracy numbers we're publishing alongside our latest models.
+Download the original data, generate answers locally with MLX, grade them, resume interrupted runs, and inspect reproducible reports. The original emphasis on **simple zero-shot chain-of-thought evaluation** is preserved, including the three-shot DROP exception.
 
-## Benchmark Results
+This is an independent adaptation of the archived upstream project. The original README and historical scores are preserved in [docs/UPSTREAM_README.md](docs/UPSTREAM_README.md). This suite spans nine benchmark families and multiple papers. **Local open-weight results are not the original papers' model results; implemented support and completed experiments are separate claims.** See the [audit](docs/PAPER_AUDIT.md) and [measured coverage](experiments/REPORT.md).
 
-| Model                        | Prompt        | MMLU   | GPQA [^8]   | MATH [^6]| HumanEval | MGSM[^5] | DROP[^5]<br>(F1, 3-shot) | SimpleQA
-|:----------------------------:|:-------------:|:------:|:------:|:--------:|:---------:|:------:|:--------------------------:|:---------:|
-| **o3**                         |               |        |        |          |           |        |                             |                      |           |
-| o3-high [^10]                | n/a [^7]      |  93.3  |  83.4  |   98.1   |  88.4     |  92.0  |  89.8                      |  48.6     |
-| o3 [^9] [^10]                | n/a           |  92.9  |  82.8  |   97.8   |  87.4     |  92.3  |  80.6                      |  49.4     |
-| o3-low [^10]                 | n/a           |  92.8  |  78.6  |   96.9   |  87.3     |  91.9  |  82.3                      |  49.4     |
-| **o4-mini**                    |               |        |        |          |           |        |                             |                      |
-| o4-mini-high [^9] [^10]      | n/a           |  90.3  |  81.3  |   98.2   |  99.3     |  93.5  |  78.1                      |  19.3     |
-| o4-mini [^9] [^10]           | n/a           |  90.0  |  77.6  |   97.5   |  97.3     |  93.7  |  77.7                      |  20.2     |
-| o4-mini-low [^10]            | n/a           |  89.5  |  73.6  |   96.2   |  95.9     |  93.0  |  76.0                      |  20.2     |
-| **o3-mini**                    |               |        |        |          |           |        |                             |                      |           |
-| o3-mini-high                 | n/a           |  86.9  |  77.2  |   97.9   |  97.6     |  92.0  |  80.6                      |  13.8     |
-| o3-mini                      | n/a           |  85.9  |  74.9  |   97.3   |  96.3     |  90.8  |  79.2                      |  13.4     |
-| o3-mini-low                  | n/a           |  84.9  |  67.6  |   95.8   |  94.5     |  89.4  |  77.6                      |  13.0     |
-| **o1**                         |               |        |        |          |           |        |                             |                      |
-|  o1                          | n/a           |  91.8  |  75.7  |   96.4   |    -      |  89.3  |  90.2                      |  42.6     |
-| o1-preview                   | n/a           |  90.8  |  73.3  |   85.5   |  92.4     |  90.8  |  74.8                      |  42.4     |
-| o1-mini                      | n/a           |  85.2  |  60.0  |   90.0   |  92.4     |  89.9  |  83.9                      |  07.6     |
-| **GPT-4.1**                            |               |        |        |          |           |        |                             |                      |           |
-| gpt-4.1-2025-04-14           | assistant [^2]|  90.2  |  66.3  |   82.1   |   94.5    |  86.9  |  79.4                      | 41.6      |
-| gpt-4.1-mini-2025-04-14      | assistant     |  87.5  |  65.0  |   81.4   |   93.8    |  88.2  |  81.0                      | 16.8      |
-| gpt-4.1-nano-2025-04-14      | assistant     |  80.1  |  50.3  |   62.3   |   87.0    |  73.0  |  82.2                      | 07.6      |
-| **GPT-4o**                     |               |        |        |          |           |        |                             |                      |           |
-| gpt-4o-2024-11-20            | assistant     |  85.7  |  46.0  |   68.5   |   90.2    |  90.3  |  81.5                      | 38.8      |
-| gpt-4o-2024-08-06            | assistant     |  88.7  |  53.1  |   75.9   |   90.2    |  90.0  |  79.8                      | 40.1      |
-| gpt-4o-2024-05-13            | assistant     |  87.2  |  49.9  |   76.6   |   91.0    |  89.9  |  83.7                      | 39.0      |
-| gpt-4o-mini-2024-07-18       | assistant     |  82.0  |  40.2  |   70.2   |   87.2    |  87.0  |  79.7                      | 09.5      |
-| **GPT-4.5-preview**          |               |        |        |          |           |        |                            |           |
-| gpt-4.5-preview-2025-02-27   | assistant     |  90.8  |  69.5  |   87.1   |   88.6    |  86.9  |  83.4                      | 62.5      |
-| **GPT-4 Turbo and GPT-4**    |               |        |        |          |           |        |                            |           |
-| gpt-4-turbo-2024-04-09       | assistant     |  86.7  |  49.3  |   73.4   |   88.2    |  89.6  |  86.0                      | 24.2      |
-| gpt-4-0125-preview           | assistant     |  85.4  |  41.4  |   64.5   |   86.6    |  85.1  |  81.5                      | n/a       |
-| gpt-4-1106-preview           | assistant     |  84.7  |  42.5  |   64.3   |   83.7    |  87.1  |  83.2                      | n/a       |
-| **Other Models (Reported)**   |               |        |        |        |           |        |                           |
-| [Claude 3.5 Sonnet](https://www.anthropic.com/news/claude-3-5-sonnet) | unknown |  88.3  |  59.4  |  71.1  |   92.0    | 91.6 | 87.1 |  28.9 |
-| [Claude 3 Opus](https://www.anthropic.com/news/claude-3-family) | unknown |  86.8  |  50.4  |  60.1  |   84.9    |   90.7   |  83.1 |  23.5 |
-| [Llama 3.1 405b](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md) | unknown |  88.6  |  50.7  |  73.8  |   89.0    | 91.6 |  84.8                   | n/a
-| [Llama 3.1 70b](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md) | unknown |  82.0  |  41.7  |  68.0  |   80.5    |  86.9  |  79.6                   | n/a
-| [Llama 3.1 8b](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md) | unknown |  68.4  |  30.4  |  51.9  |   72.6    |  68.9  |  59.5                   | n/a
-| [Grok 2](https://x.ai/blog/grok-2) | unknown | 87.5 | 56.0 | 76.1 | 88.4 | n/a | n/a | n/a
-| [Grok 2 mini](https://x.ai/blog/grok-2) | unknown | 86.2 | 51.0 | 73.0 | 85.7 | n/a | n/a | n/a
-| [Gemini 1.0 Ultra](https://goo.gle/GeminiV1-5) | unknown | 83.7 | n/a | 53.2 | 74.4 | 79.0 | 82.4 | n/a
-| [Gemini 1.5 Pro](https://goo.gle/GeminiV1-5) | unknown | 81.9 | n/a | 58.5 | 71.9 | 88.7 | 78.9 | n/a
-| [Gemini 1.5 Flash](https://goo.gle/GeminiV1-5) | unknown | 77.9 | 38.6 | 40.9 | 71.5 | 75.5 | 78.4 | n/a
+The recorded experiment campaign ended early on November 17, 2026. Eight full evaluation entries completed; remaining work is explicitly incomplete and no background experiments are running. See the [termination record](experiments/termination.json). Large raw artifacts are included as [verified, restorable archives](experiments/artifacts/README.md).
 
-## Background
+## Watch it run
 
-Evals are sensitive to prompting, and there's significant variation in the formulations used in recent publications and libraries.
-Some use few-shot prompts or role playing prompts ("You are an expert software programmer...").
-These approaches are carryovers from evaluating *base models* (rather than instruction/chat-tuned models) and from models that were worse at following instructions.
+[![Actual local MLX evaluation, automatically looping](docs/assets/demo.gif)](docs/assets/demo.mp4)
 
-For this library, we are emphasizing the *zero-shot, chain-of-thought* setting, with simple instructions like "Solve the following multiple choice problem". We believe that this prompting technique is a better reflection of the models' performance in realistic usage.
+[MP4 video](docs/assets/demo.mp4) · [Autoplay video page](docs/demo.html) · [Raw terminal recording](docs/assets/demo.cast)
 
-**We will not be actively maintaining this repository and monitoring PRs and Issues.** In particular, we're not accepting new evals. Here are the changes we might accept.
-- Bug fixes (hopefully not needed!)
-- Adding adapters for new models
-- Adding new rows to the table below with eval results, given new models and new system prompts.
+The animation is rendered from a real, timestamped terminal recording. GitHub README rendering does **not** support reliable automatic MP4 playback; the inline GIF loops automatically. On HTML renderers that permit video, the player below uses muted autoplay. Browser settings can still block autoplay. See [GitHub’s rendering pipeline](https://github.com/github/markup) and [MDN’s autoplay guidance](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay).
 
-This repository is NOT intended as a replacement for https://github.com/openai/evals, which is designed to be a comprehensive collection of a large number of evals.
+<video src="docs/assets/demo.mp4" poster="docs/assets/demo-poster.png" autoplay muted loop playsinline controls width="960"></video>
 
-## Evals
+## Quick start on M1 / M2 / M3 / M4
 
-This repository currently contains the following evals:
+Validated on **Apple M1 Pro, 16 GB unified memory, macOS 26.6.1, native arm64 Python 3.11**. No CUDA, Docker, API key or paid model endpoint is required for local evaluation. First use downloads model weights and public datasets. Other macOS versions depend on availability of compatible MLX wheels; the exact lock below targets the tested environment, not every macOS release.
 
-- MMLU: Measuring Massive Multitask Language Understanding, reference: https://arxiv.org/abs/2009.03300, https://github.com/hendrycks/test, [MIT License](https://github.com/hendrycks/test/blob/master/LICENSE)
-- MATH: Measuring Mathematical Problem Solving With the MATH Dataset, reference: https://arxiv.org/abs/2103.03874, https://github.com/hendrycks/math, [MIT License](https://github.com/idavidrein/gpqa/blob/main/LICENSE)
-- GPQA: A Graduate-Level Google-Proof Q&A Benchmark, reference: https://arxiv.org/abs/2311.12022, https://github.com/idavidrein/gpqa/,  [MIT License](https://github.com/idavidrein/gpqa/blob/main/LICENSE)
-- DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs, reference: https://arxiv.org/abs/1903.00161, https://allenai.org/data/drop, [Apache License 2.0](https://github.com/allenai/allennlp-models/blob/main/LICENSE)
-- MGSM: Multilingual Grade School Math Benchmark (MGSM), Language Models are Multilingual Chain-of-Thought Reasoners, reference: https://arxiv.org/abs/2210.03057, https://github.com/google-research/url-nlp, [Creative Commons Attribution 4.0 International Public License (CC-BY)](https://github.com/google-research/url-nlp/blob/main/LICENSE)
-- HumanEval: Evaluating Large Language Models Trained on Code, reference https://arxiv.org/abs/2107.03374, https://github.com/openai/human-eval, [MIT License](https://github.com/openai/human-eval/blob/master/LICENSE)
-- SimpleQA: Measuring short-form factuality in large language models, reference: https://openai.com/index/introducing-simpleqa, [MIT License](https://github.com/openai/simple-evals/blob/main/LICENSE)
-- BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents, reference: https://openai.com/index/browsecomp, [MIT License](https://github.com/openai/simple-evals/blob/main/LICENSE)
-- HealthBench: Evaluating Large Language Models Towards Improved Human Health, reference: https://openai.com/index/healthbench, [MIT License](https://github.com/openai/simple-evals/blob/main/LICENSE)
-
-## Samplers
-
-We have implemented sampling interfaces for the following language model APIs:
-
-- OpenAI: https://platform.openai.com/docs/overview
-- Claude: https://www.anthropic.com/api
-
-Make sure to set the `*_API_KEY` environment variables before using these APIs.
-
-## Setup
-
-Due to the optional dependencies, we're not providing a unified setup mechanism. Instead, we're providing instructions for each eval and sampler.
-
-For [HumanEval](https://github.com/openai/human-eval/) (python programming)
 ```bash
-git clone https://github.com/openai/human-eval
-pip install -e human-eval
+git clone https://github.com/InfronAI/ReproEval.git
+cd ReproEval
+brew install python@3.11
+sh scripts/bootstrap_macos.sh
+
+# Verify native Python and Metal, without disclosing credentials.
+.venv/bin/python -m simple_evals doctor
+
+# An actual model evaluation; default backend is MLX.
+.venv/bin/python -m simple_evals \
+  --eval mmlu --examples 5 --output experiments/runs/quickstart
+
+# Inspect the self-contained result report.
+open experiments/runs/quickstart/index.html
 ```
 
-For the [OpenAI API](https://pypi.org/project/openai/):
+The default candidate is [`Qwen2.5-0.5B-Instruct-4bit`](https://huggingface.co/mlx-community/Qwen2.5-0.5B-Instruct-4bit). Evaluations needing a judge use a separate [`Qwen2.5-3B-Instruct-4bit`](https://huggingface.co/mlx-community/Qwen2.5-3B-Instruct-4bit). These small models make the workflow practical; their limitations, especially judge reliability and multilingual accuracy, must be considered when interpreting scores. MLX serializes inference to bound unified-memory use. Use larger open models through `--model` and `--grader-model` if your memory and time budget allow.
+
+For an existing Python ≥3.11 environment:
+
 ```bash
-pip install openai
+python3.11 -m venv .venv
+.venv/bin/python -m pip install -e '.[mlx,humaneval,dev,browse]'
+.venv/bin/python -m pytest -q
 ```
 
-For the [Anthropic API](https://docs.anthropic.com/claude/docs/quickstart-guide):
+[requirements-macos-arm64.lock](requirements-macos-arm64.lock) captures exact tested dependency versions. Recreate that environment with `pip install -r requirements-macos-arm64.lock` followed by `pip install --no-deps -e .`. Portable core installation is `pip install -e .`; optional extras are `mlx`, `humaneval`, `anthropic`, `browse`, `analysis`, and `dev`.
+
+## Saved local results
+
+All 12 original evaluator entries and all 15 MMLU language entry points completed real small-sample workflow checks. Two complete splits were also measured with the 0.5B candidate, temperature 0.5 and a 768-token output cap:
+
+| Evaluation | Actual scope | Result |
+|---|---|---:|
+| GPQA Diamond | 198 questions, one draw each | 17/198 = 8.59% |
+| HumanEval | 164 tasks, one tested program each | pass@1 = 39/164 = 23.78% |
+
+GPQA had 84 output-limit hits and 110 missing final-answer markers; these limitations are included in the score. [Per-domain and per-task analysis](experiments/complete_split_analysis/analysis.md), [raw run artifacts](experiments/runs/m1-complete-small/analysis.md), and [39-test validation evidence](experiments/validation/verification_summary.json) are saved. Larger repeated-sampling experiments have separate live status in the [experiment report](experiments/REPORT.md).
+
+## Experiments, step by step
+
 ```bash
-pip install anthropic
+# 1. Cache and checksum all released source objects (including translated MMLU).
+.venv/bin/python -m simple_evals prepare
+
+# 2. Exercise every original evaluator; MGSM uses 5 examples PER LANGUAGE.
+.venv/bin/python scripts/run_plan.py experiments/plans/local-pilot.json
+
+# 3. Resume exactly the same configuration after interruption.
+.venv/bin/python scripts/run_plan.py experiments/plans/local-pilot.json --resume
+
+# 4. Inspect the full experiment schedule before running it.
+.venv/bin/python scripts/run_plan.py experiments/plans/full-reference.json --dry-run
+
+# 5. Run all scheduled full datasets and supported paper extensions.
+# This is substantial work: many thousands of generations and grading calls;
+# multilingual MMLU alone adds 196,588 questions. It can take multiple days.
+.venv/bin/python scripts/run_plan.py experiments/plans/full-reference.json
+
+# 6. Rebuild reports from stored results; no inference or API calls.
+.venv/bin/python -m simple_evals analyze --output experiments/runs/m1-verified-suite
 ```
 
-## Running the evals
+The full plan uses pinned model revisions and records every stage. It covers the released suite, original MATH-5000, additional 200-sample HumanEval runs at temperatures 0.2 and 0.8, 14 additional MMLU translations, SimpleQA calibration, bounded browsing budgets, and HealthBench physician/reference modes. It does not recreate unpublished agent internals or historical model training. **A checked-in plan is not evidence that its full runs have completed.** The [experiment report](experiments/REPORT.md) lists actual completed, failed and pending work.
+
+A focused full run is also possible:
+
 ```bash
-python -m simple-evals.simple_evals --list-models
+.venv/bin/python -m simple_evals --eval gpqa --full --n-repeats 1 \
+  --max-tokens 2048 --output experiments/runs/gpqa-full
 ```
-This will list all the models that you can evaluate.
 
-To run the evaluations, you can use the following command:
+`--full` selects all rows. `--paper-repeats` uses the upstream CLI's ten MATH/GPQA repeats; `--n-repeats` explicitly overrides this. `--examples` cannot be combined with `--full`; subset sampling and multiple repeats are rejected where the upstream evaluator does not support their combination. `--math-split math_test` selects original 5,000-row MATH; the default is explicitly `math_500_test`.
+
+
+For a long run detached from the terminal, use the managed runner. It writes a PID, stage state and log under `experiments/jobs/`:
+
 ```bash
-python -m simple-evals.simple_evals --model <model_name> --examples <num_examples>
+.venv/bin/python scripts/manage_experiments.py start
+.venv/bin/python scripts/manage_experiments.py status
+.venv/bin/python scripts/manage_experiments.py stop
+# After stopping, preserve all settings and resume:
+.venv/bin/python scripts/manage_experiments.py start --resume
 ```
-This will launch evaluations through the OpenAI API.
 
-## Notes
+The default managed plan is `full-reference.json`. Use `--plan experiments/plans/local-validation.json` for the actual validation protocol (one example per original evaluator plus complete single-draw GPQA/HumanEval). The larger example pilot is a separate output directory. Public-web results, background progress and all source differences remain visible in the report.
 
-[^1]:chatgpt system message: "You are ChatGPT, a large language model trained by OpenAI, based on the GPT-4 architecture.\nKnowledge cutoff: 2023-12\nCurrent date: 2024-04-01"
-[^2]:assistant system message in [OpenAI API doc](https://platform.openai.com/docs/api-reference/introduction): "You are a helpful assistant." .
-[^3]:claude-3 empty system message: suggested by Anthropic API doc, and we have done limited experiments due to [rate limit](https://docs.anthropic.com/claude/reference/rate-limits) issues, but we welcome PRs with alternative choices.
-[^4]:claude-3 lmsys system message: system message in LMSYS [Fast-chat open source code](https://github.com/lm-sys/FastChat/blob/7899355ebe32117fdae83985cf8ee476d2f4243f/fastchat/conversation.py#L894): "The assistant is Claude, created by Anthropic. The current date is {{currentDateTime}}. Claude's knowledge base was last updated ... ". We have done limited experiments due to [rate limit](https://docs.anthropic.com/claude/reference/rate-limits) issues, but we welcome PRs with alternative choices.
-[^5]:We believe these evals are saturated for our newer models, but are reporting them for completeness.
-[^6]:For newer models (anything on or after o1) we evaluate on [MATH-500](https://github.com/openai/prm800k/tree/main/prm800k/math_splits), which is a newer, IID version of MATH.
-[^7]:o-series models do not support using a system prompt.
-[^8]:Includes an answer regex tweak for GPQA benchmark.
-[^9]:The default reasoning level for o3-mini is "medium".
-[^10]:These results are with no tools enabled for o3 or o4-mini
+## Supported evaluations
 
-## Legal Stuff
-By contributing to evals, you are agreeing to make your evaluation logic and data under the same MIT license as this repository. You must have adequate rights to upload any data used in an eval. OpenAI reserves the right to use this data in future service improvements to our product. Contributions to OpenAI evals will be subject to our usual Usage Policies: https://platform.openai.com/docs/usage-policies.
+| CLI name | Released full split | Grading / output |
+|---|---:|---|
+| `mmlu`, `mmlu_ZH-CN`, etc. | 14,042 per language | Letter accuracy, four subject categories |
+| `math` | 500 or 5,000 | Original equivalence-grader prompt |
+| `gpqa` | 198 Diamond questions | Seeded permutations and accuracy |
+| `mgsm` | 250 × 11 languages | Numeric accuracy and language groups |
+| `drop` | 9,536 dev questions | EM, F1 **on a 0–100 scale**, three demonstrations |
+| `humaneval` | 164 tasks | Actual code tests, unbiased pass@k |
+| `simpleqa` | 4,326 | Correct / incorrect / not attempted, attempted accuracy, F1 |
+| `browsecomp` | 1,266 | Decrypted questions, corrected yes/no grader |
+| `healthbench` | 5,000 | Weighted rubric criteria, clipped aggregate, tags |
+| `healthbench_hard` | 1,000 | Same rubric procedure |
+| `healthbench_consensus` | 3,671 source rows | Same rubric procedure |
+| `healthbench_meta` | 29,511 source rows | Model/physician pairwise agreement and balanced F1 |
+| `simpleqa_calibration` | 4,326 × configurable draws | Confidence/frequency bins, consensus@n, pass@n |
+
+`--eval all` selects the 12 original entries; calibration is an explicit additional experiment. The dataset inventory is measured from downloaded source files, not inferred from README descriptions.
+
+```bash
+# Calibration: temperature 1, 100 draws/question, Appendix-D-style curves.
+.venv/bin/python -m simple_evals --eval simpleqa_calibration --examples 3 \
+  --temperature 1 --calibration-samples 100 --output experiments/runs/calibration
+
+# Optional browsing adapter: at most 5 search/open actions per question.
+.venv/bin/python -m simple_evals --eval browsecomp --examples 3 --browse \
+  --browse-steps 5 --output experiments/runs/browse
+
+# Original physician/reference evaluation modes remain available.
+.venv/bin/python -m simple_evals --eval healthbench --examples 3 \
+  --physician-group 'Group 2' --reference-completions \
+  --output experiments/runs/physician-references
+
+# The original multilingual entry point now shares the unified runner.
+.venv/bin/python -m simple_evals.run_multilingual_mmlu --examples 5 \
+  --output experiments/runs/multilingual
+```
+
+Calibration keeps all requested draws. Invalid or conflicting JSON is recorded as a failed structured-answer draw for pass/consensus; confidence statistics use only valid confidence values and report coverage. It is never repaired by selecting one of several conflicting confidences.
+
+Without `--browse`, BrowseComp is a **closed-book baseline**. The optional agent uses public search and bounded page reads; all observations and errors are retained. It is not OpenAI's proprietary browsing agent. Search availability and changing web content affect reproducibility.
+
+HumanEval executes generated code in fresh timed processes. On macOS, the OS sandbox denies networking and writes outside the temporary directory, and restricts reading the home directory. The Python reliability guard is also enabled. Linux runs require an isolated container and the explicit `SIMPLE_EVALS_ALLOW_UNSANDBOXED_CODE=1` setting. Configure `--samples-per-task`, `--pass-k`, and `--code-timeout`; k values exceeding the sample count are omitted, never extrapolated.
+
+## Data flow
+
+```mermaid
+flowchart LR
+    A[Published datasets] --> B[Download + SHA-256 cache]
+    B --> C[Original split + seeded subset]
+    C --> D[Original task prompt]
+    D --> E[Local MLX candidate]
+    E --> F{Evaluation method}
+    F --> G[Answer extraction / numeric metrics]
+    F --> H[Separate local rubric or factuality grader]
+    F --> I[Isolated HumanEval test process]
+    G --> J[Per-example checkpoint]
+    H --> J
+    I --> J
+    J --> K[Original aggregation]
+    K --> L[JSON + CSV + HTML + analysis]
+    E --> M[Raw generation traces + usage]
+    M --> L
+```
+
+## Structure and execution flow
+
+```mermaid
+flowchart TD
+    CLI[CLI / experiment plan] --> V[Validate settings + run fingerprint]
+    V --> R[Lazy evaluation registry]
+    R --> DATA[Verified dataset cache]
+    R --> S[Sampler interface]
+    S --> MLX[MLX / Metal]
+    S --> API[Optional OpenAI / Responses / Claude]
+    S --> WEB[Optional bounded browsing adapter]
+    R --> MAP[Ordered execution + nested worker limit]
+    MAP --> RES{Matching checkpoint exists?}
+    RES -->|Yes| LOAD[Restore completed example]
+    RES -->|No| RUN[Generate + grade + atomically save]
+    LOAD --> AGG[Aggregate + persist reports]
+    RUN --> AGG
+    RUN -->|Failure| ERR[Save explicit error; keep checkpoints]
+```
+
+```text
+src/simple_evals/
+  cli.py, registry.py         installation-friendly entry point and lazy dispatch
+  *_eval.py                  retained benchmark implementations + calibration
+  sampler/                   MLX, API and optional browsing adapters
+  datasets.py, runtime.py     verified cache, deterministic seeds, resume journal
+  code_execution.py          macOS sandbox and subprocess timeouts
+  analysis.py                reports built from saved measurements
+experiments/
+  plans/                     explicit pilot and full schedules
+  runs/                      manifests, traces, per-example data and reports
+  dataset_inventory.json     actual counts and HumanEval archive hash
+  datasets.json              official source URLs and SHA-256 receipts
+  REPORT.md                  measured results and remaining work
+scripts/                     bootstrap, plan runner and genuine demo recorder
+tests/                       upstream scoring tests and regression/integration tests
+docs/                        paper audit, demo, preserved upstream documentation
+healthbench_scripts/         original exploratory analysis notebook
+```
+
+## Reproducibility and failures
+
+Each run stores its configuration, source hashes and source snapshot, git baseline, dependencies, platform, resolved model revisions, source-data receipts, raw model/grader traces, input-bearing checkpoints, conversations, metrics and HTML. Independent repeated generations receive distinct seeds; completed examples are restored without new inference. Changed code/configuration/dependencies or checkpoint inputs prevent accidental mixing of experiments. Request/grader failures are not converted into wrong answers; candidate output-format failures remain observable model behavior. Reports can be regenerated without a model. The managed runner executes a frozen package/plan snapshot, so later workspace edits cannot change an ongoing full job. [Model-file hashes](experiments/models.json) and [prompt-preservation checks](experiments/prompt_preservation.json) provide additional provenance.
+
+Dataset sampling retains the upstream seeds (0 generally; 42 for DROP). `--seed` controls local generation. Exact bitwise inference across different MLX/macOS versions is not promised. HealthBench bootstrap uses a fixed RNG. Full prompts are never silently truncated: exceeding `--max-context` fails explicitly, and output token-limit hits are recorded. Inspect these before comparing scores.
+
+After prefetching data and weights, `--offline` forbids dataset/model downloads. `--resume` must use the same settings and environment; failed items rerun, completed items do not. Running processes use a lock to protect the output directory.
+
+## Compare models
+
+The original multi-model workflow is available as a sequential, memory-bounded comparison runner. Every model uses the same requested settings and evaluator seeds, and a combined CSV/JSON is saved:
+
+```bash
+.venv/bin/python scripts/compare_models.py \
+  --models mlx-community/Qwen2.5-0.5B-Instruct-4bit,mlx-community/Qwen2.5-3B-Instruct-4bit \
+  --eval mmlu --examples 2 --output experiments/comparison/new-comparison
+```
+
+The single-run CLI accepts one model ID; use this runner for comma-separated model lists. Small comparison subsets validate execution, not model rankings.
+
+## Optional API backends
+
+Original sampling interfaces remain available without loading them for local runs:
+
+```bash
+# Configure credentials in your shell, never in committed files.
+.venv/bin/python -m simple_evals --backend openai --model YOUR_MODEL \
+  --grader-backend openai --grader-model YOUR_GRADER \
+  --eval simpleqa --examples 5 --output experiments/runs/api-check
+```
+
+Backends: `mlx`, `openai`, `o-chat`, `responses`, `anthropic`. OpenAI-compatible local servers use `OPENAI_BASE_URL` and their expected key setting. Use `--reasoning-effort` and `--system-message` where supported. Anthropic requires the `anthropic` extra. API requests use bounded SDK retries and a timeout. The existing HealthBench Professional flags remain available; the [paper audit](docs/PAPER_AUDIT.md) explains their relationship to the original HealthBench protocol.
+
+## Validation and demo regeneration
+
+```bash
+.venv/bin/python -m pytest -q
+.venv/bin/ruff check src tests scripts
+.venv/bin/python -m build
+
+# Requires ffmpeg (brew install ffmpeg) and the dev extra.
+# Use a fresh experiments/runs/demo output directory for a new recording.
+.venv/bin/python scripts/record_demo.py --output experiments/runs/demo-new
+```
+
+Tests cover BrowseComp's corrected positive grades, saved SimpleQA metrics, bounded grading retries, empty/nested maps, checkpoint recovery and invalidation, missing CSV values, escaped reports, deterministic bootstrap, calibration boundaries, and real macOS code execution including timeouts and network denial.
+
+
+## Measured optimization
+
+![Repeated-prefix cache measurements](docs/assets/cache-performance.svg)
+
+MLX reuses an LRU cache of matching prompt prefixes, capped at 256 MiB per sampler and two entries. Candidate and grader caches stay separate. In the recorded synthetic A/B, four warm calls averaged **4.146 s without caching vs 0.183 s with caching**; all twelve greedy answers matched. This measures repeated-prefix latency, not an overall suite speedup. [Raw measurements](experiments/cache_performance.json) and [reproduction script](scripts/benchmark_cache.py) are included. Disable with `--no-prefix-cache`.
+
+## Attribution
+
+Code remains under [MIT](LICENSE). Dataset and model licenses remain their authors' licenses; see the original links in the [upstream README](docs/UPSTREAM_README.md) and the [paper audit](docs/PAPER_AUDIT.md). The [MLX LM project](https://github.com/ml-explore/mlx-lm) provides native Apple Silicon inference. Benchmark data and canaries must remain evaluation material, not training data.

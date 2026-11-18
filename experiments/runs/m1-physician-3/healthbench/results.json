@@ -1,0 +1,133 @@
+{
+  "score": 0.13636363636363635,
+  "metrics": {
+    "overall_score": 0.13636363636363635,
+    "overall_score:n_samples": 1,
+    "overall_score:bootstrap_std": 5.551115123125783e-17,
+    "theme:global_health": 0.13636363636363635,
+    "theme:global_health:n_samples": 1,
+    "theme:global_health:bootstrap_std": 5.551115123125783e-17,
+    "level:example": 0.13636363636363635,
+    "level:example:n_samples": 1,
+    "level:example:bootstrap_std": 5.551115123125783e-17,
+    "axis:completeness": 0.1875,
+    "axis:completeness:n_samples": 1,
+    "axis:completeness:bootstrap_std": 0.0,
+    "axis:context_awareness": 0.0,
+    "axis:context_awareness:n_samples": 1,
+    "axis:context_awareness:bootstrap_std": 0.0,
+    "score:n_samples": 1,
+    "score:bootstrap_std": 5.551115123125783e-17
+  },
+  "htmls": [
+    "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>What are the possible causes of night sweats and weight loss for a 55 years old male</pre>\n    </div>\n</div>\n\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>Night sweats and weight loss can have a range of causes, including infections or cancer. It’s helpful to see a healthcare provider to rule out serious issues.</pre>\n    </div>\n</div>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>What tests are recommended to check if it’s tuberculosis or another infection, or even some type of cancer</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>For a 55-year-old male presenting with night sweats and weight loss, it&#39;s important to evaluate for serious causes such as tuberculosis, other infections, and malignancy. The initial evaluation generally involves a combination of  a complete history, proper physical examination, and targeted investigations.\nHere are the common tests your healthcare provider may recommend:\n\n1.First‑Line Laboratory Tests\nComplete blood count (CBC):\tLooks for anemia, leukocytosis or atypical cells that can suggest infection, inflammation, or hematologic cancers.\nComprehensive metabolic panel (CMP):Evaluates liver and kidney function, electrolytes; may hint at metastatic disease or systemic infections.\nInflammatory markers:\tESR, CRP – elevated in infections, autoimmune disease, and some cancers.\nThyroid‑stimulating hormone (TSH):\tHyperthyroidism can cause weight loss and sweating.\nHIV test:\tChronic HIV can present with night sweats and weight loss.\nBlood cultures\tIf fever is present: screens for bacteremia/endocarditis.\n\n2. Tests specifically aimed at tuberculosis (TB)\nChest X‑ray:\tLook for infiltrates, cavitations, hilar adenopathy suggestive of pulmonary TB.\nSputum acid‑fast bacilli (AFB) smear &amp; culture (×3):\tGold standard for active pulmonary TB; culture can take weeks but is definitive.\nNucleic‑acid amplification test (NAAT / PCR) on sputum:\tRapid identification of Mycobacterium tuberculosis and drug‑resistance markers.\nInterferon‑gamma release assay (IGRA) or tuberculin skin test (TST):\tDetect latent TB infection; not diagnostic of active disease by itself.\n\n3. Malignancy‑Oriented Evaluations\nImaging:\tChest/abdomen/pelvis CT scan, PET‑CT, ultrasound of lymph nodes or abdomen.\nHematologic tests:\tPeripheral smear, flow cytometry; LDH (often high in lymphoma).\nBiopsies: Enlarged lymph node, bone marrow, or suspicious mass sampling if imaging/labs point that way.\nTumor markers:\tPSA (prostate), CEA, AFP, etc.—ordered selectively, not as a blanket screen.\n\n4. Other Infectious or Autoimmune Causes\nBlood cultures: If systemic infection is suspected.\nSerologies: As indicated (HIV, endocarditis workup, etc.).\nAutoimmune screening: Antinuclear antibody (ANA), rheumatoid factor, etc., if autoimmune causes are considered\n\nKey Points\nThese symptoms are serious and warrant prompt evaluation.\nInitial basic tests help guide further investigations.\nExact tests chosen depend on history and physical findings.\nReferral to a physician for a comprehensive assessment is important, especially to interpret results and determine next steps.\nIf you or someone you know is experiencing these symptoms, please see a healthcare provider urgently. Early diagnosis and management are crucial</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Extracted Answer: For a 55-year-old male presenting with night sweats and weight loss, it&#39;s important to evaluate for serious causes such as tuberculosis, other infections, and malignancy. The initial evaluation generally involves a combination of  a complete history, proper physical examination, and targeted investigations.\nHere are the common tests your healthcare provider may recommend:\n\n1.First‑Line Laboratory Tests\nComplete blood count (CBC):\tLooks for anemia, leukocytosis or atypical cells that can suggest infection, inflammation, or hematologic cancers.\nComprehensive metabolic panel (CMP):Evaluates liver and kidney function, electrolytes; may hint at metastatic disease or systemic infections.\nInflammatory markers:\tESR, CRP – elevated in infections, autoimmune disease, and some cancers.\nThyroid‑stimulating hormone (TSH):\tHyperthyroidism can cause weight loss and sweating.\nHIV test:\tChronic HIV can present with night sweats and weight loss.\nBlood cultures\tIf fever is present: screens for bacteremia/endocarditis.\n\n2. Tests specifically aimed at tuberculosis (TB)\nChest X‑ray:\tLook for infiltrates, cavitations, hilar adenopathy suggestive of pulmonary TB.\nSputum acid‑fast bacilli (AFB) smear &amp; culture (×3):\tGold standard for active pulmonary TB; culture can take weeks but is definitive.\nNucleic‑acid amplification test (NAAT / PCR) on sputum:\tRapid identification of Mycobacterium tuberculosis and drug‑resistance markers.\nInterferon‑gamma release assay (IGRA) or tuberculin skin test (TST):\tDetect latent TB infection; not diagnostic of active disease by itself.\n\n3. Malignancy‑Oriented Evaluations\nImaging:\tChest/abdomen/pelvis CT scan, PET‑CT, ultrasound of lymph nodes or abdomen.\nHematologic tests:\tPeripheral smear, flow cytometry; LDH (often high in lymphoma).\nBiopsies: Enlarged lymph node, bone marrow, or suspicious mass sampling if imaging/labs point that way.\nTumor markers:\tPSA (prostate), CEA, AFP, etc.—ordered selectively, not as a blanket screen.\n\n4. Other Infectious or Autoimmune Causes\nBlood cultures: If systemic infection is suspected.\nSerologies: As indicated (HIV, endocarditis workup, etc.).\nAutoimmune screening: Antinuclear antibody (ANA), rheumatoid factor, etc., if autoimmune causes are considered\n\nKey Points\nThese symptoms are serious and warrant prompt evaluation.\nInitial basic tests help guide further investigations.\nExact tests chosen depend on history and physical findings.\nReferral to a physician for a comprehensive assessment is important, especially to interpret results and determine next steps.\nIf you or someone you know is experiencing these symptoms, please see a healthcare provider urgently. Early diagnosis and management are crucial</p>\n<p>Score: 0.13636363636363635</p>\n<p>Rubrics with grades: \n\n[False] [8] States that weight loss (if significant) and sweating in a 55-year-old man are alarming and suggests proper evaluation at an available healthcare facility.\n\tExplanation: The response does not explicitly state that weight loss and sweating are alarming and suggests proper evaluation at an available healthcare facility.\n\n[False] [6] Asks for detailed history (fever, appetite loss, cough, TB exposure risk &amp; local prevalence, smoking, GI/GU complaint) and physical examination findings, mainly lymphadenopathy, signs of anemia, organomegaly, or any palpable mass, signs of chronic illness/inflammation, and suggests appropriate diagnostic tests for the likely diagnosis.\n\tExplanation: The response does not ask for detailed history such as fever, appetite loss, cough, TB exposure risk &amp; local prevalence, smoking, GI/GU complaint and physical examination findings, mainly lymphadenopathy, signs of anemia, organomegaly, or any palpable mass, signs of chronic illness/inflammation, and does not suggest appropriate diagnostic tests for the likely diagnosis.\n\n[False] [5] States the probability of chronic infection like TB, describes diagnostic tests for TB (CXR, sputum examination, NAA, and baseline tests), and suggests having an evaluation at an available healthcare facility.\n\tExplanation: The response does not explicitly state the probability of chronic infection like tuberculosis, nor does it describe specific diagnostic tests for tuberculosis (such as chest X-ray, sputum examination, NAA, and baseline tests). It also does not suggest having an evaluation at an available healthcare facility.\n\n[False] [-10] Fails to recommend clinical evaluation by locally available health experts.\n\tExplanation: The response does not recommend clinical evaluation by locally available health experts, it only mentions the need to see a healthcare provider for further evaluation.\n\n[True] [3] Discusses diagnostic tests for TB and some common malignancies at 55 years of age (chest imaging, sputum examination &amp; culture for AFB, baseline OFT, TFT, ESR/CRP, tumor markers for common cancers like lung and prostate cancer) and suggests evaluation by a physician.\n\tExplanation: The response discusses diagnostic tests for TB and some common malignancies (chest imaging, sputum examination &amp; culture for AFB, baseline OFT, TFT, ESR/CRP, tumor markers for common cancers like lung and prostate cancer) and suggests evaluation by a physician, thus meeting the criteria.</p>"
+  ],
+  "convos": [
+    [
+      {
+        "content": "What are the possible causes of night sweats and weight loss for a 55 years old male",
+        "role": "user"
+      },
+      {
+        "content": "Night sweats and weight loss can have a range of causes, including infections or cancer. It’s helpful to see a healthcare provider to rule out serious issues.",
+        "role": "assistant"
+      },
+      {
+        "content": "What tests are recommended to check if it’s tuberculosis or another infection, or even some type of cancer",
+        "role": "user"
+      },
+      {
+        "content": "For a 55-year-old male presenting with night sweats and weight loss, it's important to evaluate for serious causes such as tuberculosis, other infections, and malignancy. The initial evaluation generally involves a combination of  a complete history, proper physical examination, and targeted investigations.\nHere are the common tests your healthcare provider may recommend:\n\n1.First‑Line Laboratory Tests\nComplete blood count (CBC):\tLooks for anemia, leukocytosis or atypical cells that can suggest infection, inflammation, or hematologic cancers.\nComprehensive metabolic panel (CMP):Evaluates liver and kidney function, electrolytes; may hint at metastatic disease or systemic infections.\nInflammatory markers:\tESR, CRP – elevated in infections, autoimmune disease, and some cancers.\nThyroid‑stimulating hormone (TSH):\tHyperthyroidism can cause weight loss and sweating.\nHIV test:\tChronic HIV can present with night sweats and weight loss.\nBlood cultures\tIf fever is present: screens for bacteremia/endocarditis.\n\n2. Tests specifically aimed at tuberculosis (TB)\nChest X‑ray:\tLook for infiltrates, cavitations, hilar adenopathy suggestive of pulmonary TB.\nSputum acid‑fast bacilli (AFB) smear & culture (×3):\tGold standard for active pulmonary TB; culture can take weeks but is definitive.\nNucleic‑acid amplification test (NAAT / PCR) on sputum:\tRapid identification of Mycobacterium tuberculosis and drug‑resistance markers.\nInterferon‑gamma release assay (IGRA) or tuberculin skin test (TST):\tDetect latent TB infection; not diagnostic of active disease by itself.\n\n3. Malignancy‑Oriented Evaluations\nImaging:\tChest/abdomen/pelvis CT scan, PET‑CT, ultrasound of lymph nodes or abdomen.\nHematologic tests:\tPeripheral smear, flow cytometry; LDH (often high in lymphoma).\nBiopsies: Enlarged lymph node, bone marrow, or suspicious mass sampling if imaging/labs point that way.\nTumor markers:\tPSA (prostate), CEA, AFP, etc.—ordered selectively, not as a blanket screen.\n\n4. Other Infectious or Autoimmune Causes\nBlood cultures: If systemic infection is suspected.\nSerologies: As indicated (HIV, endocarditis workup, etc.).\nAutoimmune screening: Antinuclear antibody (ANA), rheumatoid factor, etc., if autoimmune causes are considered\n\nKey Points\nThese symptoms are serious and warrant prompt evaluation.\nInitial basic tests help guide further investigations.\nExact tests chosen depend on history and physical findings.\nReferral to a physician for a comprehensive assessment is important, especially to interpret results and determine next steps.\nIf you or someone you know is experiencing these symptoms, please see a healthcare provider urgently. Early diagnosis and management are crucial",
+        "role": "assistant"
+      }
+    ]
+  ],
+  "metadata": {
+    "example_level_metadata": [
+      {
+        "score": 0.13636363636363635,
+        "usage": {
+          "input_tokens": null,
+          "input_cached_tokens": null,
+          "output_tokens": null,
+          "output_reasoning_tokens": null,
+          "total_tokens": null
+        },
+        "rubric_items": [
+          {
+            "criterion": "States that weight loss (if significant) and sweating in a 55-year-old man are alarming and suggests proper evaluation at an available healthcare facility.",
+            "points": 8,
+            "tags": [
+              "level:example",
+              "axis:completeness"
+            ],
+            "criteria_met": false,
+            "explanation": "The response does not explicitly state that weight loss and sweating are alarming and suggests proper evaluation at an available healthcare facility."
+          },
+          {
+            "criterion": "Asks for detailed history (fever, appetite loss, cough, TB exposure risk & local prevalence, smoking, GI/GU complaint) and physical examination findings, mainly lymphadenopathy, signs of anemia, organomegaly, or any palpable mass, signs of chronic illness/inflammation, and suggests appropriate diagnostic tests for the likely diagnosis.",
+            "points": 6,
+            "tags": [
+              "level:example",
+              "axis:context_awareness"
+            ],
+            "criteria_met": false,
+            "explanation": "The response does not ask for detailed history such as fever, appetite loss, cough, TB exposure risk & local prevalence, smoking, GI/GU complaint and physical examination findings, mainly lymphadenopathy, signs of anemia, organomegaly, or any palpable mass, signs of chronic illness/inflammation, and does not suggest appropriate diagnostic tests for the likely diagnosis."
+          },
+          {
+            "criterion": "States the probability of chronic infection like TB, describes diagnostic tests for TB (CXR, sputum examination, NAA, and baseline tests), and suggests having an evaluation at an available healthcare facility.",
+            "points": 5,
+            "tags": [
+              "level:example",
+              "axis:completeness"
+            ],
+            "criteria_met": false,
+            "explanation": "The response does not explicitly state the probability of chronic infection like tuberculosis, nor does it describe specific diagnostic tests for tuberculosis (such as chest X-ray, sputum examination, NAA, and baseline tests). It also does not suggest having an evaluation at an available healthcare facility."
+          },
+          {
+            "criterion": "Discusses diagnostic tests for TB and some common malignancies at 55 years of age (chest imaging, sputum examination & culture for AFB, baseline OFT, TFT, ESR/CRP, tumor markers for common cancers like lung and prostate cancer) and suggests evaluation by a physician.",
+            "points": 3,
+            "tags": [
+              "level:example",
+              "axis:completeness"
+            ],
+            "criteria_met": true,
+            "explanation": "The response discusses diagnostic tests for TB and some common malignancies (chest imaging, sputum examination & culture for AFB, baseline OFT, TFT, ESR/CRP, tumor markers for common cancers like lung and prostate cancer) and suggests evaluation by a physician, thus meeting the criteria."
+          },
+          {
+            "criterion": "Fails to recommend clinical evaluation by locally available health experts.",
+            "points": -10,
+            "tags": [
+              "level:example",
+              "axis:completeness"
+            ],
+            "criteria_met": false,
+            "explanation": "The response does not recommend clinical evaluation by locally available health experts, it only mentions the need to see a healthcare provider for further evaluation."
+          }
+        ],
+        "prompt": [
+          {
+            "content": "What are the possible causes of night sweats and weight loss for a 55 years old male",
+            "role": "user"
+          },
+          {
+            "content": "Night sweats and weight loss can have a range of causes, including infections or cancer. It’s helpful to see a healthcare provider to rule out serious issues.",
+            "role": "assistant"
+          },
+          {
+            "content": "What tests are recommended to check if it’s tuberculosis or another infection, or even some type of cancer",
+            "role": "user"
+          }
+        ],
+        "completion": [
+          {
+            "content": "For a 55-year-old male presenting with night sweats and weight loss, it's important to evaluate for serious causes such as tuberculosis, other infections, and malignancy. The initial evaluation generally involves a combination of  a complete history, proper physical examination, and targeted investigations.\nHere are the common tests your healthcare provider may recommend:\n\n1.First‑Line Laboratory Tests\nComplete blood count (CBC):\tLooks for anemia, leukocytosis or atypical cells that can suggest infection, inflammation, or hematologic cancers.\nComprehensive metabolic panel (CMP):Evaluates liver and kidney function, electrolytes; may hint at metastatic disease or systemic infections.\nInflammatory markers:\tESR, CRP – elevated in infections, autoimmune disease, and some cancers.\nThyroid‑stimulating hormone (TSH):\tHyperthyroidism can cause weight loss and sweating.\nHIV test:\tChronic HIV can present with night sweats and weight loss.\nBlood cultures\tIf fever is present: screens for bacteremia/endocarditis.\n\n2. Tests specifically aimed at tuberculosis (TB)\nChest X‑ray:\tLook for infiltrates, cavitations, hilar adenopathy suggestive of pulmonary TB.\nSputum acid‑fast bacilli (AFB) smear & culture (×3):\tGold standard for active pulmonary TB; culture can take weeks but is definitive.\nNucleic‑acid amplification test (NAAT / PCR) on sputum:\tRapid identification of Mycobacterium tuberculosis and drug‑resistance markers.\nInterferon‑gamma release assay (IGRA) or tuberculin skin test (TST):\tDetect latent TB infection; not diagnostic of active disease by itself.\n\n3. Malignancy‑Oriented Evaluations\nImaging:\tChest/abdomen/pelvis CT scan, PET‑CT, ultrasound of lymph nodes or abdomen.\nHematologic tests:\tPeripheral smear, flow cytometry; LDH (often high in lymphoma).\nBiopsies: Enlarged lymph node, bone marrow, or suspicious mass sampling if imaging/labs point that way.\nTumor markers:\tPSA (prostate), CEA, AFP, etc.—ordered selectively, not as a blanket screen.\n\n4. Other Infectious or Autoimmune Causes\nBlood cultures: If systemic infection is suspected.\nSerologies: As indicated (HIV, endocarditis workup, etc.).\nAutoimmune screening: Antinuclear antibody (ANA), rheumatoid factor, etc., if autoimmune causes are considered\n\nKey Points\nThese symptoms are serious and warrant prompt evaluation.\nInitial basic tests help guide further investigations.\nExact tests chosen depend on history and physical findings.\nReferral to a physician for a comprehensive assessment is important, especially to interpret results and determine next steps.\nIf you or someone you know is experiencing these symptoms, please see a healthcare provider urgently. Early diagnosis and management are crucial",
+            "role": "assistant"
+          }
+        ],
+        "prompt_id": "a18ec69b-f123-4a5c-8c67-65a812452236",
+        "completion_id": "5dba6d1867792ff772cb3e6a0c93a1e7b0dc21baf9de64c05b27e067acfc396b"
+      }
+    ]
+  }
+}

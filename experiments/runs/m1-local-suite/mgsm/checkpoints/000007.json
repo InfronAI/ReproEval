@@ -1,0 +1,31 @@
+{
+  "index": 7,
+  "input_sha256": "490e977850a26bec2c980850201497bdf702120bde013f5b4f87ca7052b98672",
+  "input": {
+    "inputs": "Josh beschließt, ein Haus zu verkaufen. Er kauft ein Haus für 80.000 US-Dollar und steckt anschließend 50.000 US-Dollar an Reparaturen hinein. Dadurch steigt der Wert des Hauses um 150 %. Wie viel Gewinn macht er?",
+    "targets": "70000",
+    "lang": "de"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": false,
+      "metrics": {
+        "de": false,
+        "group_latin": false
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Löse dieses Mathematikproblem. Gib die Schritte zur Begründung an, bevor du die endgültige Antwort in der letzten Zeile alleine im Format &#34;Antwort:&#34; gibst. Füge nichts anderes als die ganzzahlige Antwort nach &#34;Antwort:&#34; hinzu.\n\nJosh beschließt, ein Haus zu verkaufen. Er kauft ein Haus für 80.000 US-Dollar und steckt anschließend 50.000 US-Dollar an Reparaturen hinein. Dadurch steigt der Wert des Hauses um 150 %. Wie viel Gewinn macht er?</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>Antwort: \n1. Er kauft ein Haus für 80.000 US-Dollars.\n2. Er kauft 50.000 US-Dollars für Reparaturen, damit er den Preis erhöht.\n3. Der Wert des Hauses steigt um 150%.\n\nZusammengefasst:\n- Initial Preis: 80.000 US-Dollars\n- Kauften Reparaturen: 50.000 US-Dollars\n- Er erhält 150% des kauften Reparaturen: 150% * 50.000 US-Dollars = 75.000 US-Dollars\n\nZusammengefasst:\n- Initial Preis: 80.000 US-Dollars\n- Kauften Reparaturen: 50.000 US-Dollars\n- Er erhält 75.000 US-Dollars\n\nEr erhält 75.000 US-Dollars, was die Gewin von 75.000 US-Dollars erster Preis.</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 70000</p>\n<p>Extracted Answer: 75.000</p>\n<p>Score: False</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Löse dieses Mathematikproblem. Gib die Schritte zur Begründung an, bevor du die endgültige Antwort in der letzten Zeile alleine im Format \"Antwort:\" gibst. Füge nichts anderes als die ganzzahlige Antwort nach \"Antwort:\" hinzu.\n\nJosh beschließt, ein Haus zu verkaufen. Er kauft ein Haus für 80.000 US-Dollar und steckt anschließend 50.000 US-Dollar an Reparaturen hinein. Dadurch steigt der Wert des Hauses um 150 %. Wie viel Gewinn macht er?"
+        },
+        {
+          "content": "Antwort: \n1. Er kauft ein Haus für 80.000 US-Dollars.\n2. Er kauft 50.000 US-Dollars für Reparaturen, damit er den Preis erhöht.\n3. Der Wert des Hauses steigt um 150%.\n\nZusammengefasst:\n- Initial Preis: 80.000 US-Dollars\n- Kauften Reparaturen: 50.000 US-Dollars\n- Er erhält 150% des kauften Reparaturen: 150% * 50.000 US-Dollars = 75.000 US-Dollars\n\nZusammengefasst:\n- Initial Preis: 80.000 US-Dollars\n- Kauften Reparaturen: 50.000 US-Dollars\n- Er erhält 75.000 US-Dollars\n\nEr erhält 75.000 US-Dollars, was die Gewin von 75.000 US-Dollars erster Preis.",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

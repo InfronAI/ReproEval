@@ -1,0 +1,35 @@
+{
+  "index": 4,
+  "input_sha256": "9b28b319ce60d5e379099543e97fe08fb155a35d7f94a712d97f3055bac270b5",
+  "input": {
+    "Unnamed: 0": 176,
+    "Question": "What must you ensure before a speaking valve is used?",
+    "A": "That the patient is able to swallow properly.",
+    "B": "It is seven days after the tracheostomy tube was first inserted.",
+    "C": "The cuff is deflated.",
+    "D": "The cuff is inflated.",
+    "Answer": "C",
+    "Subject": "clinical_knowledge"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 1.0,
+      "metrics": {
+        "other": 1.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCD. Think step by step before answering.\n\nWhat must you ensure before a speaking valve is used?\n\nA) That the patient is able to swallow properly.\nB) It is seven days after the tracheostomy tube was first inserted.\nC) The cuff is deflated.\nD) The cuff is inflated.</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>To answer this question, we need to consider the purpose of a speaking valve and its function in the context of tracheotomy (tracheostomy) procedures. A speaking valve is a device used to assist in speech and communication by allowing the patient to breathe by speaking.\n\nBefore using a speaking valve, the following steps are typically necessary:\n\n1. Ensure Comfort and Safety: Ensure that the patient is comfortable and able to breathe by speaking. This includes checking the patient&#39;s airway and ensuring that the patient is not under pressure or air retention.\n\n2. Check the Tracheostomy Tube: Confirm that the tracheostomy tube is properly positioned and that the tubing is secure.\n\n3. Check the Patient&#39;s Airway: Check the patient&#39;s airway to ensure that it is clear and unobstructed. This includes checking for any foreign objects or blockages.\n\n4. Ensure Proper Circulation: Ensure that the patient&#39;s blood is circulating properly by checking for any blockages in the circulation pathways.\n\n5. Check for Pressure: Check for any pressure in the airway or tracheostomy tube.\n\n6. Ensure the Patient is in a Safe Position: Ensure that the patient is in a safe position by positioning them to breathe through the mouth.\n\nGiven these points, the correct answer is:\n\nC) The cuff is deflated.\n\nTherefore, the correct answer is:\nAnswer: C</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: C</p>\n<p>Extracted Answer: C</p>\n<p>Score: 1.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Answer the following multiple choice question. The last line of your response should be of the following format: 'Answer: $LETTER' (without quotes) where LETTER is one of ABCD. Think step by step before answering.\n\nWhat must you ensure before a speaking valve is used?\n\nA) That the patient is able to swallow properly.\nB) It is seven days after the tracheostomy tube was first inserted.\nC) The cuff is deflated.\nD) The cuff is inflated."
+        },
+        {
+          "content": "To answer this question, we need to consider the purpose of a speaking valve and its function in the context of tracheotomy (tracheostomy) procedures. A speaking valve is a device used to assist in speech and communication by allowing the patient to breathe by speaking.\n\nBefore using a speaking valve, the following steps are typically necessary:\n\n1. Ensure Comfort and Safety: Ensure that the patient is comfortable and able to breathe by speaking. This includes checking the patient's airway and ensuring that the patient is not under pressure or air retention.\n\n2. Check the Tracheostomy Tube: Confirm that the tracheostomy tube is properly positioned and that the tubing is secure.\n\n3. Check the Patient's Airway: Check the patient's airway to ensure that it is clear and unobstructed. This includes checking for any foreign objects or blockages.\n\n4. Ensure Proper Circulation: Ensure that the patient's blood is circulating properly by checking for any blockages in the circulation pathways.\n\n5. Check for Pressure: Check for any pressure in the airway or tracheostomy tube.\n\n6. Ensure the Patient is in a Safe Position: Ensure that the patient is in a safe position by positioning them to breathe through the mouth.\n\nGiven these points, the correct answer is:\n\nC) The cuff is deflated.\n\nTherefore, the correct answer is:\nAnswer: C",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

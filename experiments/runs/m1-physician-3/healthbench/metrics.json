@@ -1,0 +1,21 @@
+{
+  "overall_score": 0.13636363636363635,
+  "overall_score:n_samples": 1,
+  "overall_score:bootstrap_std": 5.551115123125783e-17,
+  "theme:global_health": 0.13636363636363635,
+  "theme:global_health:n_samples": 1,
+  "theme:global_health:bootstrap_std": 5.551115123125783e-17,
+  "level:example": 0.13636363636363635,
+  "level:example:n_samples": 1,
+  "level:example:bootstrap_std": 5.551115123125783e-17,
+  "axis:completeness": 0.1875,
+  "axis:completeness:n_samples": 1,
+  "axis:completeness:bootstrap_std": 0.0,
+  "axis:context_awareness": 0.0,
+  "axis:context_awareness:n_samples": 1,
+  "axis:context_awareness:bootstrap_std": 0.0,
+  "score:n_samples": 1,
+  "score:bootstrap_std": 5.551115123125783e-17,
+  "score": 0.13636363636363635,
+  "wall_seconds": 22.693724874872714
+}

@@ -1,0 +1,31 @@
+{
+  "index": 38,
+  "input_sha256": "bebdda480be9cf10b352f3a24fe4c6bb383c26809322fd37d59eae6cf3c5da99",
+  "input": {
+    "inputs": "James anaamua kukimbia mbio 3 fupi mara 3 kwa wiki. Anakimbia mita 60 kwa kila mbio fupi. Huwa anakimbia jumla ya mita ngapi kwa wiki?",
+    "targets": "540",
+    "lang": "sw"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": false,
+      "metrics": {
+        "sw": false,
+        "group_latin": false
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Suluhisha tatizo hili la hesabu. Toa hatua za mantiki kabla ya kutoa jibu la mwisho kwenye mstari wa mwisho peke yake katika muundo wa &#34;Jibu:&#34;. Usiongeze chochote kingine isipokuwa jibu la integer baada ya &#34;Jibu:&#34;.\n\nJames anaamua kukimbia mbio 3 fupi mara 3 kwa wiki. Anakimbia mita 60 kwa kila mbio fupi. Huwa anakimbia jumla ya mita ngapi kwa wiki?</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>Toa hatua za mantiki kabla ya kutoa jibu jumla ya mita ngapi kwa wiki, James anaamua kukimbia mbio 3 fupi mara 3 kwa wiki. Anakimbia mita 60 kwa kila mbio fupi.</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 540</p>\n<p>Extracted Answer: None</p>\n<p>Score: False</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Suluhisha tatizo hili la hesabu. Toa hatua za mantiki kabla ya kutoa jibu la mwisho kwenye mstari wa mwisho peke yake katika muundo wa \"Jibu:\". Usiongeze chochote kingine isipokuwa jibu la integer baada ya \"Jibu:\".\n\nJames anaamua kukimbia mbio 3 fupi mara 3 kwa wiki. Anakimbia mita 60 kwa kila mbio fupi. Huwa anakimbia jumla ya mita ngapi kwa wiki?"
+        },
+        {
+          "content": "Toa hatua za mantiki kabla ya kutoa jibu jumla ya mita ngapi kwa wiki, James anaamua kukimbia mbio 3 fupi mara 3 kwa wiki. Anakimbia mita 60 kwa kila mbio fupi.",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "index": 134,
+  "input_sha256": "2822346fad028f3adc8dd4cb356ee085400995da581f883ec952e8ebf8381054",
+  "input": {
+    "task_id": "HumanEval/134",
+    "prompt": "\ndef check_if_last_char_is_a_letter(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n\n    Examples:\n    check_if_last_char_is_a_letter(\"apple pie\") ➞ False\n    check_if_last_char_is_a_letter(\"apple pi e\") ➞ True\n    check_if_last_char_is_a_letter(\"apple pi e \") ➞ False\n    check_if_last_char_is_a_letter(\"\") ➞ False \n    '''\n",
+    "entry_point": "check_if_last_char_is_a_letter",
+    "canonical_solution": " \n    check = txt.split(' ')[-1]\n    return True if len(check) == 1 and (97 <= ord(check.lower()) <= 122) else False\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(\"apple\") == False\n    assert candidate(\"apple pi e\") == True\n    assert candidate(\"eeeee\") == False\n    assert candidate(\"A\") == True\n    assert candidate(\"Pumpkin pie \") == False\n    assert candidate(\"Pumpkin pie 1\") == False\n    assert candidate(\"\") == False\n    assert candidate(\"eeeee e \") == False\n    assert candidate(\"apple pie\") == False\n    assert candidate(\"apple pi e \") == False\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef check_if_last_char_is_a_letter(txt):\n    &#39;&#39;&#39;\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and False otherwise.\n    Note: &#34;word&#34; is a group of characters separated by space.\n\n    Examples:\n    check_if_last_char_is_a_letter(&#34;apple pie&#34;) ➞ False\n    check_if_last_char_is_a_letter(&#34;apple pi e&#34;) ➞ True\n    check_if_last_char_is_a_letter(&#34;apple pi e &#34;) ➞ False\n    check_if_last_char_is_a_letter(&#34;&#34;) ➞ False \n    &#39;&#39;&#39;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;\\n    Create a function that returns True if the last character\\n    of a given string is an alphabetical character and is not\\n    a part of a word, and False otherwise.\\n    Note: &#34;word&#34; is a group of characters separated by space.\\n\\n    Examples:\\n    check_if_last_char_is_a_letter(&#34;apple pie&#34;) ➞ False\\n    check_if_last_char_is_a_letter(&#34;apple pi e&#34;) ➞ True\\n    check_if_last_char_is_a_letter(&#34;apple pi e &#34;) ➞ False\\n    check_if_last_char_is_a_letter(&#34;&#34;) ➞ False \\n    &#39;\n    last_char = txt[-1]\n    if last_char == &#39; &#39;:\n        return False\n    else:\n        return last_char.isalpha() and &#39;word&#39; not in txt.split(&#39; &#39;)\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef check_if_last_char_is_a_letter(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n\n    Examples:\n    check_if_last_char_is_a_letter(\"apple pie\") ➞ False\n    check_if_last_char_is_a_letter(\"apple pi e\") ➞ True\n    check_if_last_char_is_a_letter(\"apple pi e \") ➞ False\n    check_if_last_char_is_a_letter(\"\") ➞ False \n    '''\n"
+        },
+        {
+          "content": "    '\\n    Create a function that returns True if the last character\\n    of a given string is an alphabetical character and is not\\n    a part of a word, and False otherwise.\\n    Note: \"word\" is a group of characters separated by space.\\n\\n    Examples:\\n    check_if_last_char_is_a_letter(\"apple pie\") ➞ False\\n    check_if_last_char_is_a_letter(\"apple pi e\") ➞ True\\n    check_if_last_char_is_a_letter(\"apple pi e \") ➞ False\\n    check_if_last_char_is_a_letter(\"\") ➞ False \\n    '\n    last_char = txt[-1]\n    if last_char == ' ':\n        return False\n    else:\n        return last_char.isalpha() and 'word' not in txt.split(' ')\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

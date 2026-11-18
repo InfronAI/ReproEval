@@ -1,0 +1,35 @@
+{
+  "index": 0,
+  "input_sha256": "4bf9bdbf1b0f3d601b802ce1daa88b05803b9d12e821b38b894e486de60c46e1",
+  "input": {
+    "Unnamed: 0": 130,
+    "Question": "¿En qué consiste la vacuna eficaz contra el VPH?",
+    "A": "Es una vacuna atenuada elaborada con microbios vivos por mutagénesis específica",
+    "B": "Es un vacuna inactivada químicamente y elaborada con microbios enteros",
+    "C": "Consiste en el autoensamblaje de la proteína L1 del virus en partículas similivirales",
+    "D": "Es una vacuna de subunidades inactivada químicamente",
+    "Answer": "A",
+    "Subject": "virology"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "other": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCD. Think step by step before answering.\n\n¿En qué consiste la vacuna eficaz contra el VPH?\n\nA) Es una vacuna atenuada elaborada con microbios vivos por mutagénesis específica\nB) Es un vacuna inactivada químicamente y elaborada con microbios enteros\nC) Consiste en el autoensamblaje de la proteína L1 del virus en partículas similivirales\nD) Es una vacuna de subunidades inactivada químicamente</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>Para determinar qué consiste la vacuna eficaz contra el VPH, vamos a analizar cada opción:\n\nA) Es una vacuna atenuada elaborada con microbios vivos por mutagénesis específica\n- Esta vacuna es un componente específico del VPH y no se trata como una vacuna eficaz.\n\nB) Es un vacuna inactivada químicamente y elaborada con microbios enteros\n- Esta es una vacuna eficaz contra el VPH, ya que se trata como una vacuna inactivada y elaborada con microbios enteros.\n\nC) Consiste en el autoensamblaje de la proteína L1 del virus en partículas similivirales\n- Este es una vacuna eficaz contra el VPH, ya que se trata como una vacuna inactivada y elaborada con microbios enteros.\n\nD) Es una vacuna de subunidades inactivada químicamente\n- Esta vacuna es un componente específico del VPH y no se trata como una vacuna eficaz.\n\nDicho esto, la vacuna eficaz para el VPH es la B) Es un vacuna inactivada químicamente y elaborada con microbios enteros.\n\nEl resultado final es: Answer: B</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: A</p>\n<p>Extracted Answer: B</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Answer the following multiple choice question. The last line of your response should be of the following format: 'Answer: $LETTER' (without quotes) where LETTER is one of ABCD. Think step by step before answering.\n\n¿En qué consiste la vacuna eficaz contra el VPH?\n\nA) Es una vacuna atenuada elaborada con microbios vivos por mutagénesis específica\nB) Es un vacuna inactivada químicamente y elaborada con microbios enteros\nC) Consiste en el autoensamblaje de la proteína L1 del virus en partículas similivirales\nD) Es una vacuna de subunidades inactivada químicamente"
+        },
+        {
+          "content": "Para determinar qué consiste la vacuna eficaz contra el VPH, vamos a analizar cada opción:\n\nA) Es una vacuna atenuada elaborada con microbios vivos por mutagénesis específica\n- Esta vacuna es un componente específico del VPH y no se trata como una vacuna eficaz.\n\nB) Es un vacuna inactivada químicamente y elaborada con microbios enteros\n- Esta es una vacuna eficaz contra el VPH, ya que se trata como una vacuna inactivada y elaborada con microbios enteros.\n\nC) Consiste en el autoensamblaje de la proteína L1 del virus en partículas similivirales\n- Este es una vacuna eficaz contra el VPH, ya que se trata como una vacuna inactivada y elaborada con microbios enteros.\n\nD) Es una vacuna de subunidades inactivada químicamente\n- Esta vacuna es un componente específico del VPH y no se trata como una vacuna eficaz.\n\nDicho esto, la vacuna eficaz para el VPH es la B) Es un vacuna inactivada químicamente y elaborada con microbios enteros.\n\nEl resultado final es: Answer: B",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

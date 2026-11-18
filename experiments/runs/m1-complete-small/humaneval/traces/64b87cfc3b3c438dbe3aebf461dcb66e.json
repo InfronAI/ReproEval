@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List, Any\n\n\ndef filter_integers(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for integers\n    >>> filter_integers(['a', 3.14, 5])\n    [5]\n    >>> filter_integers([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\nfrom typing import List, Any\n\ndef filter_integers(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for integers \"\"\"\n    return [int(val) for val in values if isinstance(val, int)]\n```\n\nThis function signature and docstring are complete, as the docstring provides a brief description of the function's purpose and expected behavior. The implementation uses a list comprehension to filter out non-integer values from the input list, resulting in a filtered list of integers.",
+  "usage": {
+    "input_tokens": 142,
+    "output_tokens": 107,
+    "input_cached_tokens": 56,
+    "total_tokens": 249
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 693062394,
+  "seconds": 0.9754348332062364,
+  "generation_tokens_per_second": 131.93517676964697,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

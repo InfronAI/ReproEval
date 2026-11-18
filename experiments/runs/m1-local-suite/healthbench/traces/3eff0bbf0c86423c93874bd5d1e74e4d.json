@@ -1,0 +1,23 @@
+{
+  "messages": [
+    {
+      "content": "postpartum thyroid testing i delivered a baby 1 month ago i live in moscow how often do i check TSH postpartum i want the local russian guidelines",
+      "role": "user"
+    }
+  ],
+  "response": "Postpartum thyroid testing is crucial for ensuring that your thyroid function is normal, as it can be affected by the hormonal changes that occur during pregnancy and childbirth. It's important to keep track of your TSH (Thyroid Stimulating Hormone) levels, as this test is the primary indicator of the status of your thyroid gland.\n\nHere are the steps to perform the postpartum thyroid test:\n\n1. **Choose the Day**: Choose a day after the delivery to check your TSH levels. This is typically the first day after the birth, and it’s a good day to avoid any stress hormones.\n\n2. **Prepare for the Test**: Ensure you have a good night’s sleep and are well-rested. You can prepare by eating a healthy diet, staying hydrated, and avoiding caffeine and alcohol.\n\n3. **Check the Day**: On the chosen day, go to the clinic or hospital to have the TSH test. You will be given a small amount of a special liquid that contains a small amount of the thyroid hormone (T4). You will be asked to swallow the liquid and then wait for about 15 minutes. The TSH level will be measured in the next few minutes.\n\n4. **Take Care of Yourself**: If you feel too tired to do anything, don’t worry about it. It’s important to be as healthy as possible during the postpartum period.\n\n5. **Follow-up**: If you have a new baby, it’s a good idea to check your TSH level again after the baby is born to ensure that the thyroid function is normal. This is another important test to perform.\n\nYour local Russian guidelines for postpartum thyroid testing may vary based on the hospital you visit and the type of postpartum care you had. It’s best to consult with a healthcare provider to understand the specific guidelines for your region.\n\nRemember, it's crucial to follow up with your healthcare provider after a postpartum check-up to ensure that your thyroid function is normal and that you are managing your thyroid health effectively.",
+  "usage": {
+    "input_tokens": 63,
+    "output_tokens": 414,
+    "total_tokens": 477
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 3601620728,
+  "seconds": 3.656521250028163,
+  "generation_tokens_per_second": 121.03060778014843,
+  "peak_memory_gb": 2.955553162,
+  "truncated": false,
+  "finish_reason": "stop"
+}

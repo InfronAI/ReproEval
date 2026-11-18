@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    >>> order_by_points([]) == []\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    >>> order_by_points([]) == []\n    \"\"\"\n    if not nums:\n        return []\n\n    # Convert the list to a list of strings (digits) and a list of integers (numbers)\n    digits = [str(num) for num in nums]\n    numbers = [num for num in nums]\n\n    # Calculate the sum of the digits for each number and store them in a list\n    digit_sum = []\n    for i in range(len(numbers)):\n        if len(digit_sum) > 0:\n            digit_sum.append(int(digits[i]) + int(digit_sum[-1]) if digit_sum else int(digits[i]) + 0)\n\n    # Sort the list of digits in ascending order based on their sum\n    digit_sum.sort()\n\n    # Convert the list of digits back to strings and then back to integers\n    sorted_nums = []\n    for i in range(len(numbers)):\n        if len(digit_sum) > 0:\n            sorted_nums.append(int(digits[i]) + int(digit_sum[-1]) if digit_sum else int(digits[i]) + 0)\n        else:\n            sorted_nums.append(int(digits[i]) + int(digit_sum[-1]) if digit_sum else int(digits[i]) + 0)\n\n    return sorted_nums\n```",
+  "usage": {
+    "input_tokens": 171,
+    "output_tokens": 365,
+    "input_cached_tokens": 52,
+    "total_tokens": 536
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 1717126956,
+  "seconds": 2.4849967076443136,
+  "generation_tokens_per_second": 158.1426085853384,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

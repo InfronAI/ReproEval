@@ -1,0 +1,50 @@
+{
+  "index": 4,
+  "input_sha256": "d43b88b8a377d2a88b7c5259bdddea83a67d7974c7699da8622f586e1eaa4a0b",
+  "input": {
+    "task_id": "HumanEval/130",
+    "prompt": "\ndef tri(n):\n    \"\"\"Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in \n    the last couple centuries. However, what people don't know is Tribonacci sequence.\n    Tribonacci sequence is defined by the recurrence:\n    tri(1) = 3\n    tri(n) = 1 + n / 2, if n is even.\n    tri(n) =  tri(n - 1) + tri(n - 2) + tri(n + 1), if n is odd.\n    For example:\n    tri(2) = 1 + (2 / 2) = 2\n    tri(4) = 3\n    tri(3) = tri(2) + tri(1) + tri(4)\n           = 2 + 3 + 3 = 8 \n    You are given a non-negative integer number n, you have to a return a list of the \n    first n + 1 numbers of the Tribonacci sequence.\n    Examples:\n    tri(3) = [1, 3, 2, 8]\n    \"\"\"\n",
+    "entry_point": "tri",
+    "canonical_solution": "    if n == 0:\n        return [1]\n    my_tri = [1, 3]\n    for i in range(2, n + 1):\n        if i % 2 == 0:\n            my_tri.append(i / 2 + 1)\n        else:\n            my_tri.append(my_tri[i - 1] + my_tri[i - 2] + (i + 3) / 2)\n    return my_tri\n",
+    "test": "def check(candidate):\n\n    # Check some simple cases\n    \n    assert candidate(3) == [1, 3, 2.0, 8.0]\n    assert candidate(4) == [1, 3, 2.0, 8.0, 3.0]\n    assert candidate(5) == [1, 3, 2.0, 8.0, 3.0, 15.0]\n    assert candidate(6) == [1, 3, 2.0, 8.0, 3.0, 15.0, 4.0]\n    assert candidate(7) == [1, 3, 2.0, 8.0, 3.0, 15.0, 4.0, 24.0]\n    assert candidate(8) == [1, 3, 2.0, 8.0, 3.0, 15.0, 4.0, 24.0, 5.0]\n    assert candidate(9) == [1, 3, 2.0, 8.0, 3.0, 15.0, 4.0, 24.0, 5.0, 35.0]\n    assert candidate(20) == [1, 3, 2.0, 8.0, 3.0, 15.0, 4.0, 24.0, 5.0, 35.0, 6.0, 48.0, 7.0, 63.0, 8.0, 80.0, 9.0, 99.0, 10.0, 120.0, 11.0]\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate(0) == [1]\n    assert candidate(1) == [1, 3]\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0,
+        "pass@2": 0.0,
+        "pass@5": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef tri(n):\n    &#34;&#34;&#34;Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in \n    the last couple centuries. However, what people don&#39;t know is Tribonacci sequence.\n    Tribonacci sequence is defined by the recurrence:\n    tri(1) = 3\n    tri(n) = 1 + n / 2, if n is even.\n    tri(n) =  tri(n - 1) + tri(n - 2) + tri(n + 1), if n is odd.\n    For example:\n    tri(2) = 1 + (2 / 2) = 2\n    tri(4) = 3\n    tri(3) = tri(2) + tri(1) + tri(4)\n           = 2 + 3 + 3 = 8 \n    You are given a non-negative integer number n, you have to a return a list of the \n    first n + 1 numbers of the Tribonacci sequence.\n    Examples:\n    tri(3) = [1, 3, 2, 8]\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    a = [0, 3]\n    b = [0, 3]\n    c = [0, 3, 8]\n    for i in range(3, n + 1):\n        if i % 2 == 0:\n            a.append(a[-1] + a[-2] + a[-3])\n        else:\n            a.append(a[-1] + a[-2] + a[-3] + a[-1])\n        a.append(a[-1] + a[-2] + a[-3] + a[-1])\n        a.append(a[-1] + a[-2] + a[-3] + a[-1])\n        a.append(a[-1] + a[-2] + a[-3] + a[-1])\n    return a[:n + 1]\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1, 1, 1, 1, 1]</p>\n<p>Extracted Answer: [0, 0, 0, 0, 0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\ndef tri(n):\n    \"\"\"Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in \n    the last couple centuries. However, what people don't know is Tribonacci sequence.\n    Tribonacci sequence is defined by the recurrence:\n    tri(1) = 3\n    tri(n) = 1 + n / 2, if n is even.\n    tri(n) =  tri(n - 1) + tri(n - 2) + tri(n + 1), if n is odd.\n    For example:\n    tri(2) = 1 + (2 / 2) = 2\n    tri(4) = 3\n    tri(3) = tri(2) + tri(1) + tri(4)\n           = 2 + 3 + 3 = 8 \n    You are given a non-negative integer number n, you have to a return a list of the \n    first n + 1 numbers of the Tribonacci sequence.\n    Examples:\n    tri(3) = [1, 3, 2, 8]\n    \"\"\"\n"
+        },
+        {
+          "content": "    a = [0, 3]\n    b = [0, 3]\n    c = [0, 3, 8]\n    for i in range(3, n + 1):\n        if i % 2 == 0:\n            a.append(a[-1] + a[-2] + a[-3])\n        else:\n            a.append(a[-1] + a[-2] + a[-3] + a[-1])\n        a.append(a[-1] + a[-2] + a[-3] + a[-1])\n        a.append(a[-1] + a[-2] + a[-3] + a[-1])\n        a.append(a[-1] + a[-2] + a[-3] + a[-1])\n    return a[:n + 1]\n",
+          "role": "assistant"
+        },
+        {
+          "content": "    'Return the first n + 1 numbers of the Tribonacci sequence'\n    sequence = [0, 3, 1]\n    if n == 0:\n        return sequence\n    for i in range(3, n + 1):\n        sequence.append(sum(sequence[-2:]) + sequence[-1])\n    return sequence\n",
+          "role": "assistant"
+        },
+        {
+          "content": "    'Generate the first n + 1 numbers of the Tribonacci sequence.'\n    if n == 0:\n        return []\n    elif n == 1:\n        return [3]\n    elif n == 2:\n        return [1, 3]\n    else:\n        sequence = [1, 3]\n        for i in range(3, n + 1):\n            if i % 2 == 0:\n                sequence.append(sequence[-1] + sequence[-2] + sequence[-3])\n            else:\n                sequence.append(sequence[-1] + sequence[-2] + sequence[-3])\n        return sequence\n",
+          "role": "assistant"
+        },
+        {
+          "content": "    \"Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in the last couple centuries. However, what people don't know is Tribonacci sequence.\\n    Tribonacci sequence is defined by the recurrence:\\n    tri(1) = 3\\n    tri(n) = 1 + n / 2, if n is even.\\n    tri(n) =  tri(n - 1) + tri(n - 2) + tri(n + 1), if n is odd.\\n    For example:\\n    tri(2) = 1 + (2 / 2) = 2\\n    tri(4) = 3\\n    tri(3) = tri(2) + tri(1) + tri(4)\\n           = 2 + 3 + 3 = 8 \\n    You are given a non-negative integer number n, you have to a return a list of the \\n    first n + 1 numbers of the Tribonacci sequence.\\n    Examples:\\n    tri(3) = [1, 3, 2, 8]\\n    \"\n    if n == 0:\n        return []\n    if n == 1 or n == 2:\n        return [3]\n    else:\n        sequence = [3]\n        for i in range(3, n + 1):\n            if i % 2 == 0:\n                sequence.append(sequence[-1] + sequence[-2] + sequence[-3])\n            else:\n                sequence.append(sequence[-1] + sequence[-2] + sequence[-3] + 1)\n        return sequence\n",
+          "role": "assistant"
+        },
+        {
+          "content": "def tri(n):\n    \"\"\"Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in the last couple centuries. However, what people don't know is Tribonacci sequence.\n    Tribonacci sequence is defined by the recurrence:\n    tri(1) = 3\n    tri(n) = 1 + n / 2, if n is even.\n    tri(n) =  tri(n - 1) + tri(n - 2) + tri(n + 1), if n is odd.\n    For example:\n    tri(2) = 1 + (2 / 2) = 2\n    tri(4) = 3\n    tri(3) = tri(2) + tri(1) + tri(4)\n           = 2 + 3 + 3 = 8 \n    You are given a non-negative integer number n, you have to a return a list of the \n    first n + 1 numbers of the Tribonacci sequence.\n    Examples:\n    tri(3) = [1, 3, 2, 8]\n    \"\"\"\n    if n == 0:\n        return []\n    elif n == 1:\n        return [3]\n    elif n == 2:\n        return [1, 3]\n    else:\n        sequence = [1, 3]\n        for i in range(3, n + 1):\n            if i % 2 == 0:\n                sequence.append(sequence[-1] + sequence[-2] + sequence[-3])\n            else:\n                sequence.append(sum(sequence[-1:-2:-1:-1]+[1]))\n        return sequence[:n+1]\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

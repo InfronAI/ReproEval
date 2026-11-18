@@ -1,0 +1,22 @@
+{
+  "description": "All released evaluators on deterministic small subsets. Not full paper reproduction.",
+  "stages": [
+    {
+      "name": "original-suite",
+      "args": [
+        "--eval",
+        "all",
+        "--examples",
+        "5",
+        "--max-tokens",
+        "768",
+        "--output",
+        "experiments/runs/local-pilot",
+        "--model-revision",
+        "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+        "--grader-revision",
+        "4f83f8f146fdf28b512a06562b671d7af4fab457"
+      ]
+    }
+  ]
+}

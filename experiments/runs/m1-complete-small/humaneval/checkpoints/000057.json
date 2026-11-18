@@ -1,0 +1,32 @@
+{
+  "index": 57,
+  "input_sha256": "b4971b44f24ff7b152174b391361ff558542f67c97d001de9f992470f414844f",
+  "input": {
+    "task_id": "HumanEval/57",
+    "prompt": "\n\ndef monotonic(l: list):\n    \"\"\"Return True is list elements are monotonically increasing or decreasing.\n    >>> monotonic([1, 2, 4, 20])\n    True\n    >>> monotonic([1, 20, 4, 10])\n    False\n    >>> monotonic([4, 1, 0, -10])\n    True\n    \"\"\"\n",
+    "entry_point": "monotonic",
+    "canonical_solution": "    if l == sorted(l) or l == sorted(l, reverse=True):\n        return True\n    return False\n",
+    "test": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate([1, 2, 4, 10]) == True\n    assert candidate([1, 2, 4, 20]) == True\n    assert candidate([1, 20, 4, 10]) == False\n    assert candidate([4, 1, 0, -10]) == True\n    assert candidate([4, 1, 1, 0]) == True\n    assert candidate([1, 2, 3, 2, 5, 60]) == False\n    assert candidate([1, 2, 3, 4, 5, 60]) == True\n    assert candidate([9, 9, 9, 9]) == True\n\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef monotonic(l: list):\n    &#34;&#34;&#34;Return True is list elements are monotonically increasing or decreasing.\n    &gt;&gt;&gt; monotonic([1, 2, 4, 20])\n    True\n    &gt;&gt;&gt; monotonic([1, 20, 4, 10])\n    False\n    &gt;&gt;&gt; monotonic([4, 1, 0, -10])\n    True\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#39;Return True is list elements are monotonically increasing or decreasing.\\n    &gt;&gt;&gt; monotonic([1, 2, 4, 20])\\n    True\\n    &gt;&gt;&gt; monotonic([1, 20, 4, 10])\\n    False\\n    &gt;&gt;&gt; monotonic([4, 1, 0, -10])\\n    True\\n    &#39;\n    n = len(l)\n    for i in range(n - 1):\n        if l[i] &lt; l[i + 1]:\n            return False\n    return True\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef monotonic(l: list):\n    \"\"\"Return True is list elements are monotonically increasing or decreasing.\n    >>> monotonic([1, 2, 4, 20])\n    True\n    >>> monotonic([1, 20, 4, 10])\n    False\n    >>> monotonic([4, 1, 0, -10])\n    True\n    \"\"\"\n"
+        },
+        {
+          "content": "    'Return True is list elements are monotonically increasing or decreasing.\\n    >>> monotonic([1, 2, 4, 20])\\n    True\\n    >>> monotonic([1, 20, 4, 10])\\n    False\\n    >>> monotonic([4, 1, 0, -10])\\n    True\\n    '\n    n = len(l)\n    for i in range(n - 1):\n        if l[i] < l[i + 1]:\n            return False\n    return True\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

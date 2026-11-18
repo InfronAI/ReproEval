@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\nfrom typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\nfrom typing import List\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string \"\"\"\n    result = []\n    for i in range(len(string) + 1):\n        prefix = string[:i]\n        result.append(prefix)\n    return result\n```\n\nThis function signature and docstring describe the use case and purpose of the function, which is to generate all prefixes of the input string and return them as a list. The docstring provides a clear explanation of the input and output, as well as the purpose of the function.",
+  "usage": {
+    "input_tokens": 109,
+    "output_tokens": 126,
+    "input_cached_tokens": 55,
+    "total_tokens": 235
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 1714326827,
+  "seconds": 1.1089024590328336,
+  "generation_tokens_per_second": 132.2584593185992,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}

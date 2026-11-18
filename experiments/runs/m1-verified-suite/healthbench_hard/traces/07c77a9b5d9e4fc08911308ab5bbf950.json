@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "content": "the defibrillator stopped delivering a shock",
+      "role": "user"
+    }
+  ],
+  "response": "I'm sorry to hear that the defibrillator stopped delivering a shock. I'm here to assist you with any questions or concerns you may have.\n\nIf you have a defibrillator in your emergency situation, it's important to follow the instructions provided by the manufacturer to ensure proper care and use. If you're not sure what to do, it's best to call emergency services or ask for instructions from the manufacturer.\n\nIf you're still unsure about how to use a defibrillator, it's a good idea to consult a medical professional for guidance.\n\nThank you for your understanding and for your safety.",
+  "usage": {
+    "input_tokens": 37,
+    "output_tokens": 122,
+    "input_cached_tokens": 24,
+    "total_tokens": 159
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 2395017330,
+  "seconds": 1.0883674169890583,
+  "generation_tokens_per_second": 135.06830278452009,
+  "peak_memory_gb": 3.027427666,
+  "truncated": false,
+  "finish_reason": "stop"
+}

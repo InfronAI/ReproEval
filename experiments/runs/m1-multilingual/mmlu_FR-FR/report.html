@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message {
+                padding: 8px 16px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+            }
+            .message.user {
+                background-color: #B2DFDB;
+                color: #00695C;
+            }
+            .message.assistant {
+                background-color: #B39DDB;
+                color: #4527A0;
+            }
+            .message.system {
+                background-color: #EEEEEE;
+                color: #212121;
+            }
+            .role {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .variant {
+                color: #795548;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h1>Metrics</h1>
+    <table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><b>Score</b></td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>other</td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>other:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>score:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    </table>
+    
+    <h1>Examples</h1>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCD. Think step by step before answering.
+
+Le vaccin anti-cancer efficace contre le VPH comprend…
+
+A) un virus vivant atténué par une mutagenèse spécifique
+B) un vaccin à virus entier chimiquement inactivé
+C) un auto-assemblage de la protéine virale L1 en VLP
+D) un vaccin à sous-unités inactivé chimiquement</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant
+    
+    </div>
+    <div class="content">
+    <pre>To answer this question, we need to understand the concepts of &#34;Vaccin&#34; and &#34;VPH.&#34; A &#34;Vaccin&#34; is a vaccine that is designed to stimulate the immune system to produce a vaccine-like immunity against a particular disease or condition, such as preventing the transmission of a virus. &#34;VPH&#34; stands for &#34;Viral Persistent Hyperplasia,&#34; referring to the presence of a virus in the body that can persist even after the initial infection is gone.
+
+The question asks about a &#34;Vaccin&#34; that is &#34;anti-cancer,&#34; which means it is designed to prevent or inhibit the growth or spread of cancer cells.
+
+Let&#39;s analyze each option:
+
+A) Un virus vivant atténué par une mutagenèse spécifique
+   This would be a vaccine that targets a specific virus and inhibits its replication in the host cells.
+
+B) Un vaccin à virus entier chimiquement inactivé
+   This would be a vaccine that completely removes the virus from the host.
+
+C) Un auto-assemblage de la protéine virale L1 en VLP
+   This would be a vaccine that uses the entire viral structure to produce a new, modified virus.
+
+D) Un vaccin à sous-unités inactivé chimiquement
+   This would be a vaccine that uses a small amount of the virus&#39;s genetic material to produce a new virus.
+
+Given that a &#34;Vaccin&#34; is a vaccine that targets a specific virus and inhibits its replication in the host cells, the correct answer is:
+
+A) Un virus vivant atténué par une mutagenèse spécifique
+
+This option is the most accurate description of a &#34;Vaccin&#34; that is &#34;anti-cancer.&#34;
+
+Therefore, the correct answer is:
+Answer: A</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: A</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    </body>
+</html>

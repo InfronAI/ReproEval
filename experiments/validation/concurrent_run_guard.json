@@ -1,0 +1,26 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "simple_evals",
+    "--eval",
+    "gpqa,humaneval",
+    "--full",
+    "--n-repeats",
+    "1",
+    "--samples-per-task",
+    "1",
+    "--max-tokens",
+    "768",
+    "--output",
+    "experiments/runs/m1-complete-small",
+    "--model-revision",
+    "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+    "--grader-revision",
+    "4f83f8f146fdf28b512a06562b671d7af4fab457",
+    "--resume"
+  ],
+  "returncode": 2,
+  "stderr": "usage: __main__.py [-h] [--backend {mlx,openai,o-chat,responses,anthropic}]\n                   [--model MODEL] [--grader-model GRADER_MODEL]\n                   [--grader-backend {mlx,openai,o-chat,responses,anthropic}]\n                   [--reasoning-effort {low,medium,high}]\n                   [--system-message SYSTEM_MESSAGE]\n                   [--model-revision MODEL_REVISION]\n                   [--grader-revision GRADER_REVISION] [--eval EVAL]\n                   [--list-evals] [--list-models]\n                   [--examples EXAMPLES | --full] [--debug]\n                   [--workers WORKERS] [--max-tokens MAX_TOKENS]\n                   [--grader-max-tokens GRADER_MAX_TOKENS]\n                   [--max-context MAX_CONTEXT] [--no-prefix-cache]\n                   [--temperature TEMPERATURE] [--seed SEED]\n                   [--n-repeats N_REPEATS] [--paper-repeats]\n                   [--calibration-samples CALIBRATION_SAMPLES]\n                   [--pass-k PASS_K] [--samples-per-task SAMPLES_PER_TASK]\n                   [--code-timeout CODE_TIMEOUT]\n                   [--math-split {math_test,math_500_test}] [--output OUTPUT]\n                   [--resume] [--offline] [--cache-dir CACHE_DIR]\n                   [--healthbench-input-path HEALTHBENCH_INPUT_PATH]\n                   [--healthbench-length-adjustment-center HEALTHBENCH_LENGTH_ADJUSTMENT_CENTER]\n                   [--healthbench-length-adjustment-penalty-per-500-chars HEALTHBENCH_LENGTH_ADJUSTMENT_PENALTY_PER_500_CHARS]\n                   [--healthbench-professional-mode]\n                   [--healthbench-use-gpt-5-4-low-grader]\n                   [--physician-group {Group 1,Group 2,Group 3}]\n                   [--reference-completions] [--browse]\n                   [--browse-steps BROWSE_STEPS]\n                   [{run,doctor,prepare,analyze}]\n__main__.py: error: another process is writing this run\n",
+  "expected": "another process is writing this run"
+}

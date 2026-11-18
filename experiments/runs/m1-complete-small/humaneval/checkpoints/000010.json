@@ -1,0 +1,32 @@
+{
+  "index": 10,
+  "input_sha256": "841ec5985291075eb4095a3890971908ec17e599ced7406a61ea32ec4604de0e",
+  "input": {
+    "task_id": "HumanEval/10",
+    "prompt": "\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef make_palindrome(string: str) -> str:\n    \"\"\" Find the shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> make_palindrome('')\n    ''\n    >>> make_palindrome('cat')\n    'catac'\n    >>> make_palindrome('cata')\n    'catac'\n    \"\"\"\n",
+    "entry_point": "make_palindrome",
+    "canonical_solution": "    if not string:\n        return ''\n\n    beginning_of_suffix = 0\n\n    while not is_palindrome(string[beginning_of_suffix:]):\n        beginning_of_suffix += 1\n\n    return string + string[:beginning_of_suffix][::-1]\n",
+    "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('') == ''\n    assert candidate('x') == 'x'\n    assert candidate('xyz') == 'xyzyx'\n    assert candidate('xyx') == 'xyx'\n    assert candidate('jerry') == 'jerryrrej'\n"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": 0.0,
+      "metrics": {
+        "pass@1": 0.0
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef is_palindrome(string: str) -&gt; bool:\n    &#34;&#34;&#34; Test if given string is a palindrome &#34;&#34;&#34;\n    return string == string[::-1]\n\n\ndef make_palindrome(string: str) -&gt; str:\n    &#34;&#34;&#34; Find the shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    &gt;&gt;&gt; make_palindrome(&#39;&#39;)\n    &#39;&#39;\n    &gt;&gt;&gt; make_palindrome(&#39;cat&#39;)\n    &#39;catac&#39;\n    &gt;&gt;&gt; make_palindrome(&#39;cata&#39;)\n    &#39;catac&#39;\n    &#34;&#34;&#34;\n</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>    &#34; Find the shortest palindrome that begins with a supplied string.\\n    Algorithm idea is simple:\\n    - Find the longest postfix of supplied string that is a palindrome.\\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\\n    &gt;&gt;&gt; make_palindrome(&#39;&#39;)\\n    &#39;&#39;\\n    &gt;&gt;&gt; make_palindrome(&#39;cat&#39;)\\n    &#39;catac&#39;\\n    &gt;&gt;&gt; make_palindrome(&#39;cata&#39;)\\n    &#39;catac&#39;\\n    &#34;\n    max_suffix = &#39;&#39;\n    for i in range(len(string) - 1, -1, -1):\n        if string[i] == string[-1]:\n            continue\n        max_suffix = string[i:-1]\n        break\n    shortest_palindrome = string[::-1]\n    return string + reverse_of_longest_postfix(max_suffix)\n\ndef is_palindrome(string: str) -&gt; bool:\n    &#34;&#34;&#34; Test if given string is a palindrome &#34;&#34;&#34;\n    return string == string[::-1]\n</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: [1]</p>\n<p>Extracted Answer: [0]</p>\n<p>Score: 0.0</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef make_palindrome(string: str) -> str:\n    \"\"\" Find the shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> make_palindrome('')\n    ''\n    >>> make_palindrome('cat')\n    'catac'\n    >>> make_palindrome('cata')\n    'catac'\n    \"\"\"\n"
+        },
+        {
+          "content": "    \" Find the shortest palindrome that begins with a supplied string.\\n    Algorithm idea is simple:\\n    - Find the longest postfix of supplied string that is a palindrome.\\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\\n    >>> make_palindrome('')\\n    ''\\n    >>> make_palindrome('cat')\\n    'catac'\\n    >>> make_palindrome('cata')\\n    'catac'\\n    \"\n    max_suffix = ''\n    for i in range(len(string) - 1, -1, -1):\n        if string[i] == string[-1]:\n            continue\n        max_suffix = string[i:-1]\n        break\n    shortest_palindrome = string[::-1]\n    return string + reverse_of_longest_postfix(max_suffix)\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

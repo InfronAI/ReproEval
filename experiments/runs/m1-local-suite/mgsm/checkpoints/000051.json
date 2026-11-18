@@ -1,0 +1,31 @@
+{
+  "index": 51,
+  "input_sha256": "01b9d01716e4fd42a006bcd055999ae34f545ff98874e2242cdac92235d34032",
+  "input": {
+    "inputs": "制作一件袍子需要 2 匹蓝色纤维布料和这个数量一半的白色纤维布料。它一共需要用掉多少匹布料？",
+    "targets": "3",
+    "lang": "zh"
+  },
+  "result": {
+    "kind": "single",
+    "value": {
+      "score": false,
+      "metrics": {
+        "zh": false,
+        "group_non_latin": false
+      },
+      "html": "\n<h3>Prompt conversation</h3>\n\n\n<div class=\"message user\">\n    <div class=\"role\">\n    user\n    \n    </div>\n    <div class=\"content\">\n    <pre>解决这个数学问题。在最后一行给出答案前，请提供推理步骤。最后一行应该以 &#34;答案: &#34; 的形式独立给出答案。在 &#34;答案：&#34; 后不要添加除整数答案之外的任何内容。\n\n制作一件袍子需要 2 匹蓝色纤维布料和这个数量一半的白色纤维布料。它一共需要用掉多少匹布料？</pre>\n    </div>\n</div>\n\n<h3>Sampled message</h3>\n\n<div class=\"message assistant\">\n    <div class=\"role\">\n    assistant\n    \n    </div>\n    <div class=\"content\">\n    <pre>要制作一件袍子，需要 2 匹蓝色布料和这个数量一半的白色布料。我们首先计算白色布料的数量。\n\n白色布料的数量是蓝色布料的 1/2，所以白色布料的数量是 2 匹蓝色布料的 1/2，即 1 匹白色布料。\n\n接下来，我们计算总共需要的布料数量。这是蓝色布料和白色布料的总和，即 2 匹 + 1 匹 = 3 匹。\n\n所以，这件袍子一共需要用掉 3 匹布料。</pre>\n    </div>\n</div>\n<h3>Results</h3>\n<p>Correct Answer: 3</p>\n<p>Extracted Answer: None</p>\n<p>Score: False</p>",
+      "convo": [
+        {
+          "role": "user",
+          "content": "解决这个数学问题。在最后一行给出答案前，请提供推理步骤。最后一行应该以 \"答案: \" 的形式独立给出答案。在 \"答案：\" 后不要添加除整数答案之外的任何内容。\n\n制作一件袍子需要 2 匹蓝色纤维布料和这个数量一半的白色纤维布料。它一共需要用掉多少匹布料？"
+        },
+        {
+          "content": "要制作一件袍子，需要 2 匹蓝色布料和这个数量一半的白色布料。我们首先计算白色布料的数量。\n\n白色布料的数量是蓝色布料的 1/2，所以白色布料的数量是 2 匹蓝色布料的 1/2，即 1 匹白色布料。\n\n接下来，我们计算总共需要的布料数量。这是蓝色布料和白色布料的总和，即 2 匹 + 1 匹 = 3 匹。\n\n所以，这件袍子一共需要用掉 3 匹布料。",
+          "role": "assistant"
+        }
+      ],
+      "example_level_metadata": null
+    }
+  }
+}

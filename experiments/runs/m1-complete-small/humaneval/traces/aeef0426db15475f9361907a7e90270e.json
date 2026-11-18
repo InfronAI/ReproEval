@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n\n\ndef common(l1: list, l2: list):\n    \"\"\"Return sorted unique common elements for two lists.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    >>> common([5, 3, 2, 8], [3, 2])\n    [2, 3]\n\n    \"\"\"\n"
+    }
+  ],
+  "response": "```python\ndef common(l1: list, l2: list) -> list:\n    \"\"\"Return sorted unique common elements for two lists.\"\"\"\n    # Use a set to find unique elements in both lists\n    unique_elements = set(l1).intersection(set(l2))\n    \n    # Convert the set to a sorted list\n    sorted_unique_elements = sorted(list(unique_elements))\n    \n    return sorted_unique_elements\n```",
+  "usage": {
+    "input_tokens": 173,
+    "output_tokens": 85,
+    "input_cached_tokens": 52,
+    "total_tokens": 258
+  },
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "revision": "a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3",
+  "role": "candidate",
+  "seed": 1507026740,
+  "seconds": 0.8177092499099672,
+  "generation_tokens_per_second": 137.344890383929,
+  "peak_memory_gb": 1.177639674,
+  "truncated": false,
+  "finish_reason": "stop"
+}
